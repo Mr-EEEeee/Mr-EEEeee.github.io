@@ -1,0 +1,4 @@
+  /* 取消top颜色以支持cover透明图片显示背景 */
+#page-header{
+    background-color: unset;
+}

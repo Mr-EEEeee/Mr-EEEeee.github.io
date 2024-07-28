@@ -21,7 +21,45 @@
   <entry>
     <title>test</title>
     <url>/2024/07/26/test/</url>
-    <content><![CDATA[<p>test</p>
+    <content><![CDATA[<p>h124:</p>
+<h1 id="test"><a href="#test" class="headerlink" title="test"></a>test</h1><h2 id="test2"><a href="#test2" class="headerlink" title="test2"></a>test2</h2><h3 id="test3"><a href="#test3" class="headerlink" title="test3"></a>test3</h3><h4 id="test4"><a href="#test4" class="headerlink" title="test4"></a>test4</h4><p>pic:<br><img src="/./img/avatar.jpg" alt="avatar"></p>
+<p>code:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;test&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<p>test, <strong>bold</strong>, <em>italic</em>, <em><strong>bl</strong></em>, <del>slash</del></p>
+<p>强调:<code>ili</code></p>
+<p>ima: $y&#x3D;ax+b$</p>
+<p>$$<br>bma<br>$$</p>
+<p>链接锚点’a’: <a href="http://baidu.com/">baidu</a></p>
+<h2 id="Check"><a href="#Check" class="headerlink" title="Check"></a>Check</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> test</li>
+<li><input disabled="" type="checkbox"> test2</li>
+<li></li>
+</ul>
+<p>居中对齐图片cpic:</p>
+<div align=center><img src="./img/avatar.jpg"></div>
+
+<p>table:</p>
+<table>
+<thead>
+<tr>
+<th>t1</th>
+<th>t2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>x1</td>
+<td>x2</td>
+</tr>
+</tbody></table>
 ]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
   </entry>
 </search>
