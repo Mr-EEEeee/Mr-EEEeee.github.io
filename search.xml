@@ -88,10 +88,13 @@
 
 ]]></content>
       <categories>
-        <category>笔记,教学</category>
+        <category>笔记</category>
+        <category>教程</category>
       </categories>
       <tags>
-        <tag>Hexo, Butterfly, css</tag>
+        <tag>Hexo</tag>
+        <tag>Butterfly</tag>
+        <tag>css</tag>
       </tags>
   </entry>
 </search>
