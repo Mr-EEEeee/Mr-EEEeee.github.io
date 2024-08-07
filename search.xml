@@ -26,58 +26,34 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo之Butterfly主题透明css浅析</title>
-    <url>/2024/07/29/css1/</url>
-    <content><![CDATA[<p><img src="/./img/posts/image-1.png" alt="效果图1"><br><img src="/./img/posts/image-2.png" alt="效果图2"></p>
-<h2 id="1-改变透明度"><a href="#1-改变透明度" class="headerlink" title="1.改变透明度"></a>1.改变透明度</h2><h3 id="卡片透明度"><a href="#卡片透明度" class="headerlink" title="卡片透明度"></a>卡片透明度</h3><p>在souce文件夹中新建css文件夹，用来存放所有自行配置的css文件，与img文件夹同理，防止更新后被覆盖。在文件夹中新建transparency.css文件，编写以下代码。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 明亮模式透明度0.75 */</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line"><span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">75</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 黑暗模式透明度0.7 */</span></span><br><span class="line"><span class="selector-attr">[data-theme=<span class="string">&quot;dark&quot;</span>]</span> &#123;</span><br><span class="line"><span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">12</span>, <span class="number">12</span>, <span class="number">12</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在主题配置文件的inject下按格式填写css，其中根目录为source文件夹。<br><img src="/../img/posts/image-3.png"></p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/transparency.css&quot;&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="页脚透明度"><a href="#页脚透明度" class="headerlink" title="页脚透明度"></a>页脚透明度</h3><p>在主题配置文件中，将页脚颜色直接设置为transparent。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Footer Background</span></span><br><span class="line"><span class="attr">footer_bg:</span> <span class="string">transparent</span></span><br></pre></td></tr></table></figure>
-<p>因为有遮罩的关系，既保留了底色来显示文字，又可以和背景融为一体。<br><img src="/../img/posts/image.png" alt="页脚效果"></p>
-<h2 id="2-改变top颜色"><a href="#2-改变top颜色" class="headerlink" title="2.改变top颜色"></a>2.改变top颜色</h2><p>新建css文件命名为headtransparency，编写以下代码。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 取消top颜色以支持cover透明图片显示背景 */</span></span><br><span class="line"><span class="selector-id">#page-header</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: unset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>同样添加到inject中</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/headtransparency.css&quot;&gt;</span></span><br></pre></td></tr></table></figure>
-<p>因为顶图优先级top_img &gt; cover， 而cover既可以作为文章封面，又可以在top_img未设置时作为顶图，所以我准备全使用cover设置图片，省去多余图片设置。但在top_img未设置时，主题的蓝色 <code>#49b1f5</code> 会作为背景色填充 ，因为图片的webp和png格式有alpha通道，存在透明的图片会显露出cover图片下被默认填充的背景色，所以需要取消页眉的背景色填充，这样就可以透出页面背景。另外页眉同样有遮罩，比较合适。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Add mask to header or footer (为 header 或 footer 添加黑色半透遮罩)</span></span><br><span class="line"><span class="attr">mask:</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">footer:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h1 id="教学"><a href="#教学" class="headerlink" title="教学"></a>教学</h1><p>实际上css的内容操作是使用浏览器F12调试摸索的，需要在右侧的样式中逐一查找对应属性。<br><img src="/../img/posts/image4.png" alt="点击元素获取id"><br>因为我从未接触过css，速成只能利用网络文档和AI，自行摸索出了结果，而网络上流传的许多修改透明度方法千篇一律都是屎山代码，长篇大论中仅有一两句有用，且不适配黑暗模式的页面，所幸我最后自行排查出了结果，并简化了代码。</p>
-<p>另外我认为无需单独配置每个卡牌的透明度，如果透明度各不相同那页面会很不美观，又因为所有卡片都使用 <code>--card-bg</code> 作为颜色，那在两种页面模式下配置它即可，既省事又高效，但rgba函数仍需获取颜色作为填充，我选取了原主题颜色，可以自行调整。</p>
+    <title>游戏设计之心流</title>
+    <url>/2024/08/02/design1/</url>
+    <content><![CDATA[<h1 id="心流"><a href="#心流" class="headerlink" title="心流"></a>心流</h1><p><u>指玩家沉浸游戏，淡化时间、饥饿等外部因素，全神贯注的状态</u><br>理论适用于大部分“传统游戏”，但仍须根据游戏类型及目标用户具体问题具体分析。<br><img src="https://s2.loli.net/2024/08/02/3RkghHSZ5JzfY76.png" alt="心流图"><br><strong>心流的节奏要有变化</strong></p>
+<p>达到心流体验的最主要的条件我认为是：1.明确的目标 2.充分的正反馈。<br><em>但我还没有真正参与设计出过优秀的游戏，所以暂不分析也没有能力分析如何设计具有心流体验的游戏，下文更多通过解读和举例分析来浅谈心流。</em></p>
+<p>特殊的如魂系游戏和大部分手游另作讨论。<br>魂系游戏：更多依靠技术，以及在高压的焦虑中起伏的心流状态。<br>手游：更多依靠养成和数值，碎片化游戏时间，难以产生心流状态。</p>
+<p><img src="https://s2.loli.net/2024/08/02/oZ2zb56vGeV4kyU.png" alt="游戏体验数据走向"><br>游戏中的各种决策决定了游戏节奏和玩家的体验感受，大的决策影响更大，决策也会受玩家的水平影响。<br><img src="https://s2.loli.net/2024/08/02/mXuhxga9bqFEDTP.png" alt="决策流程图"><br>抽象来说<u>最差</u>的游戏设计就是<strong>破坏玩家的心流体验</strong>。<br><a id="content"></a>游戏设计要<strong>避免心流中断</strong>，出现停顿都可能影响心流让玩家感到不适，常见和典型的例子如<strong>场景加载</strong>、<strong>菜单动画</strong>、<strong>对话框</strong>等，这种交互效果都会短暂的阻碍玩家行动，如果频繁出现且无法加速和跳过会导致断层。</p>
+<p>在《赛博朋克2077》中强制对话较少，大部分对话都不会限制玩家行动，且完全没有固定和 <em>“美观”</em> 的对话窗口；<a href="#comment1">而在《GTA5》中人物的固定对话建立在第三人称真实且丰富的实机演出上，包括人物的动作、表情等，且剧情分支是根据角色的具体行为而非对话选项</a>。两者的例子整体简单来说就是在避免断层，这样的设计在RPG中较优。<a href="#comment2">反面来说，《原神》《鸣潮》等游戏被大量玩家网友诟病的对话无法跳过，剧情对话又臭又长的这种体验，根本上就是<u>阻碍了玩家心流的形成</u></a>，因为二游每个版本都有大量的剧情对话，且大部分的对话都没有伴随剧情演出，只是角色直立生硬的对话框对话，<u>信息密度过低破坏了玩家的沉浸感</u>，从游戏设计上讲是非常低级的，<a href="#comment3">且完全有办法优化</a>。<br><img src="https://s2.loli.net/2024/08/02/lHYIEQiLvu4O8Dw.png" alt="心流断层导致节奏破碎的体验"></p>
+<p>游戏设计也要<strong>避免决策溢出</strong>，同时出现过多的决策会让玩家感到压力，常出现在路线分支等情况和水平较低的玩家身上。决策溢出更难避免，需要在游戏测试过程中持续优化，可以设定一些阈值，而不是设法全覆盖。</p>
+<p><u>以上内容不完全适用于回合制游戏，需要具体游戏具体分析。</u></p>
+<h2 id="评论"><a href="#评论" class="headerlink" title="评论 "></a>评论 <a id="comment1"></a></h2><p><a href="#content">返回文中</a></p>
+<p><a id="comment2"></a>过场对话的剧情体验是GTA5心流中的”伏“，任务的进行则是“起”。</p>
 <hr>
-<h3 id="以下是避雷"><a href="#以下是避雷" class="headerlink" title="以下是避雷"></a>以下是避雷</h3><p><img src="/../img/posts/026fc1bea3736cc224e319b6c2b4741e.png" alt="雷同的网络教程"><br>以下这是网络教程的雷同代码,除开页脚我直接设置为transparent外，仅两句可用，分别是.recent-post-item和最主要的–card-bg，且因为全覆盖设置成白色，完全不适配原黑暗模式页面。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 文章页背景 */</span></span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 可以自行修改*/</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 所有页面背景 */</span></span><br><span class="line"><span class="selector-id">#aside_content</span> <span class="selector-class">.card-widget</span>,</span><br><span class="line"><span class="selector-id">#recent-posts</span>&gt;<span class="selector-class">.recent-post-item</span>,</span><br><span class="line"><span class="selector-class">.layout_page</span>&gt;<span class="selector-tag">div</span><span class="selector-pseudo">:first-child</span><span class="selector-pseudo">:not</span>(<span class="selector-class">.recent-posts</span>),</span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#page</span>,</span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span>,</span><br><span class="line"><span class="selector-class">.read-mode</span> <span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 */</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*侧边卡片的透明度 */</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">    <span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 页脚透明 */</span></span><br><span class="line"><span class="selector-id">#footer</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 */</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
+<p><a id="comment3"></a>这是已经得到市场验证的，《鸣潮》在开服后几天添加了更多对话的跳过来补救，更是印证了这种说法。我认为这其实是游戏设计和体验过程中很基础和重要的方面，所以我不理解库洛和米哈游这种中大厂的策划到底是什么水平。<em>为什么连我这样应届生未入行的人都能分析和理解的游戏设计，他们却不懂。</em></p>
+<p><em>所以之前春招后期有面试官问过我，“考虑过为什么策划岗的校招应聘结果不理想”，我不只回答说“因为我个人的经验不足，没有完全地从玩家视角转变到策划开发者的视角”，我还简单地说“感觉策划岗位对学历的要求更高”，因为我个人感觉策划岗位很难通过交流得知实际的策划水平，不像开发直接做算法题判断人的代码能力，而目前游戏公司招策划很看重学历高低，相较其他岗位我不认同策划岗位的能力与应试的学历正相关，我更感觉策划水平与天赋有关。有点幽默的是后来我还听到过大概说“找不到工作不要总反思自己，也要反思外部因素”的说法，我就也开始考虑，再根据库洛《鸣潮》公测后的表现，我更加怀疑策划岗位求职情况不理想，不只是我有问题，我对自己的工作能力一直很有信心，不过也不至于说自负到把原因都归结于别人，我没工作这段时间一直在学习游戏设计来提升自己。</em></p>
+<hr>
+<p>简单的如添加跳过和倍速选项，在跳过中对对话和剧情进行文字的总结呈现；特殊的如借鉴日厂游戏《绯红结系》《女神异闻录》等用2D形式来美化对话演出，仅需增加一些人物表情拆分等即可。</p>
+<p>针对这类二游，我个人设计将次要的内容通过类似漫画的的方式呈现，重要的主线再通过文字和视频具体表现，从计算机视觉方向讲，现在追求的是“多模态”，类比来说我这样的游戏设计就是在提高信息密度以提供相对流畅的游戏体验，避免破坏玩家的心流。</p>
+<p>而像《GTA5》这样的全部实机动画演出对于二游来说就没有必要，成本较高。</p>
+<p><em>不过这样的成本对于这些中大厂而言其实是不高的，导致这样的原因根本上是厂商把资金更多地投入到了营销中，买量成本大量压缩了开发成本。我难以评价利弊，可能对于厂商的盈利是有利的，但我感觉对于游戏市场长期的良性发展是不利的，不确定。</em></p>
 ]]></content>
       <categories>
-        <category>教程</category>
+        <category>评论</category>
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>Butterfly</tag>
-        <tag>css</tag>
+        <tag>游戏设计</tag>
+        <tag>心流</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2024/07/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>test1</title>
@@ -124,36 +100,6 @@
       </tags>
   </entry>
   <entry>
-    <title>游戏设计之心流</title>
-    <url>/2024/08/02/design1/</url>
-    <content><![CDATA[<h1 id="心流"><a href="#心流" class="headerlink" title="心流"></a>心流</h1><p><u>指玩家沉浸游戏，淡化时间、饥饿等外部因素，全神贯注的状态</u><br>理论适用于大部分“传统游戏”，但仍须根据游戏类型及目标用户具体问题具体分析。<br><img src="https://s2.loli.net/2024/08/02/3RkghHSZ5JzfY76.png" alt="心流图"><br><strong>心流的节奏要有变化</strong></p>
-<p>达到心流体验的最主要的条件我认为是：1.明确的目标 2.充分的正反馈。<br><em>但我还没有真正参与设计出过优秀的游戏，所以暂不分析也没有能力分析如何设计具有心流体验的游戏，下文更多通过解读和举例分析来浅谈心流。</em></p>
-<p>特殊的如魂系游戏和大部分手游另作讨论。<br>魂系游戏：更多依靠技术，以及在高压的焦虑中起伏的心流状态。<br>手游：更多依靠养成和数值，碎片化游戏时间，难以产生心流状态。</p>
-<p><img src="https://s2.loli.net/2024/08/02/oZ2zb56vGeV4kyU.png" alt="游戏体验数据走向"><br>游戏中的各种决策决定了游戏节奏和玩家的体验感受，大的决策影响更大，决策也会受玩家的水平影响。<br><img src="https://s2.loli.net/2024/08/02/mXuhxga9bqFEDTP.png" alt="决策流程图"><br>抽象来说<u>最差</u>的游戏设计就是<strong>破坏玩家的心流体验</strong>。</p>
-<p>游戏设计要<strong>避免心流中断</strong>，出现停顿都可能影响心流让玩家感到不适，常见和典型的例子如<strong>场景加载</strong>、<strong>菜单动画</strong>、<strong>对话框</strong>等，这种交互效果都会短暂的阻碍玩家行动，如果频繁出现且无法加速和跳过会导致断层。<br><a id="content"></a>在《赛博朋克2077》中强制对话较少，大部分对话都不会限制玩家行动，且完全没有固定和 <em>“美观”</em> 的对话窗口；<a href="#comment1">而在《GTA5》中人物的固定对话建立在第三人称真实且丰富的实机演出上，包括人物的动作、表情等，且剧情分支是根据角色的具体行为而非对话选项</a>。两者的例子整体简单来说就是在避免断层，这样的设计在RPG中较优。<a href="#comment2">反面来说，《原神》《鸣潮》等游戏被大量玩家网友诟病的对话无法跳过，剧情对话又臭又长的这种体验，根本上就是<u>阻碍了玩家心流的形成</u></a>，因为二游每个版本都有大量的剧情对话，且大部分的对话都没有伴随剧情演出，只是角色直立生硬的对话框对话，<u>信息密度过低破坏了玩家的沉浸感</u>，从游戏设计上讲是非常低级的，<a href="#comment3">且完全有办法优化</a>。<br><img src="https://s2.loli.net/2024/08/02/lHYIEQiLvu4O8Dw.png" alt="心流断层导致节奏破碎的体验"></p>
-<p>游戏设计也要<strong>避免决策溢出</strong>，同时出现过多的决策会让玩家感到压力，常出现在路线分支等情况和水平较低的玩家身上。决策溢出更难避免，需要在游戏测试过程中持续优化，可以设定一些阈值，而不是设法全覆盖。</p>
-<p><u>以上内容不完全适用于回合制游戏，需要具体游戏具体分析。</u></p>
-<h2 id="评论"><a href="#评论" class="headerlink" title="评论 "></a>评论 <a id="comment1"></a></h2><p><a href="#content">返回文中</a></p>
-<p><a id="comment2"></a>过场对话的剧情体验是GTA5心流中的”伏“，任务的进行则是“起”。</p>
-<hr>
-<p><a id="comment3"></a>这是已经得到市场验证的，《鸣潮》在开服后几天添加了更多对话的跳过来补救，更是印证了这种说法。我认为这其实是游戏设计和体验过程中很基础和重要的方面，所以我不理解库洛和米哈游这种中大厂的策划到底是什么水平。<em>为什么连我这样应届生未入行的人都能分析和理解的游戏设计，他们却不懂。</em></p>
-<p><em>所以之前春招后期有面试官问过我，“考虑过为什么策划岗的校招应聘结果不理想”，我不只回答说“因为我个人的经验不足，没有完全地从玩家视角转变到策划开发者的视角”，我还简单地说“感觉策划岗位对学历的要求更高”，因为我个人感觉策划岗位很难通过交流得知实际的策划水平，不像开发直接做算法题判断人的代码能力，而目前游戏公司招策划很看重学历高低，相较其他岗位我不认同策划岗位的能力与应试的学历正相关，我更感觉策划水平与天赋有关。有点幽默的是后来我还听到过大概说“找不到工作不要总反思自己，也要反思外部因素”的说法，我就也开始考虑，再根据库洛《鸣潮》公测后的表现，我更加怀疑策划岗位求职情况不理想，不只是我有问题，我对自己的工作能力一直很有信心，不过也不至于说自负到把原因都归结于别人，我没工作这段时间一直在学习游戏设计来提升自己。</em></p>
-<hr>
-<p>简单的如添加跳过和倍速选项，在跳过中对对话和剧情进行文字的总结呈现；特殊的如借鉴日厂游戏《绯红结系》《女神异闻录》等用2D形式来美化对话演出，仅需增加一些人物表情拆分等即可。</p>
-<p>针对这类二游，我个人设计将次要的内容通过类似漫画的的方式呈现，重要的主线再通过文字和视频具体表现，从计算机视觉方向讲，现在追求的是“多模态”，类比来说我这样的游戏设计就是在提高信息密度以提供相对流畅的游戏体验，避免破坏玩家的心流。</p>
-<p>而像《GTA5》这样的全部实机动画演出对于二游来说就没有必要，成本较高。</p>
-<p><em>不过这样的成本对于这些中大厂而言其实是不高的，导致这样的原因根本上是厂商把资金更多地投入到了营销中，买量成本大量压缩了开发成本。我难以评价利弊，可能对于厂商的盈利是有利的，但我感觉对于游戏市场长期的良性发展是不利的，不确定。</em></p>
-]]></content>
-      <categories>
-        <category>评论</category>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>心流</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Unity的生命周期</title>
     <url>/2024/08/01/unity1/</url>
     <content><![CDATA[<h1 id="Unity的生命周期"><a href="#Unity的生命周期" class="headerlink" title="Unity的生命周期"></a>Unity的生命周期</h1><p><a href="https://docs.unity3d.com/cn/2023.2/Manual/UnityManual.html">Unity官方手册</a></p>
@@ -189,6 +135,60 @@
       </categories>
       <tags>
         <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2024/07/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hexo之Butterfly主题透明css浅析</title>
+    <url>/2024/07/29/css1/</url>
+    <content><![CDATA[<p><img src="/./img/posts/image-1.png" alt="效果图1"><br><img src="/./img/posts/image-2.png" alt="效果图2"></p>
+<h2 id="1-改变透明度"><a href="#1-改变透明度" class="headerlink" title="1.改变透明度"></a>1.改变透明度</h2><h3 id="卡片透明度"><a href="#卡片透明度" class="headerlink" title="卡片透明度"></a>卡片透明度</h3><p>在souce文件夹中新建css文件夹，用来存放所有自行配置的css文件，与img文件夹同理，防止更新后被覆盖。在文件夹中新建transparency.css文件，编写以下代码。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 明亮模式透明度0.75 */</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line"><span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">75</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 黑暗模式透明度0.7 */</span></span><br><span class="line"><span class="selector-attr">[data-theme=<span class="string">&quot;dark&quot;</span>]</span> &#123;</span><br><span class="line"><span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">12</span>, <span class="number">12</span>, <span class="number">12</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在主题配置文件的inject下按格式填写css，其中根目录为source文件夹。<br><img src="/../img/posts/image-3.png"></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/transparency.css&quot;&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="页脚透明度"><a href="#页脚透明度" class="headerlink" title="页脚透明度"></a>页脚透明度</h3><p>在主题配置文件中，将页脚颜色直接设置为transparent。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Footer Background</span></span><br><span class="line"><span class="attr">footer_bg:</span> <span class="string">transparent</span></span><br></pre></td></tr></table></figure>
+<p>因为有遮罩的关系，既保留了底色来显示文字，又可以和背景融为一体。<br><img src="/../img/posts/image.png" alt="页脚效果"></p>
+<h2 id="2-改变top颜色"><a href="#2-改变top颜色" class="headerlink" title="2.改变top颜色"></a>2.改变top颜色</h2><p>新建css文件命名为headtransparency，编写以下代码。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 取消top颜色以支持cover透明图片显示背景 */</span></span><br><span class="line"><span class="selector-id">#page-header</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: unset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>同样添加到inject中</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/headtransparency.css&quot;&gt;</span></span><br></pre></td></tr></table></figure>
+<p>因为顶图优先级top_img &gt; cover， 而cover既可以作为文章封面，又可以在top_img未设置时作为顶图，所以我准备全使用cover设置图片，省去多余图片设置。但在top_img未设置时，主题的蓝色 <code>#49b1f5</code> 会作为背景色填充 ，因为图片的webp和png格式有alpha通道，存在透明的图片会显露出cover图片下被默认填充的背景色，所以需要取消页眉的背景色填充，这样就可以透出页面背景。另外页眉同样有遮罩，比较合适。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Add mask to header or footer (为 header 或 footer 添加黑色半透遮罩)</span></span><br><span class="line"><span class="attr">mask:</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">footer:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h1 id="教学"><a href="#教学" class="headerlink" title="教学"></a>教学</h1><p>实际上css的内容操作是使用浏览器F12调试摸索的，需要在右侧的样式中逐一查找对应属性。<br><img src="/../img/posts/image4.png" alt="点击元素获取id"><br>因为我从未接触过css，速成只能利用网络文档和AI，自行摸索出了结果，而网络上流传的许多修改透明度方法千篇一律都是屎山代码，长篇大论中仅有一两句有用，且不适配黑暗模式的页面，所幸我最后自行排查出了结果，并简化了代码。</p>
+<p>另外我认为无需单独配置每个卡牌的透明度，如果透明度各不相同那页面会很不美观，又因为所有卡片都使用 <code>--card-bg</code> 作为颜色，那在两种页面模式下配置它即可，既省事又高效，但rgba函数仍需获取颜色作为填充，我选取了原主题颜色，可以自行调整。</p>
+<hr>
+<h3 id="以下是避雷"><a href="#以下是避雷" class="headerlink" title="以下是避雷"></a>以下是避雷</h3><p><img src="/../img/posts/026fc1bea3736cc224e319b6c2b4741e.png" alt="雷同的网络教程"><br>以下这是网络教程的雷同代码,除开页脚我直接设置为transparent外，仅两句可用，分别是.recent-post-item和最主要的–card-bg，且因为全覆盖设置成白色，完全不适配原黑暗模式页面。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 文章页背景 */</span></span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 可以自行修改*/</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 所有页面背景 */</span></span><br><span class="line"><span class="selector-id">#aside_content</span> <span class="selector-class">.card-widget</span>,</span><br><span class="line"><span class="selector-id">#recent-posts</span>&gt;<span class="selector-class">.recent-post-item</span>,</span><br><span class="line"><span class="selector-class">.layout_page</span>&gt;<span class="selector-tag">div</span><span class="selector-pseudo">:first-child</span><span class="selector-pseudo">:not</span>(<span class="selector-class">.recent-posts</span>),</span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#page</span>,</span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span>,</span><br><span class="line"><span class="selector-class">.read-mode</span> <span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 */</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*侧边卡片的透明度 */</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">    <span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 页脚透明 */</span></span><br><span class="line"><span class="selector-id">#footer</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 */</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Butterfly</tag>
+        <tag>css</tag>
       </tags>
   </entry>
 </search>
