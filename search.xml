@@ -1,36 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>游戏设计笔记2</title>
-    <url>/2024/08/09/b2/</url>
-    <content><![CDATA[<h2 id="游戏的构成"><a href="#游戏的构成" class="headerlink" title="游戏的构成"></a>游戏的构成</h2><p>在我的评价体系中，我将游戏拆分为两大元素：<strong>1.游戏性 2.艺术性</strong>。<br>其中“游戏性”可能与真正意义的<code>游戏性</code>不太一致，我这里主要为了与“艺术性”进行区分，而传统概念的<code>游戏性</code>是一个整体性的概念，包括了我所谓的“游戏性”和“艺术性”，是区别于其他娱乐方式或是艺术方式的概念。</p>
-<p>元素四分法中拆分游戏为：<strong>1.机制 2.技术 3.故事 4.美学</strong>。</p>
-<ul>
-<li>机制：包括游戏目标和游戏方式，使游戏成为游戏，需要美学、技术和故事的支持。</li>
-<li>故事：由游戏中事件按发生的顺序构成，需要机制来推动，美学来增强表现力，技术来配合展示。</li>
-<li>美学：是游戏的外观、声音等各方面的感觉，对玩家之体验影响最直接，可以搭配机制来表现，需要技术来放大，故事来凸显。</li>
-<li>技术：是一种媒介，美学通过其展现，机制通过其产生作用，故事通过其来讲述。</li>
-</ul>
-<p>我认为我的评价体系和四分法是高度重合的：“游戏性”主要包括了玩法、机制（可玩性）和技术；“艺术性”主要包括了剧情故事和美学，其中美学又包括美术、音乐音效、地编等元素。其中的<u>技术</u>其实是在两大元素的交集中。内容上其实一致，区别是四分法主要保留了各元素间的联系，我的评价体系做分割主要是为了方便评价，使各部分相对独立，</p>
-<p>我个人所谓的游戏评价体系就是在两大元素中专注评价感受较深的方面，分析优缺点，而非一个多边形的维度图来统一评价标准。</p>
-<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>游戏设计使用了全部的四种元素吗？设计能够通过增强一种或者多种元素来获得提高吗？四种元素是否和谐，互相作用并向同一个主题努力？</p>
-<h2 id="思维方式"><a href="#思维方式" class="headerlink" title="思维方式"></a>思维方式</h2><p>分析设计游戏要内外兼顾，表面涉及玩家体验，内在涉及游戏组成元素。不仅要理解各种各样的游戏元素及它们之间的关系，还必须考虑它们与体验的关系，即同时保留玩家视角与设计师视角，在理解元素及其关系是如何产生体验的同时感受游戏体验。如果只保留玩家视角，会只思考体验，却不理解为什么会有这样的体验或者怎样增强这种体验；<u>如果只保留设计师视角，可能让一个游戏结构在理论上十分完美，而在现实中十分糟糕</u>（这或许是我常感觉很多设计师、策划有问题的原因）。只有同时专注这两件事，才能设计出好的游戏内容。</p>
-<h3 id="思考-1"><a href="#思考-1" class="headerlink" title="思考"></a>思考</h3><p>这种思维方式近期才被我列为我的个人优势之一。具体想法如下（搬运自我的其他笔记）：<br><em>我爱玩游戏，会玩游戏，能真正的了解游戏，懂游戏，对于实际的策划工作有扎实的着力点。（这一点原本我认为是策划基础的必备能力，但是后来我才了解到现在很多的游戏设计师和策划，根本都不玩或者是玩不明白他们自己设计的游戏或是参照的游戏或是竞品，经典例如《英雄联盟》的设计师，在后知后觉地调整游戏平衡时还要私下微信询问部分英雄的“绝活哥”，通过他们的意见来设计平衡游戏，而最后设计改动的还和调研反馈大相径庭，且毫无作用，这我认为是很可笑的，这样的例子还有很多，比如《绝区零》《鸣潮》《尘白禁区》等游戏都有类似情况，<del>这点与我说的第二点共同作用，</del> 展开来详细讲内容会很多，<u>概括来说就是现在很多的策划在招人和实际工作时我觉得有点过于学院派和闭门造车</u>）</em><br><strong>总之我现在认为我能同时从玩家视角和策划视角分析游戏，这成为了我的一大能力优势。</strong> 虽然还并没有人认可，或许也再也没机会被人认可了。</p>
-<p>必须一次性看到游戏的全部：四种元素和玩家体验以及它们是怎样关联起来的。可以把注意力从皮肤转移到骨骼再到皮肤，但更好的方法是全息观察游戏和体验。<br>反思游戏中的哪种元素产生了令人享受的体验？游戏中的哪种元素会让玩家在体验中分心？怎样改变游戏元素来提高游戏体验？</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-        <tag>评价体系</tag>
-        <tag>个人优势</tag>
-        <tag>我</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>游戏设计笔记1</title>
     <url>/2024/08/08/b1/</url>
     <content><![CDATA[<h2 id="策划必备要素"><a href="#策划必备要素" class="headerlink" title="策划必备要素"></a>策划必备要素</h2><p>倾听&gt;&gt;创意，沟通</p>
@@ -86,6 +56,36 @@
       </tags>
   </entry>
   <entry>
+    <title>游戏设计笔记2</title>
+    <url>/2024/08/09/b2/</url>
+    <content><![CDATA[<h2 id="游戏的构成"><a href="#游戏的构成" class="headerlink" title="游戏的构成"></a>游戏的构成</h2><p>在我的评价体系中，我将游戏拆分为两大元素：<strong>1.游戏性 2.艺术性</strong>。<br>其中“游戏性”可能与真正意义的<code>游戏性</code>不太一致，我这里主要为了与“艺术性”进行区分，而传统概念的<code>游戏性</code>是一个整体性的概念，包括了我所谓的“游戏性”和“艺术性”，是区别于其他娱乐方式或是艺术方式的概念。</p>
+<p>元素四分法中拆分游戏为：<strong>1.机制 2.技术 3.故事 4.美学</strong>。</p>
+<ul>
+<li>机制：包括游戏目标和游戏方式，使游戏成为游戏，需要美学、技术和故事的支持。</li>
+<li>故事：由游戏中事件按发生的顺序构成，需要机制来推动，美学来增强表现力，技术来配合展示。</li>
+<li>美学：是游戏的外观、声音等各方面的感觉，对玩家之体验影响最直接，可以搭配机制来表现，需要技术来放大，故事来凸显。</li>
+<li>技术：是一种媒介，美学通过其展现，机制通过其产生作用，故事通过其来讲述。</li>
+</ul>
+<p>我认为我的评价体系和四分法是高度重合的：“游戏性”主要包括了玩法、机制（可玩性）和技术；“艺术性”主要包括了剧情故事和美学，其中美学又包括美术、音乐音效、地编等元素。其中的<u>技术</u>其实是在两大元素的交集中。内容上其实一致，区别是四分法主要保留了各元素间的联系，我的评价体系做分割主要是为了方便评价，使各部分相对独立，</p>
+<p>我个人所谓的游戏评价体系就是在两大元素中专注评价感受较深的方面，分析优缺点，而非一个多边形的维度图来统一评价标准。</p>
+<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>游戏设计使用了全部的四种元素吗？设计能够通过增强一种或者多种元素来获得提高吗？四种元素是否和谐，互相作用并向同一个主题努力？</p>
+<h2 id="思维方式"><a href="#思维方式" class="headerlink" title="思维方式"></a>思维方式</h2><p>分析设计游戏要内外兼顾，表面涉及玩家体验，内在涉及游戏组成元素。不仅要理解各种各样的游戏元素及它们之间的关系，还必须考虑它们与体验的关系，即同时保留玩家视角与设计师视角，在理解元素及其关系是如何产生体验的同时感受游戏体验。如果只保留玩家视角，会只思考体验，却不理解为什么会有这样的体验或者怎样增强这种体验；<u>如果只保留设计师视角，可能让一个游戏结构在理论上十分完美，而在现实中十分糟糕</u>（这或许是我常感觉很多设计师、策划有问题的原因）。只有同时专注这两件事，才能设计出好的游戏内容。</p>
+<h3 id="思考-1"><a href="#思考-1" class="headerlink" title="思考"></a>思考</h3><p>这种思维方式近期才被我列为我的个人优势之一。具体想法如下（搬运自我的其他笔记）：<br><em>我爱玩游戏，会玩游戏，能真正的了解游戏，懂游戏，对于实际的策划工作有扎实的着力点。（这一点原本我认为是策划基础的必备能力，但是后来我才了解到现在很多的游戏设计师和策划，根本都不玩或者是玩不明白他们自己设计的游戏或是参照的游戏或是竞品，经典例如《英雄联盟》的设计师，在后知后觉地调整游戏平衡时还要私下微信询问部分英雄的“绝活哥”，通过他们的意见来设计平衡游戏，而最后设计改动的还和调研反馈大相径庭，且毫无作用，这我认为是很可笑的，这样的例子还有很多，比如《绝区零》《鸣潮》《尘白禁区》等游戏都有类似情况，<del>这点与我说的第二点共同作用，</del> 展开来详细讲内容会很多，<u>概括来说就是现在很多的策划在招人和实际工作时我觉得有点过于学院派和闭门造车</u>）</em><br><strong>总之我现在认为我能同时从玩家视角和策划视角分析游戏，这成为了我的一大能力优势。</strong> 虽然还并没有人认可，或许也再也没机会被人认可了。</p>
+<p>必须一次性看到游戏的全部：四种元素和玩家体验以及它们是怎样关联起来的。可以把注意力从皮肤转移到骨骼再到皮肤，但更好的方法是全息观察游戏和体验。<br>反思游戏中的哪种元素产生了令人享受的体验？游戏中的哪种元素会让玩家在体验中分心？怎样改变游戏元素来提高游戏体验？</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+        <tag>评价体系</tag>
+        <tag>个人优势</tag>
+        <tag>我</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo之Butterfly主题透明css浅析</title>
     <url>/2024/07/29/css1/</url>
     <content><![CDATA[<p><img src="/./img/posts/image-1.png" alt="效果图1"><br><img src="/./img/posts/image-2.png" alt="效果图2"></p>
@@ -122,24 +122,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/07/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>游戏设计之心流</title>
     <url>/2024/08/02/design1/</url>
     <content><![CDATA[<h1 id="心流"><a href="#心流" class="headerlink" title="心流"></a>心流</h1><p><u>指玩家沉浸游戏，淡化时间、饥饿等外部因素，全神贯注的状态</u><br>理论适用于大部分“传统游戏”，但仍须根据游戏类型及目标用户具体问题具体分析。<br><img src="https://s2.loli.net/2024/08/02/3RkghHSZ5JzfY76.png" alt="心流图"><br><strong>心流的节奏要有变化</strong></p>
@@ -168,6 +150,24 @@
         <tag>游戏设计</tag>
         <tag>心流</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2024/07/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>关于《炉石传说》国服回归策划的启发</title>
