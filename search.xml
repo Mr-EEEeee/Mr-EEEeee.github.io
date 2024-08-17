@@ -76,6 +76,117 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo之Butterfly主题透明css浅析</title>
+    <url>/2024/07/29/css1/</url>
+    <content><![CDATA[<p><img src="/./img/posts/image-1.png" alt="效果图1"><br><img src="/./img/posts/image-2.png" alt="效果图2"></p>
+<h2 id="1-改变透明度"><a href="#1-改变透明度" class="headerlink" title="1.改变透明度"></a>1.改变透明度</h2><h3 id="卡片透明度"><a href="#卡片透明度" class="headerlink" title="卡片透明度"></a>卡片透明度</h3><p>在souce文件夹中新建css文件夹，用来存放所有自行配置的css文件，与img文件夹同理，防止更新后被覆盖。在文件夹中新建transparency.css文件，编写以下代码。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 明亮模式透明度0.75 */</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line"><span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">75</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 黑暗模式透明度0.7 */</span></span><br><span class="line"><span class="selector-attr">[data-theme=<span class="string">&quot;dark&quot;</span>]</span> &#123;</span><br><span class="line"><span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">12</span>, <span class="number">12</span>, <span class="number">12</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在主题配置文件的inject下按格式填写css，其中根目录为source文件夹。<br><img src="/../img/posts/image-3.png"></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/transparency.css&quot;&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="页脚透明度"><a href="#页脚透明度" class="headerlink" title="页脚透明度"></a>页脚透明度</h3><p>在主题配置文件中，将页脚颜色直接设置为transparent。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Footer Background</span></span><br><span class="line"><span class="attr">footer_bg:</span> <span class="string">transparent</span></span><br></pre></td></tr></table></figure>
+<p>因为有遮罩的关系，既保留了底色来显示文字，又可以和背景融为一体。<br><img src="/../img/posts/image.png" alt="页脚效果"></p>
+<h2 id="2-改变top颜色"><a href="#2-改变top颜色" class="headerlink" title="2.改变top颜色"></a>2.改变top颜色</h2><p>新建css文件命名为headtransparency，编写以下代码。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 取消top颜色以支持cover透明图片显示背景 */</span></span><br><span class="line"><span class="selector-id">#page-header</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: unset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>同样添加到inject中</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/headtransparency.css&quot;&gt;</span></span><br></pre></td></tr></table></figure>
+<p>因为顶图优先级top_img &gt; cover， 而cover既可以作为文章封面，又可以在top_img未设置时作为顶图，所以我准备全使用cover设置图片，省去多余图片设置。但在top_img未设置时，主题的蓝色 <code>#49b1f5</code> 会作为背景色填充 ，因为图片的webp和png格式有alpha通道，存在透明的图片会显露出cover图片下被默认填充的背景色，所以需要取消页眉的背景色填充，这样就可以透出页面背景。另外页眉同样有遮罩，比较合适。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Add mask to header or footer (为 header 或 footer 添加黑色半透遮罩)</span></span><br><span class="line"><span class="attr">mask:</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">footer:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h1 id="教学"><a href="#教学" class="headerlink" title="教学"></a>教学</h1><p>实际上css的内容操作是使用浏览器F12调试摸索的，需要在右侧的样式中逐一查找对应属性。<br><img src="/../img/posts/image4.png" alt="点击元素获取id"><br>因为我从未接触过css，速成只能利用网络文档和AI，自行摸索出了结果，而网络上流传的许多修改透明度方法千篇一律都是屎山代码，长篇大论中仅有一两句有用，且不适配黑暗模式的页面，所幸我最后自行排查出了结果，并简化了代码。</p>
+<p>另外我认为无需单独配置每个卡牌的透明度，如果透明度各不相同那页面会很不美观，又因为所有卡片都使用 <code>--card-bg</code> 作为颜色，那在两种页面模式下配置它即可，既省事又高效，但rgba函数仍需获取颜色作为填充，我选取了原主题颜色，可以自行调整。</p>
+<hr>
+<h3 id="以下是避雷"><a href="#以下是避雷" class="headerlink" title="以下是避雷"></a>以下是避雷</h3><p><img src="/../img/posts/026fc1bea3736cc224e319b6c2b4741e.png" alt="雷同的网络教程"><br>以下这是网络教程的雷同代码,除开页脚我直接设置为transparent外，仅两句可用，分别是.recent-post-item和最主要的–card-bg，且因为全覆盖设置成白色，完全不适配原黑暗模式页面。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 文章页背景 */</span></span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 可以自行修改*/</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 所有页面背景 */</span></span><br><span class="line"><span class="selector-id">#aside_content</span> <span class="selector-class">.card-widget</span>,</span><br><span class="line"><span class="selector-id">#recent-posts</span>&gt;<span class="selector-class">.recent-post-item</span>,</span><br><span class="line"><span class="selector-class">.layout_page</span>&gt;<span class="selector-tag">div</span><span class="selector-pseudo">:first-child</span><span class="selector-pseudo">:not</span>(<span class="selector-class">.recent-posts</span>),</span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#page</span>,</span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span>,</span><br><span class="line"><span class="selector-class">.read-mode</span> <span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 */</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*侧边卡片的透明度 */</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">    <span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 页脚透明 */</span></span><br><span class="line"><span class="selector-id">#footer</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 */</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Butterfly</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏设计之心流</title>
+    <url>/2024/08/02/design1/</url>
+    <content><![CDATA[<h1 id="心流"><a href="#心流" class="headerlink" title="心流"></a>心流</h1><p><u>指玩家沉浸游戏，淡化时间、饥饿等外部因素，全神贯注的状态</u><br>理论适用于大部分“传统游戏”，但仍须根据游戏类型及目标用户具体问题具体分析。<br><img src="https://s2.loli.net/2024/08/02/3RkghHSZ5JzfY76.png" alt="心流图"><br><strong>心流的节奏要有变化</strong></p>
+<p>达到心流体验的最主要的条件我认为是：1.明确的目标 2.充分的正反馈。<br><em>但我还没有真正参与设计出过优秀的游戏，所以暂不分析也没有能力分析如何设计具有心流体验的游戏，下文更多通过解读和举例分析来浅谈心流。</em></p>
+<p>特殊的如魂系游戏和大部分手游另作讨论。<br>魂系游戏：更多依靠技术，以及在高压的焦虑中起伏的心流状态。<br>手游：更多依靠养成和数值，碎片化游戏时间，难以产生心流状态。</p>
+<p><img src="https://s2.loli.net/2024/08/02/oZ2zb56vGeV4kyU.png" alt="游戏体验数据走向"><br>游戏中的各种决策决定了游戏节奏和玩家的体验感受，大的决策影响更大，决策也会受玩家的水平影响。<br><img src="https://s2.loli.net/2024/08/02/mXuhxga9bqFEDTP.png" alt="决策流程图"><br>抽象来说<u>最差</u>的游戏设计就是<strong>破坏玩家的心流体验</strong>。<br><a id="content"></a>游戏设计要<strong>避免心流中断</strong>，出现停顿都可能影响心流让玩家感到不适，常见和典型的例子如<strong>场景加载</strong>、<strong>菜单动画</strong>、<strong>对话框</strong>等，这种交互效果都会短暂的阻碍玩家行动，如果频繁出现且无法加速和跳过会导致断层。</p>
+<p>在《赛博朋克2077》中强制对话较少，大部分对话都不会限制玩家行动，且完全没有固定和 <em>“美观”</em> 的对话窗口；<a href="#comment1">而在《GTA5》中人物的固定对话建立在第三人称真实且丰富的实机演出上，包括人物的动作、表情等，且剧情分支是根据角色的具体行为而非对话选项</a>。两者的例子整体简单来说就是在避免断层，这样的设计在RPG中较优。<a href="#comment2">反面来说，《原神》《鸣潮》等游戏被大量玩家网友诟病的对话无法跳过，剧情对话又臭又长的这种体验，根本上就是<u>阻碍了玩家心流的形成</u></a>，因为二游每个版本都有大量的剧情对话，且大部分的对话都没有伴随剧情演出，只是角色直立生硬的对话框对话，<u>信息密度过低破坏了玩家的沉浸感</u>，从游戏设计上讲是非常低级的，<a href="#comment3">且完全有办法优化</a>。<br><img src="https://s2.loli.net/2024/08/02/lHYIEQiLvu4O8Dw.png" alt="心流断层导致节奏破碎的体验"></p>
+<p>游戏设计也要<strong>避免决策溢出</strong>，同时出现过多的决策会让玩家感到压力，常出现在路线分支等情况和水平较低的玩家身上。决策溢出更难避免，需要在游戏测试过程中持续优化，可以设定一些阈值，而不是设法全覆盖。</p>
+<p><u>以上内容不完全适用于回合制游戏，需要具体游戏具体分析。</u></p>
+<h2 id="评论"><a href="#评论" class="headerlink" title="评论 "></a>评论 <a id="comment1"></a></h2><p><a href="#content">返回文中</a></p>
+<p><a id="comment2"></a>过场对话的剧情体验是GTA5心流中的”伏“，任务的进行则是“起”。</p>
+<hr>
+<p><a id="comment3"></a>这是已经得到市场验证的，《鸣潮》在开服后几天添加了更多对话的跳过来补救，更是印证了这种说法。我认为这其实是游戏设计和体验过程中很基础和重要的方面，所以我不理解库洛和米哈游这种中大厂的策划到底是什么水平。<em>为什么连我这样应届生未入行的人都能分析和理解的游戏设计，他们却不懂。</em></p>
+<p><em>所以之前春招后期有面试官问过我，“考虑过为什么策划岗的校招应聘结果不理想”，我不只回答说“因为我个人的经验不足，没有完全地从玩家视角转变到策划开发者的视角”，我还简单地说“感觉策划岗位对学历的要求更高”，因为我个人感觉策划岗位很难通过交流得知实际的策划水平，不像开发直接做算法题判断人的代码能力，而目前游戏公司招策划很看重学历高低，相较其他岗位我不认同策划岗位的能力与应试的学历正相关，我更感觉策划水平与天赋有关。有点幽默的是后来我还听到过大概说“找不到工作不要总反思自己，也要反思外部因素”的说法，我就也开始考虑，再根据库洛《鸣潮》公测后的表现，我更加怀疑策划岗位求职情况不理想，不只是我有问题，我对自己的工作能力一直很有信心，不过也不至于说自负到把原因都归结于别人，我没工作这段时间一直在学习游戏设计来提升自己。</em></p>
+<hr>
+<p>简单的如添加跳过和倍速选项，在跳过中对对话和剧情进行文字的总结呈现；特殊的如借鉴日厂游戏《绯红结系》《女神异闻录》等用2D形式来美化对话演出，仅需增加一些人物表情拆分等即可。</p>
+<p>针对这类二游，我个人设计将次要的内容通过类似漫画的的方式呈现，重要的主线再通过文字和视频具体表现，从计算机视觉方向讲，现在追求的是“多模态”，类比来说我这样的游戏设计就是在提高信息密度以提供相对流畅的游戏体验，避免破坏玩家的心流。</p>
+<p>而像《GTA5》这样的全部实机动画演出对于二游来说就没有必要，成本较高。</p>
+<p><em>不过这样的成本对于这些中大厂而言其实是不高的，导致这样的原因根本上是厂商把资金更多地投入到了营销中，买量成本大量压缩了开发成本。我难以评价利弊，可能对于厂商的盈利是有利的，但我感觉对于游戏市场长期的良性发展是不利的，不确定。</em></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>心流</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为什么感觉好玩的新游戏越来越少？</title>
+    <url>/2024/08/17/idea2/</url>
+    <content><![CDATA[<p>我希望我未来能设计出好玩的游戏。</p>
+<h1 id="游戏的发展趋势"><a href="#游戏的发展趋势" class="headerlink" title="游戏的发展趋势"></a>游戏的发展趋势</h1><p>我想把游戏发展大致分为三个阶段：①约2000年前的萌芽期 ②00年至15年左右的发展红利期 ③15年后至今的稳定期。<br>虽然很多书籍、视频等内容很详细地讲解过游戏发展的几个阶段，但我主要是以各阶段为载体，来分析游戏设计的发展趋势。</p>
+<p>在①阶段，游戏从2D向3D发展，创新了很多技术和游戏模式，成为了之后游戏的基础。<br>在②阶段时，各种游戏如雨后春笋般地出现，技术的迭代、玩法的革新无不刺激着玩家们的神经，让人耳目一新。<br>在③阶段时，各方面的“质变”逐渐放缓，玩法创新逐渐减少，游戏产品趋于工业化，产生了一定瓶颈。</p>
+<p>某种程度上说，③阶段的现状就是本文标题问题的原因。游戏玩法经过这么多年的积累已经趋于饱和，近年游戏的创新，只能通过“抄”的方式：跨国抄、跨文化抄、跨品类抄、跨平台抄等等（可能具体另写一文论述）。玩法上排列组合、重组优化的创新方式让游戏的惊喜刺激程度相比②阶段有所减弱，很多工业化的出品也是乏善可陈。<del>创新的放缓和现在大环境一致，电影、音乐等内容的发展也都趋于停滞，如同当今市场下创新创业的艰难，也类比摩尔定律在如今的失效，但这形势太大我无法分析，但肯定是有一定关系的，比如游戏的设计更受投资方的影响，追求变现能力和稳定性，削弱了开发者的能力。</del></p>
+<p>总之，现在游戏发展趋向稳定化，画面技术上一定的发展难以弥补玩法上创新的缺失，毕竟游戏的特点还是在“玩”。</p>
+<p>在玩法难以创新的形势下，玩家所获得的惊喜刺激相对减少，所以网游、手游开始更有优势，通过版本内容的更新、PVP竞技的无限随机和即时正反馈，让玩家获得更廉价的快乐，一个版本的收益就与单机顶级佳作卖出得全部份额相当。而部分单机3A游戏也开始顺应时代的趋势，产出了越来越多的“良品”：典型的如育碧一代代的《刺客信条》，动视一代代的《使命召唤》，甚至还出现了CDPR《赛博朋克2077》这种半成品。这些游戏有的开始内购皮肤、载具，有的阉割内容，通过DLC来补全游戏，工业化的产出让整体游戏发展开始劣币驱逐良币，越来越少的厂商坚持内容路线，开发游戏的主旨从好玩逐渐向收益倾斜。这也导致了恶性循环，很多手游、网游设计者或者说策划，在设计好玩游戏内容的能力越来越弱，游戏设计能力越来越差（手游每日上线清体力、日常这样上班式的体验；《守望先锋》低下的平衡性和更新速度；《鸣潮》被喷强制进行长对话；《绝区零》被喷走格子玩法和低级的战斗玩法等等），依赖艺术方面的优势来转移玩家的注意力，不通过“玩”来吸引“玩家”，而是靠收集？养成？还是靠玩家的幻想？（指美术、皮肤等）来吸引人们，并给游戏公司带来可观的收益，即便很大程度上不是内容设计师、策划的功劳，或者说主要是美术、文案等方面的功劳。总之，游戏给玩家提供的情绪价值似乎从出发点上已经发生了变换。</p>
+<h1 id="电子ED的病因"><a href="#电子ED的病因" class="headerlink" title="电子ED的病因"></a>电子ED的病因</h1><p>我认为总体主要分为以下两点。</p>
+<h2 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h2><p>从时间上看，游玩游戏的主力军年龄已经越来越高。大环境上，当代社会节奏加快，人们的生活压力增大，一些玩家可能因为生活、工作或其他责任的增加，而感到精力不足，难以像以前那样投入游戏，也有很多人没有足够的时间投入到游戏中，毕竟游戏需要投入一定学习和时间成本，长时间的工作和学习可能使他们更倾向于选择更轻松的休闲方式。</p>
+<p>随着手游的兴起，人们开始更多地接触手游，手游通常设计得更加便捷和易于上手，满足了快节奏生活中碎片化时间的娱乐需求，更廉价的正反馈可能导致很多玩家消耗了原本对于传统电子游戏的兴趣，让人难以再静心去体验游戏，就像“伟哥”一样透支了人们的游玩动力，并让人们离不开它，这在更年轻的下一代上影响或许更加明显，很多人开始连电脑都不会使用。</p>
+<h2 id="游戏性"><a href="#游戏性" class="headerlink" title="游戏性"></a>游戏性</h2><p>如第一章的发展趋势中所说，当今游戏很难产生颠覆性的玩法，玩家们见识过了越来越多的游戏，接触新的游戏越来越难以产生惊喜和共鸣，游戏内容上的变化更多地开始体现在剧情设定、画面等艺术内容上，人们每当游玩新的游戏时，常能快速地熟悉游戏机制，而在玩法上感到同质化，无法产生“新”的感觉时，在游玩了一段时间后很容易在度过游戏初期后就感到乏味而弃坑。</p>
+<h1 id="为什么《幻兽帕鲁》是电子ED的特效药"><a href="#为什么《幻兽帕鲁》是电子ED的特效药" class="headerlink" title="为什么《幻兽帕鲁》是电子ED的特效药"></a>为什么《幻兽帕鲁》是电子ED的特效药</h1><h1 id="为什么我预测《黑神话：悟空》会成功"><a href="#为什么我预测《黑神话：悟空》会成功" class="headerlink" title="为什么我预测《黑神话：悟空》会成功"></a>为什么我预测《黑神话：悟空》会成功</h1><p>2024年8月16日晚10点解禁了《黑神话：悟空》的媒体评测，结合部分的实机演示，我认为《黑神话：悟空》大概率会是一个优秀的作品，并且应该很好玩，只要恶性BUG不多。</p>
+<p>综上所述，好玩的游戏应该能让玩家体验到新鲜感，但现在游戏又都是互相“抄”，那么让玩家感觉到“原创感”就是“抄”的最高境界，《黑神话：悟空》很大概率能达到。《守望先锋》为什么初期那么优秀，因为它有“原创感”，将MOBA融合到FPS中，将各个国家的标志性建筑设计成地图，将类似这些方面节省的工作量投入到角色设计及开发玩法中，设计出优秀的竞技体验，让玩家们感觉这就是原创的精品游戏。</p>
+<p>《黑神话：悟空》以《西游记》为背景文化，大大节省了自行设计庞大世界观的消耗，同时能借鉴国外大量的优秀动作和角色扮演游戏，游戏厂商如育碧、卡普空、顽皮狗、From Software等，虽说大家常将其与《黑暗之魂》对比，但我个人感觉与《只狼：影逝二度》最相关（相比黑魂的地图、关卡更相似，且弱化关卡沿途小怪，更注重BOSS战），且相比只狼的故事，以顶级神话故事为基底更具优势。另外《黑神话：悟空》还跨越了种族，主角将是一个猴子，玩法上《西游记》就给出了答案，无论是武器、法术，还是七十二变、铜头铁臂，都极大拓展了游戏玩法，足够让玩家获得新鲜感、“原创感”，这些创意拿来主义后节省下来的时间、金钱，能更进一步地用于优化、完善游戏设计和创意。</p>
+<p>值得一提的是，如上文第一章发展趋势所说，游戏开发开始以收益为导向，通过对比，很显然，我认为《黑神话：悟空》能好玩、能成功的优势就在于不以赚钱为首要目标，听说游科拥有充足的资金供应，那么不受制于投资者和温饱收益限制，开发者们义无反顾地发挥能力，专注于游戏内容的设计，可以使 <code>游戏性</code> 得到充分的满足，且显而易见地表现在了画面中，向所有人展现了虚幻5引擎的强大。</p>
+<h1 id="未来游戏发展方向"><a href="#未来游戏发展方向" class="headerlink" title="未来游戏发展方向"></a>未来游戏发展方向</h1><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1>]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2024/07/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>状态模式笔记1</title>
     <url>/2024/08/11/b3/</url>
     <content><![CDATA[<p>英雄游戏（英雄互娱）曾在面试中询问我有关动画状态机的内容，我当时没有准备过这方面，紧张时说出了不太了解的回答，事后回想自己其实了解过相关内容，曾在设计角色时绑定骨骼后导入过一些动作来操控角色，当时还学习过如何平滑动作动画，进行状态机的切换，懊悔自己薄弱的即时表达能力，感觉很可惜。借此机会，我回顾了“动画状态机”，同时再阅读有关“设计模式”的书籍，通过递归式地学习，针对“状态模式”先做些笔记，发散出了“有限状态机”再是“行为树”等内容，所以将笔记拆分为几篇集中叙写，内容对象针对游戏角色(AI)。<del>这几天我的确还是有点乏了，感觉自己学的写的没有正反馈，认识的朋友们大都找到合适的工作了，我水平真的不够吗，感觉入职之后再写博客会更有动力吧。。。</del></p>
@@ -113,42 +224,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo之Butterfly主题透明css浅析</title>
-    <url>/2024/07/29/css1/</url>
-    <content><![CDATA[<p><img src="/./img/posts/image-1.png" alt="效果图1"><br><img src="/./img/posts/image-2.png" alt="效果图2"></p>
-<h2 id="1-改变透明度"><a href="#1-改变透明度" class="headerlink" title="1.改变透明度"></a>1.改变透明度</h2><h3 id="卡片透明度"><a href="#卡片透明度" class="headerlink" title="卡片透明度"></a>卡片透明度</h3><p>在souce文件夹中新建css文件夹，用来存放所有自行配置的css文件，与img文件夹同理，防止更新后被覆盖。在文件夹中新建transparency.css文件，编写以下代码。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 明亮模式透明度0.75 */</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line"><span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">75</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 黑暗模式透明度0.7 */</span></span><br><span class="line"><span class="selector-attr">[data-theme=<span class="string">&quot;dark&quot;</span>]</span> &#123;</span><br><span class="line"><span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">12</span>, <span class="number">12</span>, <span class="number">12</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在主题配置文件的inject下按格式填写css，其中根目录为source文件夹。<br><img src="/../img/posts/image-3.png"></p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/transparency.css&quot;&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="页脚透明度"><a href="#页脚透明度" class="headerlink" title="页脚透明度"></a>页脚透明度</h3><p>在主题配置文件中，将页脚颜色直接设置为transparent。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Footer Background</span></span><br><span class="line"><span class="attr">footer_bg:</span> <span class="string">transparent</span></span><br></pre></td></tr></table></figure>
-<p>因为有遮罩的关系，既保留了底色来显示文字，又可以和背景融为一体。<br><img src="/../img/posts/image.png" alt="页脚效果"></p>
-<h2 id="2-改变top颜色"><a href="#2-改变top颜色" class="headerlink" title="2.改变top颜色"></a>2.改变top颜色</h2><p>新建css文件命名为headtransparency，编写以下代码。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 取消top颜色以支持cover透明图片显示背景 */</span></span><br><span class="line"><span class="selector-id">#page-header</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: unset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>同样添加到inject中</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/headtransparency.css&quot;&gt;</span></span><br></pre></td></tr></table></figure>
-<p>因为顶图优先级top_img &gt; cover， 而cover既可以作为文章封面，又可以在top_img未设置时作为顶图，所以我准备全使用cover设置图片，省去多余图片设置。但在top_img未设置时，主题的蓝色 <code>#49b1f5</code> 会作为背景色填充 ，因为图片的webp和png格式有alpha通道，存在透明的图片会显露出cover图片下被默认填充的背景色，所以需要取消页眉的背景色填充，这样就可以透出页面背景。另外页眉同样有遮罩，比较合适。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Add mask to header or footer (为 header 或 footer 添加黑色半透遮罩)</span></span><br><span class="line"><span class="attr">mask:</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">footer:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h1 id="教学"><a href="#教学" class="headerlink" title="教学"></a>教学</h1><p>实际上css的内容操作是使用浏览器F12调试摸索的，需要在右侧的样式中逐一查找对应属性。<br><img src="/../img/posts/image4.png" alt="点击元素获取id"><br>因为我从未接触过css，速成只能利用网络文档和AI，自行摸索出了结果，而网络上流传的许多修改透明度方法千篇一律都是屎山代码，长篇大论中仅有一两句有用，且不适配黑暗模式的页面，所幸我最后自行排查出了结果，并简化了代码。</p>
-<p>另外我认为无需单独配置每个卡牌的透明度，如果透明度各不相同那页面会很不美观，又因为所有卡片都使用 <code>--card-bg</code> 作为颜色，那在两种页面模式下配置它即可，既省事又高效，但rgba函数仍需获取颜色作为填充，我选取了原主题颜色，可以自行调整。</p>
-<hr>
-<h3 id="以下是避雷"><a href="#以下是避雷" class="headerlink" title="以下是避雷"></a>以下是避雷</h3><p><img src="/../img/posts/026fc1bea3736cc224e319b6c2b4741e.png" alt="雷同的网络教程"><br>以下这是网络教程的雷同代码,除开页脚我直接设置为transparent外，仅两句可用，分别是.recent-post-item和最主要的–card-bg，且因为全覆盖设置成白色，完全不适配原黑暗模式页面。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 文章页背景 */</span></span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 可以自行修改*/</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 所有页面背景 */</span></span><br><span class="line"><span class="selector-id">#aside_content</span> <span class="selector-class">.card-widget</span>,</span><br><span class="line"><span class="selector-id">#recent-posts</span>&gt;<span class="selector-class">.recent-post-item</span>,</span><br><span class="line"><span class="selector-class">.layout_page</span>&gt;<span class="selector-tag">div</span><span class="selector-pseudo">:first-child</span><span class="selector-pseudo">:not</span>(<span class="selector-class">.recent-posts</span>),</span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#page</span>,</span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span>,</span><br><span class="line"><span class="selector-class">.read-mode</span> <span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 */</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*侧边卡片的透明度 */</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">    <span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 页脚透明 */</span></span><br><span class="line"><span class="selector-id">#footer</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 */</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Butterfly</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于《炉石传说》国服回归策划的启发</title>
     <url>/2024/07/30/idea1/</url>
     <content><![CDATA[<h2 id="新闻"><a href="#新闻" class="headerlink" title="新闻"></a>新闻</h2><p>最近的ChinaJoy上，《炉石传说》（HearthStone）中国宣布，回归日期定档9月25日，回归后一定时间内登录《炉石传说》，所有国服玩家（包括新注册玩家）即可免费获赠2023年全部错过的卡牌，共计2154张卡牌，包括全部97张金色传说。另外游戏内还有额外的任务卡包、皮肤等福利，游戏外与网易雷火合作赞助赛事100万元奖金以及提供4个国服直邀名额。</p>
@@ -171,125 +246,6 @@
         <tag>策划</tag>
         <tag>游戏</tag>
         <tag>运营</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>游戏设计之心流</title>
-    <url>/2024/08/02/design1/</url>
-    <content><![CDATA[<h1 id="心流"><a href="#心流" class="headerlink" title="心流"></a>心流</h1><p><u>指玩家沉浸游戏，淡化时间、饥饿等外部因素，全神贯注的状态</u><br>理论适用于大部分“传统游戏”，但仍须根据游戏类型及目标用户具体问题具体分析。<br><img src="https://s2.loli.net/2024/08/02/3RkghHSZ5JzfY76.png" alt="心流图"><br><strong>心流的节奏要有变化</strong></p>
-<p>达到心流体验的最主要的条件我认为是：1.明确的目标 2.充分的正反馈。<br><em>但我还没有真正参与设计出过优秀的游戏，所以暂不分析也没有能力分析如何设计具有心流体验的游戏，下文更多通过解读和举例分析来浅谈心流。</em></p>
-<p>特殊的如魂系游戏和大部分手游另作讨论。<br>魂系游戏：更多依靠技术，以及在高压的焦虑中起伏的心流状态。<br>手游：更多依靠养成和数值，碎片化游戏时间，难以产生心流状态。</p>
-<p><img src="https://s2.loli.net/2024/08/02/oZ2zb56vGeV4kyU.png" alt="游戏体验数据走向"><br>游戏中的各种决策决定了游戏节奏和玩家的体验感受，大的决策影响更大，决策也会受玩家的水平影响。<br><img src="https://s2.loli.net/2024/08/02/mXuhxga9bqFEDTP.png" alt="决策流程图"><br>抽象来说<u>最差</u>的游戏设计就是<strong>破坏玩家的心流体验</strong>。<br><a id="content"></a>游戏设计要<strong>避免心流中断</strong>，出现停顿都可能影响心流让玩家感到不适，常见和典型的例子如<strong>场景加载</strong>、<strong>菜单动画</strong>、<strong>对话框</strong>等，这种交互效果都会短暂的阻碍玩家行动，如果频繁出现且无法加速和跳过会导致断层。</p>
-<p>在《赛博朋克2077》中强制对话较少，大部分对话都不会限制玩家行动，且完全没有固定和 <em>“美观”</em> 的对话窗口；<a href="#comment1">而在《GTA5》中人物的固定对话建立在第三人称真实且丰富的实机演出上，包括人物的动作、表情等，且剧情分支是根据角色的具体行为而非对话选项</a>。两者的例子整体简单来说就是在避免断层，这样的设计在RPG中较优。<a href="#comment2">反面来说，《原神》《鸣潮》等游戏被大量玩家网友诟病的对话无法跳过，剧情对话又臭又长的这种体验，根本上就是<u>阻碍了玩家心流的形成</u></a>，因为二游每个版本都有大量的剧情对话，且大部分的对话都没有伴随剧情演出，只是角色直立生硬的对话框对话，<u>信息密度过低破坏了玩家的沉浸感</u>，从游戏设计上讲是非常低级的，<a href="#comment3">且完全有办法优化</a>。<br><img src="https://s2.loli.net/2024/08/02/lHYIEQiLvu4O8Dw.png" alt="心流断层导致节奏破碎的体验"></p>
-<p>游戏设计也要<strong>避免决策溢出</strong>，同时出现过多的决策会让玩家感到压力，常出现在路线分支等情况和水平较低的玩家身上。决策溢出更难避免，需要在游戏测试过程中持续优化，可以设定一些阈值，而不是设法全覆盖。</p>
-<p><u>以上内容不完全适用于回合制游戏，需要具体游戏具体分析。</u></p>
-<h2 id="评论"><a href="#评论" class="headerlink" title="评论 "></a>评论 <a id="comment1"></a></h2><p><a href="#content">返回文中</a></p>
-<p><a id="comment2"></a>过场对话的剧情体验是GTA5心流中的”伏“，任务的进行则是“起”。</p>
-<hr>
-<p><a id="comment3"></a>这是已经得到市场验证的，《鸣潮》在开服后几天添加了更多对话的跳过来补救，更是印证了这种说法。我认为这其实是游戏设计和体验过程中很基础和重要的方面，所以我不理解库洛和米哈游这种中大厂的策划到底是什么水平。<em>为什么连我这样应届生未入行的人都能分析和理解的游戏设计，他们却不懂。</em></p>
-<p><em>所以之前春招后期有面试官问过我，“考虑过为什么策划岗的校招应聘结果不理想”，我不只回答说“因为我个人的经验不足，没有完全地从玩家视角转变到策划开发者的视角”，我还简单地说“感觉策划岗位对学历的要求更高”，因为我个人感觉策划岗位很难通过交流得知实际的策划水平，不像开发直接做算法题判断人的代码能力，而目前游戏公司招策划很看重学历高低，相较其他岗位我不认同策划岗位的能力与应试的学历正相关，我更感觉策划水平与天赋有关。有点幽默的是后来我还听到过大概说“找不到工作不要总反思自己，也要反思外部因素”的说法，我就也开始考虑，再根据库洛《鸣潮》公测后的表现，我更加怀疑策划岗位求职情况不理想，不只是我有问题，我对自己的工作能力一直很有信心，不过也不至于说自负到把原因都归结于别人，我没工作这段时间一直在学习游戏设计来提升自己。</em></p>
-<hr>
-<p>简单的如添加跳过和倍速选项，在跳过中对对话和剧情进行文字的总结呈现；特殊的如借鉴日厂游戏《绯红结系》《女神异闻录》等用2D形式来美化对话演出，仅需增加一些人物表情拆分等即可。</p>
-<p>针对这类二游，我个人设计将次要的内容通过类似漫画的的方式呈现，重要的主线再通过文字和视频具体表现，从计算机视觉方向讲，现在追求的是“多模态”，类比来说我这样的游戏设计就是在提高信息密度以提供相对流畅的游戏体验，避免破坏玩家的心流。</p>
-<p>而像《GTA5》这样的全部实机动画演出对于二游来说就没有必要，成本较高。</p>
-<p><em>不过这样的成本对于这些中大厂而言其实是不高的，导致这样的原因根本上是厂商把资金更多地投入到了营销中，买量成本大量压缩了开发成本。我难以评价利弊，可能对于厂商的盈利是有利的，但我感觉对于游戏市场长期的良性发展是不利的，不确定。</em></p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>心流</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2024/07/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>为什么感觉好玩的新游戏越来越少？</title>
-    <url>/2024/08/17/idea2/</url>
-    <content><![CDATA[<p>我希望我未来能设计出好玩的游戏。</p>
-<h1 id="游戏的发展趋势"><a href="#游戏的发展趋势" class="headerlink" title="游戏的发展趋势"></a>游戏的发展趋势</h1><p>我想把游戏发展大致分为三个阶段：①约2000年前的萌芽期 ②00年至15年左右的发展红利期 ③15年后至今的稳定期。<br>虽然很多书籍、视频等内容很详细地讲解过游戏发展的几个阶段，但我主要是以各阶段为载体，目的来分析游戏设计的发展趋势。</p>
-<p>在①阶段，游戏从2D向3D发展，创新了很多技术和游戏模式，成为了之后游戏的基础。<br>在②阶段时，各种游戏如雨后春笋般地出现，技术的迭代、玩法的革新无不刺激着玩家们的神经，让人耳目一新。<br>在③阶段时，各方面的“质变”逐渐放缓，玩法创新逐渐减少，游戏产品趋于工业化，产生了一定瓶颈。</p>
-<p>某种程度上说，③阶段的现状就是本文标题问题的原因。游戏玩法经过这么多年的积累已经趋于饱和，近年游戏的创新，只能通过“抄”的方式：跨国抄、跨文化抄、跨品类抄、跨平台抄等等（可能具体另写一文论述）。玩法上排列组合、重组优化的创新方式让游戏的惊喜刺激相比②阶段有所减弱，很多工业化的出品也是乏善可陈。<del>创新的放缓和现在大环境一致，电影、音乐等内容的发展也都趋于停滞，如同当今市场下创新创业的艰难，也类比摩尔定律在如今的失效，但这形势太大我无法分析，但肯定是有一定关系的，比如游戏的设计更受投资方的影响，追求变现能力和稳定性，削弱了开发者的能力。</del></p>
-<p>总之，现在游戏发展趋向稳定化，画面技术上一定的发展难以弥补玩法上创新的缺失，毕竟游戏的特点还是在“玩”。</p>
-<p>在玩法难以创新的形势下，玩家所获得的惊喜刺激相对减少，所以网游、手游开始更有优势，通过版本内容的更新、PVP竞技的无限随机和即时正反馈，让玩家获得更廉价的快乐，一个版本的收益就与单机顶级佳作卖出得全部份额相当。而部分单机3A游戏也开始顺应时代的趋势，产出了越来越多的“良品”：典型的如育碧一代代的《刺客信条》，动视一代代的《使命召唤》，甚至还出现了CDPR《赛博朋克2077》这种半成品。这些游戏有的开始内购皮肤、载具，有的阉割内容，通过DLC来补全游戏，工业化的产出让整体游戏发展开始劣币驱逐良币，越来越少的厂商坚持内容路线，开发游戏的主旨从好玩逐渐向收益倾斜。这也导致了恶性循环，很多手游、网游设计者或者说策划，在设计好玩游戏内容的能力越来越弱，游戏设计能力越来越差（手游每日上线清体力、日常这样上班式的体验；《守望先锋》低下的平衡性和更新速度；《鸣潮》被喷强制进行长对话；《绝区零》被喷走格子玩法和低级的战斗玩法等等），依赖艺术方面的优势来转移玩家的注意力，不通过“玩”来吸引“玩家”，而是靠收集？养成？还是靠玩家的幻想？（指美术、皮肤等）来吸引人们，并给游戏公司带来可观的收益，即便很大程度上不是设计师、策划的功劳，或者说不是玩法策划的功劳。总之，游戏给玩家提供的情绪价值似乎从出发点上已经发生了变换。</p>
-<h1 id="电子ED的病因"><a href="#电子ED的病因" class="headerlink" title="电子ED的病因"></a>电子ED的病因</h1><h3 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h3><h3 id="游戏性"><a href="#游戏性" class="headerlink" title="游戏性"></a>游戏性</h3><h1 id="为什么《幻兽帕鲁》是电子ED的特效药"><a href="#为什么《幻兽帕鲁》是电子ED的特效药" class="headerlink" title="为什么《幻兽帕鲁》是电子ED的特效药"></a>为什么《幻兽帕鲁》是电子ED的特效药</h1><h1 id="为什么我预测《黑神话：悟空》会成功"><a href="#为什么我预测《黑神话：悟空》会成功" class="headerlink" title="为什么我预测《黑神话：悟空》会成功"></a>为什么我预测《黑神话：悟空》会成功</h1><h1 id="未来游戏发展方向"><a href="#未来游戏发展方向" class="headerlink" title="未来游戏发展方向"></a>未来游戏发展方向</h1>]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Unity的生命周期</title>
-    <url>/2024/08/01/unity1/</url>
-    <content><![CDATA[<h1 id="Unity的生命周期"><a href="#Unity的生命周期" class="headerlink" title="Unity的生命周期"></a>Unity的生命周期</h1><p><a href="https://docs.unity3d.com/cn/2023.2/Manual/UnityManual.html">Unity官方手册</a></p>
-<p>场景开始前调用，用于<strong>加载场景</strong>（场景中每个对象调用一次）<br>在为任何对象调用 Start 和 Update 等函数之前，会为所有脚本调用 Awake 和 OnEnable 函数。在游戏运行过程中实例化对象时，不能强制执行此调用。</p>
-<ul>
-<li><strong>Awake：</strong> 早于Start，常用于在游戏开始之前初始化变量或游戏状态（只调用一次）</li>
-<li><strong>OnEnable：</strong> 当对象变为可用或激活状态时调用（可多次调用）</li>
-</ul>
-<p><u><strong>Start</u>：</strong> 仅当启用脚本实例后，在第一次帧更新之前（Update前）调用，常用于数据或逻辑对象初始化（只调用一次），在游戏运行过程中实例化对象时，不能强制执行此调用。</p>
-<p><strong>FixedUpdate：</strong> 根据物理帧利用固定间隔计时器（独立于帧率）进行所有物理计算和更新</p>
-<p><strong>OnTrigger：</strong> 触发器被触发时调用；<strong>OnCollision：</strong> 产生碰撞事件时调用</p>
-<p><em><del>yield WaitForFixedUpdate：所有脚本上调用所有 FixedUpdate 后继续，作为卡点，在物理帧结束至此点再开始执行后续代码</del></em></p>
-<p><em><del>OnMouse：输入</del></em></p>
-<p><u><strong>Update</u>：</strong> 每帧调用</p>
-<p><strong>LateUpdate：</strong> 每帧Update方法调用后调用，常见用途是跟随第三人称摄像机</p>
-<p><em><del>一堆渲染函数（有关状态机）</del></em></p>
-<p><strong>OnGUI：</strong> 渲染用户界面，然后为每个输入事件处理布局和键盘&#x2F;鼠标事件</p>
-<p><em><del>yield WaitForEndOfFrame：**当前帧彻底结束后会执行此协程</del></em></p>
-<p><strong>OnApplicationPause：</strong> 应用暂停时在帧结尾处调用，并发出一个额外帧，从而允许游戏显示图形来指示暂停状态，取消暂停后从FixedUpdate开始重新执行</p>
-<p>在场景中的所有活动对象上调用以下函数</p>
-<ul>
-<li><strong>OnApplicationQuit：</strong> 应用退出前在所有对象上调用，可以用于保存退出前的信息</li>
-<li><strong>OnDisable：</strong> 行为被禁用或处于非活动状态时调用</li>
-</ul>
-<p><strong>OnDestroy：</strong> 物体被销毁时，即存在的最后一帧完成所有帧更新之后调用，一般用于清理内存</p>
-<p><img src="https://s2.loli.net/2024/08/01/wD4g5PSxKa1e8TN.png" alt="中文流程图"></p>
-<p>yield函数都是协程，在Update返回后更新。</p>
-<p><strong>协程</strong>是一种编写异步代码的方法，其中包括等待一定时间或某些操作完成，同时允许其他代码继续执行。它允许程序在单线程内实现多个独立的执行线程（协程），这些线程可以非阻塞地挂起和恢复，以实现协作式多任务处理。协程的核心思想是让程序员能够控制执行的流程，而不是完全交给操作系统或线程调度器来控制。</p>
-<p><img src="https://s2.loli.net/2024/08/01/oKkrTDdJX2igxfB.png" alt="官方文档流程图"></p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Unity</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Unity中的面向对象</title>
-    <url>/2024/08/10/unity2/</url>
-    <content><![CDATA[<p>场景中存在GameObject实例，每个实例对象在Inspector中都会显示一系列组件，这些组件就是脚本（类），默认全部继承自MonoBehaviour类，成为了该脚本类的实例对象和所选对象GameObject的各种属性。</p>
-<p>Prefab预制体，将场景中的物体拖动到Assets里即可生成。这个过程实际上是一个抽象的过程，抽象成一个具有场景中被拖动物体的所有属性(含值)的模板类。</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>面向对象</tag>
-        <tag>Unity</tag>
       </tags>
   </entry>
   <entry>
@@ -334,6 +290,58 @@
       </categories>
       <tags>
         <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Unity中的面向对象</title>
+    <url>/2024/08/10/unity2/</url>
+    <content><![CDATA[<p>场景中存在GameObject实例，每个实例对象在Inspector中都会显示一系列组件，这些组件就是脚本（类），默认全部继承自MonoBehaviour类，成为了该脚本类的实例对象和所选对象GameObject的各种属性。</p>
+<p>Prefab预制体，将场景中的物体拖动到Assets里即可生成。这个过程实际上是一个抽象的过程，抽象成一个具有场景中被拖动物体的所有属性(含值)的模板类。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>面向对象</tag>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Unity的生命周期</title>
+    <url>/2024/08/01/unity1/</url>
+    <content><![CDATA[<h1 id="Unity的生命周期"><a href="#Unity的生命周期" class="headerlink" title="Unity的生命周期"></a>Unity的生命周期</h1><p><a href="https://docs.unity3d.com/cn/2023.2/Manual/UnityManual.html">Unity官方手册</a></p>
+<p>场景开始前调用，用于<strong>加载场景</strong>（场景中每个对象调用一次）<br>在为任何对象调用 Start 和 Update 等函数之前，会为所有脚本调用 Awake 和 OnEnable 函数。在游戏运行过程中实例化对象时，不能强制执行此调用。</p>
+<ul>
+<li><strong>Awake：</strong> 早于Start，常用于在游戏开始之前初始化变量或游戏状态（只调用一次）</li>
+<li><strong>OnEnable：</strong> 当对象变为可用或激活状态时调用（可多次调用）</li>
+</ul>
+<p><u><strong>Start</u>：</strong> 仅当启用脚本实例后，在第一次帧更新之前（Update前）调用，常用于数据或逻辑对象初始化（只调用一次），在游戏运行过程中实例化对象时，不能强制执行此调用。</p>
+<p><strong>FixedUpdate：</strong> 根据物理帧利用固定间隔计时器（独立于帧率）进行所有物理计算和更新</p>
+<p><strong>OnTrigger：</strong> 触发器被触发时调用；<strong>OnCollision：</strong> 产生碰撞事件时调用</p>
+<p><em><del>yield WaitForFixedUpdate：所有脚本上调用所有 FixedUpdate 后继续，作为卡点，在物理帧结束至此点再开始执行后续代码</del></em></p>
+<p><em><del>OnMouse：输入</del></em></p>
+<p><u><strong>Update</u>：</strong> 每帧调用</p>
+<p><strong>LateUpdate：</strong> 每帧Update方法调用后调用，常见用途是跟随第三人称摄像机</p>
+<p><em><del>一堆渲染函数（有关状态机）</del></em></p>
+<p><strong>OnGUI：</strong> 渲染用户界面，然后为每个输入事件处理布局和键盘&#x2F;鼠标事件</p>
+<p><em><del>yield WaitForEndOfFrame：**当前帧彻底结束后会执行此协程</del></em></p>
+<p><strong>OnApplicationPause：</strong> 应用暂停时在帧结尾处调用，并发出一个额外帧，从而允许游戏显示图形来指示暂停状态，取消暂停后从FixedUpdate开始重新执行</p>
+<p>在场景中的所有活动对象上调用以下函数</p>
+<ul>
+<li><strong>OnApplicationQuit：</strong> 应用退出前在所有对象上调用，可以用于保存退出前的信息</li>
+<li><strong>OnDisable：</strong> 行为被禁用或处于非活动状态时调用</li>
+</ul>
+<p><strong>OnDestroy：</strong> 物体被销毁时，即存在的最后一帧完成所有帧更新之后调用，一般用于清理内存</p>
+<p><img src="https://s2.loli.net/2024/08/01/wD4g5PSxKa1e8TN.png" alt="中文流程图"></p>
+<p>yield函数都是协程，在Update返回后更新。</p>
+<p><strong>协程</strong>是一种编写异步代码的方法，其中包括等待一定时间或某些操作完成，同时允许其他代码继续执行。它允许程序在单线程内实现多个独立的执行线程（协程），这些线程可以非阻塞地挂起和恢复，以实现协作式多任务处理。协程的核心思想是让程序员能够控制执行的流程，而不是完全交给操作系统或线程调度器来控制。</p>
+<p><img src="https://s2.loli.net/2024/08/01/oKkrTDdJX2igxfB.png" alt="官方文档流程图"></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Unity</tag>
       </tags>
   </entry>
 </search>
