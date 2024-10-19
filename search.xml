@@ -1,43 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>状态模式笔记1</title>
-    <url>/2024/08/11/b3/</url>
-    <content><![CDATA[<p>英雄游戏（英雄互娱）曾在面试中询问我有关动画状态机的内容，我当时没有准备过这方面，紧张时说出了不太了解的回答，事后回想自己其实了解过相关内容，曾在设计角色时绑定骨骼后导入过一些动作来操控角色，当时还学习过如何平滑动作动画，进行状态机的切换，懊悔自己薄弱的即时表达能力，感觉很可惜。借此机会，我回顾了“动画状态机”，同时再阅读有关“设计模式”的书籍，通过递归式地学习，针对“状态模式”先做些笔记，发散出了“有限状态机”再是“行为树”等内容，所以将笔记拆分为几篇集中叙写，内容对象针对游戏角色(AI)。<del>这几天我的确还是有点乏了，感觉自己学的写的没有正反馈，认识的朋友们大都找到合适的工作了，我水平真的不够吗，感觉入职之后再写博客会更有动力吧。。。</del></p>
-<h1 id="状态模式"><a href="#状态模式" class="headerlink" title="状态模式"></a>状态模式</h1><p><em>“允许一个对象的行为随着内部状态的改变而改变，对象看起来好像是在修改自身类。”</em></p>
-<h2 id="有限状态机FSM"><a href="#有限状态机FSM" class="headerlink" title="有限状态机FSM"></a>有限状态机FSM</h2><ul>
-<li>拥有一组状态，并且可以在这组状态之间进行切换。</li>
-<li>状态机同一时刻只能处于一种状态。</li>
-<li>状态机会接收一组输入或者事件。</li>
-<li>每一个状态有一组转换，每一个转换都关联着一个输入并指向另一个状态。<br><img src="https://s2.loli.net/2024/08/15/Hym65dXV4NGxTlp.png" alt="image.png"></li>
-</ul>
-<p>首先，有限状态机的每个状态可以用枚举 <code>enum</code> 列出来</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">publice <span class="built_in">enum</span> State&#123;</span><br><span class="line">    Attack,</span><br><span class="line">    Jump,</span><br><span class="line">    Move,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>然后在角色AI类中，简单可以通过switch case来实现条件判断和状态转换，但存在一些缺点：</p>
-<ol>
-<li>每增加一个状态，就需要在所有switch代码中添加对应代码。</li>
-<li>所有与状态有关的对象和参数保存在一个类中，在被多个状态共享时容易产生混淆。</li>
-<li>方法过于冗长，不易于调试。</li>
-</ol>
-<p>所以需要使用<strong>状态模式</strong>。</p>
-<h2 id="状态模式-1"><a href="#状态模式-1" class="headerlink" title="状态模式"></a>状态模式</h2><ul>
-<li>角色类</li>
-<li>状态接口<br>列举状态方法，切换具体状态。</li>
-<li>具体状态类<br>继承自状态接口，设置在各状态下的行为。<br> <img src="https://s2.loli.net/2024/08/15/GDVOpMZ3Pq5CFX1.png" alt="状态模式角色AI结构图"><br>状态模式将每个状态相关的行为封装到了相关类中，在增删改查时不会对原有架构造成较大影响，可以让人清楚了解单一状态执行时的环境，降低了维护成本。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>设计模式</tag>
-        <tag>状态模式</tag>
-        <tag>有限状态机</tag>
-        <tag>AI</tag>
-        <tag>面向对象</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>游戏设计笔记2</title>
     <url>/2024/08/09/b2/</url>
     <content><![CDATA[<h2 id="游戏的构成"><a href="#游戏的构成" class="headerlink" title="游戏的构成"></a>游戏的构成</h2><p>在我的评价体系中，我将游戏拆分为两大元素：<strong>1.可玩性<del>游戏性</del> 2.艺术性</strong>。<br><del>其中“游戏性”可能与真正意义的<code>游戏性</code>不太一致，我这里主要为了与“艺术性”进行区分，而传统概念的<code>游戏性</code>是一个整体性的概念，包括了我所谓的“游戏性”和“艺术性”，是区别于其他娱乐方式或是艺术方式的概念。</del></p>
@@ -70,31 +33,6 @@
         <tag>评价体系</tag>
         <tag>个人优势</tag>
         <tag>我</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>游戏设计笔记3</title>
-    <url>/2024/08/19/b4/</url>
-    <content><![CDATA[<h2 id="游戏的可玩性"><a href="#游戏的可玩性" class="headerlink" title="游戏的可玩性"></a>游戏的可玩性</h2><p><em>游戏可玩性优先：在所有的电子游戏中，可玩性是最主要的娱乐元素。所以，在设计游戏时，首先要考虑的就是游戏的可玩性。————《游戏设计基础》(Ernest Adams)</em></p>
-<p>当我看到书上的这句话时我感受到了充分的认同感，但我立马想到了有悖这一观点的例子，然后在我沉思后，我感到了疑惑，到底是这句话出了问题，还是国内二游模式过分畸形。</p>
-<p>手游本就相比端游会缺少一些可玩性可以理解，但国内<strong>大部分</strong>二游是可玩性优先的吗？我觉得不是的，首先需要确定的是客观来说大部分二游的主体游戏内容是单一枯燥的，虽然我暂时很难直接证明，但是否则就不会在任务设置合理的情况下存在所谓<strong>上班</strong>式的体验并出现那么多代肝和自动脚本。二游设置的任务负担不大但主体玩法没有太多可玩性，很多需要玩家日复一日地重复游玩完全相同内容，也就是所谓的<strong>日常</strong>、<strong>周常</strong>，并衍生出了所谓<strong>长草期</strong>等名称，以此来收集资源（主要是抽卡资源和养成材料），玩家根本不会因为完成这些任务而觉得好玩。而只有通过这些资源积累才能获取角色等内容来从某种意义上拓展游戏一定的可玩性，但主要还是为了抽卡<strong>收集</strong>这一目的服务，可这种收集玩法的可玩性真的很低，长期消磨玩家的耐心最后也只能提供很短期的正反馈且并不能让玩家充分地获得<strong>回报感</strong>，玩家们不会思考是那么长期地打卡游玩的功劳，而是更多地利用赌博心理，让人感觉幸运和终于获得的轻微满足感以及新鲜感，反而在未获得（收集）时会产生极大的挫败感，这对增加或维持用户粘性的效果并不好。</p>
-<p>在MMORPG中因为存在社交属性的存在，玩家重复刷团本会显得没那么枯燥，在过程（战斗）和结果（战利品）都增加了一些随机性，同时合作的玩法也相比个人更具可玩性；在《宝可梦》这类收集游戏中，寻找和捕捉时的随机性以及在多种设计下给予玩家充分的回报感（图鉴、组队、繁衍等玩法），也大大提升了可玩性。以上两个简单举例，对比说明了二游日常模式和抽卡玩法的低可玩性。</p>
-<p>但是可玩性低不代表优先级低，还需别的方面加以证明。上文提到了攒资源抽卡本质上是收集玩法，那么就算玩家是有意识去收集（实际上大都不是，后文解释），收集后最核心的玩法还是在<strong>养成</strong>，而支撑养成这一目标的根本不是可玩性，而是下一章要讲的美学（艺术性）。因为大部分二游的主体玩法内容单一，虽然养成可以使角色的可玩性得到一定的提升，但即便角色的可玩性较高，面对枯燥的关卡和重复的游戏也难以发挥，玩法不够支撑角色的可玩性，玩家仍会感觉枯燥乏味，感觉每天都在<strong>肝</strong>，类似<u>木桶效应</u>；而真正支撑玩家收集并养成的，是二游厂商或者说策划们更花心思的剧情、人设、立绘、建模、动作动画等美学要素，这才是真正吸引二游玩家的，因为一边“强度党”关心的是角色的数值和机制，而不是真正意义上的可玩性，他们只会说强度高，但不会实际感觉说这个角色很好玩，更多的还是另一边玩家因为美学各方面的塑造而单纯喜欢这个角色并进行收集、养成和付费，获得满足感，同样不是可玩性的作用。游戏公司很明显懂这一点，所以愈发在美学上下功夫，来促进玩家的消费，而在玩法上设计的不尽人意。</p>
-<p>那么综上所述，我认为这些二游并不以可玩性优先，但目前这种盈利模式是成功的，我虽然很想认同书籍作者的观点，但可能因为书是在10年代编写的，当时并不流行现在的二游模式，受到了时效性的局限，所以我可能会将该观点添加“端游&#x2F;主机游戏”的限定词，端游&#x2F;主机游戏才必须要以可玩性为优先，手游或许不必。</p>
-<p>诚然，上述所说的游戏设计模式有可取性，但我认为还是有些过头了，我想手游更合适的或许还是要可玩性与美学具有相同的优先级，只有足够的可玩性才能够充分地发挥美学。这些二游可玩性水平的滞后，或许是过度依赖美学的结果，<del>系统、玩法、关卡策划太过安逸而不思进取了</del>，国内部分游戏厂商为了求稳过分地限制了策划的能力。</p>
-<h2 id="游戏的美学（艺术性）"><a href="#游戏的美学（艺术性）" class="headerlink" title="游戏的美学（艺术性）"></a>游戏的美学（艺术性）</h2><ol>
-<li>协调性：让游戏的各个方面适当地结合在一起，成为一个连贯、统一的整体。</li>
-<li>沉浸性：通过策略、空间、叙事等方式创建出沉浸感。</li>
-<li>情感共鸣：娱乐感、满足感、惊喜、兴奋、好奇、成就、自豪、松了一口气等。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
       </tags>
   </entry>
   <entry>
@@ -134,6 +72,71 @@
       </tags>
   </entry>
   <entry>
+    <title>游戏设计笔记1</title>
+    <url>/2024/08/08/b1/</url>
+    <content><![CDATA[<h2 id="策划必备要素"><a href="#策划必备要素" class="headerlink" title="策划必备要素"></a>策划必备要素</h2><p>倾听&gt;&gt;创意，沟通</p>
+<ol>
+<li>倾听团队，与团队沟通合作。</li>
+<li>倾听受众，深入理解用户。</li>
+<li>倾听游戏，彻底了解游戏。</li>
+<li>倾听客户（投资者），理解并满足最上级需求。</li>
+<li>倾听自己，发挥天赋。<br>只有学会深度倾听才能让设计出的游戏给玩家创造良好的体验。</li>
+</ol>
+<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>仔细分析用户不清晰的反馈，洞察其中的情感，反思自己真正想让用户体验什么？用户实际产生了什么体验？怎么缩小实际与设想的差距？再深入思考这种体验的本质是什么？如何抓住这种本质？</p>
+<p>为了最大化游戏的乐趣，反思游戏中的哪个部分很有乐趣？为什么？哪个部分需要变得更加有乐趣？</p>
+<p>思考玩家的真正游玩动力（动机）————不是游戏设定的目标，而是玩家真正想要完成目标的原因。反思游戏给玩家的思维引导了怎样的问题？做了哪些努力让他们在意这些问题？能做什么来使他们提出更多的问题（更感兴趣更有游玩动力，增加用户粘性）？<br><em>比如，一个解谜电子游戏在每一关中都可能有一个时间限定的目标，玩家们尝试问这样一个问题:“我能在 30秒之内找到过关的方法吗?”一个让他们更加在意的方法是，当他们解决了任意一个谜题后播放一段有趣的动画，那么玩家就会问这样一个问题:“我想知道下一个动画是什么?”</em></p>
+<h2 id="思考游戏"><a href="#思考游戏" class="headerlink" title="思考游戏"></a>思考游戏</h2><p><em>游戏是一种对自主控制系统的练习，其中包含力量的竞争，被规则限制以产生一个不平衡的结果</em></p>
+<ul>
+<li>游戏是完全自主的</li>
+<li>游戏有目标</li>
+<li>游戏有冲突</li>
+<li>游戏有规则</li>
+<li>游戏有输赢</li>
+</ul>
+<p><em>游戏是一个拥有内生意义的交互结构，需要玩家们努力完成目标。</em><br>游戏越吸引人，游戏中的 <code>内生价值</code> 越大。（游戏中有价值的部分仅在游戏环境中有价值）</p>
+<ul>
+<li>游戏可交互</li>
+<li>游戏有挑战性</li>
+<li>游戏能创造其内生价值</li>
+</ul>
+<p><strong>游戏是一种以娱乐为目标进行的解决问题的活动</strong></p>
+<h3 id="思考-1"><a href="#思考-1" class="headerlink" title="思考"></a>思考</h3><p>游戏中哪些东西对玩家很有价值？怎样让这些东西对玩家更有价值？游戏中的价值与玩家的动机之间有怎样的关系？</p>
+<p>游戏要求玩家解决哪些问题？是否有一些隐藏的问题作为玩法的一部分出现？游戏中，怎样产生新的问题来保持对玩家的吸引力？</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏设计笔记3</title>
+    <url>/2024/08/19/b4/</url>
+    <content><![CDATA[<h2 id="游戏的可玩性"><a href="#游戏的可玩性" class="headerlink" title="游戏的可玩性"></a>游戏的可玩性</h2><p><em>游戏可玩性优先：在所有的电子游戏中，可玩性是最主要的娱乐元素。所以，在设计游戏时，首先要考虑的就是游戏的可玩性。————《游戏设计基础》(Ernest Adams)</em></p>
+<p>当我看到书上的这句话时我感受到了充分的认同感，但我立马想到了有悖这一观点的例子，然后在我沉思后，我感到了疑惑，到底是这句话出了问题，还是国内二游模式过分畸形。</p>
+<p>手游本就相比端游会缺少一些可玩性可以理解，但国内<strong>大部分</strong>二游是可玩性优先的吗？我觉得不是的，首先需要确定的是客观来说大部分二游的主体游戏内容是单一枯燥的，虽然我暂时很难直接证明，但是否则就不会在任务设置合理的情况下存在所谓<strong>上班</strong>式的体验并出现那么多代肝和自动脚本。二游设置的任务负担不大但主体玩法没有太多可玩性，很多需要玩家日复一日地重复游玩完全相同内容，也就是所谓的<strong>日常</strong>、<strong>周常</strong>，并衍生出了所谓<strong>长草期</strong>等名称，以此来收集资源（主要是抽卡资源和养成材料），玩家根本不会因为完成这些任务而觉得好玩。而只有通过这些资源积累才能获取角色等内容来从某种意义上拓展游戏一定的可玩性，但主要还是为了抽卡<strong>收集</strong>这一目的服务，可这种收集玩法的可玩性真的很低，长期消磨玩家的耐心最后也只能提供很短期的正反馈且并不能让玩家充分地获得<strong>回报感</strong>，玩家们不会思考是那么长期地打卡游玩的功劳，而是更多地利用赌博心理，让人感觉幸运和终于获得的轻微满足感以及新鲜感，反而在未获得（收集）时会产生极大的挫败感，这对增加或维持用户粘性的效果并不好。</p>
+<p>在MMORPG中因为存在社交属性的存在，玩家重复刷团本会显得没那么枯燥，在过程（战斗）和结果（战利品）都增加了一些随机性，同时合作的玩法也相比个人更具可玩性；在《宝可梦》这类收集游戏中，寻找和捕捉时的随机性以及在多种设计下给予玩家充分的回报感（图鉴、组队、繁衍等玩法），也大大提升了可玩性。以上两个简单举例，对比说明了二游日常模式和抽卡玩法的低可玩性。</p>
+<p>但是可玩性低不代表优先级低，还需别的方面加以证明。上文提到了攒资源抽卡本质上是收集玩法，那么就算玩家是有意识去收集（实际上大都不是，后文解释），收集后最核心的玩法还是在<strong>养成</strong>，而支撑养成这一目标的根本不是可玩性，而是下一章要讲的美学（艺术性）。因为大部分二游的主体玩法内容单一，虽然养成可以使角色的可玩性得到一定的提升，但即便角色的可玩性较高，面对枯燥的关卡和重复的游戏也难以发挥，玩法不够支撑角色的可玩性，玩家仍会感觉枯燥乏味，感觉每天都在<strong>肝</strong>，类似<u>木桶效应</u>；而真正支撑玩家收集并养成的，是二游厂商或者说策划们更花心思的剧情、人设、立绘、建模、动作动画等美学要素，这才是真正吸引二游玩家的，因为一边“强度党”关心的是角色的数值和机制，而不是真正意义上的可玩性，他们只会说强度高，但不会实际感觉说这个角色很好玩，更多的还是另一边玩家因为美学各方面的塑造而单纯喜欢这个角色并进行收集、养成和付费，获得满足感，同样不是可玩性的作用。游戏公司很明显懂这一点，所以愈发在美学上下功夫，来促进玩家的消费，而在玩法上设计的不尽人意。</p>
+<p>那么综上所述，我认为这些二游并不以可玩性优先，但目前这种盈利模式是成功的，我虽然很想认同书籍作者的观点，但可能因为书是在10年代编写的，当时并不流行现在的二游模式，受到了时效性的局限，所以我可能会将该观点添加“端游&#x2F;主机游戏”的限定词，端游&#x2F;主机游戏才必须要以可玩性为优先，手游或许不必。</p>
+<p>诚然，上述所说的游戏设计模式有可取性，但我认为还是有些过头了，我想手游更合适的或许还是要可玩性与美学具有相同的优先级，只有足够的可玩性才能够充分地发挥美学。这些二游可玩性水平的滞后，或许是过度依赖美学的结果，<del>系统、玩法、关卡策划太过安逸而不思进取了</del>，国内部分游戏厂商为了求稳过分地限制了策划的能力。</p>
+<h2 id="游戏的美学（艺术性）"><a href="#游戏的美学（艺术性）" class="headerlink" title="游戏的美学（艺术性）"></a>游戏的美学（艺术性）</h2><ol>
+<li>协调性：让游戏的各个方面适当地结合在一起，成为一个连贯、统一的整体。</li>
+<li>沉浸性：通过策略、空间、叙事等方式创建出沉浸感。</li>
+<li>情感共鸣：娱乐感、满足感、惊喜、兴奋、好奇、成就、自豪、松了一口气等。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>游戏设计之心流</title>
     <url>/2024/08/02/design1/</url>
     <content><![CDATA[<h1 id="心流"><a href="#心流" class="headerlink" title="心流"></a>心流</h1><p><u>指玩家沉浸游戏，淡化时间、饥饿等外部因素，全神贯注的状态</u><br>理论适用于大部分“传统游戏”，但仍须根据游戏类型及目标用户具体问题具体分析。<br><img src="https://s2.loli.net/2024/08/02/3RkghHSZ5JzfY76.png" alt="心流图"><br><strong>心流的节奏要有变化</strong></p>
@@ -164,6 +167,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2024/07/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>关于《炉石传说》国服回归策划的启发</title>
     <url>/2024/07/30/idea1/</url>
     <content><![CDATA[<h2 id="新闻"><a href="#新闻" class="headerlink" title="新闻"></a>新闻</h2><p>最近的ChinaJoy上，《炉石传说》（HearthStone）中国宣布，回归日期定档9月25日，回归后一定时间内登录《炉石传说》，所有国服玩家（包括新注册玩家）即可免费获赠2023年全部错过的卡牌，共计2154张卡牌，包括全部97张金色传说。另外游戏内还有额外的任务卡包、皮肤等福利，游戏外与网易雷火合作赞助赛事100万元奖金以及提供4个国服直邀名额。</p>
@@ -189,22 +210,46 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/07/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>锐评我所擅长和喜欢的FPS和JRPG</title>
+    <url>/2024/08/31/idea3/</url>
+    <content><![CDATA[<p>FPS竞技性强，能给予玩家强烈的即时的刺激感与正反馈，容易产生沉浸感和进入心流状态。但这对于枪械和操作的手感要求较高，同时因为竞技性的过强，导致影响游戏出圈的因素会更多，如平衡性、差异化玩法、门槛、反作弊、关卡地图设计等等。</p>
+<p>首要的是传统JRPG和新型JRPG有明显差别，我主要喜欢新式的JRPG，相对来说更短平快，符合我个人喜好。JRPG线性叙事节奏较紧凑平滑，较简单直接，适合当代节奏，动作动画较优秀流畅，画风较美，系统较简单易入门，但也因此略显颓势，JRPG相比当代商业引擎技术孱弱，游戏工业化流水线，除了《最终幻想》这类老牌IP的老式JRPG外很少再出现优秀佳作，平均都在良好水平线附近，近年仅《碧蓝幻想Relink》接近优秀，这或许与部分日厂追求稳定的低投入低回报理念有关，同时这种思想感觉也影响了国内部分游戏厂商，或许从某种意义上导致了国内除《觅长生》等独立游戏外仅有《黑神话：悟空》一部优秀3A的现状。</p>
 ]]></content>
+      <categories>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分析《Apex Legends》角色技能设计维度</title>
+    <url>/2024/10/10/idea4/</url>
+    <content><![CDATA[<p>《APEX英雄》技能体系我会分三维为：转移，攻防，信息与资源。其中转移分为远近，其关系进点和机动性。以此为三维，可通过思维导图进一步细分效果。</p>
+<p>值得一提的是，实际上《APEX英雄》的角色设计对于资源相关的考量在电竞比赛中与玩家排位中相差巨大。<br><img src="https://s2.loli.net/2024/10/10/L3b8kSOHmBQGTW7.png" alt="三维图"></p>
+]]></content>
+      <categories>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计竞技类游戏时如何兼顾女性用户</title>
+    <url>/2024/10/20/idea5/</url>
+    <content><![CDATA[<p><strong>例如在FPS和MOBA游戏中，设计明确的奶位（偏纯辅助型）角色，即可兼顾女性玩家</strong><br>例如《守望先锋》中的天使，《英雄联盟》中的魔法猫咪、琴女，《无畏契约》中的贤者等。<br>看似像暴论，但意思已经基本到位了，我细想确实如此。</p>
+<p>后续有空再更</p>
+]]></content>
+      <categories>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
   </entry>
   <entry>
     <title>为什么感觉好玩的新游戏越来越少？</title>
@@ -234,31 +279,40 @@
       </tags>
   </entry>
   <entry>
-    <title>锐评我所擅长和喜欢的FPS和JRPG</title>
-    <url>/2024/08/31/idea3/</url>
-    <content><![CDATA[<p>FPS竞技性强，能给予玩家强烈的即时的刺激感与正反馈，容易产生沉浸感和进入心流状态。但这对于枪械和操作的手感要求较高，同时因为竞技性的过强，导致影响游戏出圈的因素会更多，如平衡性、差异化玩法、门槛、反作弊、关卡地图设计等等。</p>
-<p>首要的是传统JRPG和新型JRPG有明显差别，我主要喜欢新式的JRPG，相对来说更短平快，符合我个人喜好。JRPG线性叙事节奏较紧凑平滑，较简单直接，适合当代节奏，动作动画较优秀流畅，画风较美，系统较简单易入门，但也因此略显颓势，JRPG相比当代商业引擎技术孱弱，游戏工业化流水线，除了《最终幻想》这类老牌IP的老式JRPG外很少再出现优秀佳作，平均都在良好水平线附近，近年仅《碧蓝幻想Relink》接近优秀，这或许与部分日厂追求稳定的低投入低回报理念有关，同时这种思想感觉也影响了国内部分游戏厂商，或许从某种意义上导致了国内除《觅长生》等独立游戏外仅有《黑神话：悟空》一部优秀3A的现状。</p>
+    <title>状态模式笔记1</title>
+    <url>/2024/08/11/b3/</url>
+    <content><![CDATA[<p>英雄游戏（英雄互娱）曾在面试中询问我有关动画状态机的内容，我当时没有准备过这方面，紧张时说出了不太了解的回答，事后回想自己其实了解过相关内容，曾在设计角色时绑定骨骼后导入过一些动作来操控角色，当时还学习过如何平滑动作动画，进行状态机的切换，懊悔自己薄弱的即时表达能力，感觉很可惜。借此机会，我回顾了“动画状态机”，同时再阅读有关“设计模式”的书籍，通过递归式地学习，针对“状态模式”先做些笔记，发散出了“有限状态机”再是“行为树”等内容，所以将笔记拆分为几篇集中叙写，内容对象针对游戏角色(AI)。<del>这几天我的确还是有点乏了，感觉自己学的写的没有正反馈，认识的朋友们大都找到合适的工作了，我水平真的不够吗，感觉入职之后再写博客会更有动力吧。。。</del></p>
+<h1 id="状态模式"><a href="#状态模式" class="headerlink" title="状态模式"></a>状态模式</h1><p><em>“允许一个对象的行为随着内部状态的改变而改变，对象看起来好像是在修改自身类。”</em></p>
+<h2 id="有限状态机FSM"><a href="#有限状态机FSM" class="headerlink" title="有限状态机FSM"></a>有限状态机FSM</h2><ul>
+<li>拥有一组状态，并且可以在这组状态之间进行切换。</li>
+<li>状态机同一时刻只能处于一种状态。</li>
+<li>状态机会接收一组输入或者事件。</li>
+<li>每一个状态有一组转换，每一个转换都关联着一个输入并指向另一个状态。<br><img src="https://s2.loli.net/2024/08/15/Hym65dXV4NGxTlp.png" alt="image.png"></li>
+</ul>
+<p>首先，有限状态机的每个状态可以用枚举 <code>enum</code> 列出来</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">publice <span class="built_in">enum</span> State&#123;</span><br><span class="line">    Attack,</span><br><span class="line">    Jump,</span><br><span class="line">    Move,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后在角色AI类中，简单可以通过switch case来实现条件判断和状态转换，但存在一些缺点：</p>
+<ol>
+<li>每增加一个状态，就需要在所有switch代码中添加对应代码。</li>
+<li>所有与状态有关的对象和参数保存在一个类中，在被多个状态共享时容易产生混淆。</li>
+<li>方法过于冗长，不易于调试。</li>
+</ol>
+<p>所以需要使用<strong>状态模式</strong>。</p>
+<h2 id="状态模式-1"><a href="#状态模式-1" class="headerlink" title="状态模式"></a>状态模式</h2><ul>
+<li>角色类</li>
+<li>状态接口<br>列举状态方法，切换具体状态。</li>
+<li>具体状态类<br>继承自状态接口，设置在各状态下的行为。<br> <img src="https://s2.loli.net/2024/08/15/GDVOpMZ3Pq5CFX1.png" alt="状态模式角色AI结构图"><br>状态模式将每个状态相关的行为封装到了相关类中，在增删改查时不会对原有架构造成较大影响，可以让人清楚了解单一状态执行时的环境，降低了维护成本。</li>
+</ul>
 ]]></content>
       <categories>
-        <category>评论</category>
+        <category>笔记</category>
       </categories>
       <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>分析《Apex Legends》角色技能设计维度</title>
-    <url>/2024/10/10/idea4/</url>
-    <content><![CDATA[<p>《APEX英雄》技能体系我会分三维为：转移，攻防，信息与资源。其中转移分为远近，其关系进点和机动性。以此为三维，可通过思维导图进一步细分效果。</p>
-<p>值得一提的是，实际上《APEX英雄》的角色设计对于资源相关的考量在电竞比赛中与玩家排位中相差巨大。<br><img src="https://s2.loli.net/2024/10/10/L3b8kSOHmBQGTW7.png" alt="三维图"></p>
-]]></content>
-      <categories>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
+        <tag>设计模式</tag>
+        <tag>状态模式</tag>
+        <tag>有限状态机</tag>
+        <tag>AI</tag>
+        <tag>面向对象</tag>
       </tags>
   </entry>
   <entry>
@@ -341,46 +395,6 @@
       </categories>
       <tags>
         <tag>Unity</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>游戏设计笔记1</title>
-    <url>/2024/08/08/b1/</url>
-    <content><![CDATA[<h2 id="策划必备要素"><a href="#策划必备要素" class="headerlink" title="策划必备要素"></a>策划必备要素</h2><p>倾听&gt;&gt;创意，沟通</p>
-<ol>
-<li>倾听团队，与团队沟通合作。</li>
-<li>倾听受众，深入理解用户。</li>
-<li>倾听游戏，彻底了解游戏。</li>
-<li>倾听客户（投资者），理解并满足最上级需求。</li>
-<li>倾听自己，发挥天赋。<br>只有学会深度倾听才能让设计出的游戏给玩家创造良好的体验。</li>
-</ol>
-<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>仔细分析用户不清晰的反馈，洞察其中的情感，反思自己真正想让用户体验什么？用户实际产生了什么体验？怎么缩小实际与设想的差距？再深入思考这种体验的本质是什么？如何抓住这种本质？</p>
-<p>为了最大化游戏的乐趣，反思游戏中的哪个部分很有乐趣？为什么？哪个部分需要变得更加有乐趣？</p>
-<p>思考玩家的真正游玩动力（动机）————不是游戏设定的目标，而是玩家真正想要完成目标的原因。反思游戏给玩家的思维引导了怎样的问题？做了哪些努力让他们在意这些问题？能做什么来使他们提出更多的问题（更感兴趣更有游玩动力，增加用户粘性）？<br><em>比如，一个解谜电子游戏在每一关中都可能有一个时间限定的目标，玩家们尝试问这样一个问题:“我能在 30秒之内找到过关的方法吗?”一个让他们更加在意的方法是，当他们解决了任意一个谜题后播放一段有趣的动画，那么玩家就会问这样一个问题:“我想知道下一个动画是什么?”</em></p>
-<h2 id="思考游戏"><a href="#思考游戏" class="headerlink" title="思考游戏"></a>思考游戏</h2><p><em>游戏是一种对自主控制系统的练习，其中包含力量的竞争，被规则限制以产生一个不平衡的结果</em></p>
-<ul>
-<li>游戏是完全自主的</li>
-<li>游戏有目标</li>
-<li>游戏有冲突</li>
-<li>游戏有规则</li>
-<li>游戏有输赢</li>
-</ul>
-<p><em>游戏是一个拥有内生意义的交互结构，需要玩家们努力完成目标。</em><br>游戏越吸引人，游戏中的 <code>内生价值</code> 越大。（游戏中有价值的部分仅在游戏环境中有价值）</p>
-<ul>
-<li>游戏可交互</li>
-<li>游戏有挑战性</li>
-<li>游戏能创造其内生价值</li>
-</ul>
-<p><strong>游戏是一种以娱乐为目标进行的解决问题的活动</strong></p>
-<h3 id="思考-1"><a href="#思考-1" class="headerlink" title="思考"></a>思考</h3><p>游戏中哪些东西对玩家很有价值？怎样让这些东西对玩家更有价值？游戏中的价值与玩家的动机之间有怎样的关系？</p>
-<p>游戏要求玩家解决哪些问题？是否有一些隐藏的问题作为玩法的一部分出现？游戏中，怎样产生新的问题来保持对玩家的吸引力？</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
       </tags>
   </entry>
   <entry>
