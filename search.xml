@@ -1,79 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>游戏设计笔记2</title>
-    <url>/2024/08/09/b2/</url>
-    <content><![CDATA[<h2 id="游戏的构成"><a href="#游戏的构成" class="headerlink" title="游戏的构成"></a>游戏的构成</h2><p>在我的评价体系中，我将游戏拆分为两大元素：<strong>1.可玩性<del>游戏性</del> 2.艺术性</strong>。<br><del>其中“游戏性”可能与真正意义的<code>游戏性</code>不太一致，我这里主要为了与“艺术性”进行区分，而传统概念的<code>游戏性</code>是一个整体性的概念，包括了我所谓的“游戏性”和“艺术性”，是区别于其他娱乐方式或是艺术方式的概念。</del></p>
-<p>元素四分法中拆分游戏为：<strong>1.机制 2.技术 3.故事 4.美学</strong>。</p>
-<ul>
-<li>机制：包括游戏目标和游戏方式，使游戏成为游戏，需要美学、技术和故事的支持。</li>
-<li>故事：由游戏中事件按发生的顺序构成，需要机制来推动，美学来增强表现力，技术来配合展示。</li>
-<li>美学：是游戏的外观、声音等各方面的感觉，对玩家之体验影响最直接，可以搭配机制来表现，需要技术来放大，故事来凸显。</li>
-<li>技术：是一种媒介，美学通过其展现，机制通过其产生作用，故事通过其来讲述。</li>
-</ul>
-<p>我认为我的评价体系和四分法是高度重合的：“可玩<del>游戏</del>性”主要包括了玩法、机制和技术，是游戏最主要的要素；“艺术性”主要包括了剧情故事和美学，其中美学又包括画面美术、音乐音效、地编等元素。其中我认为其实美学甚至可以包括故事，基本等于“艺术性”的含义，另外<u>技术</u>其实是在两大元素的交集中。内容上基本一致，区别是四分法主要保留了各元素间的联系，我的评价体系做分割主要是为了方便评价，使各部分相对独立。</p>
-<p>我个人所谓的游戏评价体系就是在两大元素中专注评价感受较深的方面，分析优缺点，而非一个多边形的维度图来统一评价标准，总体上优秀的游戏至少会在两大元素其一做到优秀。</p>
-<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>游戏设计使用了全部的四种元素吗？设计能够通过增强一种或者多种元素来获得提高吗？四种元素是否和谐，互相作用并向同一个主题努力？</p>
-<h2 id="思维方式"><a href="#思维方式" class="headerlink" title="思维方式"></a>思维方式</h2><p>分析设计游戏要内外兼顾，表面涉及玩家体验，内在涉及游戏组成元素。不仅要理解各种各样的游戏元素及它们之间的关系，还必须考虑它们与体验的关系，即同时保留玩家视角与设计师视角，在理解元素及其关系是如何产生体验的同时感受游戏体验。如果只保留玩家视角，会只思考体验，却不理解为什么会有这样的体验或者怎样增强这种体验；<u>如果只保留设计师视角，可能让一个游戏结构在理论上十分完美，而在现实中十分糟糕</u>（这或许是我常感觉很多设计师、策划有问题的原因）。只有同时专注这两件事，才能设计出好的游戏内容。</p>
-<h3 id="思考-1"><a href="#思考-1" class="headerlink" title="思考"></a>思考</h3><p>这种思维方式近期才被我列为我的个人优势之一。具体想法如下（搬运自我的其他笔记）：<br><em>我爱玩游戏，会玩游戏，能真正的了解游戏，懂游戏，对于实际的策划工作有扎实的着力点。（这一点原本我认为是策划基础的必备能力，但是后来我才了解到现在很多的游戏设计师和策划，根本都不玩或者是玩不明白他们自己设计的游戏或是参照的游戏或是竞品，经典例如《英雄联盟》的设计师，在后知后觉地调整游戏平衡时还要私下微信询问部分英雄的“绝活哥”，通过他们的意见来设计平衡游戏，而最后设计改动的还和调研反馈大相径庭，且毫无作用，这我认为是很可笑的，这样的例子还有很多，比如《绝区零》《鸣潮》《尘白禁区》等游戏都有类似情况，<del>这点与我说的第二点共同作用，</del> 展开来详细讲内容会很多，<u>概括来说就是现在很多的策划在招人和实际工作时我觉得有点过于学院派和闭门造车</u>）</em><br><strong>总之我现在认为我能同时从玩家视角和策划视角分析游戏，这成为了我的一大能力优势。</strong> 虽然还并没有人认可，或许也再也没机会被人认可了。</p>
-<p>必须一次性看到游戏的全部：四种元素和玩家体验以及它们是怎样关联起来的。可以把注意力从皮肤转移到骨骼再到皮肤，但更好的方法是全息观察游戏和体验。</p>
-<p>统一的主题：反思游戏中的哪种元素产生了令人享受的体验？游戏中的哪种元素会让玩家在体验中分心？怎样改变游戏元素来提高游戏体验？</p>
-<p>思考游戏主题是什么？是否采用了所有可能的方法来强化主题？</p>
-<h2 id="共鸣主题"><a href="#共鸣主题" class="headerlink" title="共鸣主题"></a>共鸣主题</h2><p>不是每个主题都能成为一个共鸣主题。不过当找到一个深刻的共鸣主题时，就值得好好利用它。这些主题中的一些是基于体验的，另一些是基于真相的。无法通过逻辑分辨出哪一个主题是有共鸣性的–必须在自己内心深处亲自感受这种共鸣，这是一种很重要的自我倾听的形式。</p>
-<p><em>一些设计师拒绝主题的概念,因为他们认为:“玩家从来不会注意到主题”确实，玩家们并不总能够清楚地认识到真正打动他们的是作品的主题–这是因为主题经常作用于潜意识的层面。玩家们知道他们喜欢一个游戏，但他们很难说清为什么喜欢。在许多场合，他们喜欢的理由可能是所有的元素都在加强一个他们认为很有趣或者很重要的主题。主题并不会像谜题一般故意留下隐藏的信息。主题会把你的作品聚焦到对玩家有意义的事物上。</em> </p>
-<h3 id="思考-2"><a href="#思考-2" class="headerlink" title="思考"></a>思考</h3><p>在游戏中，能感觉到哪些有力的或者特殊的元素？当向他人描述此游戏时，哪些创意能让他们真的兴奋？如果没有任何限制，这个游戏将会变成什么样？我对这个游戏的方向有一定的直觉，那到底是什么在驱动这种直觉呢？</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-        <tag>评价体系</tag>
-        <tag>个人优势</tag>
-        <tag>我</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo之Butterfly主题透明css浅析</title>
-    <url>/2024/07/29/css1/</url>
-    <content><![CDATA[<p><img src="/./img/posts/image-1.png" alt="效果图1"><br><img src="/./img/posts/image-2.png" alt="效果图2"></p>
-<h2 id="1-改变透明度"><a href="#1-改变透明度" class="headerlink" title="1.改变透明度"></a>1.改变透明度</h2><h3 id="卡片透明度"><a href="#卡片透明度" class="headerlink" title="卡片透明度"></a>卡片透明度</h3><p>在souce文件夹中新建css文件夹，用来存放所有自行配置的css文件，与img文件夹同理，防止更新后被覆盖。在文件夹中新建transparency.css文件，编写以下代码。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 明亮模式透明度0.75 */</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line"><span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">75</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 黑暗模式透明度0.7 */</span></span><br><span class="line"><span class="selector-attr">[data-theme=<span class="string">&quot;dark&quot;</span>]</span> &#123;</span><br><span class="line"><span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">12</span>, <span class="number">12</span>, <span class="number">12</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在主题配置文件的inject下按格式填写css，其中根目录为source文件夹。<br><img src="/../img/posts/image-3.png"></p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/transparency.css&quot;&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="页脚透明度"><a href="#页脚透明度" class="headerlink" title="页脚透明度"></a>页脚透明度</h3><p>在主题配置文件中，将页脚颜色直接设置为transparent。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Footer Background</span></span><br><span class="line"><span class="attr">footer_bg:</span> <span class="string">transparent</span></span><br></pre></td></tr></table></figure>
-<p>因为有遮罩的关系，既保留了底色来显示文字，又可以和背景融为一体。<br><img src="/../img/posts/image.png" alt="页脚效果"></p>
-<h2 id="2-改变top颜色"><a href="#2-改变top颜色" class="headerlink" title="2.改变top颜色"></a>2.改变top颜色</h2><p>新建css文件命名为headtransparency，编写以下代码。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 取消top颜色以支持cover透明图片显示背景 */</span></span><br><span class="line"><span class="selector-id">#page-header</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: unset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>同样添加到inject中</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/headtransparency.css&quot;&gt;</span></span><br></pre></td></tr></table></figure>
-<p>因为顶图优先级top_img &gt; cover， 而cover既可以作为文章封面，又可以在top_img未设置时作为顶图，所以我准备全使用cover设置图片，省去多余图片设置。但在top_img未设置时，主题的蓝色 <code>#49b1f5</code> 会作为背景色填充 ，因为图片的webp和png格式有alpha通道，存在透明的图片会显露出cover图片下被默认填充的背景色，所以需要取消页眉的背景色填充，这样就可以透出页面背景。另外页眉同样有遮罩，比较合适。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Add mask to header or footer (为 header 或 footer 添加黑色半透遮罩)</span></span><br><span class="line"><span class="attr">mask:</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">footer:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h1 id="教学"><a href="#教学" class="headerlink" title="教学"></a>教学</h1><p>实际上css的内容操作是使用浏览器F12调试摸索的，需要在右侧的样式中逐一查找对应属性。<br><img src="/../img/posts/image4.png" alt="点击元素获取id"><br>因为我从未接触过css，速成只能利用网络文档和AI，自行摸索出了结果，而网络上流传的许多修改透明度方法千篇一律都是屎山代码，长篇大论中仅有一两句有用，且不适配黑暗模式的页面，所幸我最后自行排查出了结果，并简化了代码。</p>
-<p>另外我认为无需单独配置每个卡牌的透明度，如果透明度各不相同那页面会很不美观，又因为所有卡片都使用 <code>--card-bg</code> 作为颜色，那在两种页面模式下配置它即可，既省事又高效，但rgba函数仍需获取颜色作为填充，我选取了原主题颜色，可以自行调整。</p>
-<hr>
-<h3 id="以下是避雷"><a href="#以下是避雷" class="headerlink" title="以下是避雷"></a>以下是避雷</h3><p><img src="/../img/posts/026fc1bea3736cc224e319b6c2b4741e.png" alt="雷同的网络教程"><br>以下这是网络教程的雷同代码,除开页脚我直接设置为transparent外，仅两句可用，分别是.recent-post-item和最主要的–card-bg，且因为全覆盖设置成白色，完全不适配原黑暗模式页面。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 文章页背景 */</span></span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 可以自行修改*/</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 所有页面背景 */</span></span><br><span class="line"><span class="selector-id">#aside_content</span> <span class="selector-class">.card-widget</span>,</span><br><span class="line"><span class="selector-id">#recent-posts</span>&gt;<span class="selector-class">.recent-post-item</span>,</span><br><span class="line"><span class="selector-class">.layout_page</span>&gt;<span class="selector-tag">div</span><span class="selector-pseudo">:first-child</span><span class="selector-pseudo">:not</span>(<span class="selector-class">.recent-posts</span>),</span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#page</span>,</span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span>,</span><br><span class="line"><span class="selector-class">.read-mode</span> <span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 */</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*侧边卡片的透明度 */</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">    <span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 页脚透明 */</span></span><br><span class="line"><span class="selector-id">#footer</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 */</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Butterfly</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>游戏设计笔记1</title>
-    <url>/2024/08/08/b1/</url>
+    <url>/2025/07/27/b1/</url>
     <content><![CDATA[<h2 id="策划必备要素"><a href="#策划必备要素" class="headerlink" title="策划必备要素"></a>策划必备要素</h2><p>倾听&gt;&gt;创意，沟通</p>
 <ol>
 <li>倾听团队，与团队沟通合作。</li>
@@ -112,8 +41,43 @@
       </tags>
   </entry>
   <entry>
+    <title>游戏设计笔记2</title>
+    <url>/2025/07/27/b2/</url>
+    <content><![CDATA[<h2 id="游戏的构成"><a href="#游戏的构成" class="headerlink" title="游戏的构成"></a>游戏的构成</h2><p>在我的评价体系中，我将游戏拆分为两大元素：<strong>1.可玩性<del>游戏性</del> 2.艺术性</strong>。<br><del>其中“游戏性”可能与真正意义的<code>游戏性</code>不太一致，我这里主要为了与“艺术性”进行区分，而传统概念的<code>游戏性</code>是一个整体性的概念，包括了我所谓的“游戏性”和“艺术性”，是区别于其他娱乐方式或是艺术方式的概念。</del></p>
+<p>元素四分法中拆分游戏为：<strong>1.机制 2.技术 3.故事 4.美学</strong>。</p>
+<ul>
+<li>机制：包括游戏目标和游戏方式，使游戏成为游戏，需要美学、技术和故事的支持。</li>
+<li>故事：由游戏中事件按发生的顺序构成，需要机制来推动，美学来增强表现力，技术来配合展示。</li>
+<li>美学：是游戏的外观、声音等各方面的感觉，对玩家之体验影响最直接，可以搭配机制来表现，需要技术来放大，故事来凸显。</li>
+<li>技术：是一种媒介，美学通过其展现，机制通过其产生作用，故事通过其来讲述。</li>
+</ul>
+<p>我认为我的评价体系和四分法是高度重合的：“可玩<del>游戏</del>性”主要包括了玩法、机制和技术，是游戏最主要的要素；“艺术性”主要包括了剧情故事和美学，其中美学又包括画面美术、音乐音效、地编等元素。其中我认为其实美学甚至可以包括故事，基本等于“艺术性”的含义，另外<u>技术</u>其实是在两大元素的交集中。内容上基本一致，区别是四分法主要保留了各元素间的联系，我的评价体系做分割主要是为了方便评价，使各部分相对独立。</p>
+<p>我个人所谓的游戏评价体系就是在两大元素中专注评价感受较深的方面，分析优缺点，而非一个多边形的维度图来统一评价标准，总体上优秀的游戏至少会在两大元素其一做到优秀。</p>
+<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>游戏设计使用了全部的四种元素吗？设计能够通过增强一种或者多种元素来获得提高吗？四种元素是否和谐，互相作用并向同一个主题努力？</p>
+<h2 id="思维方式"><a href="#思维方式" class="headerlink" title="思维方式"></a>思维方式</h2><p>分析设计游戏要内外兼顾，表面涉及玩家体验，内在涉及游戏组成元素。不仅要理解各种各样的游戏元素及它们之间的关系，还必须考虑它们与体验的关系，即同时保留玩家视角与设计师视角，在理解元素及其关系是如何产生体验的同时感受游戏体验。如果只保留玩家视角，会只思考体验，却不理解为什么会有这样的体验或者怎样增强这种体验；<u>如果只保留设计师视角，可能让一个游戏结构在理论上十分完美，而在现实中十分糟糕</u>（这或许是我常感觉很多设计师、策划有问题的原因）。只有同时专注这两件事，才能设计出好的游戏内容。</p>
+<h3 id="思考-1"><a href="#思考-1" class="headerlink" title="思考"></a>思考</h3><p>这种思维方式近期才被我列为我的个人优势之一。具体想法如下（搬运自我的其他笔记）：<br><em>我爱玩游戏，会玩游戏，能真正的了解游戏，懂游戏，对于实际的策划工作有扎实的着力点。（这一点原本我认为是策划基础的必备能力，但是后来我才了解到现在很多的游戏设计师和策划，根本都不玩或者是玩不明白他们自己设计的游戏或是参照的游戏或是竞品，经典例如《英雄联盟》的设计师，在后知后觉地调整游戏平衡时还要私下微信询问部分英雄的“绝活哥”，通过他们的意见来设计平衡游戏，而最后设计改动的还和调研反馈大相径庭，且毫无作用，这我认为是很可笑的，这样的例子还有很多，比如《绝区零》《鸣潮》《尘白禁区》等游戏都有类似情况，<del>这点与我说的第二点共同作用，</del> 展开来详细讲内容会很多，<u>概括来说就是现在很多的策划在招人和实际工作时我觉得有点过于学院派和闭门造车</u>）</em><br><strong>总之我现在认为我能同时从玩家视角和策划视角分析游戏，这成为了我的一大能力优势。</strong> 虽然还并没有人认可，或许也再也没机会被人认可了。</p>
+<p>必须一次性看到游戏的全部：四种元素和玩家体验以及它们是怎样关联起来的。可以把注意力从皮肤转移到骨骼再到皮肤，但更好的方法是全息观察游戏和体验。</p>
+<p>统一的主题：反思游戏中的哪种元素产生了令人享受的体验？游戏中的哪种元素会让玩家在体验中分心？怎样改变游戏元素来提高游戏体验？</p>
+<p>思考游戏主题是什么？是否采用了所有可能的方法来强化主题？</p>
+<h2 id="共鸣主题"><a href="#共鸣主题" class="headerlink" title="共鸣主题"></a>共鸣主题</h2><p>不是每个主题都能成为一个共鸣主题。不过当找到一个深刻的共鸣主题时，就值得好好利用它。这些主题中的一些是基于体验的，另一些是基于真相的。无法通过逻辑分辨出哪一个主题是有共鸣性的–必须在自己内心深处亲自感受这种共鸣，这是一种很重要的自我倾听的形式。</p>
+<p><em>一些设计师拒绝主题的概念,因为他们认为:“玩家从来不会注意到主题”确实，玩家们并不总能够清楚地认识到真正打动他们的是作品的主题–这是因为主题经常作用于潜意识的层面。玩家们知道他们喜欢一个游戏，但他们很难说清为什么喜欢。在许多场合，他们喜欢的理由可能是所有的元素都在加强一个他们认为很有趣或者很重要的主题。主题并不会像谜题一般故意留下隐藏的信息。主题会把你的作品聚焦到对玩家有意义的事物上。</em> </p>
+<h3 id="思考-2"><a href="#思考-2" class="headerlink" title="思考"></a>思考</h3><p>在游戏中，能感觉到哪些有力的或者特殊的元素？当向他人描述此游戏时，哪些创意能让他们真的兴奋？如果没有任何限制，这个游戏将会变成什么样？我对这个游戏的方向有一定的直觉，那到底是什么在驱动这种直觉呢？</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+        <tag>评价体系</tag>
+        <tag>个人优势</tag>
+        <tag>我</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>游戏设计笔记3</title>
-    <url>/2024/08/19/b4/</url>
+    <url>/2025/07/27/b4/</url>
     <content><![CDATA[<h2 id="游戏的可玩性"><a href="#游戏的可玩性" class="headerlink" title="游戏的可玩性"></a>游戏的可玩性</h2><p><em>游戏可玩性优先：在所有的电子游戏中，可玩性是最主要的娱乐元素。所以，在设计游戏时，首先要考虑的就是游戏的可玩性。————《游戏设计基础》(Ernest Adams)</em></p>
 <p>当我看到书上的这句话时我感受到了充分的认同感，但我立马想到了有悖这一观点的例子，然后在我沉思后，我感到了疑惑，到底是这句话出了问题，还是国内二游模式过分畸形。</p>
 <p>手游本就相比端游会缺少一些可玩性可以理解，但国内<strong>大部分</strong>二游是可玩性优先的吗？我觉得不是的，首先需要确定的是客观来说大部分二游的主体游戏内容是单一枯燥的，虽然我暂时很难直接证明，但是否则就不会在任务设置合理的情况下存在所谓<strong>上班</strong>式的体验并出现那么多代肝和自动脚本。二游设置的任务负担不大但主体玩法没有太多可玩性，很多需要玩家日复一日地重复游玩完全相同内容，也就是所谓的<strong>日常</strong>、<strong>周常</strong>，并衍生出了所谓<strong>长草期</strong>等名称，以此来收集资源（主要是抽卡资源和养成材料），玩家根本不会因为完成这些任务而觉得好玩。而只有通过这些资源积累才能获取角色等内容来从某种意义上拓展游戏一定的可玩性，但主要还是为了抽卡<strong>收集</strong>这一目的服务，可这种收集玩法的可玩性真的很低，长期消磨玩家的耐心最后也只能提供很短期的正反馈且并不能让玩家充分地获得<strong>回报感</strong>，玩家们不会思考是那么长期地打卡游玩的功劳，而是更多地利用赌博心理，让人感觉幸运和终于获得的轻微满足感以及新鲜感，反而在未获得（收集）时会产生极大的挫败感，这对增加或维持用户粘性的效果并不好。</p>
@@ -137,8 +101,44 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo之Butterfly主题透明css浅析</title>
+    <url>/2025/07/27/css1/</url>
+    <content><![CDATA[<p><img src="/./img/posts/image-1.png" alt="效果图1"><br><img src="/./img/posts/image-2.png" alt="效果图2"></p>
+<h2 id="1-改变透明度"><a href="#1-改变透明度" class="headerlink" title="1.改变透明度"></a>1.改变透明度</h2><h3 id="卡片透明度"><a href="#卡片透明度" class="headerlink" title="卡片透明度"></a>卡片透明度</h3><p>在souce文件夹中新建css文件夹，用来存放所有自行配置的css文件，与img文件夹同理，防止更新后被覆盖。在文件夹中新建transparency.css文件，编写以下代码。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 明亮模式透明度0.75 */</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line"><span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">75</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 黑暗模式透明度0.7 */</span></span><br><span class="line"><span class="selector-attr">[data-theme=<span class="string">&quot;dark&quot;</span>]</span> &#123;</span><br><span class="line"><span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">12</span>, <span class="number">12</span>, <span class="number">12</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在主题配置文件的inject下按格式填写css，其中根目录为source文件夹。<br><img src="/../img/posts/image-3.png"></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/transparency.css&quot;&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="页脚透明度"><a href="#页脚透明度" class="headerlink" title="页脚透明度"></a>页脚透明度</h3><p>在主题配置文件中，将页脚颜色直接设置为transparent。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Footer Background</span></span><br><span class="line"><span class="attr">footer_bg:</span> <span class="string">transparent</span></span><br></pre></td></tr></table></figure>
+<p>因为有遮罩的关系，既保留了底色来显示文字，又可以和背景融为一体。<br><img src="/../img/posts/image.png" alt="页脚效果"></p>
+<h2 id="2-改变top颜色"><a href="#2-改变top颜色" class="headerlink" title="2.改变top颜色"></a>2.改变top颜色</h2><p>新建css文件命名为headtransparency，编写以下代码。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 取消top颜色以支持cover透明图片显示背景 */</span></span><br><span class="line"><span class="selector-id">#page-header</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: unset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>同样添加到inject中</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/headtransparency.css&quot;&gt;</span></span><br></pre></td></tr></table></figure>
+<p>因为顶图优先级top_img &gt; cover， 而cover既可以作为文章封面，又可以在top_img未设置时作为顶图，所以我准备全使用cover设置图片，省去多余图片设置。但在top_img未设置时，主题的蓝色 <code>#49b1f5</code> 会作为背景色填充 ，因为图片的webp和png格式有alpha通道，存在透明的图片会显露出cover图片下被默认填充的背景色，所以需要取消页眉的背景色填充，这样就可以透出页面背景。另外页眉同样有遮罩，比较合适。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Add mask to header or footer (为 header 或 footer 添加黑色半透遮罩)</span></span><br><span class="line"><span class="attr">mask:</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">footer:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h1 id="教学"><a href="#教学" class="headerlink" title="教学"></a>教学</h1><p>实际上css的内容操作是使用浏览器F12调试摸索的，需要在右侧的样式中逐一查找对应属性。<br><img src="/../img/posts/image4.png" alt="点击元素获取id"><br>因为我从未接触过css，速成只能利用网络文档和AI，自行摸索出了结果，而网络上流传的许多修改透明度方法千篇一律都是屎山代码，长篇大论中仅有一两句有用，且不适配黑暗模式的页面，所幸我最后自行排查出了结果，并简化了代码。</p>
+<p>另外我认为无需单独配置每个卡牌的透明度，如果透明度各不相同那页面会很不美观，又因为所有卡片都使用 <code>--card-bg</code> 作为颜色，那在两种页面模式下配置它即可，既省事又高效，但rgba函数仍需获取颜色作为填充，我选取了原主题颜色，可以自行调整。</p>
+<hr>
+<h3 id="以下是避雷"><a href="#以下是避雷" class="headerlink" title="以下是避雷"></a>以下是避雷</h3><p><img src="/../img/posts/026fc1bea3736cc224e319b6c2b4741e.png" alt="雷同的网络教程"><br>以下这是网络教程的雷同代码,除开页脚我直接设置为transparent外，仅两句可用，分别是.recent-post-item和最主要的–card-bg，且因为全覆盖设置成白色，完全不适配原黑暗模式页面。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 文章页背景 */</span></span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 可以自行修改*/</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 所有页面背景 */</span></span><br><span class="line"><span class="selector-id">#aside_content</span> <span class="selector-class">.card-widget</span>,</span><br><span class="line"><span class="selector-id">#recent-posts</span>&gt;<span class="selector-class">.recent-post-item</span>,</span><br><span class="line"><span class="selector-class">.layout_page</span>&gt;<span class="selector-tag">div</span><span class="selector-pseudo">:first-child</span><span class="selector-pseudo">:not</span>(<span class="selector-class">.recent-posts</span>),</span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#page</span>,</span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span>,</span><br><span class="line"><span class="selector-class">.read-mode</span> <span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 */</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*侧边卡片的透明度 */</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">    <span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 页脚透明 */</span></span><br><span class="line"><span class="selector-id">#footer</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 */</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Butterfly</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>游戏设计之心流</title>
-    <url>/2024/08/02/design1/</url>
+    <url>/2025/07/27/design1/</url>
     <content><![CDATA[<h1 id="心流"><a href="#心流" class="headerlink" title="心流"></a>心流</h1><p><u>指玩家沉浸游戏，淡化时间、饥饿等外部因素，全神贯注的状态</u><br>理论适用于大部分“传统游戏”，但仍须根据游戏类型及目标用户具体问题具体分析。<br><img src="https://s2.loli.net/2024/08/02/3RkghHSZ5JzfY76.png" alt="心流图"><br><strong>心流的节奏要有变化</strong></p>
 <p>达到心流体验的最主要的条件我认为是：1.明确的目标 2.充分的正反馈。<br><em>但我还没有真正参与设计出过优秀的游戏，所以暂不分析也没有能力分析如何设计具有心流体验的游戏，下文更多通过解读和举例分析来浅谈心流。</em></p>
 <p>特殊的如魂系游戏和大部分手游另作讨论。<br>魂系游戏：更多依靠技术，以及在高压的焦虑中起伏的心流状态。<br>手游：更多依靠养成和数值，碎片化游戏时间，难以产生心流状态。</p>
@@ -168,7 +168,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2024/07/25/hello-world/</url>
+    <url>/2025/07/27/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -186,7 +186,7 @@
   </entry>
   <entry>
     <title>关于《炉石传说》国服回归策划的启发</title>
-    <url>/2024/07/30/idea1/</url>
+    <url>/2025/07/27/idea1/</url>
     <content><![CDATA[<h2 id="新闻"><a href="#新闻" class="headerlink" title="新闻"></a>新闻</h2><p>最近的ChinaJoy上，《炉石传说》（HearthStone）中国宣布，回归日期定档9月25日，回归后一定时间内登录《炉石传说》，所有国服玩家（包括新注册玩家）即可免费获赠2023年全部错过的卡牌，共计2154张卡牌，包括全部97张金色传说。另外游戏内还有额外的任务卡包、皮肤等福利，游戏外与网易雷火合作赞助赛事100万元奖金以及提供4个国服直邀名额。</p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>我曾有玩过一段时间的《炉石传说》，从开服时入坑的尝试，到2017年左右的卡拉赞之夜版本开始长期游玩至JK版本左右，也算是对游戏及环境有一定理解。</p>
 <p>国服《炉石传说》玩家数量较多，游戏热情也较高，游戏平衡性相对较好（不过基本可以说没有竞品）；消费上以每个版本发布的预购卡包和冒险模式为主。运营上相比《守望先锋》的后继无力，显然《炉石传说》更扎实地稳中有进，所以中国市场是十分重要的，暴雪对于中国市场肯定也是十分看重的。</p>
@@ -210,50 +210,8 @@
       </tags>
   </entry>
   <entry>
-    <title>锐评我所擅长和喜欢的FPS和JRPG</title>
-    <url>/2024/08/31/idea3/</url>
-    <content><![CDATA[<p>FPS竞技性强，能给予玩家强烈的即时的刺激感与正反馈，容易产生沉浸感和进入心流状态。但这对于枪械和操作的手感要求较高，同时因为竞技性的过强，导致影响游戏出圈的因素会更多，如平衡性、差异化玩法、门槛、反作弊、关卡地图设计等等。</p>
-<p>首要的是传统JRPG和新型JRPG有明显差别，我主要喜欢新式的JRPG，相对来说更短平快，符合我个人喜好。JRPG线性叙事节奏较紧凑平滑，较简单直接，适合当代节奏，动作动画较优秀流畅，画风较美，系统较简单易入门，但也因此略显颓势，JRPG相比当代商业引擎技术孱弱，游戏工业化流水线，除了《最终幻想》这类老牌IP的老式JRPG外很少再出现优秀佳作，平均都在良好水平线附近，近年仅《碧蓝幻想Relink》接近优秀，这或许与部分日厂追求稳定的低投入低回报理念有关，同时这种思想感觉也影响了国内部分游戏厂商，或许从某种意义上导致了国内除《觅长生》等独立游戏外仅有《黑神话：悟空》一部优秀3A的现状。</p>
-]]></content>
-      <categories>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>分析《Apex Legends》角色技能设计维度</title>
-    <url>/2024/10/10/idea4/</url>
-    <content><![CDATA[<p>《APEX英雄》技能体系我会分三维为：转移，攻防，信息与资源。其中转移分为远近，其关系进点和机动性。以此为三维，可通过思维导图进一步细分效果。</p>
-<p>值得一提的是，实际上《APEX英雄》的角色设计对于资源相关的考量在电竞比赛中与玩家排位中相差巨大。<br><img src="https://s2.loli.net/2024/10/10/L3b8kSOHmBQGTW7.png" alt="三维图"></p>
-]]></content>
-      <categories>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>设计竞技类游戏时如何兼顾女性用户</title>
-    <url>/2024/10/20/idea5/</url>
-    <content><![CDATA[<p><strong>例如在FPS和MOBA游戏中，设计明确的奶位（偏纯辅助型）角色，即可兼顾女性玩家</strong><br>例如《守望先锋》中的天使，《英雄联盟》中的魔法猫咪、琴女，《无畏契约》中的贤者等。<br>看似像暴论，但意思已经基本到位了，我细想确实如此。</p>
-<p>后续有空再更</p>
-]]></content>
-      <categories>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>为什么感觉好玩的新游戏越来越少？</title>
-    <url>/2024/08/17/idea2/</url>
+    <url>/2025/07/27/idea2/</url>
     <content><![CDATA[<p>我希望我未来能设计出好玩的游戏。</p>
 <h1 id="游戏的发展趋势"><a href="#游戏的发展趋势" class="headerlink" title="游戏的发展趋势"></a>游戏的发展趋势</h1><p>我想把游戏发展大致分为三个阶段：①约2000年前的萌芽期 ②00年至15年左右的发展红利期 ③15年后至今的稳定期。<br>虽然很多书籍、视频等内容很详细地讲解过游戏发展的几个阶段，但我主要是以各阶段为载体，来分析游戏设计的发展趋势。</p>
 <p>在①阶段，游戏从2D向3D发展，创新了很多技术和游戏模式，成为了之后游戏的基础。<br>在②阶段时，各种游戏如雨后春笋般地出现，技术的迭代、玩法的革新无不刺激着玩家们的神经，让人耳目一新。<br>在③阶段时，各方面的“质变”逐渐放缓，玩法创新逐渐减少，游戏产品趋于工业化，产生了一定瓶颈。</p>
@@ -280,7 +238,7 @@
   </entry>
   <entry>
     <title>状态模式笔记1</title>
-    <url>/2024/08/11/b3/</url>
+    <url>/2025/07/27/b3/</url>
     <content><![CDATA[<p>英雄游戏（英雄互娱）曾在面试中询问我有关动画状态机的内容，我当时没有准备过这方面，紧张时说出了不太了解的回答，事后回想自己其实了解过相关内容，曾在设计角色时绑定骨骼后导入过一些动作来操控角色，当时还学习过如何平滑动作动画，进行状态机的切换，懊悔自己薄弱的即时表达能力，感觉很可惜。借此机会，我回顾了“动画状态机”，同时再阅读有关“设计模式”的书籍，通过递归式地学习，针对“状态模式”先做些笔记，发散出了“有限状态机”再是“行为树”等内容，所以将笔记拆分为几篇集中叙写，内容对象针对游戏角色(AI)。<del>这几天我的确还是有点乏了，感觉自己学的写的没有正反馈，认识的朋友们大都找到合适的工作了，我水平真的不够吗，感觉入职之后再写博客会更有动力吧。。。</del></p>
 <h1 id="状态模式"><a href="#状态模式" class="headerlink" title="状态模式"></a>状态模式</h1><p><em>“允许一个对象的行为随着内部状态的改变而改变，对象看起来好像是在修改自身类。”</em></p>
 <h2 id="有限状态机FSM"><a href="#有限状态机FSM" class="headerlink" title="有限状态机FSM"></a>有限状态机FSM</h2><ul>
@@ -313,6 +271,86 @@
         <tag>有限状态机</tag>
         <tag>AI</tag>
         <tag>面向对象</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>锐评我所擅长和喜欢的FPS和JRPG</title>
+    <url>/2025/07/27/idea3/</url>
+    <content><![CDATA[<p>FPS竞技性强，能给予玩家强烈的即时的刺激感与正反馈，容易产生沉浸感和进入心流状态。但这对于枪械和操作的手感要求较高，同时因为竞技性的过强，导致影响游戏出圈的因素会更多，如平衡性、差异化玩法、门槛、反作弊、关卡地图设计等等。</p>
+<p>首要的是传统JRPG和新型JRPG有明显差别，我主要喜欢新式的JRPG，相对来说更短平快，符合我个人喜好。JRPG线性叙事节奏较紧凑平滑，较简单直接，适合当代节奏，动作动画较优秀流畅，画风较美，系统较简单易入门，但也因此略显颓势，JRPG相比当代商业引擎技术孱弱，游戏工业化流水线，除了《最终幻想》这类老牌IP的老式JRPG外很少再出现优秀佳作，平均都在良好水平线附近，近年仅《碧蓝幻想Relink》接近优秀，这或许与部分日厂追求稳定的低投入低回报理念有关，同时这种思想感觉也影响了国内部分游戏厂商，或许从某种意义上导致了国内除《觅长生》等独立游戏外仅有《黑神话：悟空》一部优秀3A的现状。</p>
+]]></content>
+      <categories>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分析《Apex Legends》角色技能设计维度</title>
+    <url>/2025/07/27/idea4/</url>
+    <content><![CDATA[<p>《APEX英雄》技能体系我会分三维为：转移，攻防，信息与资源。其中转移分为远近，其关系进点和机动性。以此为三维，可通过思维导图进一步细分效果。</p>
+<p>值得一提的是，实际上《APEX英雄》的角色设计对于资源相关的考量在电竞比赛中与玩家排位中相差巨大。<br><img src="https://s2.loli.net/2024/10/10/L3b8kSOHmBQGTW7.png" alt="三维图"></p>
+]]></content>
+      <categories>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计竞技类游戏时如何兼顾女性用户</title>
+    <url>/2025/07/27/idea5/</url>
+    <content><![CDATA[<p><strong>例如在FPS和MOBA游戏中，设计明确的奶位（偏纯辅助型）角色，即可兼顾女性玩家</strong><br>例如《守望先锋》中的天使，《英雄联盟》中的魔法猫咪、琴女，《无畏契约》中的贤者等。<br>看似像暴论，但意思已经基本到位了，我细想确实如此。</p>
+<p>后续有空再更</p>
+]]></content>
+      <categories>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Unity的生命周期</title>
+    <url>/2025/07/27/unity1/</url>
+    <content><![CDATA[<h1 id="Unity的生命周期"><a href="#Unity的生命周期" class="headerlink" title="Unity的生命周期"></a>Unity的生命周期</h1><p><a href="https://docs.unity3d.com/cn/2023.2/Manual/UnityManual.html">Unity官方手册</a></p>
+<p>场景开始前调用，用于<strong>加载场景</strong>（场景中每个对象调用一次）<br>在为任何对象调用 Start 和 Update 等函数之前，会为所有脚本调用 Awake 和 OnEnable 函数。在游戏运行过程中实例化对象时，不能强制执行此调用。</p>
+<ul>
+<li><strong>Awake：</strong> 早于Start，常用于在游戏开始之前初始化变量或游戏状态（只调用一次）</li>
+<li><strong>OnEnable：</strong> 当对象变为可用或激活状态时调用（可多次调用）</li>
+</ul>
+<p><u><strong>Start</u>：</strong> 仅当启用脚本实例后，在第一次帧更新之前（Update前）调用，常用于数据或逻辑对象初始化（只调用一次），在游戏运行过程中实例化对象时，不能强制执行此调用。</p>
+<p><strong>FixedUpdate：</strong> 根据物理帧利用固定间隔计时器（独立于帧率）进行所有物理计算和更新</p>
+<p><strong>OnTrigger：</strong> 触发器被触发时调用；<strong>OnCollision：</strong> 产生碰撞事件时调用</p>
+<p><em><del>yield WaitForFixedUpdate：所有脚本上调用所有 FixedUpdate 后继续，作为卡点，在物理帧结束至此点再开始执行后续代码</del></em></p>
+<p><em><del>OnMouse：输入</del></em></p>
+<p><u><strong>Update</u>：</strong> 每帧调用</p>
+<p><strong>LateUpdate：</strong> 每帧Update方法调用后调用，常见用途是跟随第三人称摄像机</p>
+<p><em><del>一堆渲染函数（有关状态机）</del></em></p>
+<p><strong>OnGUI：</strong> 渲染用户界面，然后为每个输入事件处理布局和键盘&#x2F;鼠标事件</p>
+<p><em><del>yield WaitForEndOfFrame：**当前帧彻底结束后会执行此协程</del></em></p>
+<p><strong>OnApplicationPause：</strong> 应用暂停时在帧结尾处调用，并发出一个额外帧，从而允许游戏显示图形来指示暂停状态，取消暂停后从FixedUpdate开始重新执行</p>
+<p>在场景中的所有活动对象上调用以下函数</p>
+<ul>
+<li><strong>OnApplicationQuit：</strong> 应用退出前在所有对象上调用，可以用于保存退出前的信息</li>
+<li><strong>OnDisable：</strong> 行为被禁用或处于非活动状态时调用</li>
+</ul>
+<p><strong>OnDestroy：</strong> 物体被销毁时，即存在的最后一帧完成所有帧更新之后调用，一般用于清理内存</p>
+<p><img src="https://s2.loli.net/2024/08/01/wD4g5PSxKa1e8TN.png" alt="中文流程图"></p>
+<p>yield函数都是协程，在Update返回后更新。</p>
+<p><strong>协程</strong>是一种编写异步代码的方法，其中包括等待一定时间或某些操作完成，同时允许其他代码继续执行。它允许程序在单线程内实现多个独立的执行线程（协程），这些线程可以非阻塞地挂起和恢复，以实现协作式多任务处理。协程的核心思想是让程序员能够控制执行的流程，而不是完全交给操作系统或线程调度器来控制。</p>
+<p><img src="https://s2.loli.net/2024/08/01/oKkrTDdJX2igxfB.png" alt="官方文档流程图"></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Unity</tag>
       </tags>
   </entry>
   <entry>
@@ -360,46 +398,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Unity的生命周期</title>
-    <url>/2024/08/01/unity1/</url>
-    <content><![CDATA[<h1 id="Unity的生命周期"><a href="#Unity的生命周期" class="headerlink" title="Unity的生命周期"></a>Unity的生命周期</h1><p><a href="https://docs.unity3d.com/cn/2023.2/Manual/UnityManual.html">Unity官方手册</a></p>
-<p>场景开始前调用，用于<strong>加载场景</strong>（场景中每个对象调用一次）<br>在为任何对象调用 Start 和 Update 等函数之前，会为所有脚本调用 Awake 和 OnEnable 函数。在游戏运行过程中实例化对象时，不能强制执行此调用。</p>
-<ul>
-<li><strong>Awake：</strong> 早于Start，常用于在游戏开始之前初始化变量或游戏状态（只调用一次）</li>
-<li><strong>OnEnable：</strong> 当对象变为可用或激活状态时调用（可多次调用）</li>
-</ul>
-<p><u><strong>Start</u>：</strong> 仅当启用脚本实例后，在第一次帧更新之前（Update前）调用，常用于数据或逻辑对象初始化（只调用一次），在游戏运行过程中实例化对象时，不能强制执行此调用。</p>
-<p><strong>FixedUpdate：</strong> 根据物理帧利用固定间隔计时器（独立于帧率）进行所有物理计算和更新</p>
-<p><strong>OnTrigger：</strong> 触发器被触发时调用；<strong>OnCollision：</strong> 产生碰撞事件时调用</p>
-<p><em><del>yield WaitForFixedUpdate：所有脚本上调用所有 FixedUpdate 后继续，作为卡点，在物理帧结束至此点再开始执行后续代码</del></em></p>
-<p><em><del>OnMouse：输入</del></em></p>
-<p><u><strong>Update</u>：</strong> 每帧调用</p>
-<p><strong>LateUpdate：</strong> 每帧Update方法调用后调用，常见用途是跟随第三人称摄像机</p>
-<p><em><del>一堆渲染函数（有关状态机）</del></em></p>
-<p><strong>OnGUI：</strong> 渲染用户界面，然后为每个输入事件处理布局和键盘&#x2F;鼠标事件</p>
-<p><em><del>yield WaitForEndOfFrame：**当前帧彻底结束后会执行此协程</del></em></p>
-<p><strong>OnApplicationPause：</strong> 应用暂停时在帧结尾处调用，并发出一个额外帧，从而允许游戏显示图形来指示暂停状态，取消暂停后从FixedUpdate开始重新执行</p>
-<p>在场景中的所有活动对象上调用以下函数</p>
-<ul>
-<li><strong>OnApplicationQuit：</strong> 应用退出前在所有对象上调用，可以用于保存退出前的信息</li>
-<li><strong>OnDisable：</strong> 行为被禁用或处于非活动状态时调用</li>
-</ul>
-<p><strong>OnDestroy：</strong> 物体被销毁时，即存在的最后一帧完成所有帧更新之后调用，一般用于清理内存</p>
-<p><img src="https://s2.loli.net/2024/08/01/wD4g5PSxKa1e8TN.png" alt="中文流程图"></p>
-<p>yield函数都是协程，在Update返回后更新。</p>
-<p><strong>协程</strong>是一种编写异步代码的方法，其中包括等待一定时间或某些操作完成，同时允许其他代码继续执行。它允许程序在单线程内实现多个独立的执行线程（协程），这些线程可以非阻塞地挂起和恢复，以实现协作式多任务处理。协程的核心思想是让程序员能够控制执行的流程，而不是完全交给操作系统或线程调度器来控制。</p>
-<p><img src="https://s2.loli.net/2024/08/01/oKkrTDdJX2igxfB.png" alt="官方文档流程图"></p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Unity</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Unity中的面向对象</title>
-    <url>/2024/08/10/unity2/</url>
+    <url>/2025/07/27/unity2/</url>
     <content><![CDATA[<p>场景中存在GameObject实例，每个实例对象在Inspector中都会显示一系列组件，这些组件就是脚本（类），默认全部继承自MonoBehaviour类，成为了该脚本类的实例对象和所选对象GameObject的各种属性。</p>
 <p>Prefab预制体，将场景中的物体拖动到Assets里即可生成。这个过程实际上是一个抽象的过程，抽象成一个具有场景中被拖动物体的所有属性(含值)的模板类。</p>
 ]]></content>
