@@ -1,78 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>游戏设计笔记2</title>
-    <url>/2024/08/09/b2/</url>
-    <content><![CDATA[<h2 id="游戏的构成"><a href="#游戏的构成" class="headerlink" title="游戏的构成"></a>游戏的构成</h2><p>在我的评价体系中，我将游戏拆分为两大元素：<strong>1.可玩性<del>游戏性</del> 2.艺术性</strong>。<br><del>其中“游戏性”可能与真正意义的<code>游戏性</code>不太一致，我这里主要为了与“艺术性”进行区分，而传统概念的<code>游戏性</code>是一个整体性的概念，包括了我所谓的“游戏性”和“艺术性”，是区别于其他娱乐方式或是艺术方式的概念。</del></p>
-<p>元素四分法中拆分游戏为：<strong>1.机制 2.技术 3.故事 4.美学</strong>。</p>
-<ul>
-<li>机制：包括游戏目标和游戏方式，使游戏成为游戏，需要美学、技术和故事的支持。</li>
-<li>故事：由游戏中事件按发生的顺序构成，需要机制来推动，美学来增强表现力，技术来配合展示。</li>
-<li>美学：是游戏的外观、声音等各方面的感觉，对玩家之体验影响最直接，可以搭配机制来表现，需要技术来放大，故事来凸显。</li>
-<li>技术：是一种媒介，美学通过其展现，机制通过其产生作用，故事通过其来讲述。</li>
-</ul>
-<p>我认为我的评价体系和四分法是高度重合的：“可玩<del>游戏</del>性”主要包括了玩法、机制和技术，是游戏最主要的要素；“艺术性”主要包括了剧情故事和美学，其中美学又包括画面美术、音乐音效、地编等元素。其中我认为其实美学甚至可以包括故事，基本等于“艺术性”的含义，另外<u>技术</u>其实是在两大元素的交集中。内容上基本一致，区别是四分法主要保留了各元素间的联系，我的评价体系做分割主要是为了方便评价，使各部分相对独立。</p>
-<p>我个人所谓的游戏评价体系就是在两大元素中专注评价感受较深的方面，分析优缺点，而非一个多边形的维度图来统一评价标准，总体上优秀的游戏至少会在两大元素其一做到优秀。</p>
-<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>游戏设计使用了全部的四种元素吗？设计能够通过增强一种或者多种元素来获得提高吗？四种元素是否和谐，互相作用并向同一个主题努力？</p>
-<h2 id="思维方式"><a href="#思维方式" class="headerlink" title="思维方式"></a>思维方式</h2><p>分析设计游戏要内外兼顾，表面涉及玩家体验，内在涉及游戏组成元素。不仅要理解各种各样的游戏元素及它们之间的关系，还必须考虑它们与体验的关系，即同时保留玩家视角与设计师视角，在理解元素及其关系是如何产生体验的同时感受游戏体验。如果只保留玩家视角，会只思考体验，却不理解为什么会有这样的体验或者怎样增强这种体验；<u>如果只保留设计师视角，可能让一个游戏结构在理论上十分完美，而在现实中十分糟糕</u>（这或许是我常感觉很多设计师、策划有问题的原因）。只有同时专注这两件事，才能设计出好的游戏内容。</p>
-<h3 id="思考-1"><a href="#思考-1" class="headerlink" title="思考"></a>思考</h3><p>这种思维方式近期才被我列为我的个人优势之一。具体想法如下（搬运自我的其他笔记）：<br><em>我爱玩游戏，会玩游戏，能真正的了解游戏，懂游戏，对于实际的策划工作有扎实的着力点。（这一点原本我认为是策划基础的必备能力，但是后来我才了解到现在很多的游戏设计师和策划，根本都不玩或者是玩不明白他们自己设计的游戏或是参照的游戏或是竞品，经典例如《英雄联盟》的设计师，在后知后觉地调整游戏平衡时还要私下微信询问部分英雄的“绝活哥”，通过他们的意见来设计平衡游戏，而最后设计改动的还和调研反馈大相径庭，且毫无作用，这我认为是很可笑的，这样的例子还有很多，比如《绝区零》《鸣潮》《尘白禁区》等游戏都有类似情况，<del>这点与我说的第二点共同作用，</del> 展开来详细讲内容会很多，<u>概括来说就是现在很多的策划在招人和实际工作时我觉得有点过于学院派和闭门造车</u>）</em><br><strong>总之我现在认为我能同时从玩家视角和策划视角分析游戏，这成为了我的一大能力优势。</strong> 虽然还并没有人认可，或许也再也没机会被人认可了。</p>
-<p>必须一次性看到游戏的全部：四种元素和玩家体验以及它们是怎样关联起来的。可以把注意力从皮肤转移到骨骼再到皮肤，但更好的方法是全息观察游戏和体验。</p>
-<p>统一的主题：反思游戏中的哪种元素产生了令人享受的体验？游戏中的哪种元素会让玩家在体验中分心？怎样改变游戏元素来提高游戏体验？</p>
-<p>思考游戏主题是什么？是否采用了所有可能的方法来强化主题？</p>
-<h2 id="共鸣主题"><a href="#共鸣主题" class="headerlink" title="共鸣主题"></a>共鸣主题</h2><p>不是每个主题都能成为一个共鸣主题。不过当找到一个深刻的共鸣主题时，就值得好好利用它。这些主题中的一些是基于体验的，另一些是基于真相的。无法通过逻辑分辨出哪一个主题是有共鸣性的–必须在自己内心深处亲自感受这种共鸣，这是一种很重要的自我倾听的形式。</p>
-<p><em>一些设计师拒绝主题的概念,因为他们认为:“玩家从来不会注意到主题”确实，玩家们并不总能够清楚地认识到真正打动他们的是作品的主题–这是因为主题经常作用于潜意识的层面。玩家们知道他们喜欢一个游戏，但他们很难说清为什么喜欢。在许多场合，他们喜欢的理由可能是所有的元素都在加强一个他们认为很有趣或者很重要的主题。主题并不会像谜题一般故意留下隐藏的信息。主题会把你的作品聚焦到对玩家有意义的事物上。</em> </p>
-<h3 id="思考-2"><a href="#思考-2" class="headerlink" title="思考"></a>思考</h3><p>在游戏中，能感觉到哪些有力的或者特殊的元素？当向他人描述此游戏时，哪些创意能让他们真的兴奋？如果没有任何限制，这个游戏将会变成什么样？我对这个游戏的方向有一定的直觉，那到底是什么在驱动这种直觉呢？</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-        <tag>评价体系</tag>
-        <tag>个人优势</tag>
-        <tag>我</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>状态模式笔记1</title>
-    <url>/2024/08/11/b3/</url>
-    <content><![CDATA[<p>英雄游戏（英雄互娱）曾在面试中询问我有关动画状态机的内容，我当时没有准备过这方面，紧张时说出了不太了解的回答，事后回想自己其实了解过相关内容，曾在设计角色时绑定骨骼后导入过一些动作来操控角色，当时还学习过如何平滑动作动画，进行状态机的切换，懊悔自己薄弱的即时表达能力，感觉很可惜。借此机会，我回顾了“动画状态机”，同时再阅读有关“设计模式”的书籍，通过递归式地学习，针对“状态模式”先做些笔记，发散出了“有限状态机”再是“行为树”等内容，所以将笔记拆分为几篇集中叙写，内容对象针对游戏角色(AI)。<del>这几天我的确还是有点乏了，感觉自己学的写的没有正反馈，认识的朋友们大都找到合适的工作了，我水平真的不够吗，感觉入职之后再写博客会更有动力吧。。。</del></p>
-<h1 id="状态模式"><a href="#状态模式" class="headerlink" title="状态模式"></a>状态模式</h1><p><em>“允许一个对象的行为随着内部状态的改变而改变，对象看起来好像是在修改自身类。”</em></p>
-<h2 id="有限状态机FSM"><a href="#有限状态机FSM" class="headerlink" title="有限状态机FSM"></a>有限状态机FSM</h2><ul>
-<li>拥有一组状态，并且可以在这组状态之间进行切换。</li>
-<li>状态机同一时刻只能处于一种状态。</li>
-<li>状态机会接收一组输入或者事件。</li>
-<li>每一个状态有一组转换，每一个转换都关联着一个输入并指向另一个状态。<br><img src="https://s2.loli.net/2024/08/15/Hym65dXV4NGxTlp.png" alt="image.png"></li>
-</ul>
-<p>首先，有限状态机的每个状态可以用枚举 <code>enum</code> 列出来</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">publice <span class="built_in">enum</span> State&#123;</span><br><span class="line">    Attack,</span><br><span class="line">    Jump,</span><br><span class="line">    Move,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>然后在角色AI类中，简单可以通过switch case来实现条件判断和状态转换，但存在一些缺点：</p>
-<ol>
-<li>每增加一个状态，就需要在所有switch代码中添加对应代码。</li>
-<li>所有与状态有关的对象和参数保存在一个类中，在被多个状态共享时容易产生混淆。</li>
-<li>方法过于冗长，不易于调试。</li>
-</ol>
-<p>所以需要使用<strong>状态模式</strong>。</p>
-<h2 id="状态模式-1"><a href="#状态模式-1" class="headerlink" title="状态模式"></a>状态模式</h2><ul>
-<li>角色类</li>
-<li>状态接口<br>列举状态方法，切换具体状态。</li>
-<li>具体状态类<br>继承自状态接口，设置在各状态下的行为。<br> <img src="https://s2.loli.net/2024/08/15/GDVOpMZ3Pq5CFX1.png" alt="状态模式角色AI结构图"><br>状态模式将每个状态相关的行为封装到了相关类中，在增删改查时不会对原有架构造成较大影响，可以让人清楚了解单一状态执行时的环境，降低了维护成本。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>设计模式</tag>
-        <tag>状态模式</tag>
-        <tag>有限状态机</tag>
-        <tag>AI</tag>
-        <tag>面向对象</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>游戏设计笔记1</title>
     <url>/2024/08/08/b1/</url>
     <content><![CDATA[<h2 id="策划必备要素"><a href="#策划必备要素" class="headerlink" title="策划必备要素"></a>策划必备要素</h2><p>倾听&gt;&gt;创意，沟通</p>
@@ -113,29 +41,75 @@
       </tags>
   </entry>
   <entry>
-    <title>C++性能优化笔记</title>
-    <url>/2025/07/28/cpp1/</url>
-    <content><![CDATA[<h3 id="malloc-new"><a href="#malloc-new" class="headerlink" title="malloc &#x2F; new"></a>malloc &#x2F; new</h3><p><code>malloc</code> 不会自动调用构造函数，通过绕过构造函数和析构函数，直接用底层手段手动控制对象的生命周期，避免额外的函数调用开销。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="type">int</span> age;</span><br><span class="line">        <span class="type">float</span> height;</span><br><span class="line">        <span class="built_in">Person</span>();</span><br><span class="line">&#125;;</span><br><span class="line">Person::<span class="built_in">Person</span>(<span class="type">void</span>)&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;调用构造函数&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br><span class="line">Person::~<span class="built_in">Person</span>(<span class="type">void</span>)&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;调用析构函数&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person* p = (Person*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(Person));</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;1&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">p-&gt;age = <span class="number">25</span>;</span><br><span class="line">p-&gt;height = <span class="number">175.5f</span>;</span><br><span class="line"><span class="built_in">free</span>(p);</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;2&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">auto</span> t = <span class="keyword">new</span> <span class="built_in">Person</span>();</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;1&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"><span class="built_in">delete</span>(t);</span><br></pre></td></tr></table></figure>
-<pre><code>1
-2
-调用构造函数
-1
-调用析构函数
-</code></pre>
-<h3 id="移动构造-拷贝构造"><a href="#移动构造-拷贝构造" class="headerlink" title="移动构造 &#x2F; 拷贝构造"></a>移动构造 &#x2F; 拷贝构造</h3><p><strong>移动构造</strong> 仅接管指针（原对象置空）<br><strong>拷贝构造</strong> 深拷贝，分配新内存（复制），性能差</p>
-<h3 id="深拷贝-浅拷贝"><a href="#深拷贝-浅拷贝" class="headerlink" title="深拷贝 &#x2F; 浅拷贝"></a>深拷贝 &#x2F; 浅拷贝</h3><p><strong>浅拷贝</strong>	拷贝指针地址，两者共享资源	<br><strong>深拷贝</strong>	拷贝资源内容，各自拥有自己的资源，性能差</p>
-<h3 id="堆-栈"><a href="#堆-栈" class="headerlink" title="堆 &#x2F; 栈"></a>堆 &#x2F; 栈</h3><ul>
-<li>字符串拼接，<code>string</code>（堆） &#x2F; <code>char</code>（栈）<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;benchmark/benchmark.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="comment">// 测试用例：N次字符串拼接</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 1000</span></span><br><span class="line"><span class="comment">// 方法1：std::string</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcString</span><span class="params">(benchmark::State&amp; state)</span></span>&#123;  </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state)&#123;</span><br><span class="line">    std::string s;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;N; ++i) s += <span class="string">&quot;a&quot;</span>;  <span class="comment">// SSO优化初期，后期堆分配</span></span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(s);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcString);</span><br><span class="line"><span class="comment">// 方法2：char[]（栈）</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcCharstack</span><span class="params">(benchmark::State&amp; state)</span></span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state)&#123; </span><br><span class="line">    <span class="type">char</span> arr[N]; <span class="comment">// 危险！可能栈溢出</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;N; ++i) arr[i] = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(arr);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcCharstack);</span><br><span class="line"><span class="comment">// 方法3：char*（堆）</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcCharheap</span><span class="params">(benchmark::State&amp; state)</span></span>&#123;  </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state)&#123; </span><br><span class="line">    <span class="type">char</span>* ptr = <span class="keyword">new</span> <span class="type">char</span>[N];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;N; ++i) ptr[i] = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(ptr);</span><br><span class="line">    <span class="keyword">delete</span>[] ptr;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcCharheap);</span><br><span class="line"><span class="comment">// 方法4：std::vector&lt;char&gt;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcVectorChar</span><span class="params">(benchmark::State&amp; state)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state) &#123;</span><br><span class="line">    std::vector&lt;<span class="type">char</span>&gt; vec;</span><br><span class="line">    vec.<span class="built_in">reserve</span>(N); <span class="comment">// 提前分配堆空间，避免多次扩容，提升性能</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) vec.<span class="built_in">emplace_back</span>(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(vec);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcVectorChar);</span><br></pre></td></tr></table></figure>
-<img src="https://s2.loli.net/2025/07/31/HjsID92KYZvcC1A.png" alt="运行耗时对比"><br>显然耗时 <code>string</code> ≈ <code>vector&lt;char&gt;</code> &gt; <code>char*</code> &gt; <code>char[]</code><br>另外 <code>vector</code> 在未提前 <code>reserve()</code> 空间的情况下，性能基本与 <code>string</code> 相同，提前分配堆空间后提升了约10%的速度。</li>
+    <title>状态模式笔记1</title>
+    <url>/2024/08/11/b3/</url>
+    <content><![CDATA[<p>英雄游戏（英雄互娱）曾在面试中询问我有关动画状态机的内容，我当时没有准备过这方面，紧张时说出了不太了解的回答，事后回想自己其实了解过相关内容，曾在设计角色时绑定骨骼后导入过一些动作来操控角色，当时还学习过如何平滑动作动画，进行状态机的切换，懊悔自己薄弱的即时表达能力，感觉很可惜。借此机会，我回顾了“动画状态机”，同时再阅读有关“设计模式”的书籍，通过递归式地学习，针对“状态模式”先做些笔记，发散出了“有限状态机”再是“行为树”等内容，所以将笔记拆分为几篇集中叙写，内容对象针对游戏角色(AI)。<del>这几天我的确还是有点乏了，感觉自己学的写的没有正反馈，认识的朋友们大都找到合适的工作了，我水平真的不够吗，感觉入职之后再写博客会更有动力吧。。。</del></p>
+<h1 id="状态模式"><a href="#状态模式" class="headerlink" title="状态模式"></a>状态模式</h1><p><em>“允许一个对象的行为随着内部状态的改变而改变，对象看起来好像是在修改自身类。”</em></p>
+<h2 id="有限状态机FSM"><a href="#有限状态机FSM" class="headerlink" title="有限状态机FSM"></a>有限状态机FSM</h2><ul>
+<li>拥有一组状态，并且可以在这组状态之间进行切换。</li>
+<li>状态机同一时刻只能处于一种状态。</li>
+<li>状态机会接收一组输入或者事件。</li>
+<li>每一个状态有一组转换，每一个转换都关联着一个输入并指向另一个状态。<br><img src="https://s2.loli.net/2024/08/15/Hym65dXV4NGxTlp.png" alt="image.png"></li>
+</ul>
+<p>首先，有限状态机的每个状态可以用枚举 <code>enum</code> 列出来</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">publice <span class="built_in">enum</span> State&#123;</span><br><span class="line">    Attack,</span><br><span class="line">    Jump,</span><br><span class="line">    Move,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后在角色AI类中，简单可以通过switch case来实现条件判断和状态转换，但存在一些缺点：</p>
+<ol>
+<li>每增加一个状态，就需要在所有switch代码中添加对应代码。</li>
+<li>所有与状态有关的对象和参数保存在一个类中，在被多个状态共享时容易产生混淆。</li>
+<li>方法过于冗长，不易于调试。</li>
+</ol>
+<p>所以需要使用<strong>状态模式</strong>。</p>
+<h2 id="状态模式-1"><a href="#状态模式-1" class="headerlink" title="状态模式"></a>状态模式</h2><ul>
+<li>角色类</li>
+<li>状态接口<br>列举状态方法，切换具体状态。</li>
+<li>具体状态类<br>继承自状态接口，设置在各状态下的行为。<br> <img src="https://s2.loli.net/2024/08/15/GDVOpMZ3Pq5CFX1.png" alt="状态模式角色AI结构图"><br>状态模式将每个状态相关的行为封装到了相关类中，在增删改查时不会对原有架构造成较大影响，可以让人清楚了解单一状态执行时的环境，降低了维护成本。</li>
 </ul>
 ]]></content>
       <categories>
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>性能</tag>
+        <tag>设计模式</tag>
+        <tag>状态模式</tag>
+        <tag>有限状态机</tag>
+        <tag>AI</tag>
+        <tag>面向对象</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏设计笔记2</title>
+    <url>/2024/08/09/b2/</url>
+    <content><![CDATA[<h2 id="游戏的构成"><a href="#游戏的构成" class="headerlink" title="游戏的构成"></a>游戏的构成</h2><p>在我的评价体系中，我将游戏拆分为两大元素：<strong>1.可玩性<del>游戏性</del> 2.艺术性</strong>。<br><del>其中“游戏性”可能与真正意义的<code>游戏性</code>不太一致，我这里主要为了与“艺术性”进行区分，而传统概念的<code>游戏性</code>是一个整体性的概念，包括了我所谓的“游戏性”和“艺术性”，是区别于其他娱乐方式或是艺术方式的概念。</del></p>
+<p>元素四分法中拆分游戏为：<strong>1.机制 2.技术 3.故事 4.美学</strong>。</p>
+<ul>
+<li>机制：包括游戏目标和游戏方式，使游戏成为游戏，需要美学、技术和故事的支持。</li>
+<li>故事：由游戏中事件按发生的顺序构成，需要机制来推动，美学来增强表现力，技术来配合展示。</li>
+<li>美学：是游戏的外观、声音等各方面的感觉，对玩家之体验影响最直接，可以搭配机制来表现，需要技术来放大，故事来凸显。</li>
+<li>技术：是一种媒介，美学通过其展现，机制通过其产生作用，故事通过其来讲述。</li>
+</ul>
+<p>我认为我的评价体系和四分法是高度重合的：“可玩<del>游戏</del>性”主要包括了玩法、机制和技术，是游戏最主要的要素；“艺术性”主要包括了剧情故事和美学，其中美学又包括画面美术、音乐音效、地编等元素。其中我认为其实美学甚至可以包括故事，基本等于“艺术性”的含义，另外<u>技术</u>其实是在两大元素的交集中。内容上基本一致，区别是四分法主要保留了各元素间的联系，我的评价体系做分割主要是为了方便评价，使各部分相对独立。</p>
+<p>我个人所谓的游戏评价体系就是在两大元素中专注评价感受较深的方面，分析优缺点，而非一个多边形的维度图来统一评价标准，总体上优秀的游戏至少会在两大元素其一做到优秀。</p>
+<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>游戏设计使用了全部的四种元素吗？设计能够通过增强一种或者多种元素来获得提高吗？四种元素是否和谐，互相作用并向同一个主题努力？</p>
+<h2 id="思维方式"><a href="#思维方式" class="headerlink" title="思维方式"></a>思维方式</h2><p>分析设计游戏要内外兼顾，表面涉及玩家体验，内在涉及游戏组成元素。不仅要理解各种各样的游戏元素及它们之间的关系，还必须考虑它们与体验的关系，即同时保留玩家视角与设计师视角，在理解元素及其关系是如何产生体验的同时感受游戏体验。如果只保留玩家视角，会只思考体验，却不理解为什么会有这样的体验或者怎样增强这种体验；<u>如果只保留设计师视角，可能让一个游戏结构在理论上十分完美，而在现实中十分糟糕</u>（这或许是我常感觉很多设计师、策划有问题的原因）。只有同时专注这两件事，才能设计出好的游戏内容。</p>
+<h3 id="思考-1"><a href="#思考-1" class="headerlink" title="思考"></a>思考</h3><p>这种思维方式近期才被我列为我的个人优势之一。具体想法如下（搬运自我的其他笔记）：<br><em>我爱玩游戏，会玩游戏，能真正的了解游戏，懂游戏，对于实际的策划工作有扎实的着力点。（这一点原本我认为是策划基础的必备能力，但是后来我才了解到现在很多的游戏设计师和策划，根本都不玩或者是玩不明白他们自己设计的游戏或是参照的游戏或是竞品，经典例如《英雄联盟》的设计师，在后知后觉地调整游戏平衡时还要私下微信询问部分英雄的“绝活哥”，通过他们的意见来设计平衡游戏，而最后设计改动的还和调研反馈大相径庭，且毫无作用，这我认为是很可笑的，这样的例子还有很多，比如《绝区零》《鸣潮》《尘白禁区》等游戏都有类似情况，<del>这点与我说的第二点共同作用，</del> 展开来详细讲内容会很多，<u>概括来说就是现在很多的策划在招人和实际工作时我觉得有点过于学院派和闭门造车</u>）</em><br><strong>总之我现在认为我能同时从玩家视角和策划视角分析游戏，这成为了我的一大能力优势。</strong> 虽然还并没有人认可，或许也再也没机会被人认可了。</p>
+<p>必须一次性看到游戏的全部：四种元素和玩家体验以及它们是怎样关联起来的。可以把注意力从皮肤转移到骨骼再到皮肤，但更好的方法是全息观察游戏和体验。</p>
+<p>统一的主题：反思游戏中的哪种元素产生了令人享受的体验？游戏中的哪种元素会让玩家在体验中分心？怎样改变游戏元素来提高游戏体验？</p>
+<p>思考游戏主题是什么？是否采用了所有可能的方法来强化主题？</p>
+<h2 id="共鸣主题"><a href="#共鸣主题" class="headerlink" title="共鸣主题"></a>共鸣主题</h2><p>不是每个主题都能成为一个共鸣主题。不过当找到一个深刻的共鸣主题时，就值得好好利用它。这些主题中的一些是基于体验的，另一些是基于真相的。无法通过逻辑分辨出哪一个主题是有共鸣性的–必须在自己内心深处亲自感受这种共鸣，这是一种很重要的自我倾听的形式。</p>
+<p><em>一些设计师拒绝主题的概念,因为他们认为:“玩家从来不会注意到主题”确实，玩家们并不总能够清楚地认识到真正打动他们的是作品的主题–这是因为主题经常作用于潜意识的层面。玩家们知道他们喜欢一个游戏，但他们很难说清为什么喜欢。在许多场合，他们喜欢的理由可能是所有的元素都在加强一个他们认为很有趣或者很重要的主题。主题并不会像谜题一般故意留下隐藏的信息。主题会把你的作品聚焦到对玩家有意义的事物上。</em> </p>
+<h3 id="思考-2"><a href="#思考-2" class="headerlink" title="思考"></a>思考</h3><p>在游戏中，能感觉到哪些有力的或者特殊的元素？当向他人描述此游戏时，哪些创意能让他们真的兴奋？如果没有任何限制，这个游戏将会变成什么样？我对这个游戏的方向有一定的直觉，那到底是什么在驱动这种直觉呢？</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+        <tag>评价体系</tag>
+        <tag>个人优势</tag>
+        <tag>我</tag>
       </tags>
   </entry>
   <entry>
@@ -230,6 +204,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2024/07/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>关于《炉石传说》国服回归策划的启发</title>
     <url>/2024/07/30/idea1/</url>
     <content><![CDATA[<h2 id="新闻"><a href="#新闻" class="headerlink" title="新闻"></a>新闻</h2><p>最近的ChinaJoy上，《炉石传说》（HearthStone）中国宣布，回归日期定档9月25日，回归后一定时间内登录《炉石传说》，所有国服玩家（包括新注册玩家）即可免费获赠2023年全部错过的卡牌，共计2154张卡牌，包括全部97张金色传说。另外游戏内还有额外的任务卡包、皮肤等福利，游戏外与网易雷火合作赞助赛事100万元奖金以及提供4个国服直邀名额。</p>
@@ -252,52 +244,6 @@
         <tag>策划</tag>
         <tag>游戏</tag>
         <tag>运营</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2024/07/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>锐评我所擅长和喜欢的FPS和JRPG</title>
-    <url>/2024/08/31/idea3/</url>
-    <content><![CDATA[<p>FPS竞技性强，能给予玩家强烈的即时的刺激感与正反馈，容易产生沉浸感和进入心流状态。但这对于枪械和操作的手感要求较高，同时因为竞技性的过强，导致影响游戏出圈的因素会更多，如平衡性、差异化玩法、门槛、反作弊、关卡地图设计等等。</p>
-<p>首要的是传统JRPG和新型JRPG有明显差别，我主要喜欢新式的JRPG，相对来说更短平快，符合我个人喜好。JRPG线性叙事节奏较紧凑平滑，较简单直接，适合当代节奏，动作动画较优秀流畅，画风较美，系统较简单易入门，但也因此略显颓势，JRPG相比当代商业引擎技术孱弱，游戏工业化流水线，除了《最终幻想》这类老牌IP的老式JRPG外很少再出现优秀佳作，平均都在良好水平线附近，近年仅《碧蓝幻想Relink》接近优秀，这或许与部分日厂追求稳定的低投入低回报理念有关，同时这种思想感觉也影响了国内部分游戏厂商，或许从某种意义上导致了国内除《觅长生》等独立游戏外仅有《黑神话：悟空》一部优秀3A的现状。</p>
-]]></content>
-      <categories>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>分析《Apex Legends》角色技能设计维度</title>
-    <url>/2024/10/10/idea4/</url>
-    <content><![CDATA[<p>《APEX英雄》技能体系我会分三维为：转移，攻防，信息与资源。其中转移分为远近，其关系进点和机动性。以此为三维，可通过思维导图进一步细分效果。</p>
-<p>值得一提的是，实际上《APEX英雄》的角色设计对于资源相关的考量在电竞比赛中与玩家排位中相差巨大。<br><img src="https://s2.loli.net/2024/10/10/L3b8kSOHmBQGTW7.png" alt="三维图"></p>
-]]></content>
-      <categories>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
       </tags>
   </entry>
   <entry>
@@ -328,6 +274,34 @@
       </tags>
   </entry>
   <entry>
+    <title>锐评我所擅长和喜欢的FPS和JRPG</title>
+    <url>/2024/08/31/idea3/</url>
+    <content><![CDATA[<p>FPS竞技性强，能给予玩家强烈的即时的刺激感与正反馈，容易产生沉浸感和进入心流状态。但这对于枪械和操作的手感要求较高，同时因为竞技性的过强，导致影响游戏出圈的因素会更多，如平衡性、差异化玩法、门槛、反作弊、关卡地图设计等等。</p>
+<p>首要的是传统JRPG和新型JRPG有明显差别，我主要喜欢新式的JRPG，相对来说更短平快，符合我个人喜好。JRPG线性叙事节奏较紧凑平滑，较简单直接，适合当代节奏，动作动画较优秀流畅，画风较美，系统较简单易入门，但也因此略显颓势，JRPG相比当代商业引擎技术孱弱，游戏工业化流水线，除了《最终幻想》这类老牌IP的老式JRPG外很少再出现优秀佳作，平均都在良好水平线附近，近年仅《碧蓝幻想Relink》接近优秀，这或许与部分日厂追求稳定的低投入低回报理念有关，同时这种思想感觉也影响了国内部分游戏厂商，或许从某种意义上导致了国内除《觅长生》等独立游戏外仅有《黑神话：悟空》一部优秀3A的现状。</p>
+]]></content>
+      <categories>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分析《Apex Legends》角色技能设计维度</title>
+    <url>/2024/10/10/idea4/</url>
+    <content><![CDATA[<p>《APEX英雄》技能体系我会分三维为：转移，攻防，信息与资源。其中转移分为远近，其关系进点和机动性。以此为三维，可通过思维导图进一步细分效果。</p>
+<p>值得一提的是，实际上《APEX英雄》的角色设计对于资源相关的考量在电竞比赛中与玩家排位中相差巨大。<br><img src="https://s2.loli.net/2024/10/10/L3b8kSOHmBQGTW7.png" alt="三维图"></p>
+]]></content>
+      <categories>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>设计竞技类游戏时如何兼顾女性用户</title>
     <url>/2024/10/20/idea5/</url>
     <content><![CDATA[<p><strong>例如在FPS和MOBA游戏中，设计明确的奶位（偏纯辅助型）角色，即可兼顾女性玩家</strong><br>例如《守望先锋》中的天使，《英雄联盟》中的魔法猫咪、琴女，《无畏契约》中的贤者等。<br>看似像暴论，但意思已经基本到位了，我细想确实如此。</p>
@@ -339,50 +313,6 @@
       <tags>
         <tag>游戏设计</tag>
         <tag>策划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>test1</title>
-    <url>/2024/07/26/test1/</url>
-    <content><![CDATA[<p><a href="https://www.bilibili.com/video/BV1j34y1p7HX?spm_id_from=333.788.recommend_more_video.14&vd_source=11db1d1a077558e043cecb028334f12a">https://www.bilibili.com/video/BV1j34y1p7HX?spm_id_from=333.788.recommend_more_video.14&amp;vd_source=11db1d1a077558e043cecb028334f12a</a></p>
-<p>h124:</p>
-<h1 id="test"><a href="#test" class="headerlink" title="test"></a>test</h1><h2 id="test2"><a href="#test2" class="headerlink" title="test2"></a>test2</h2><h3 id="test3"><a href="#test3" class="headerlink" title="test3"></a>test3</h3><h4 id="test4"><a href="#test4" class="headerlink" title="test4"></a>test4</h4><p>pic:<br><img src="/./img/avatar.jpg" alt="avatar"></p>
-<p>code:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;test&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>test, <strong>bold</strong>, <em>italic</em>, <em><strong>bl</strong></em>, <del>slash</del>, <u>下划线</u></p>
-<p>强调:<code>ili</code></p>
-<p>ima: $y&#x3D;ax+b$</p>
-<p>$$<br>bma<br>$$</p>
-<p>链接锚点’a’: <a href="http://baidu.com/">baidu</a></p>
-<h2 id="Check"><a href="#Check" class="headerlink" title="Check"></a>Check</h2><ul>
-<li><input checked="" disabled="" type="checkbox"> test</li>
-<li><input disabled="" type="checkbox"> test2</li>
-<li></li>
-</ul>
-<p>居中对齐图片cpic:</p>
-<div align=center><img src="./img/avatar.jpg"></div>
-
-<p>table:</p>
-<table>
-<thead>
-<tr>
-<th>t1</th>
-<th>t2</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>x1</td>
-<td>x2</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -587,6 +517,90 @@
       </tags>
   </entry>
   <entry>
+    <title>Unity中的面向对象</title>
+    <url>/2024/08/10/unity2/</url>
+    <content><![CDATA[<p>场景中存在GameObject实例，每个实例对象在Inspector中都会显示一系列组件，这些组件就是脚本（类），默认全部继承自MonoBehaviour类，成为了该脚本类的实例对象和所选对象GameObject的各种属性。</p>
+<p>Prefab预制体，将场景中的物体拖动到Assets里即可生成。这个过程实际上是一个抽象的过程，抽象成一个具有场景中被拖动物体的所有属性(含值)的模板类。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>面向对象</tag>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>test1</title>
+    <url>/2024/07/26/test1/</url>
+    <content><![CDATA[<p><a href="https://www.bilibili.com/video/BV1j34y1p7HX?spm_id_from=333.788.recommend_more_video.14&vd_source=11db1d1a077558e043cecb028334f12a">https://www.bilibili.com/video/BV1j34y1p7HX?spm_id_from=333.788.recommend_more_video.14&amp;vd_source=11db1d1a077558e043cecb028334f12a</a></p>
+<p>h124:</p>
+<h1 id="test"><a href="#test" class="headerlink" title="test"></a>test</h1><h2 id="test2"><a href="#test2" class="headerlink" title="test2"></a>test2</h2><h3 id="test3"><a href="#test3" class="headerlink" title="test3"></a>test3</h3><h4 id="test4"><a href="#test4" class="headerlink" title="test4"></a>test4</h4><p>pic:<br><img src="/./img/avatar.jpg" alt="avatar"></p>
+<p>code:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;test&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>test, <strong>bold</strong>, <em>italic</em>, <em><strong>bl</strong></em>, <del>slash</del>, <u>下划线</u></p>
+<p>强调:<code>ili</code></p>
+<p>ima: $y&#x3D;ax+b$</p>
+<p>$$<br>bma<br>$$</p>
+<p>链接锚点’a’: <a href="http://baidu.com/">baidu</a></p>
+<h2 id="Check"><a href="#Check" class="headerlink" title="Check"></a>Check</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> test</li>
+<li><input disabled="" type="checkbox"> test2</li>
+<li></li>
+</ul>
+<p>居中对齐图片cpic:</p>
+<div align=center><img src="./img/avatar.jpg"></div>
+
+<p>table:</p>
+<table>
+<thead>
+<tr>
+<th>t1</th>
+<th>t2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>x1</td>
+<td>x2</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++性能优化笔记</title>
+    <url>/2025/07/28/cpp1/</url>
+    <content><![CDATA[<h3 id="malloc-new"><a href="#malloc-new" class="headerlink" title="malloc &#x2F; new"></a>malloc &#x2F; new</h3><p><code>malloc</code> 不会自动调用构造函数，通过绕过构造函数和析构函数，直接用底层手段手动控制对象的生命周期，避免额外的函数调用开销。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="type">int</span> age;</span><br><span class="line">        <span class="type">float</span> height;</span><br><span class="line">        <span class="built_in">Person</span>();</span><br><span class="line">&#125;;</span><br><span class="line">Person::<span class="built_in">Person</span>(<span class="type">void</span>)&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;调用构造函数&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br><span class="line">Person::~<span class="built_in">Person</span>(<span class="type">void</span>)&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;调用析构函数&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person* p = (Person*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(Person));</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;1&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">p-&gt;age = <span class="number">25</span>;</span><br><span class="line">p-&gt;height = <span class="number">175.5f</span>;</span><br><span class="line"><span class="built_in">free</span>(p);</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;2&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">auto</span> t = <span class="keyword">new</span> <span class="built_in">Person</span>();</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;1&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"><span class="built_in">delete</span>(t);</span><br></pre></td></tr></table></figure>
+<pre><code>1
+2
+调用构造函数
+1
+调用析构函数
+</code></pre>
+<h3 id="移动构造-拷贝构造"><a href="#移动构造-拷贝构造" class="headerlink" title="移动构造 &#x2F; 拷贝构造"></a>移动构造 &#x2F; 拷贝构造</h3><p><strong>移动构造</strong> 仅接管指针（原对象置空）<br><strong>拷贝构造</strong> 深拷贝，分配新内存（复制），性能差</p>
+<h3 id="深拷贝-浅拷贝"><a href="#深拷贝-浅拷贝" class="headerlink" title="深拷贝 &#x2F; 浅拷贝"></a>深拷贝 &#x2F; 浅拷贝</h3><p><strong>浅拷贝</strong>	拷贝指针地址，两者共享资源	<br><strong>深拷贝</strong>	拷贝资源内容，各自拥有自己的资源，性能差</p>
+<h3 id="堆-栈"><a href="#堆-栈" class="headerlink" title="堆 &#x2F; 栈"></a>堆 &#x2F; 栈</h3><ul>
+<li>字符串拼接，<code>string</code>（堆） &#x2F; <code>char</code>（栈）<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;benchmark/benchmark.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="comment">// 测试用例：N次字符串拼接</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 1000</span></span><br><span class="line"><span class="comment">// 方法1：std::string</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcString</span><span class="params">(benchmark::State&amp; state)</span></span>&#123;  </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state)&#123;</span><br><span class="line">    std::string s;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;N; ++i) s += <span class="string">&quot;a&quot;</span>;  <span class="comment">// SSO优化初期，后期堆分配</span></span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(s);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcString);</span><br><span class="line"><span class="comment">// 方法2：char[]（栈）</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcCharstack</span><span class="params">(benchmark::State&amp; state)</span></span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state)&#123; </span><br><span class="line">    <span class="type">char</span> arr[N]; <span class="comment">// 危险！可能栈溢出</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;N; ++i) arr[i] = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(arr);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcCharstack);</span><br><span class="line"><span class="comment">// 方法3：char*（堆）</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcCharheap</span><span class="params">(benchmark::State&amp; state)</span></span>&#123;  </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state)&#123; </span><br><span class="line">    <span class="type">char</span>* ptr = <span class="keyword">new</span> <span class="type">char</span>[N];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;N; ++i) ptr[i] = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(ptr);</span><br><span class="line">    <span class="keyword">delete</span>[] ptr;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcCharheap);</span><br><span class="line"><span class="comment">// 方法4：std::vector&lt;char&gt;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcVectorChar</span><span class="params">(benchmark::State&amp; state)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state) &#123;</span><br><span class="line">    std::vector&lt;<span class="type">char</span>&gt; vec;</span><br><span class="line">    vec.<span class="built_in">reserve</span>(N); <span class="comment">// 提前分配堆空间，避免多次扩容，提升性能</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) vec.<span class="built_in">emplace_back</span>(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(vec);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcVectorChar);</span><br></pre></td></tr></table></figure>
+<img src="https://s2.loli.net/2025/07/31/HjsID92KYZvcC1A.png" alt="运行耗时对比"><br>显然耗时 <code>string</code> ≈ <code>vector&lt;char&gt;</code> &gt; <code>char*</code> &gt; <code>char[]</code><br>另外 <code>vector</code> 在未提前 <code>reserve()</code> 空间的情况下，性能基本与 <code>string</code> 相同，提前分配堆空间后提升了约10%的速度。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>性能</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Unity的生命周期</title>
     <url>/2024/08/01/unity1/</url>
     <content><![CDATA[<h1 id="Unity的生命周期"><a href="#Unity的生命周期" class="headerlink" title="Unity的生命周期"></a>Unity的生命周期</h1><p><a href="https://docs.unity3d.com/cn/2023.2/Manual/UnityManual.html">Unity官方手册</a></p>
@@ -621,20 +635,6 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>Unity</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Unity中的面向对象</title>
-    <url>/2024/08/10/unity2/</url>
-    <content><![CDATA[<p>场景中存在GameObject实例，每个实例对象在Inspector中都会显示一系列组件，这些组件就是脚本（类），默认全部继承自MonoBehaviour类，成为了该脚本类的实例对象和所选对象GameObject的各种属性。</p>
-<p>Prefab预制体，将场景中的物体拖动到Assets里即可生成。这个过程实际上是一个抽象的过程，抽象成一个具有场景中被拖动物体的所有属性(含值)的模板类。</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>面向对象</tag>
         <tag>Unity</tag>
       </tags>
   </entry>
