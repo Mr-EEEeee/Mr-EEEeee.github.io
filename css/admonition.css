@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   font-weight: 600;
-  padding: 0.1rem 1rem 0.1rem 0.75rem;
+  padding: 0rem 1rem 0.1rem 0.75rem;
   font-size: 1.05em;
   background-color: rgba(0, 0, 0, 0.03);
   border-top-left-radius: 0.4rem;
@@ -25,6 +25,7 @@
   font-size: 1.2em;
   margin-right: 0.6rem;
   opacity: 0.85;
+  margin-top: 0.1rem;
 }
 
 /* 内容区域 margin */
@@ -36,7 +37,7 @@
 .admonition.anote {
   border-color: #448aff;
 }
-.admonition.anote .admonition-title {
+.admonition.anote > .admonition-title {
   background-color: #448aff1a;
   color: #2962ff;
 }
@@ -46,8 +47,8 @@
 .admonition.todo {
   border-color: #00b8d4;
 }
-.admonition.info .admonition-title,
-.admonition.todo .admonition-title {
+.admonition.info > .admonition-title,
+.admonition.todo > .admonition-title {
   background-color: rgba(0, 184, 212, 0.1);
   color: #007c91;
 }
@@ -58,9 +59,9 @@
 .admonition.caution {
   border-color: #ff9100;
 }
-.admonition.warning .admonition-title,
-.admonition.attention .admonition-title,
-.admonition.caution .admonition-title {
+.admonition.warning > .admonition-title,
+.admonition.attention > .admonition-title,
+.admonition.caution > .admonition-title {
   background-color: rgba(255, 145, 0, 0.1);
   color: #c66900;
 }
@@ -74,12 +75,12 @@
 .admonition.bug {
   border-color: #ff5252;
 }
-.admonition.failure .admonition-title,
-.admonition.missing .admonition-title,
-.admonition.fail .admonition-title,
-.admonition.error .admonition-title,
-.admonition.danger .admonition-title,
-.admonition.bug .admonition-title {
+.admonition.failure > .admonition-title,
+.admonition.missing > .admonition-title,
+.admonition.fail > .admonition-title,
+.admonition.error > .admonition-title,
+.admonition.danger > .admonition-title,
+.admonition.bug > .admonition-title {
   background-color: rgba(255, 82, 82, 0.1);
   color: #b71c1c;
 }
@@ -88,7 +89,7 @@
 .admonition.tip {
   border-color: #00bfa5;
 }
-.admonition.tip .admonition-title {
+.admonition.tip > .admonition-title {
   background-color: #00bfa51a;
   color: #00796b;
 }
@@ -97,7 +98,7 @@
 .admonition.success {
   border-color: #00c853;
 }
-.admonition.success .admonition-title {
+.admonition.success > .admonition-title {
   background-color: #00c8531a;
   color: #2e7d32;
 }
@@ -106,7 +107,7 @@
 .admonition.question {
   border-color: #64dd17;
 }
-.admonition.question .admonition-title {
+.admonition.question > .admonition-title {
   background-color: #64dd171a;
   color: #558b2f;
 }
@@ -115,7 +116,7 @@
 .admonition.example {
   border-color: #7c4dff;
 }
-.admonition.example .admonition-title {
+.admonition.example > .admonition-title {
   background-color: #7c4dff1a;
   color: #512da8;
 }
@@ -124,7 +125,7 @@
 .admonition.quote {
   border-color: #9e9e9e;
 }
-.admonition.quote .admonition-title {
+.admonition.quote > .admonition-title {
   background-color: #9e9e9e1a;
   color: #424242;
 }
@@ -144,7 +145,7 @@
 [data-theme="dark"] .admonition.anote {
   border-color: #82b1ff;
 }
-[data-theme="dark"] .admonition.anote .admonition-title {
+[data-theme="dark"] .admonition.anote > .admonition-title {
   background-color: #82b1ff1a;
   color: #bbdefb;
 }
@@ -153,7 +154,7 @@
 [data-theme="dark"] .admonition.tip {
   border-color: #64ffda;
 }
-[data-theme="dark"] .admonition.tip .admonition-title {
+[data-theme="dark"] .admonition.tip > .admonition-title {
   background-color: #64ffda1a;
   color: #1de9b6;
 }
@@ -162,7 +163,7 @@
 [data-theme="dark"] .admonition.success {
   border-color: #69f0ae;
 }
-[data-theme="dark"] .admonition.success .admonition-title {
+[data-theme="dark"] .admonition.success > .admonition-title {
   background-color: #69f0ae1a;
   color: #00e676;
 }
@@ -171,7 +172,7 @@
 [data-theme="dark"] .admonition.question {
   border-color: #b2ff59;
 }
-[data-theme="dark"] .admonition.question .admonition-title {
+[data-theme="dark"] .admonition.question > .admonition-title {
   background-color: #b2ff591a;
   color: #aeea00;
 }
@@ -180,7 +181,7 @@
 [data-theme="dark"] .admonition.example {
   border-color: #b388ff;
 }
-[data-theme="dark"] .admonition.example .admonition-title {
+[data-theme="dark"] .admonition.example > .admonition-title {
   background-color: #b388ff1a;
   color: #b39ddb;
 }
@@ -189,7 +190,7 @@
 [data-theme="dark"] .admonition.quote {
   border-color: #bdbdbd;
 }
-[data-theme="dark"] .admonition.quote .admonition-title {
+[data-theme="dark"] .admonition.quote > .admonition-title {
   background-color: #bdbdbd1a;
   color: #eeeeee;
 }
@@ -200,26 +201,28 @@
 [data-theme="dark"] .admonition.caution {
   border-color: #ffb300;
 }
-[data-theme="dark"] .admonition.warning .admonition-title,
-[data-theme="dark"] .admonition.attention .admonition-title,
-[data-theme="dark"] .admonition.caution .admonition-title {
+[data-theme="dark"] .admonition.warning > .admonition-title,
+[data-theme="dark"] .admonition.attention > .admonition-title,
+[data-theme="dark"] .admonition.caution > .admonition-title {
   background-color: #ffb3001a;
   color: #ffe082;
 }
 
-/* error / fail / failure / bug / danger */
+/* error / fail / failure / bug / danger / missing */
 [data-theme="dark"] .admonition.error,
 [data-theme="dark"] .admonition.fail,
 [data-theme="dark"] .admonition.failure,
 [data-theme="dark"] .admonition.bug,
+[data-theme="dark"] .admonition.missing,
 [data-theme="dark"] .admonition.danger {
   border-color: #ef5350;
 }
-[data-theme="dark"] .admonition.error .admonition-title,
-[data-theme="dark"] .admonition.fail .admonition-title,
-[data-theme="dark"] .admonition.failure .admonition-title,
-[data-theme="dark"] .admonition.bug .admonition-title,
-[data-theme="dark"] .admonition.danger .admonition-title {
+[data-theme="dark"] .admonition.error > .admonition-title,
+[data-theme="dark"] .admonition.fail > .admonition-title,
+[data-theme="dark"] .admonition.failure > .admonition-title,
+[data-theme="dark"] .admonition.bug > .admonition-title,
+[data-theme="dark"] .admonition.missing > .admonition-title,
+[data-theme="dark"] .admonition.danger > .admonition-title {
   background-color: #ef53501a;
   color: #ff8a80;
 }
