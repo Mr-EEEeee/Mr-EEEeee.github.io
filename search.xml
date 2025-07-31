@@ -1,43 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>游戏设计笔记1</title>
-    <url>/2024/08/08/b1/</url>
-    <content><![CDATA[<h2 id="策划必备要素"><a href="#策划必备要素" class="headerlink" title="策划必备要素"></a>策划必备要素</h2><p>倾听&gt;&gt;创意，沟通</p>
-<ol>
-<li>倾听团队，与团队沟通合作。</li>
-<li>倾听受众，深入理解用户。</li>
-<li>倾听游戏，彻底了解游戏。</li>
-<li>倾听客户（投资者），理解并满足最上级需求。</li>
-<li>倾听自己，发挥天赋。<br>只有学会深度倾听才能让设计出的游戏给玩家创造良好的体验。</li>
-</ol>
-<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>仔细分析用户不清晰的反馈，洞察其中的情感，反思自己真正想让用户体验什么？用户实际产生了什么体验？怎么缩小实际与设想的差距？再深入思考这种体验的本质是什么？如何抓住这种本质？</p>
-<p>为了最大化游戏的乐趣，反思游戏中的哪个部分很有乐趣？为什么？哪个部分需要变得更加有乐趣？</p>
-<p>思考玩家的真正游玩动力（动机）————不是游戏设定的目标，而是玩家真正想要完成目标的原因。反思游戏给玩家的思维引导了怎样的问题？做了哪些努力让他们在意这些问题？能做什么来使他们提出更多的问题（更感兴趣更有游玩动力，增加用户粘性）？<br><em>比如，一个解谜电子游戏在每一关中都可能有一个时间限定的目标，玩家们尝试问这样一个问题:“我能在 30秒之内找到过关的方法吗?”一个让他们更加在意的方法是，当他们解决了任意一个谜题后播放一段有趣的动画，那么玩家就会问这样一个问题:“我想知道下一个动画是什么?”</em></p>
-<h2 id="思考游戏"><a href="#思考游戏" class="headerlink" title="思考游戏"></a>思考游戏</h2><p><em>游戏是一种对自主控制系统的练习，其中包含力量的竞争，被规则限制以产生一个不平衡的结果</em></p>
+    <title>游戏设计笔记2</title>
+    <url>/2024/08/09/b2/</url>
+    <content><![CDATA[<h2 id="游戏的构成"><a href="#游戏的构成" class="headerlink" title="游戏的构成"></a>游戏的构成</h2><p>在我的评价体系中，我将游戏拆分为两大元素：<strong>1.可玩性<del>游戏性</del> 2.艺术性</strong>。<br><del>其中“游戏性”可能与真正意义的<code>游戏性</code>不太一致，我这里主要为了与“艺术性”进行区分，而传统概念的<code>游戏性</code>是一个整体性的概念，包括了我所谓的“游戏性”和“艺术性”，是区别于其他娱乐方式或是艺术方式的概念。</del></p>
+<p>元素四分法中拆分游戏为：<strong>1.机制 2.技术 3.故事 4.美学</strong>。</p>
 <ul>
-<li>游戏是完全自主的</li>
-<li>游戏有目标</li>
-<li>游戏有冲突</li>
-<li>游戏有规则</li>
-<li>游戏有输赢</li>
+<li>机制：包括游戏目标和游戏方式，使游戏成为游戏，需要美学、技术和故事的支持。</li>
+<li>故事：由游戏中事件按发生的顺序构成，需要机制来推动，美学来增强表现力，技术来配合展示。</li>
+<li>美学：是游戏的外观、声音等各方面的感觉，对玩家之体验影响最直接，可以搭配机制来表现，需要技术来放大，故事来凸显。</li>
+<li>技术：是一种媒介，美学通过其展现，机制通过其产生作用，故事通过其来讲述。</li>
 </ul>
-<p><em>游戏是一个拥有内生意义的交互结构，需要玩家们努力完成目标。</em><br>游戏越吸引人，游戏中的 <code>内生价值</code> 越大。（游戏中有价值的部分仅在游戏环境中有价值）</p>
-<ul>
-<li>游戏可交互</li>
-<li>游戏有挑战性</li>
-<li>游戏能创造其内生价值</li>
-</ul>
-<p><strong>游戏是一种以娱乐为目标进行的解决问题的活动</strong></p>
-<h3 id="思考-1"><a href="#思考-1" class="headerlink" title="思考"></a>思考</h3><p>游戏中哪些东西对玩家很有价值？怎样让这些东西对玩家更有价值？游戏中的价值与玩家的动机之间有怎样的关系？</p>
-<p>游戏要求玩家解决哪些问题？是否有一些隐藏的问题作为玩法的一部分出现？游戏中，怎样产生新的问题来保持对玩家的吸引力？</p>
+<p>我认为我的评价体系和四分法是高度重合的：“可玩<del>游戏</del>性”主要包括了玩法、机制和技术，是游戏最主要的要素；“艺术性”主要包括了剧情故事和美学，其中美学又包括画面美术、音乐音效、地编等元素。其中我认为其实美学甚至可以包括故事，基本等于“艺术性”的含义，另外<u>技术</u>其实是在两大元素的交集中。内容上基本一致，区别是四分法主要保留了各元素间的联系，我的评价体系做分割主要是为了方便评价，使各部分相对独立。</p>
+<p>我个人所谓的游戏评价体系就是在两大元素中专注评价感受较深的方面，分析优缺点，而非一个多边形的维度图来统一评价标准，总体上优秀的游戏至少会在两大元素其一做到优秀。</p>
+<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>游戏设计使用了全部的四种元素吗？设计能够通过增强一种或者多种元素来获得提高吗？四种元素是否和谐，互相作用并向同一个主题努力？</p>
+<h2 id="思维方式"><a href="#思维方式" class="headerlink" title="思维方式"></a>思维方式</h2><p>分析设计游戏要内外兼顾，表面涉及玩家体验，内在涉及游戏组成元素。不仅要理解各种各样的游戏元素及它们之间的关系，还必须考虑它们与体验的关系，即同时保留玩家视角与设计师视角，在理解元素及其关系是如何产生体验的同时感受游戏体验。如果只保留玩家视角，会只思考体验，却不理解为什么会有这样的体验或者怎样增强这种体验；<u>如果只保留设计师视角，可能让一个游戏结构在理论上十分完美，而在现实中十分糟糕</u>（这或许是我常感觉很多设计师、策划有问题的原因）。只有同时专注这两件事，才能设计出好的游戏内容。</p>
+<h3 id="思考-1"><a href="#思考-1" class="headerlink" title="思考"></a>思考</h3><p>这种思维方式近期才被我列为我的个人优势之一。具体想法如下（搬运自我的其他笔记）：<br><em>我爱玩游戏，会玩游戏，能真正的了解游戏，懂游戏，对于实际的策划工作有扎实的着力点。（这一点原本我认为是策划基础的必备能力，但是后来我才了解到现在很多的游戏设计师和策划，根本都不玩或者是玩不明白他们自己设计的游戏或是参照的游戏或是竞品，经典例如《英雄联盟》的设计师，在后知后觉地调整游戏平衡时还要私下微信询问部分英雄的“绝活哥”，通过他们的意见来设计平衡游戏，而最后设计改动的还和调研反馈大相径庭，且毫无作用，这我认为是很可笑的，这样的例子还有很多，比如《绝区零》《鸣潮》《尘白禁区》等游戏都有类似情况，<del>这点与我说的第二点共同作用，</del> 展开来详细讲内容会很多，<u>概括来说就是现在很多的策划在招人和实际工作时我觉得有点过于学院派和闭门造车</u>）</em><br><strong>总之我现在认为我能同时从玩家视角和策划视角分析游戏，这成为了我的一大能力优势。</strong> 虽然还并没有人认可，或许也再也没机会被人认可了。</p>
+<p>必须一次性看到游戏的全部：四种元素和玩家体验以及它们是怎样关联起来的。可以把注意力从皮肤转移到骨骼再到皮肤，但更好的方法是全息观察游戏和体验。</p>
+<p>统一的主题：反思游戏中的哪种元素产生了令人享受的体验？游戏中的哪种元素会让玩家在体验中分心？怎样改变游戏元素来提高游戏体验？</p>
+<p>思考游戏主题是什么？是否采用了所有可能的方法来强化主题？</p>
+<h2 id="共鸣主题"><a href="#共鸣主题" class="headerlink" title="共鸣主题"></a>共鸣主题</h2><p>不是每个主题都能成为一个共鸣主题。不过当找到一个深刻的共鸣主题时，就值得好好利用它。这些主题中的一些是基于体验的，另一些是基于真相的。无法通过逻辑分辨出哪一个主题是有共鸣性的–必须在自己内心深处亲自感受这种共鸣，这是一种很重要的自我倾听的形式。</p>
+<p><em>一些设计师拒绝主题的概念,因为他们认为:“玩家从来不会注意到主题”确实，玩家们并不总能够清楚地认识到真正打动他们的是作品的主题–这是因为主题经常作用于潜意识的层面。玩家们知道他们喜欢一个游戏，但他们很难说清为什么喜欢。在许多场合，他们喜欢的理由可能是所有的元素都在加强一个他们认为很有趣或者很重要的主题。主题并不会像谜题一般故意留下隐藏的信息。主题会把你的作品聚焦到对玩家有意义的事物上。</em> </p>
+<h3 id="思考-2"><a href="#思考-2" class="headerlink" title="思考"></a>思考</h3><p>在游戏中，能感觉到哪些有力的或者特殊的元素？当向他人描述此游戏时，哪些创意能让他们真的兴奋？如果没有任何限制，这个游戏将会变成什么样？我对这个游戏的方向有一定的直觉，那到底是什么在驱动这种直觉呢？</p>
 ]]></content>
       <categories>
         <category>笔记</category>
+        <category>评论</category>
       </categories>
       <tags>
         <tag>游戏设计</tag>
         <tag>策划</tag>
+        <tag>评价体系</tag>
+        <tag>个人优势</tag>
+        <tag>我</tag>
       </tags>
   </entry>
   <entry>
@@ -78,27 +73,86 @@
       </tags>
   </entry>
   <entry>
-    <title>游戏设计笔记2</title>
-    <url>/2024/08/09/b2/</url>
-    <content><![CDATA[<h2 id="游戏的构成"><a href="#游戏的构成" class="headerlink" title="游戏的构成"></a>游戏的构成</h2><p>在我的评价体系中，我将游戏拆分为两大元素：<strong>1.可玩性<del>游戏性</del> 2.艺术性</strong>。<br><del>其中“游戏性”可能与真正意义的<code>游戏性</code>不太一致，我这里主要为了与“艺术性”进行区分，而传统概念的<code>游戏性</code>是一个整体性的概念，包括了我所谓的“游戏性”和“艺术性”，是区别于其他娱乐方式或是艺术方式的概念。</del></p>
-<p>元素四分法中拆分游戏为：<strong>1.机制 2.技术 3.故事 4.美学</strong>。</p>
+    <title>游戏设计笔记1</title>
+    <url>/2024/08/08/b1/</url>
+    <content><![CDATA[<h2 id="策划必备要素"><a href="#策划必备要素" class="headerlink" title="策划必备要素"></a>策划必备要素</h2><p>倾听&gt;&gt;创意，沟通</p>
+<ol>
+<li>倾听团队，与团队沟通合作。</li>
+<li>倾听受众，深入理解用户。</li>
+<li>倾听游戏，彻底了解游戏。</li>
+<li>倾听客户（投资者），理解并满足最上级需求。</li>
+<li>倾听自己，发挥天赋。<br>只有学会深度倾听才能让设计出的游戏给玩家创造良好的体验。</li>
+</ol>
+<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>仔细分析用户不清晰的反馈，洞察其中的情感，反思自己真正想让用户体验什么？用户实际产生了什么体验？怎么缩小实际与设想的差距？再深入思考这种体验的本质是什么？如何抓住这种本质？</p>
+<p>为了最大化游戏的乐趣，反思游戏中的哪个部分很有乐趣？为什么？哪个部分需要变得更加有乐趣？</p>
+<p>思考玩家的真正游玩动力（动机）————不是游戏设定的目标，而是玩家真正想要完成目标的原因。反思游戏给玩家的思维引导了怎样的问题？做了哪些努力让他们在意这些问题？能做什么来使他们提出更多的问题（更感兴趣更有游玩动力，增加用户粘性）？<br><em>比如，一个解谜电子游戏在每一关中都可能有一个时间限定的目标，玩家们尝试问这样一个问题:“我能在 30秒之内找到过关的方法吗?”一个让他们更加在意的方法是，当他们解决了任意一个谜题后播放一段有趣的动画，那么玩家就会问这样一个问题:“我想知道下一个动画是什么?”</em></p>
+<h2 id="思考游戏"><a href="#思考游戏" class="headerlink" title="思考游戏"></a>思考游戏</h2><p><em>游戏是一种对自主控制系统的练习，其中包含力量的竞争，被规则限制以产生一个不平衡的结果</em></p>
 <ul>
-<li>机制：包括游戏目标和游戏方式，使游戏成为游戏，需要美学、技术和故事的支持。</li>
-<li>故事：由游戏中事件按发生的顺序构成，需要机制来推动，美学来增强表现力，技术来配合展示。</li>
-<li>美学：是游戏的外观、声音等各方面的感觉，对玩家之体验影响最直接，可以搭配机制来表现，需要技术来放大，故事来凸显。</li>
-<li>技术：是一种媒介，美学通过其展现，机制通过其产生作用，故事通过其来讲述。</li>
+<li>游戏是完全自主的</li>
+<li>游戏有目标</li>
+<li>游戏有冲突</li>
+<li>游戏有规则</li>
+<li>游戏有输赢</li>
 </ul>
-<p>我认为我的评价体系和四分法是高度重合的：“可玩<del>游戏</del>性”主要包括了玩法、机制和技术，是游戏最主要的要素；“艺术性”主要包括了剧情故事和美学，其中美学又包括画面美术、音乐音效、地编等元素。其中我认为其实美学甚至可以包括故事，基本等于“艺术性”的含义，另外<u>技术</u>其实是在两大元素的交集中。内容上基本一致，区别是四分法主要保留了各元素间的联系，我的评价体系做分割主要是为了方便评价，使各部分相对独立。</p>
-<p>我个人所谓的游戏评价体系就是在两大元素中专注评价感受较深的方面，分析优缺点，而非一个多边形的维度图来统一评价标准，总体上优秀的游戏至少会在两大元素其一做到优秀。</p>
-<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>游戏设计使用了全部的四种元素吗？设计能够通过增强一种或者多种元素来获得提高吗？四种元素是否和谐，互相作用并向同一个主题努力？</p>
-<h2 id="思维方式"><a href="#思维方式" class="headerlink" title="思维方式"></a>思维方式</h2><p>分析设计游戏要内外兼顾，表面涉及玩家体验，内在涉及游戏组成元素。不仅要理解各种各样的游戏元素及它们之间的关系，还必须考虑它们与体验的关系，即同时保留玩家视角与设计师视角，在理解元素及其关系是如何产生体验的同时感受游戏体验。如果只保留玩家视角，会只思考体验，却不理解为什么会有这样的体验或者怎样增强这种体验；<u>如果只保留设计师视角，可能让一个游戏结构在理论上十分完美，而在现实中十分糟糕</u>（这或许是我常感觉很多设计师、策划有问题的原因）。只有同时专注这两件事，才能设计出好的游戏内容。</p>
-<h3 id="思考-1"><a href="#思考-1" class="headerlink" title="思考"></a>思考</h3><p>这种思维方式近期才被我列为我的个人优势之一。具体想法如下（搬运自我的其他笔记）：<br><em>我爱玩游戏，会玩游戏，能真正的了解游戏，懂游戏，对于实际的策划工作有扎实的着力点。（这一点原本我认为是策划基础的必备能力，但是后来我才了解到现在很多的游戏设计师和策划，根本都不玩或者是玩不明白他们自己设计的游戏或是参照的游戏或是竞品，经典例如《英雄联盟》的设计师，在后知后觉地调整游戏平衡时还要私下微信询问部分英雄的“绝活哥”，通过他们的意见来设计平衡游戏，而最后设计改动的还和调研反馈大相径庭，且毫无作用，这我认为是很可笑的，这样的例子还有很多，比如《绝区零》《鸣潮》《尘白禁区》等游戏都有类似情况，<del>这点与我说的第二点共同作用，</del> 展开来详细讲内容会很多，<u>概括来说就是现在很多的策划在招人和实际工作时我觉得有点过于学院派和闭门造车</u>）</em><br><strong>总之我现在认为我能同时从玩家视角和策划视角分析游戏，这成为了我的一大能力优势。</strong> 虽然还并没有人认可，或许也再也没机会被人认可了。</p>
-<p>必须一次性看到游戏的全部：四种元素和玩家体验以及它们是怎样关联起来的。可以把注意力从皮肤转移到骨骼再到皮肤，但更好的方法是全息观察游戏和体验。</p>
-<p>统一的主题：反思游戏中的哪种元素产生了令人享受的体验？游戏中的哪种元素会让玩家在体验中分心？怎样改变游戏元素来提高游戏体验？</p>
-<p>思考游戏主题是什么？是否采用了所有可能的方法来强化主题？</p>
-<h2 id="共鸣主题"><a href="#共鸣主题" class="headerlink" title="共鸣主题"></a>共鸣主题</h2><p>不是每个主题都能成为一个共鸣主题。不过当找到一个深刻的共鸣主题时，就值得好好利用它。这些主题中的一些是基于体验的，另一些是基于真相的。无法通过逻辑分辨出哪一个主题是有共鸣性的–必须在自己内心深处亲自感受这种共鸣，这是一种很重要的自我倾听的形式。</p>
-<p><em>一些设计师拒绝主题的概念,因为他们认为:“玩家从来不会注意到主题”确实，玩家们并不总能够清楚地认识到真正打动他们的是作品的主题–这是因为主题经常作用于潜意识的层面。玩家们知道他们喜欢一个游戏，但他们很难说清为什么喜欢。在许多场合，他们喜欢的理由可能是所有的元素都在加强一个他们认为很有趣或者很重要的主题。主题并不会像谜题一般故意留下隐藏的信息。主题会把你的作品聚焦到对玩家有意义的事物上。</em> </p>
-<h3 id="思考-2"><a href="#思考-2" class="headerlink" title="思考"></a>思考</h3><p>在游戏中，能感觉到哪些有力的或者特殊的元素？当向他人描述此游戏时，哪些创意能让他们真的兴奋？如果没有任何限制，这个游戏将会变成什么样？我对这个游戏的方向有一定的直觉，那到底是什么在驱动这种直觉呢？</p>
+<p><em>游戏是一个拥有内生意义的交互结构，需要玩家们努力完成目标。</em><br>游戏越吸引人，游戏中的 <code>内生价值</code> 越大。（游戏中有价值的部分仅在游戏环境中有价值）</p>
+<ul>
+<li>游戏可交互</li>
+<li>游戏有挑战性</li>
+<li>游戏能创造其内生价值</li>
+</ul>
+<p><strong>游戏是一种以娱乐为目标进行的解决问题的活动</strong></p>
+<h3 id="思考-1"><a href="#思考-1" class="headerlink" title="思考"></a>思考</h3><p>游戏中哪些东西对玩家很有价值？怎样让这些东西对玩家更有价值？游戏中的价值与玩家的动机之间有怎样的关系？</p>
+<p>游戏要求玩家解决哪些问题？是否有一些隐藏的问题作为玩法的一部分出现？游戏中，怎样产生新的问题来保持对玩家的吸引力？</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++性能优化笔记</title>
+    <url>/2025/07/28/cpp1/</url>
+    <content><![CDATA[<h3 id="malloc-new"><a href="#malloc-new" class="headerlink" title="malloc &#x2F; new"></a>malloc &#x2F; new</h3><p><code>malloc</code> 不会自动调用构造函数，通过绕过构造函数和析构函数，直接用底层手段手动控制对象的生命周期，避免额外的函数调用开销。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="type">int</span> age;</span><br><span class="line">        <span class="type">float</span> height;</span><br><span class="line">        <span class="built_in">Person</span>();</span><br><span class="line">&#125;;</span><br><span class="line">Person::<span class="built_in">Person</span>(<span class="type">void</span>)&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;调用构造函数&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br><span class="line">Person::~<span class="built_in">Person</span>(<span class="type">void</span>)&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;调用析构函数&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person* p = (Person*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(Person));</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;1&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">p-&gt;age = <span class="number">25</span>;</span><br><span class="line">p-&gt;height = <span class="number">175.5f</span>;</span><br><span class="line"><span class="built_in">free</span>(p);</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;2&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">auto</span> t = <span class="keyword">new</span> <span class="built_in">Person</span>();</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;1&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"><span class="built_in">delete</span>(t);</span><br></pre></td></tr></table></figure>
+<pre><code>1
+2
+调用构造函数
+1
+调用析构函数
+</code></pre>
+<h3 id="移动构造-拷贝构造"><a href="#移动构造-拷贝构造" class="headerlink" title="移动构造 &#x2F; 拷贝构造"></a>移动构造 &#x2F; 拷贝构造</h3><p><strong>移动构造</strong> 仅接管指针（原对象置空）<br><strong>拷贝构造</strong> 深拷贝，分配新内存（复制），性能差</p>
+<h3 id="深拷贝-浅拷贝"><a href="#深拷贝-浅拷贝" class="headerlink" title="深拷贝 &#x2F; 浅拷贝"></a>深拷贝 &#x2F; 浅拷贝</h3><p><strong>浅拷贝</strong>	拷贝指针地址，两者共享资源	<br><strong>深拷贝</strong>	拷贝资源内容，各自拥有自己的资源，性能差</p>
+<h3 id="堆-栈"><a href="#堆-栈" class="headerlink" title="堆 &#x2F; 栈"></a>堆 &#x2F; 栈</h3><ul>
+<li>字符串拼接，<code>string</code>（堆） &#x2F; <code>char</code>（栈）<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;benchmark/benchmark.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="comment">// 测试用例：N次字符串拼接</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 1000</span></span><br><span class="line"><span class="comment">// 方法1：std::string</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcString</span><span class="params">(benchmark::State&amp; state)</span></span>&#123;  </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state)&#123;</span><br><span class="line">    std::string s;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;N; ++i) s += <span class="string">&quot;a&quot;</span>;  <span class="comment">// SSO优化初期，后期堆分配</span></span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(s);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcString);</span><br><span class="line"><span class="comment">// 方法2：char[]（栈）</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcCharstack</span><span class="params">(benchmark::State&amp; state)</span></span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state)&#123; </span><br><span class="line">    <span class="type">char</span> arr[N]; <span class="comment">// 危险！可能栈溢出</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;N; ++i) arr[i] = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(arr);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcCharstack);</span><br><span class="line"><span class="comment">// 方法3：char*（堆）</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcCharheap</span><span class="params">(benchmark::State&amp; state)</span></span>&#123;  </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state)&#123; </span><br><span class="line">    <span class="type">char</span>* ptr = <span class="keyword">new</span> <span class="type">char</span>[N];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;N; ++i) ptr[i] = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(ptr);</span><br><span class="line">    <span class="keyword">delete</span>[] ptr;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcCharheap);</span><br><span class="line"><span class="comment">// 方法4：std::vector&lt;char&gt;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcVectorChar</span><span class="params">(benchmark::State&amp; state)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state) &#123;</span><br><span class="line">    std::vector&lt;<span class="type">char</span>&gt; vec;</span><br><span class="line">    vec.<span class="built_in">reserve</span>(N); <span class="comment">// 提前分配堆空间，避免多次扩容，提升性能</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) vec.<span class="built_in">emplace_back</span>(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(vec);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcVectorChar);</span><br></pre></td></tr></table></figure>
+<img src="https://s2.loli.net/2025/07/31/HjsID92KYZvcC1A.png" alt="运行耗时对比"><br>显然耗时 <code>string</code> ≈ <code>vector&lt;char&gt;</code> &gt; <code>char*</code> &gt; <code>char[]</code><br>另外 <code>vector</code> 在未提前 <code>reserve()</code> 空间的情况下，性能基本与 <code>string</code> 相同，提前分配堆空间后提升了约10%的速度。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>性能</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏设计笔记3</title>
+    <url>/2024/08/19/b4/</url>
+    <content><![CDATA[<h2 id="游戏的可玩性"><a href="#游戏的可玩性" class="headerlink" title="游戏的可玩性"></a>游戏的可玩性</h2><p><em>游戏可玩性优先：在所有的电子游戏中，可玩性是最主要的娱乐元素。所以，在设计游戏时，首先要考虑的就是游戏的可玩性。————《游戏设计基础》(Ernest Adams)</em></p>
+<p>当我看到书上的这句话时我感受到了充分的认同感，但我立马想到了有悖这一观点的例子，然后在我沉思后，我感到了疑惑，到底是这句话出了问题，还是国内二游模式过分畸形。</p>
+<p>手游本就相比端游会缺少一些可玩性可以理解，但国内<strong>大部分</strong>二游是可玩性优先的吗？我觉得不是的，首先需要确定的是客观来说大部分二游的主体游戏内容是单一枯燥的，虽然我暂时很难直接证明，但是否则就不会在任务设置合理的情况下存在所谓<strong>上班</strong>式的体验并出现那么多代肝和自动脚本。二游设置的任务负担不大但主体玩法没有太多可玩性，很多需要玩家日复一日地重复游玩完全相同内容，也就是所谓的<strong>日常</strong>、<strong>周常</strong>，并衍生出了所谓<strong>长草期</strong>等名称，以此来收集资源（主要是抽卡资源和养成材料），玩家根本不会因为完成这些任务而觉得好玩。而只有通过这些资源积累才能获取角色等内容来从某种意义上拓展游戏一定的可玩性，但主要还是为了抽卡<strong>收集</strong>这一目的服务，可这种收集玩法的可玩性真的很低，长期消磨玩家的耐心最后也只能提供很短期的正反馈且并不能让玩家充分地获得<strong>回报感</strong>，玩家们不会思考是那么长期地打卡游玩的功劳，而是更多地利用赌博心理，让人感觉幸运和终于获得的轻微满足感以及新鲜感，反而在未获得（收集）时会产生极大的挫败感，这对增加或维持用户粘性的效果并不好。</p>
+<p>在MMORPG中因为存在社交属性的存在，玩家重复刷团本会显得没那么枯燥，在过程（战斗）和结果（战利品）都增加了一些随机性，同时合作的玩法也相比个人更具可玩性；在《宝可梦》这类收集游戏中，寻找和捕捉时的随机性以及在多种设计下给予玩家充分的回报感（图鉴、组队、繁衍等玩法），也大大提升了可玩性。以上两个简单举例，对比说明了二游日常模式和抽卡玩法的低可玩性。</p>
+<p>但是可玩性低不代表优先级低，还需别的方面加以证明。上文提到了攒资源抽卡本质上是收集玩法，那么就算玩家是有意识去收集（实际上大都不是，后文解释），收集后最核心的玩法还是在<strong>养成</strong>，而支撑养成这一目标的根本不是可玩性，而是下一章要讲的美学（艺术性）。因为大部分二游的主体玩法内容单一，虽然养成可以使角色的可玩性得到一定的提升，但即便角色的可玩性较高，面对枯燥的关卡和重复的游戏也难以发挥，玩法不够支撑角色的可玩性，玩家仍会感觉枯燥乏味，感觉每天都在<strong>肝</strong>，类似<u>木桶效应</u>；而真正支撑玩家收集并养成的，是二游厂商或者说策划们更花心思的剧情、人设、立绘、建模、动作动画等美学要素，这才是真正吸引二游玩家的，因为一边“强度党”关心的是角色的数值和机制，而不是真正意义上的可玩性，他们只会说强度高，但不会实际感觉说这个角色很好玩，更多的还是另一边玩家因为美学各方面的塑造而单纯喜欢这个角色并进行收集、养成和付费，获得满足感，同样不是可玩性的作用。游戏公司很明显懂这一点，所以愈发在美学上下功夫，来促进玩家的消费，而在玩法上设计的不尽人意。</p>
+<p>那么综上所述，我认为这些二游并不以可玩性优先，但目前这种盈利模式是成功的，我虽然很想认同书籍作者的观点，但可能因为书是在10年代编写的，当时并不流行现在的二游模式，受到了时效性的局限，所以我可能会将该观点添加“端游&#x2F;主机游戏”的限定词，端游&#x2F;主机游戏才必须要以可玩性为优先，手游或许不必。</p>
+<p>诚然，上述所说的游戏设计模式有可取性，但我认为还是有些过头了，我想手游更合适的或许还是要可玩性与美学具有相同的优先级，只有足够的可玩性才能够充分地发挥美学。这些二游可玩性水平的滞后，或许是过度依赖美学的结果，<del>系统、玩法、关卡策划太过安逸而不思进取了</del>，国内部分游戏厂商为了求稳过分地限制了策划的能力。</p>
+<h2 id="游戏的美学（艺术性）"><a href="#游戏的美学（艺术性）" class="headerlink" title="游戏的美学（艺术性）"></a>游戏的美学（艺术性）</h2><ol>
+<li>协调性：让游戏的各个方面适当地结合在一起，成为一个连贯、统一的整体。</li>
+<li>沉浸性：通过策略、空间、叙事等方式创建出沉浸感。</li>
+<li>情感共鸣：娱乐感、满足感、惊喜、兴奋、好奇、成就、自豪、松了一口气等。</li>
+</ol>
 ]]></content>
       <categories>
         <category>笔记</category>
@@ -107,9 +161,6 @@
       <tags>
         <tag>游戏设计</tag>
         <tag>策划</tag>
-        <tag>评价体系</tag>
-        <tag>个人优势</tag>
-        <tag>我</tag>
       </tags>
   </entry>
   <entry>
@@ -149,31 +200,6 @@
       </tags>
   </entry>
   <entry>
-    <title>游戏设计笔记3</title>
-    <url>/2024/08/19/b4/</url>
-    <content><![CDATA[<h2 id="游戏的可玩性"><a href="#游戏的可玩性" class="headerlink" title="游戏的可玩性"></a>游戏的可玩性</h2><p><em>游戏可玩性优先：在所有的电子游戏中，可玩性是最主要的娱乐元素。所以，在设计游戏时，首先要考虑的就是游戏的可玩性。————《游戏设计基础》(Ernest Adams)</em></p>
-<p>当我看到书上的这句话时我感受到了充分的认同感，但我立马想到了有悖这一观点的例子，然后在我沉思后，我感到了疑惑，到底是这句话出了问题，还是国内二游模式过分畸形。</p>
-<p>手游本就相比端游会缺少一些可玩性可以理解，但国内<strong>大部分</strong>二游是可玩性优先的吗？我觉得不是的，首先需要确定的是客观来说大部分二游的主体游戏内容是单一枯燥的，虽然我暂时很难直接证明，但是否则就不会在任务设置合理的情况下存在所谓<strong>上班</strong>式的体验并出现那么多代肝和自动脚本。二游设置的任务负担不大但主体玩法没有太多可玩性，很多需要玩家日复一日地重复游玩完全相同内容，也就是所谓的<strong>日常</strong>、<strong>周常</strong>，并衍生出了所谓<strong>长草期</strong>等名称，以此来收集资源（主要是抽卡资源和养成材料），玩家根本不会因为完成这些任务而觉得好玩。而只有通过这些资源积累才能获取角色等内容来从某种意义上拓展游戏一定的可玩性，但主要还是为了抽卡<strong>收集</strong>这一目的服务，可这种收集玩法的可玩性真的很低，长期消磨玩家的耐心最后也只能提供很短期的正反馈且并不能让玩家充分地获得<strong>回报感</strong>，玩家们不会思考是那么长期地打卡游玩的功劳，而是更多地利用赌博心理，让人感觉幸运和终于获得的轻微满足感以及新鲜感，反而在未获得（收集）时会产生极大的挫败感，这对增加或维持用户粘性的效果并不好。</p>
-<p>在MMORPG中因为存在社交属性的存在，玩家重复刷团本会显得没那么枯燥，在过程（战斗）和结果（战利品）都增加了一些随机性，同时合作的玩法也相比个人更具可玩性；在《宝可梦》这类收集游戏中，寻找和捕捉时的随机性以及在多种设计下给予玩家充分的回报感（图鉴、组队、繁衍等玩法），也大大提升了可玩性。以上两个简单举例，对比说明了二游日常模式和抽卡玩法的低可玩性。</p>
-<p>但是可玩性低不代表优先级低，还需别的方面加以证明。上文提到了攒资源抽卡本质上是收集玩法，那么就算玩家是有意识去收集（实际上大都不是，后文解释），收集后最核心的玩法还是在<strong>养成</strong>，而支撑养成这一目标的根本不是可玩性，而是下一章要讲的美学（艺术性）。因为大部分二游的主体玩法内容单一，虽然养成可以使角色的可玩性得到一定的提升，但即便角色的可玩性较高，面对枯燥的关卡和重复的游戏也难以发挥，玩法不够支撑角色的可玩性，玩家仍会感觉枯燥乏味，感觉每天都在<strong>肝</strong>，类似<u>木桶效应</u>；而真正支撑玩家收集并养成的，是二游厂商或者说策划们更花心思的剧情、人设、立绘、建模、动作动画等美学要素，这才是真正吸引二游玩家的，因为一边“强度党”关心的是角色的数值和机制，而不是真正意义上的可玩性，他们只会说强度高，但不会实际感觉说这个角色很好玩，更多的还是另一边玩家因为美学各方面的塑造而单纯喜欢这个角色并进行收集、养成和付费，获得满足感，同样不是可玩性的作用。游戏公司很明显懂这一点，所以愈发在美学上下功夫，来促进玩家的消费，而在玩法上设计的不尽人意。</p>
-<p>那么综上所述，我认为这些二游并不以可玩性优先，但目前这种盈利模式是成功的，我虽然很想认同书籍作者的观点，但可能因为书是在10年代编写的，当时并不流行现在的二游模式，受到了时效性的局限，所以我可能会将该观点添加“端游&#x2F;主机游戏”的限定词，端游&#x2F;主机游戏才必须要以可玩性为优先，手游或许不必。</p>
-<p>诚然，上述所说的游戏设计模式有可取性，但我认为还是有些过头了，我想手游更合适的或许还是要可玩性与美学具有相同的优先级，只有足够的可玩性才能够充分地发挥美学。这些二游可玩性水平的滞后，或许是过度依赖美学的结果，<del>系统、玩法、关卡策划太过安逸而不思进取了</del>，国内部分游戏厂商为了求稳过分地限制了策划的能力。</p>
-<h2 id="游戏的美学（艺术性）"><a href="#游戏的美学（艺术性）" class="headerlink" title="游戏的美学（艺术性）"></a>游戏的美学（艺术性）</h2><ol>
-<li>协调性：让游戏的各个方面适当地结合在一起，成为一个连贯、统一的整体。</li>
-<li>沉浸性：通过策略、空间、叙事等方式创建出沉浸感。</li>
-<li>情感共鸣：娱乐感、满足感、惊喜、兴奋、好奇、成就、自豪、松了一口气等。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>游戏设计之心流</title>
     <url>/2024/08/02/design1/</url>
     <content><![CDATA[<h1 id="心流"><a href="#心流" class="headerlink" title="心流"></a>心流</h1><p><u>指玩家沉浸游戏，淡化时间、饥饿等外部因素，全神贯注的状态</u><br>理论适用于大部分“传统游戏”，但仍须根据游戏类型及目标用户具体问题具体分析。<br><img src="https://s2.loli.net/2024/08/02/3RkghHSZ5JzfY76.png" alt="心流图"><br><strong>心流的节奏要有变化</strong></p>
@@ -204,24 +230,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/07/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>关于《炉石传说》国服回归策划的启发</title>
     <url>/2024/07/30/idea1/</url>
     <content><![CDATA[<h2 id="新闻"><a href="#新闻" class="headerlink" title="新闻"></a>新闻</h2><p>最近的ChinaJoy上，《炉石传说》（HearthStone）中国宣布，回归日期定档9月25日，回归后一定时间内登录《炉石传说》，所有国服玩家（包括新注册玩家）即可免费获赠2023年全部错过的卡牌，共计2154张卡牌，包括全部97张金色传说。另外游戏内还有额外的任务卡包、皮肤等福利，游戏外与网易雷火合作赞助赛事100万元奖金以及提供4个国服直邀名额。</p>
@@ -244,6 +252,52 @@
         <tag>策划</tag>
         <tag>游戏</tag>
         <tag>运营</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2024/07/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>锐评我所擅长和喜欢的FPS和JRPG</title>
+    <url>/2024/08/31/idea3/</url>
+    <content><![CDATA[<p>FPS竞技性强，能给予玩家强烈的即时的刺激感与正反馈，容易产生沉浸感和进入心流状态。但这对于枪械和操作的手感要求较高，同时因为竞技性的过强，导致影响游戏出圈的因素会更多，如平衡性、差异化玩法、门槛、反作弊、关卡地图设计等等。</p>
+<p>首要的是传统JRPG和新型JRPG有明显差别，我主要喜欢新式的JRPG，相对来说更短平快，符合我个人喜好。JRPG线性叙事节奏较紧凑平滑，较简单直接，适合当代节奏，动作动画较优秀流畅，画风较美，系统较简单易入门，但也因此略显颓势，JRPG相比当代商业引擎技术孱弱，游戏工业化流水线，除了《最终幻想》这类老牌IP的老式JRPG外很少再出现优秀佳作，平均都在良好水平线附近，近年仅《碧蓝幻想Relink》接近优秀，这或许与部分日厂追求稳定的低投入低回报理念有关，同时这种思想感觉也影响了国内部分游戏厂商，或许从某种意义上导致了国内除《觅长生》等独立游戏外仅有《黑神话：悟空》一部优秀3A的现状。</p>
+]]></content>
+      <categories>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分析《Apex Legends》角色技能设计维度</title>
+    <url>/2024/10/10/idea4/</url>
+    <content><![CDATA[<p>《APEX英雄》技能体系我会分三维为：转移，攻防，信息与资源。其中转移分为远近，其关系进点和机动性。以此为三维，可通过思维导图进一步细分效果。</p>
+<p>值得一提的是，实际上《APEX英雄》的角色设计对于资源相关的考量在电竞比赛中与玩家排位中相差巨大。<br><img src="https://s2.loli.net/2024/10/10/L3b8kSOHmBQGTW7.png" alt="三维图"></p>
+]]></content>
+      <categories>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
       </tags>
   </entry>
   <entry>
@@ -274,38 +328,10 @@
       </tags>
   </entry>
   <entry>
-    <title>分析《Apex Legends》角色技能设计维度</title>
-    <url>/2024/10/10/idea4/</url>
-    <content><![CDATA[<p>《APEX英雄》技能体系我会分三维为：转移，攻防，信息与资源。其中转移分为远近，其关系进点和机动性。以此为三维，可通过思维导图进一步细分效果。</p>
-<p>值得一提的是，实际上《APEX英雄》的角色设计对于资源相关的考量在电竞比赛中与玩家排位中相差巨大。<br><img src="https://s2.loli.net/2024/10/10/L3b8kSOHmBQGTW7.png" alt="三维图"></p>
-]]></content>
-      <categories>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>设计竞技类游戏时如何兼顾女性用户</title>
     <url>/2024/10/20/idea5/</url>
     <content><![CDATA[<p><strong>例如在FPS和MOBA游戏中，设计明确的奶位（偏纯辅助型）角色，即可兼顾女性玩家</strong><br>例如《守望先锋》中的天使，《英雄联盟》中的魔法猫咪、琴女，《无畏契约》中的贤者等。<br>看似像暴论，但意思已经基本到位了，我细想确实如此。</p>
 <p>后续有空再更</p>
-]]></content>
-      <categories>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>锐评我所擅长和喜欢的FPS和JRPG</title>
-    <url>/2024/08/31/idea3/</url>
-    <content><![CDATA[<p>FPS竞技性强，能给予玩家强烈的即时的刺激感与正反馈，容易产生沉浸感和进入心流状态。但这对于枪械和操作的手感要求较高，同时因为竞技性的过强，导致影响游戏出圈的因素会更多，如平衡性、差异化玩法、门槛、反作弊、关卡地图设计等等。</p>
-<p>首要的是传统JRPG和新型JRPG有明显差别，我主要喜欢新式的JRPG，相对来说更短平快，符合我个人喜好。JRPG线性叙事节奏较紧凑平滑，较简单直接，适合当代节奏，动作动画较优秀流畅，画风较美，系统较简单易入门，但也因此略显颓势，JRPG相比当代商业引擎技术孱弱，游戏工业化流水线，除了《最终幻想》这类老牌IP的老式JRPG外很少再出现优秀佳作，平均都在良好水平线附近，近年仅《碧蓝幻想Relink》接近优秀，这或许与部分日厂追求稳定的低投入低回报理念有关，同时这种思想感觉也影响了国内部分游戏厂商，或许从某种意义上导致了国内除《觅长生》等独立游戏外仅有《黑神话：悟空》一部优秀3A的现状。</p>
 ]]></content>
       <categories>
         <category>评论</category>
@@ -362,7 +388,7 @@
   <entry>
     <title>test2</title>
     <url>/2025/07/28/test2/</url>
-    <content><![CDATA[<p>admonition 警告；告诫 [.ædmə’nɪʃ(ə)n]</p>
+    <content><![CDATA[<p>admonition 警告；告诫 [.ædmə’nɪʃ(ə)n]<br><a href="https://github.com/Mr-EEEeee/hexo-admonition-new">https://github.com/Mr-EEEeee/hexo-admonition-new</a></p>
 <div class="admonition anote">
 <p class="admonition-title"><span class="mdi mdi-note-outline admonition-icon"></span>Note</p>
 <p>这是一条采用默认标题的note信息。</p>

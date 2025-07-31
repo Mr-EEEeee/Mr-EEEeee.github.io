@@ -1675,8 +1675,8 @@ figure.highlight pre .javascript .function {
 }
 .container code {
   padding: 2px 5px;
-  background: rgba(30,30,30,0.05);
-  color: #f1f1f1;
+  background: rgba(27,31,35,0.05);
+  color: #f47466;
 }
 .container pre {
   padding: 10px 20px;
@@ -4251,7 +4251,7 @@ figure.highlight pre .javascript .function {
   text-align: justify;
 }
 .container a {
-  color: #f4c8a1;
+  color: #f17a4d;
 }
 .container a:hover {
   text-decoration: underline;
@@ -6180,7 +6180,7 @@ blockquote.pullquote.right {
   box-shadow: none;
 }
 [data-theme='dark'] .container .note code {
-  background: rgba(30,30,30,0.05);
+  background: rgba(27,31,35,0.05);
 }
 [data-theme='dark'] .container .aplayer {
   filter: brightness(0.8);
