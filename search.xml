@@ -379,17 +379,26 @@
       </tags>
   </entry>
   <entry>
-    <title>Unity中的面向对象</title>
-    <url>/2024/08/10/unity/unity2/</url>
-    <content><![CDATA[<p>场景中存在GameObject实例，每个实例对象在Inspector中都会显示一系列组件，这些组件就是脚本（类），默认全部继承自MonoBehaviour类，成为了该脚本类的实例对象和所选对象GameObject的各种属性。</p>
-<p>Prefab预制体，将场景中的物体拖动到Assets里即可生成。这个过程实际上是一个抽象的过程，抽象成一个具有场景中被拖动物体的所有属性(含值)的模板类。</p>
+    <title>C++ 多线程笔记4</title>
+    <url>/2025/08/07/C++/cpp5/</url>
+    <content><![CDATA[<div class="admonition tip">
+<p class="admonition-title"><span class="mdi mdi-lightbulb-on-outline admonition-icon"></span>Tip</p>
+<p><code>std::thread::hardware_concurrency()</code> 返回CPU线程数，可作为线程池默认大小。</p>
+
+</div>
+<div class="admonition example">
+<p class="admonition-title"><span class="mdi mdi-file-code-outline admonition-icon"></span>时间计数代码</p>
+<p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//时间计数 us微秒 = micro </span></span><br><span class="line"><span class="keyword">auto</span> t0 = std::chrono::steady_clock::<span class="built_in">now</span>();</span><br><span class="line"><span class="comment">//代码</span></span><br><span class="line"><span class="keyword">auto</span> ms = std::chrono::<span class="built_in">duration</span>&lt;<span class="type">double</span>, std::milli&gt;(</span><br><span class="line">std::chrono::steady_clock::<span class="built_in">now</span>() - t0).<span class="built_in">count</span>();</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;全部任务耗时 &quot;</span> &lt;&lt; ms &lt;&lt; <span class="string">&quot; ms\n&quot;</span>;</span><br></pre></td></tr></table></figure></p>
+
+</div>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;thread&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;condition_variable&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;functional&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;atomic&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;mutex&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ThreadPool</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	std::mutex mtx;</span><br><span class="line">	std::condition_variable condition;</span><br><span class="line">	std::queue&lt;std::function&lt;<span class="type">void</span>()&gt;&gt; tasks;</span><br><span class="line">	std::atomic&lt;<span class="type">bool</span>&gt; stop;</span><br><span class="line">	std::vector&lt;std::thread&gt; threads;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">ThreadPool</span>(<span class="type">const</span> ThreadPool&amp;) = <span class="keyword">delete</span>;</span><br><span class="line">	ThreadPool&amp; <span class="keyword">operator</span>=(<span class="type">const</span> ThreadPool&amp;) = <span class="keyword">delete</span>;</span><br><span class="line">	<span class="built_in">ThreadPool</span>(<span class="type">int</span> num_threads);</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="type">static</span> ThreadPool&amp; <span class="title">SetThreadPool</span><span class="params">(<span class="type">int</span> num_threads)</span> </span>&#123;</span><br><span class="line">		<span class="function"><span class="type">static</span> ThreadPool <span class="title">threadpool</span><span class="params">(num_threads)</span></span>;</span><br><span class="line">		<span class="keyword">return</span> threadpool;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	~<span class="built_in">ThreadPool</span>() &#123;</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lock</span><span class="params">(mtx)</span></span>;</span><br><span class="line">			stop = <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		condition.<span class="built_in">notify_all</span>();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">auto</span>&amp; t : threads) &#123;</span><br><span class="line">			t.<span class="built_in">join</span>();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> F, <span class="keyword">typename</span>... Args&gt; <span class="type">void</span> <span class="title">enqueue</span><span class="params">(F&amp;&amp; f, Args&amp;&amp;... args)</span> </span>&#123;</span><br><span class="line">		std::function&lt;<span class="type">void</span>()&gt; task = std::<span class="built_in">bind</span>(std::forward&lt;F&gt;(f), std::forward&lt;Args&gt;(args)...);</span><br><span class="line">		<span class="keyword">if</span> (stop) <span class="keyword">throw</span> std::<span class="built_in">runtime_error</span>(<span class="string">&quot;enqueue on stopped ThreadPool&quot;</span>);</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lock</span><span class="params">(mtx)</span></span>;</span><br><span class="line">			tasks.<span class="built_in">emplace</span>(std::<span class="built_in">move</span>(task));</span><br><span class="line">		&#125;</span><br><span class="line">		condition.<span class="built_in">notify_one</span>();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ThreadPool::<span class="built_in">ThreadPool</span>(<span class="type">int</span> num_threads) : stop&#123; <span class="literal">false</span> &#125; &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; num_threads; i++) &#123;</span><br><span class="line">		threads.<span class="built_in">emplace_back</span>([<span class="keyword">this</span>]() &#123;</span><br><span class="line">			<span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				std::unique_lock&lt;std::mutex&gt; <span class="built_in">lock</span>(mtx);</span><br><span class="line">				condition.<span class="built_in">wait</span>(lock, [<span class="keyword">this</span>]() &#123; <span class="keyword">return</span> !tasks.<span class="built_in">empty</span>() || stop; &#125;);</span><br><span class="line">				<span class="keyword">if</span> (stop &amp;&amp; tasks.<span class="built_in">empty</span>()) <span class="keyword">return</span>;</span><br><span class="line">				std::function&lt;<span class="built_in">void</span>()&gt; <span class="built_in">task</span>(std::<span class="built_in">move</span>(tasks.<span class="built_in">front</span>()));</span><br><span class="line">				tasks.<span class="built_in">pop</span>();</span><br><span class="line">				lock.<span class="built_in">unlock</span>();</span><br><span class="line">				<span class="built_in">task</span>();</span><br><span class="line">			&#125;</span><br><span class="line">			&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ThreadPool&amp; threadpool = ThreadPool::<span class="built_in">SetThreadPool</span>(std::thread::<span class="built_in">hardware_concurrency</span>());</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">500</span>; i++) &#123;</span><br><span class="line">		threadpool.<span class="built_in">enqueue</span>([i]() &#123;</span><br><span class="line">			std::cout &lt;&lt; <span class="string">&quot;task: &quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot; is running&quot;</span> &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">			std::this_thread::<span class="built_in">sleep_for</span>(std::chrono::<span class="built_in">milliseconds</span>(<span class="number">10</span>));</span><br><span class="line">			std::cout &lt;&lt; <span class="string">&quot;task: &quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot; is done&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">			&#125;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>Unity</tag>
-        <tag>面向对象</tag>
+        <tag>C++</tag>
+        <tag>多线程</tag>
       </tags>
   </entry>
   <entry>
@@ -431,6 +440,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Unity中的面向对象</title>
+    <url>/2024/08/10/unity/unity2/</url>
+    <content><![CDATA[<p>场景中存在GameObject实例，每个实例对象在Inspector中都会显示一系列组件，这些组件就是脚本（类），默认全部继承自MonoBehaviour类，成为了该脚本类的实例对象和所选对象GameObject的各种属性。</p>
+<p>Prefab预制体，将场景中的物体拖动到Assets里即可生成。这个过程实际上是一个抽象的过程，抽象成一个具有场景中被拖动物体的所有属性(含值)的模板类。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Unity</tag>
+        <tag>面向对象</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo之Butterfly主题透明css浅析</title>
     <url>/2024/07/29/%E6%95%99%E7%A8%8B/css1/</url>
     <content><![CDATA[<p><img src="/./img/posts/image-1.png" alt="效果图1"><br><img src="/./img/posts/image-2.png" alt="效果图2"></p>
@@ -464,29 +487,6 @@
         <tag>Hexo</tag>
         <tag>Butterfly</tag>
         <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ 多线程笔记4</title>
-    <url>/2025/08/07/C++/cpp5/</url>
-    <content><![CDATA[<div class="admonition tip">
-<p class="admonition-title"><span class="mdi mdi-lightbulb-on-outline admonition-icon"></span>Tip</p>
-<p><code>std::thread::hardware_concurrency()</code> 返回CPU线程数，可作为线程池默认大小。</p>
-
-</div>
-<div class="admonition example">
-<p class="admonition-title"><span class="mdi mdi-file-code-outline admonition-icon"></span>时间计数代码</p>
-<p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//时间计数 us微秒 = micro </span></span><br><span class="line"><span class="keyword">auto</span> t0 = std::chrono::steady_clock::<span class="built_in">now</span>();</span><br><span class="line"><span class="comment">//代码</span></span><br><span class="line"><span class="keyword">auto</span> ms = std::chrono::<span class="built_in">duration</span>&lt;<span class="type">double</span>, std::milli&gt;(</span><br><span class="line">std::chrono::steady_clock::<span class="built_in">now</span>() - t0).<span class="built_in">count</span>();</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;全部任务耗时 &quot;</span> &lt;&lt; ms &lt;&lt; <span class="string">&quot; ms\n&quot;</span>;</span><br></pre></td></tr></table></figure></p>
-
-</div>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;thread&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;condition_variable&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;functional&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;atomic&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;mutex&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ThreadPool</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	std::mutex mtx;</span><br><span class="line">	std::condition_variable condition;</span><br><span class="line">	std::queue&lt;std::function&lt;<span class="type">void</span>()&gt;&gt; tasks;</span><br><span class="line">	std::atomic&lt;<span class="type">bool</span>&gt; stop;</span><br><span class="line">	std::vector&lt;std::thread&gt; threads;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">ThreadPool</span>(<span class="type">const</span> ThreadPool&amp;) = <span class="keyword">delete</span>;</span><br><span class="line">	ThreadPool&amp; <span class="keyword">operator</span>=(<span class="type">const</span> ThreadPool&amp;) = <span class="keyword">delete</span>;</span><br><span class="line">	<span class="built_in">ThreadPool</span>(<span class="type">int</span> num_threads);</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="type">static</span> ThreadPool&amp; <span class="title">SetThreadPool</span><span class="params">(<span class="type">int</span> num_threads)</span> </span>&#123;</span><br><span class="line">		<span class="function"><span class="type">static</span> ThreadPool <span class="title">threadpool</span><span class="params">(num_threads)</span></span>;</span><br><span class="line">		<span class="keyword">return</span> threadpool;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	~<span class="built_in">ThreadPool</span>() &#123;</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lock</span><span class="params">(mtx)</span></span>;</span><br><span class="line">			stop = <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		condition.<span class="built_in">notify_all</span>();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">auto</span>&amp; t : threads) &#123;</span><br><span class="line">			t.<span class="built_in">join</span>();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> F, <span class="keyword">typename</span>... Args&gt; <span class="type">void</span> <span class="title">enqueue</span><span class="params">(F&amp;&amp; f, Args&amp;&amp;... args)</span> </span>&#123;</span><br><span class="line">		std::function&lt;<span class="type">void</span>()&gt; task = std::<span class="built_in">bind</span>(std::forward&lt;F&gt;(f), std::forward&lt;Args&gt;(args)...);</span><br><span class="line">		<span class="keyword">if</span> (stop) <span class="keyword">throw</span> std::<span class="built_in">runtime_error</span>(<span class="string">&quot;enqueue on stopped ThreadPool&quot;</span>);</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lock</span><span class="params">(mtx)</span></span>;</span><br><span class="line">			tasks.<span class="built_in">emplace</span>(std::<span class="built_in">move</span>(task));</span><br><span class="line">		&#125;</span><br><span class="line">		condition.<span class="built_in">notify_one</span>();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ThreadPool::<span class="built_in">ThreadPool</span>(<span class="type">int</span> num_threads) : stop&#123; <span class="literal">false</span> &#125; &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; num_threads; i++) &#123;</span><br><span class="line">		threads.<span class="built_in">emplace_back</span>([<span class="keyword">this</span>]() &#123;</span><br><span class="line">			<span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				std::unique_lock&lt;std::mutex&gt; <span class="built_in">lock</span>(mtx);</span><br><span class="line">				condition.<span class="built_in">wait</span>(lock, [<span class="keyword">this</span>]() &#123; <span class="keyword">return</span> !tasks.<span class="built_in">empty</span>() || stop; &#125;);</span><br><span class="line">				<span class="keyword">if</span> (stop &amp;&amp; tasks.<span class="built_in">empty</span>()) <span class="keyword">return</span>;</span><br><span class="line">				std::function&lt;<span class="built_in">void</span>()&gt; <span class="built_in">task</span>(std::<span class="built_in">move</span>(tasks.<span class="built_in">front</span>()));</span><br><span class="line">				tasks.<span class="built_in">pop</span>();</span><br><span class="line">				lock.<span class="built_in">unlock</span>();</span><br><span class="line">				<span class="built_in">task</span>();</span><br><span class="line">			&#125;</span><br><span class="line">			&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ThreadPool&amp; threadpool = ThreadPool::<span class="built_in">SetThreadPool</span>(std::thread::<span class="built_in">hardware_concurrency</span>());</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">500</span>; i++) &#123;</span><br><span class="line">		threadpool.<span class="built_in">enqueue</span>([i]() &#123;</span><br><span class="line">			std::cout &lt;&lt; <span class="string">&quot;task: &quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot; is running&quot;</span> &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">			std::this_thread::<span class="built_in">sleep_for</span>(std::chrono::<span class="built_in">milliseconds</span>(<span class="number">10</span>));</span><br><span class="line">			std::cout &lt;&lt; <span class="string">&quot;task: &quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot; is done&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">			&#125;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>多线程</tag>
       </tags>
   </entry>
   <entry>
@@ -560,6 +560,31 @@
       </tags>
   </entry>
   <entry>
+    <title>游戏设计笔记3</title>
+    <url>/2024/08/19/%E7%AC%94%E8%AE%B0/b4/</url>
+    <content><![CDATA[<h2 id="游戏的可玩性"><a href="#游戏的可玩性" class="headerlink" title="游戏的可玩性"></a>游戏的可玩性</h2><p><em>游戏可玩性优先：在所有的电子游戏中，可玩性是最主要的娱乐元素。所以，在设计游戏时，首先要考虑的就是游戏的可玩性。————《游戏设计基础》(Ernest Adams)</em></p>
+<p>当我看到书上的这句话时我感受到了充分的认同感，但我立马想到了有悖这一观点的例子，然后在我沉思后，我感到了疑惑，到底是这句话出了问题，还是国内二游模式过分畸形。</p>
+<p>手游本就相比端游会缺少一些可玩性可以理解，但国内<strong>大部分</strong>二游是可玩性优先的吗？我觉得不是的，首先需要确定的是客观来说大部分二游的主体游戏内容是单一枯燥的，虽然我暂时很难直接证明，但是否则就不会在任务设置合理的情况下存在所谓<strong>上班</strong>式的体验并出现那么多代肝和自动脚本。二游设置的任务负担不大但主体玩法没有太多可玩性，很多需要玩家日复一日地重复游玩完全相同内容，也就是所谓的<strong>日常</strong>、<strong>周常</strong>，并衍生出了所谓<strong>长草期</strong>等名称，以此来收集资源（主要是抽卡资源和养成材料），玩家根本不会因为完成这些任务而觉得好玩。而只有通过这些资源积累才能获取角色等内容来从某种意义上拓展游戏一定的可玩性，但主要还是为了抽卡<strong>收集</strong>这一目的服务，可这种收集玩法的可玩性真的很低，长期消磨玩家的耐心最后也只能提供很短期的正反馈且并不能让玩家充分地获得<strong>回报感</strong>，玩家们不会思考是那么长期地打卡游玩的功劳，而是更多地利用赌博心理，让人感觉幸运和终于获得的轻微满足感以及新鲜感，反而在未获得（收集）时会产生极大的挫败感，这对增加或维持用户粘性的效果并不好。</p>
+<p>在MMORPG中因为存在社交属性的存在，玩家重复刷团本会显得没那么枯燥，在过程（战斗）和结果（战利品）都增加了一些随机性，同时合作的玩法也相比个人更具可玩性；在《宝可梦》这类收集游戏中，寻找和捕捉时的随机性以及在多种设计下给予玩家充分的回报感（图鉴、组队、繁衍等玩法），也大大提升了可玩性。以上两个简单举例，对比说明了二游日常模式和抽卡玩法的低可玩性。</p>
+<p>但是可玩性低不代表优先级低，还需别的方面加以证明。上文提到了攒资源抽卡本质上是收集玩法，那么就算玩家是有意识去收集（实际上大都不是，后文解释），收集后最核心的玩法还是在<strong>养成</strong>，而支撑养成这一目标的根本不是可玩性，而是下一章要讲的美学（艺术性）。因为大部分二游的主体玩法内容单一，虽然养成可以使角色的可玩性得到一定的提升，但即便角色的可玩性较高，面对枯燥的关卡和重复的游戏也难以发挥，玩法不够支撑角色的可玩性，玩家仍会感觉枯燥乏味，感觉每天都在<strong>肝</strong>，类似<u>木桶效应</u>；而真正支撑玩家收集并养成的，是二游厂商或者说策划们更花心思的剧情、人设、立绘、建模、动作动画等美学要素，这才是真正吸引二游玩家的，因为一边“强度党”关心的是角色的数值和机制，而不是真正意义上的可玩性，他们只会说强度高，但不会实际感觉说这个角色很好玩，更多的还是另一边玩家因为美学各方面的塑造而单纯喜欢这个角色并进行收集、养成和付费，获得满足感，同样不是可玩性的作用。游戏公司很明显懂这一点，所以愈发在美学上下功夫，来促进玩家的消费，而在玩法上设计的不尽人意。</p>
+<p>那么综上所述，我认为这些二游并不以可玩性优先，但目前这种盈利模式是成功的，我虽然很想认同书籍作者的观点，但可能因为书是在10年代编写的，当时并不流行现在的二游模式，受到了时效性的局限，所以我可能会将该观点添加“端游&#x2F;主机游戏”的限定词，端游&#x2F;主机游戏才必须要以可玩性为优先，手游或许不必。</p>
+<p>诚然，上述所说的游戏设计模式有可取性，但我认为还是有些过头了，我想手游更合适的或许还是要可玩性与美学具有相同的优先级，只有足够的可玩性才能够充分地发挥美学。这些二游可玩性水平的滞后，或许是过度依赖美学的结果，<del>系统、玩法、关卡策划太过安逸而不思进取了</del>，国内部分游戏厂商为了求稳过分地限制了策划的能力。</p>
+<h2 id="游戏的美学（艺术性）"><a href="#游戏的美学（艺术性）" class="headerlink" title="游戏的美学（艺术性）"></a>游戏的美学（艺术性）</h2><ol>
+<li>协调性：让游戏的各个方面适当地结合在一起，成为一个连贯、统一的整体。</li>
+<li>沉浸性：通过策略、空间、叙事等方式创建出沉浸感。</li>
+<li>情感共鸣：娱乐感、满足感、惊喜、兴奋、好奇、成就、自豪、松了一口气等。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>游戏设计笔记2</title>
     <url>/2024/08/09/%E7%AC%94%E8%AE%B0/b2/</url>
     <content><![CDATA[<h2 id="游戏的构成"><a href="#游戏的构成" class="headerlink" title="游戏的构成"></a>游戏的构成</h2><p>在我的评价体系中，我将游戏拆分为两大元素：<strong>1.可玩性<del>游戏性</del> 2.艺术性</strong>。<br><del>其中“游戏性”可能与真正意义的<code>游戏性</code>不太一致，我这里主要为了与“艺术性”进行区分，而传统概念的<code>游戏性</code>是一个整体性的概念，包括了我所谓的“游戏性”和“艺术性”，是区别于其他娱乐方式或是艺术方式的概念。</del></p>
@@ -595,28 +620,19 @@
       </tags>
   </entry>
   <entry>
-    <title>游戏设计笔记3</title>
-    <url>/2024/08/19/%E7%AC%94%E8%AE%B0/b4/</url>
-    <content><![CDATA[<h2 id="游戏的可玩性"><a href="#游戏的可玩性" class="headerlink" title="游戏的可玩性"></a>游戏的可玩性</h2><p><em>游戏可玩性优先：在所有的电子游戏中，可玩性是最主要的娱乐元素。所以，在设计游戏时，首先要考虑的就是游戏的可玩性。————《游戏设计基础》(Ernest Adams)</em></p>
-<p>当我看到书上的这句话时我感受到了充分的认同感，但我立马想到了有悖这一观点的例子，然后在我沉思后，我感到了疑惑，到底是这句话出了问题，还是国内二游模式过分畸形。</p>
-<p>手游本就相比端游会缺少一些可玩性可以理解，但国内<strong>大部分</strong>二游是可玩性优先的吗？我觉得不是的，首先需要确定的是客观来说大部分二游的主体游戏内容是单一枯燥的，虽然我暂时很难直接证明，但是否则就不会在任务设置合理的情况下存在所谓<strong>上班</strong>式的体验并出现那么多代肝和自动脚本。二游设置的任务负担不大但主体玩法没有太多可玩性，很多需要玩家日复一日地重复游玩完全相同内容，也就是所谓的<strong>日常</strong>、<strong>周常</strong>，并衍生出了所谓<strong>长草期</strong>等名称，以此来收集资源（主要是抽卡资源和养成材料），玩家根本不会因为完成这些任务而觉得好玩。而只有通过这些资源积累才能获取角色等内容来从某种意义上拓展游戏一定的可玩性，但主要还是为了抽卡<strong>收集</strong>这一目的服务，可这种收集玩法的可玩性真的很低，长期消磨玩家的耐心最后也只能提供很短期的正反馈且并不能让玩家充分地获得<strong>回报感</strong>，玩家们不会思考是那么长期地打卡游玩的功劳，而是更多地利用赌博心理，让人感觉幸运和终于获得的轻微满足感以及新鲜感，反而在未获得（收集）时会产生极大的挫败感，这对增加或维持用户粘性的效果并不好。</p>
-<p>在MMORPG中因为存在社交属性的存在，玩家重复刷团本会显得没那么枯燥，在过程（战斗）和结果（战利品）都增加了一些随机性，同时合作的玩法也相比个人更具可玩性；在《宝可梦》这类收集游戏中，寻找和捕捉时的随机性以及在多种设计下给予玩家充分的回报感（图鉴、组队、繁衍等玩法），也大大提升了可玩性。以上两个简单举例，对比说明了二游日常模式和抽卡玩法的低可玩性。</p>
-<p>但是可玩性低不代表优先级低，还需别的方面加以证明。上文提到了攒资源抽卡本质上是收集玩法，那么就算玩家是有意识去收集（实际上大都不是，后文解释），收集后最核心的玩法还是在<strong>养成</strong>，而支撑养成这一目标的根本不是可玩性，而是下一章要讲的美学（艺术性）。因为大部分二游的主体玩法内容单一，虽然养成可以使角色的可玩性得到一定的提升，但即便角色的可玩性较高，面对枯燥的关卡和重复的游戏也难以发挥，玩法不够支撑角色的可玩性，玩家仍会感觉枯燥乏味，感觉每天都在<strong>肝</strong>，类似<u>木桶效应</u>；而真正支撑玩家收集并养成的，是二游厂商或者说策划们更花心思的剧情、人设、立绘、建模、动作动画等美学要素，这才是真正吸引二游玩家的，因为一边“强度党”关心的是角色的数值和机制，而不是真正意义上的可玩性，他们只会说强度高，但不会实际感觉说这个角色很好玩，更多的还是另一边玩家因为美学各方面的塑造而单纯喜欢这个角色并进行收集、养成和付费，获得满足感，同样不是可玩性的作用。游戏公司很明显懂这一点，所以愈发在美学上下功夫，来促进玩家的消费，而在玩法上设计的不尽人意。</p>
-<p>那么综上所述，我认为这些二游并不以可玩性优先，但目前这种盈利模式是成功的，我虽然很想认同书籍作者的观点，但可能因为书是在10年代编写的，当时并不流行现在的二游模式，受到了时效性的局限，所以我可能会将该观点添加“端游&#x2F;主机游戏”的限定词，端游&#x2F;主机游戏才必须要以可玩性为优先，手游或许不必。</p>
-<p>诚然，上述所说的游戏设计模式有可取性，但我认为还是有些过头了，我想手游更合适的或许还是要可玩性与美学具有相同的优先级，只有足够的可玩性才能够充分地发挥美学。这些二游可玩性水平的滞后，或许是过度依赖美学的结果，<del>系统、玩法、关卡策划太过安逸而不思进取了</del>，国内部分游戏厂商为了求稳过分地限制了策划的能力。</p>
-<h2 id="游戏的美学（艺术性）"><a href="#游戏的美学（艺术性）" class="headerlink" title="游戏的美学（艺术性）"></a>游戏的美学（艺术性）</h2><ol>
-<li>协调性：让游戏的各个方面适当地结合在一起，成为一个连贯、统一的整体。</li>
-<li>沉浸性：通过策略、空间、叙事等方式创建出沉浸感。</li>
-<li>情感共鸣：娱乐感、满足感、惊喜、兴奋、好奇、成就、自豪、松了一口气等。</li>
-</ol>
+    <title>vs 使用笔记</title>
+    <url>/2025/08/04/%E7%AC%94%E8%AE%B0/vscode/</url>
+    <content><![CDATA[<p><img src="https://s2.loli.net/2025/08/04/nuO3hUQeyva1zWc.png" alt="将Visual Studio 2022快捷键改为vscode方案"></p>
+<h3 id="选中相同内容"><a href="#选中相同内容" class="headerlink" title="选中相同内容"></a>选中相同内容</h3><p><code>Ctrl + D</code> 逐个选择<br><code>Ctrl + Shift + L</code> 全选</p>
+<h3 id="控制光标"><a href="#控制光标" class="headerlink" title="控制光标"></a>控制光标</h3><p><code>Ctrl + ←/→</code><br><code>Home/End</code> 当前行首位， + <code>Ctrl</code> 为当前页首位 </p>
+<h3 id="内联提示"><a href="#内联提示" class="headerlink" title="内联提示"></a>内联提示</h3><p>double <code>Ctrl</code> 切换</p>
 ]]></content>
       <categories>
         <category>笔记</category>
-        <category>评论</category>
       </categories>
       <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
+        <tag>vs</tag>
+        <tag>快捷键</tag>
       </tags>
   </entry>
   <entry>
@@ -654,22 +670,6 @@
         <tag>状态模式</tag>
         <tag>有限状态机</tag>
         <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vs 使用笔记</title>
-    <url>/2025/08/04/%E7%AC%94%E8%AE%B0/vscode/</url>
-    <content><![CDATA[<p><img src="https://s2.loli.net/2025/08/04/nuO3hUQeyva1zWc.png" alt="将Visual Studio 2022快捷键改为vscode方案"></p>
-<h3 id="选中相同内容"><a href="#选中相同内容" class="headerlink" title="选中相同内容"></a>选中相同内容</h3><p><code>Ctrl + D</code> 逐个选择<br><code>Ctrl + Shift + L</code> 全选</p>
-<h3 id="控制光标"><a href="#控制光标" class="headerlink" title="控制光标"></a>控制光标</h3><p><code>Ctrl + ←/→</code><br><code>Home/End</code> 当前行首位， + <code>Ctrl</code> 为当前页首位 </p>
-<h3 id="内联提示"><a href="#内联提示" class="headerlink" title="内联提示"></a>内联提示</h3><p>double <code>Ctrl</code> 切换</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>vs</tag>
-        <tag>快捷键</tag>
       </tags>
   </entry>
   <entry>
