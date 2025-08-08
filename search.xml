@@ -696,4 +696,40 @@
         <tag>策划</tag>
       </tags>
   </entry>
+  <entry>
+    <title>C++ 多线程笔记小结</title>
+    <url>/2025/08/08/C++/cpp7/</url>
+    <content><![CDATA[<ul>
+<li><strong>线程安全</strong>： 并行读写和串行读写效果一致。</li>
+<li>解决数据<strong>竞态</strong>问题常见是把全局变量改为线程局部变量；初始化时使用 <code>call_once</code> 或使用局部静态变量进行初始化，因为局部静态变量 c++11 后初始化自动线程安全；还有使用锁和原子变量 <code>atomic</code> 来保证原子性等。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>多线程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ 多线程笔记5</title>
+    <url>/2025/08/08/C++/cpp6/</url>
+    <content><![CDATA[<h2 id="异步并发"><a href="#异步并发" class="headerlink" title="异步并发"></a>异步并发</h2><p><code>include &lt;future&gt;</code> 使用 <code>std::future .get()</code> 异步返回结果</p>
+<ol>
+<li><code>std::async</code><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">std::future&lt;<span class="type">int</span>&gt; fut = std::<span class="built_in">async</span>(std::launch::async, function);</span><br><span class="line"><span class="comment">// …干别的事…</span></span><br><span class="line">std::cout &lt;&lt; fut.<span class="built_in">get</span>();</span><br></pre></td></tr></table></figure></li>
+<li><code>std::packaged_task</code> 封装函数<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">std::packaged_task&lt;<span class="title">int</span><span class="params">(<span class="type">int</span>)</span>&gt; <span class="title">task</span><span class="params">(function)</span></span>;</span><br><span class="line">std::future&lt;<span class="type">int</span>&gt; fut = task.<span class="built_in">get_future</span>();</span><br><span class="line">std::<span class="built_in">thread</span>(std::<span class="built_in">move</span>(task), arg);</span><br><span class="line">std::cout &lt;&lt; fut.<span class="built_in">get</span>();</span><br></pre></td></tr></table></figure></li>
+<li><code>std::promise</code><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">std::promise&lt;<span class="type">int</span>&gt; prom;</span><br><span class="line">std::future&lt;<span class="type">int</span>&gt; fut = prom.<span class="built_in">get_future</span>();</span><br><span class="line">std::<span class="built_in">thread</span>(function, std::<span class="built_in">move</span>(prom)).<span class="built_in">join</span>();</span><br><span class="line">std::cout &lt;&lt; fut.<span class="built_in">get</span>();</span><br></pre></td></tr></table></figure>
+<div class="admonition anote"><p class="admonition-title"><span class="mdi mdi-note-outline admonition-icon"></span>Note</p><p><code>std::promise</code> 和 <code>std::packaged_task</code> 一样都要用 <code>std::future</code> = .get_future()</p>
+</div></li>
+</ol>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>多线程</tag>
+      </tags>
+  </entry>
 </search>
