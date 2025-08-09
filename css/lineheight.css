@@ -1,4 +1,10 @@
 /* 减小行高 */
-p, .content {
-  line-height: 1.85; 
+p, .content, li {
+  line-height: 1.7; 
+}
+.container p {
+    margin: 0px 0px 8px;
+}
+.container ol li, .container ul li {
+    margin: 8px 0 !important;
 }
