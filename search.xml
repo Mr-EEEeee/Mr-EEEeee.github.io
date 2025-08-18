@@ -250,10 +250,10 @@
     <content><![CDATA[<h2 id="值类别"><a href="#值类别" class="headerlink" title="值类别"></a>值类别</h2><p><a href="https://blog.csdn.net/qq_55125921/article/details/144319904">参考</a></p>
 <ol>
 <li>lvalue: 左值，可取地址，如变量名。</li>
-<li>pvalue: 纯右值，如 <code>int(42)</code> 临时量。</li>
+<li>prvalue: 纯右值，如 <code>int(42)</code> 临时量。</li>
 <li>xvalue: 将亡值， 如表达式 <code>std::move(obj)</code>。</li>
 </ol>
-<p>纯右值和将亡值都统称<code>右值（rvalue）</code>，可以是不具名的临时变量，可以是即将离开作用域或被move的类型。左值和将亡值都属于<code>泛左值</code>。</p>
+<p>纯右值和将亡值都统称<code>右值（rvalue）</code>，可以是不具名的临时变量，可以是即将离开作用域或被 move 的类型。左值和将亡值都属于<code>泛左值</code>。</p>
 <div class="admonition attention"><p class="admonition-title"><span class="mdi mdi-alert-circle-outline admonition-icon"></span>Attention</p><div class="admonition-content"><p>值类别（value category）只看“表达式的静态属性”，跟对象本身的状态无关。<strong>变量</strong>本身没有值类别，只有表达式才有。</p>
 <p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>  x = <span class="number">42</span>;</span><br><span class="line"><span class="keyword">decltype</span>(<span class="keyword">auto</span>) b = std::<span class="built_in">move</span>(x);</span><br></pre></td></tr></table></figure>
 当以后写 <code>b</code> 这个标识符时，它所在的表达式是<strong>左值</strong>（因为具名变量都是左值表达式），但它的声明类型仍然是 <code>int&amp;&amp;</code>。</p>
@@ -278,7 +278,7 @@
 <blockquote>
 <p>永远不要在 return 语句上 <code>std::move</code> 临时对象或局部变量，会影响 RVO&#x2F;NRVO（具名）返回值优化。</p>
 </blockquote>
-<h3 id="悬垂引用"><a href="#悬垂引用" class="headerlink" title="悬垂引用"></a>悬垂引用</h3><p><code>std::move(obj)</code> 中的临时对象 obj 在整条语句结束后立即析构，指向已释放内存 → 悬垂引用。</p>
+<h3 id="悬垂引用"><a href="#悬垂引用" class="headerlink" title="悬垂引用"></a>悬垂引用</h3><p><code>std::move(obj)</code> 中的“临时对象” obj 在整条语句结束后立即析构，指向已释放内存 → 悬垂引用。</p>
 <table>
 <thead>
 <tr>
@@ -344,7 +344,8 @@
 <ul>
 <li><code>push_back/emplace</code> 的形参是万能引用。<br><code>push_back()</code> 左值时调用拷贝构造一次深拷贝，右值时调用移动构造。对于可移动但不可拷贝的类型（如 <code>std::unique_ptr</code>），<code>push_back(std::move(ptr))</code> 可以；<code>push_back(ptr)</code>（左值）则编译不过。</li>
 </ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><strong><code>std::move</code> 是“标记为可移动”，<code>std::forward</code> 是“原样转发”，两者都不移动对象，真正移动的是构造函数&#x2F;赋值运算符。</strong></p>
+<ul>
 <li>当函数内部「不再用」该值，且知道一定是右值 → 直接 <code>std::move</code>。</li>
 <li>当函数要把参数「继续往下传」，要保持其原来的值类别 → <code>std::forward</code>。</li>
 </ul>
@@ -400,7 +401,7 @@
 <td><code>std::move</code></td>
 </tr>
 </tbody></table>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="POD"><a href="#POD" class="headerlink" title="POD"></a>POD</h3><p>“平凡可复制 POD” &#x3D; 同时满足 ①平凡类型（trivial）②可复制（trivially copyable）③POD（standard-layout） 的类型；在 C++20 之前这三者等价，C++20 起 POD 被拆分成 “trivial + standard-layout”，但日常口语仍把 int、double 这类简单数据叫 POD。<br><strong>能直接 memcpy、没有析构&#x2F;构造负担、布局与 C 结构体一致的类型，就是“平凡可复制 POD”。</strong><br><strong><code>push/emplace</code> 时传入的参数类型若是 POD ，则都变为同一条汇编写入容器内存，无性能差别。</strong></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="POD"><a href="#POD" class="headerlink" title="POD"></a>POD</h3><p><del>“平凡可复制 POD” &#x3D; 同时满足 ①平凡类型（trivial）②可复制（trivially copyable）③POD（standard-layout） 的类型；在 C++20 之前这三者等价，C++20 起 POD 被拆分成 “trivial + standard-layout”，</del> 日常口语仍把 int、double 这类简单数据叫 POD。<br><strong>能直接 memcpy、没有析构&#x2F;构造负担、布局与 C 结构体一致的类型，就是“平凡可复制 POD”。</strong><br><strong><code>push/emplace</code> 时传入的参数类型若是 POD ，则都变为同一条汇编写入容器内存，无性能差别。</strong></p>
 <h4 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h4><table>
 <thead>
 <tr>
