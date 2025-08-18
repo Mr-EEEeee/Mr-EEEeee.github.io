@@ -1,0 +1,18 @@
+.table-wrap {
+    overflow-x: auto;
+    text-align: initial;
+}
+.table-wrap code {
+  white-space: pre;        /* 保持代码原样，不自动换行 */
+  word-break: normal;      /* 不要随意拆单词 */
+}
+/* 表格边框统一样式 */
+table th, table td {
+  border: 1px solid #B0B0B0;   /* 换成你想要的颜色 */
+  border-top: none;
+  border-left: none;
+}
+table {
+  border-top: 1px solid #B0B0B0;
+  border-left: 1px solid #B0B0B0;
+}
