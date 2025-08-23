@@ -1,9 +1,14 @@
-  /* 明亮模式透明度0.75 */
-  :root {
-    --card-bg: rgba(255, 255, 255, .75);
-  }
+/* card */
+/* 明亮模式透明度0.75 */
+:root {
+  --card-bg: rgba(255, 255, 255, .75);
+}
+/* 黑暗模式透明度0.7 */
+[data-theme="dark"] {
+  --card-bg: rgba(12, 12, 12, .7);
+}
 
-  /* 黑暗模式透明度0.7 */
-  [data-theme="dark"] {
-    --card-bg: rgba(12, 12, 12, .7);
-  }
+/* head */
+#page-header {
+  background-color: unset;
+}
