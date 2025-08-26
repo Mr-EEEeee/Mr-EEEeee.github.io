@@ -1,22 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/07/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>test1</title>
+    <url>/2024/07/26/test1/</url>
+    <content><![CDATA[<p><a href="https://butterfly.js.org/posts/89757140/?highlight=table#Tables">https://butterfly.js.org/posts/89757140/?highlight=table#Tables</a><br><a href="https://www.bilibili.com/video/BV1j34y1p7HX?spm_id_from=333.788.recommend_more_video.14&vd_source=11db1d1a077558e043cecb028334f12a">https://www.bilibili.com/video/BV1j34y1p7HX?spm_id_from=333.788.recommend_more_video.14&amp;vd_source=11db1d1a077558e043cecb028334f12a</a></p>
+<p>h124:</p>
+<h1 id="test"><a href="#test" class="headerlink" title="test"></a>test</h1><h2 id="test2"><a href="#test2" class="headerlink" title="test2"></a>test2</h2><h3 id="test3"><a href="#test3" class="headerlink" title="test3"></a>test3</h3><h4 id="test4"><a href="#test4" class="headerlink" title="test4"></a>test4</h4><p>pic:<br><img src="/./img/avatar.jpg" alt="avatar"></p>
+<p>code:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;test&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<hr>
+<p>test, <strong>bold</strong>, <em>italic</em>, <em><strong>bl</strong></em>, <del>slash</del>, <u>下划线</u></p>
+<p>强调:<code>ili</code></p>
+<p>ima: $y&#x3D;ax+b$</p>
+<p>$$<br>bma<br>$$</p>
+<p>链接锚点’a’: <a href="http://baidu.com/">baidu</a></p>
+<h2 id="Check"><a href="#Check" class="headerlink" title="Check"></a>Check</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> test</li>
+<li><input disabled="" type="checkbox"> test2</li>
+<li></li>
+</ul>
+<p>居中对齐图片cpic:</p>
+<div align=center><img src="./img/avatar.jpg"></div>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>table:</p>
+<table>
+<thead>
+<tr>
+<th>t1</th>
+<th>t2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>x1</td>
+<td>x2</td>
+</tr>
+</tbody></table>
 ]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
   </entry>
   <entry>
     <title>test2</title>
@@ -141,6 +167,456 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2024/07/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Unity中的面向对象</title>
+    <url>/2024/08/10/unity/unity2/</url>
+    <content><![CDATA[<p>场景中存在GameObject实例，每个实例对象在Inspector中都会显示一系列组件，这些组件就是脚本（类），默认全部继承自MonoBehaviour类，成为了该脚本类的实例对象和所选对象GameObject的各种属性。</p>
+<p>Prefab预制体，将场景中的物体拖动到Assets里即可生成。这个过程实际上是一个抽象的过程，抽象成一个具有场景中被拖动物体的所有属性(含值)的模板类。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Unity</tag>
+        <tag>面向对象</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Unity的生命周期</title>
+    <url>/2024/08/01/unity/unity1/</url>
+    <content><![CDATA[<h1 id="Unity的生命周期"><a href="#Unity的生命周期" class="headerlink" title="Unity的生命周期"></a>Unity的生命周期</h1><p><a href="https://docs.unity3d.com/cn/2023.2/Manual/UnityManual.html">Unity官方手册</a></p>
+<p>场景开始前调用，用于<strong>加载场景</strong>（场景中每个对象调用一次）<br>在为任何对象调用 Start 和 Update 等函数之前，会为所有脚本调用 Awake 和 OnEnable 函数。在游戏运行过程中实例化对象时，不能强制执行此调用。</p>
+<ul>
+<li><strong>Awake：</strong> 早于Start，常用于在游戏开始之前初始化变量或游戏状态（只调用一次）</li>
+<li><strong>OnEnable：</strong> 当对象变为可用或激活状态时调用（可多次调用）</li>
+</ul>
+<p><u><strong>Start</u>：</strong> 仅当启用脚本实例后，在第一次帧更新之前（Update前）调用，常用于数据或逻辑对象初始化（只调用一次），在游戏运行过程中实例化对象时，不能强制执行此调用。</p>
+<p><strong>FixedUpdate：</strong> 根据物理帧利用固定间隔计时器（独立于帧率）进行所有物理计算和更新</p>
+<p><strong>OnTrigger：</strong> 触发器被触发时调用；<strong>OnCollision：</strong> 产生碰撞事件时调用</p>
+<p><em><del>yield WaitForFixedUpdate：所有脚本上调用所有 FixedUpdate 后继续，作为卡点，在物理帧结束至此点再开始执行后续代码</del></em></p>
+<p><em><del>OnMouse：输入</del></em></p>
+<p><u><strong>Update</u>：</strong> 每帧调用</p>
+<p><strong>LateUpdate：</strong> 每帧Update方法调用后调用，常见用途是跟随第三人称摄像机</p>
+<p><em><del>一堆渲染函数（有关状态机）</del></em></p>
+<p><strong>OnGUI：</strong> 渲染用户界面，然后为每个输入事件处理布局和键盘&#x2F;鼠标事件</p>
+<p><em><del>yield WaitForEndOfFrame：**当前帧彻底结束后会执行此协程</del></em></p>
+<p><strong>OnApplicationPause：</strong> 应用暂停时在帧结尾处调用，并发出一个额外帧，从而允许游戏显示图形来指示暂停状态，取消暂停后从FixedUpdate开始重新执行</p>
+<p>在场景中的所有活动对象上调用以下函数</p>
+<ul>
+<li><strong>OnApplicationQuit：</strong> 应用退出前在所有对象上调用，可以用于保存退出前的信息</li>
+<li><strong>OnDisable：</strong> 行为被禁用或处于非活动状态时调用</li>
+</ul>
+<p><strong>OnDestroy：</strong> 物体被销毁时，即存在的最后一帧完成所有帧更新之后调用，一般用于清理内存</p>
+<p><img src="https://s2.loli.net/2024/08/01/wD4g5PSxKa1e8TN.png" alt="中文流程图"></p>
+<p>yield函数都是协程，在Update返回后更新。</p>
+<p><strong>协程</strong>是一种编写异步代码的方法，其中包括等待一定时间或某些操作完成，同时允许其他代码继续执行。它允许程序在单线程内实现多个独立的执行线程（协程），这些线程可以非阻塞地挂起和恢复，以实现协作式多任务处理。协程的核心思想是让程序员能够控制执行的流程，而不是完全交给操作系统或线程调度器来控制。</p>
+<p><img src="https://s2.loli.net/2024/08/01/oKkrTDdJX2igxfB.png" alt="官方文档流程图"></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏设计之心流</title>
+    <url>/2024/08/02/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/design1/</url>
+    <content><![CDATA[<h1 id="心流"><a href="#心流" class="headerlink" title="心流"></a>心流</h1><p><u>指玩家沉浸游戏，淡化时间、饥饿等外部因素，全神贯注的状态</u><br>理论适用于大部分“传统游戏”，但仍须根据游戏类型及目标用户具体问题具体分析。<br><img src="https://s2.loli.net/2024/08/02/3RkghHSZ5JzfY76.png" alt="心流图"><br><strong>心流的节奏要有变化</strong></p>
+<p>达到心流体验的最主要的条件我认为是：1.明确的目标 2.充分的正反馈。<br><em>但我还没有真正参与设计出过优秀的游戏，所以暂不分析也没有能力分析如何设计具有心流体验的游戏，下文更多通过解读和举例分析来浅谈心流。</em></p>
+<p>特殊的如魂系游戏和大部分手游另作讨论。<br>魂系游戏：更多依靠技术，以及在高压的焦虑中起伏的心流状态。<br>手游：更多依靠养成和数值，碎片化游戏时间，难以产生心流状态。</p>
+<p><img src="https://s2.loli.net/2024/08/02/oZ2zb56vGeV4kyU.png" alt="游戏体验数据走向"><br>游戏中的各种决策决定了游戏节奏和玩家的体验感受，大的决策影响更大，决策也会受玩家的水平影响。<br><img src="https://s2.loli.net/2024/08/02/mXuhxga9bqFEDTP.png" alt="决策流程图"><br>抽象来说<u>最差</u>的游戏设计就是<strong>破坏玩家的心流体验</strong>。<br><a id="content"></a>游戏设计要<strong>避免心流中断</strong>，出现停顿都可能影响心流让玩家感到不适，常见和典型的例子如<strong>场景加载</strong>、<strong>菜单动画</strong>、<strong>对话框</strong>等，这种交互效果都会短暂的阻碍玩家行动，如果频繁出现且无法加速和跳过会导致断层。</p>
+<p>在《赛博朋克2077》中强制对话较少，大部分对话都不会限制玩家行动，且完全没有固定和 <em>“美观”</em> 的对话窗口；<a href="#comment1">而在《GTA5》中人物的固定对话建立在第三人称真实且丰富的实机演出上，包括人物的动作、表情等，且剧情分支是根据角色的具体行为而非对话选项</a>。两者的例子整体简单来说就是在避免断层，这样的设计在RPG中较优。<a href="#comment2">反面来说，《原神》《鸣潮》等游戏被大量玩家网友诟病的对话无法跳过，剧情对话又臭又长的这种体验，根本上就是<u>阻碍了玩家心流的形成</u></a>，因为二游每个版本都有大量的剧情对话，且大部分的对话都没有伴随剧情演出，只是角色直立生硬的对话框对话，<u>信息密度过低破坏了玩家的沉浸感</u>，从游戏设计上讲是非常低级的，<a href="#comment3">且完全有办法优化</a>。<br><img src="https://s2.loli.net/2024/08/02/lHYIEQiLvu4O8Dw.png" alt="心流断层导致节奏破碎的体验"></p>
+<p>游戏设计也要<strong>避免决策溢出</strong>，同时出现过多的决策会让玩家感到压力，常出现在路线分支等情况和水平较低的玩家身上。决策溢出更难避免，需要在游戏测试过程中持续优化，可以设定一些阈值，而不是设法全覆盖。</p>
+<p><u>以上内容不完全适用于回合制游戏，需要具体游戏具体分析。</u></p>
+<h2 id="评论"><a href="#评论" class="headerlink" title="评论 "></a>评论 <a id="comment1"></a></h2><p><a href="#content">返回文中</a></p>
+<p><a id="comment2"></a>过场对话的剧情体验是GTA5心流中的”伏“，任务的进行则是“起”。</p>
+<hr>
+<p><a id="comment3"></a>这是已经得到市场验证的，《鸣潮》在开服后几天添加了更多对话的跳过来补救，更是印证了这种说法。我认为这其实是游戏设计和体验过程中很基础和重要的方面，所以我不理解库洛和米哈游这种中大厂的策划到底是什么水平。<em>为什么连我这样应届生未入行的人都能分析和理解的游戏设计，他们却不懂。</em></p>
+<p><em>所以之前春招后期有面试官问过我，“考虑过为什么策划岗的校招应聘结果不理想”，我不只回答说“因为我个人的经验不足，没有完全地从玩家视角转变到策划开发者的视角”，我还简单地说“感觉策划岗位对学历的要求更高”，因为我个人感觉策划岗位很难通过交流得知实际的策划水平，不像开发直接做算法题判断人的代码能力，而目前游戏公司招策划很看重学历高低，相较其他岗位我不认同策划岗位的能力与应试的学历正相关，我更感觉策划水平与天赋有关。有点幽默的是后来我还听到过大概说“找不到工作不要总反思自己，也要反思外部因素”的说法，我就也开始考虑，再根据库洛《鸣潮》公测后的表现，我更加怀疑策划岗位求职情况不理想，不只是我有问题，我对自己的工作能力一直很有信心，不过也不至于说自负到把原因都归结于别人，我没工作这段时间一直在学习游戏设计来提升自己。</em></p>
+<hr>
+<p>简单的如添加跳过和倍速选项，在跳过中对对话和剧情进行文字的总结呈现；特殊的如借鉴日厂游戏《绯红结系》《女神异闻录》等用2D形式来美化对话演出，仅需增加一些人物表情拆分等即可。</p>
+<p>针对这类二游，我个人设计将次要的内容通过类似漫画的的方式呈现，重要的主线再通过文字和视频具体表现，从计算机视觉方向讲，现在追求的是“多模态”，类比来说我这样的游戏设计就是在提高信息密度以提供相对流畅的游戏体验，避免破坏玩家的心流。</p>
+<p>而像《GTA5》这样的全部实机动画演出对于二游来说就没有必要，成本较高。</p>
+<p><em>不过这样的成本对于这些中大厂而言其实是不高的，导致这样的原因根本上是厂商把资金更多地投入到了营销中，买量成本大量压缩了开发成本。我难以评价利弊，可能对于厂商的盈利是有利的，但我感觉对于游戏市场长期的良性发展是不利的，不确定。</em></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>心流</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构笔记：堆</title>
+    <url>/2025/08/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/s1/</url>
+    <content><![CDATA[<div style="position:relative;width:100%;padding-bottom:56.25%;height:0;">
+  <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;"
+    src="//player.bilibili.com/player.html?isOutside=true&aid=297973330&bvid=BV1AF411G7cA&cid=570109806&p=1&autoplay=0"
+    scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
+  </iframe>
+</div>
+
+<h2 id="堆的定义"><a href="#堆的定义" class="headerlink" title="堆的定义"></a>堆的定义</h2><blockquote>
+<p>是<strong>完全二叉树</strong>：只允许最后一行不为满，且最后一行必须从左往右排序，最后一行元素之间不可以有间隔</p>
+</blockquote>
+<div align=center><img src="https://s2.loli.net/2025/08/26/8WE56QdBMgsSlfb.png"></div>
+
+<p><em>层序遍历给节点编号，元素存入数组对应下标，下标节点为 i ，其子节点则为 2i+1 2i+2 。</em></p>
+<h2 id="堆的基本操作"><a href="#堆的基本操作" class="headerlink" title="堆的基本操作"></a>堆的基本操作</h2><p><strong>上滤（上浮） &#x2F; 下滤（下沉）</strong></p>
+<h3 id="下滤"><a href="#下滤" class="headerlink" title="下滤"></a>下滤</h3><p><strong>根节点向下调整</strong></p>
+<ul>
+<li>若（根）节点元素小于其最大子节点，则交换，直至该元素所在节点大于其所有子节点或移动到底部（无子节点），形成大根堆。</li>
+<li>复杂度为 <strong>O(logN)</strong> 。<br>自下而上建堆，从倒数第二行父节点开始向下调整，复杂度为 <strong>O(N)</strong> 。</li>
+</ul>
+<h3 id="上滤"><a href="#上滤" class="headerlink" title="上滤"></a>上滤</h3><p><strong>子节点向上调整</strong></p>
+<ul>
+<li>与父节点比较，大于父节点则交换，直到无法上移。</li>
+<li>主要用于插入新元素到堆尾，复杂度为 <strong>O(logN)</strong> 。<br>自顶向下建堆，每次插入到堆尾后向上调整，复杂度为 <strong>O(NlogN)</strong> 。</li>
+</ul>
+<h2 id="堆的应用"><a href="#堆的应用" class="headerlink" title="堆的应用"></a>堆的应用</h2><h3 id="优先队列-priority-queue"><a href="#优先队列-priority-queue" class="headerlink" title="优先队列 priority_queue"></a>优先队列 priority_queue</h3><p>默认为最大堆<br>弹出堆顶元素后，<strong>堆尾元素移至根节点</strong>，重新进行上滤或下滤操作直至有序。</p>
+<ul>
+<li><strong>堆排序</strong>就是把优先队列元素依次弹出，为降低空间复杂度，实际排序时堆顶弹出的元素与堆尾元素交换并存放，最终形成的树做层序遍历便是有序的。时间复杂度为 <strong>O(NlogN)</strong> 。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo之Butterfly主题透明css浅析</title>
+    <url>/2024/07/29/%E6%95%99%E7%A8%8B/css1/</url>
+    <content><![CDATA[<p><img src="/./img/posts/image-1.png" alt="效果图1"><br><img src="/./img/posts/image-2.png" alt="效果图2"></p>
+<h2 id="1-改变透明度"><a href="#1-改变透明度" class="headerlink" title="1.改变透明度"></a>1.改变透明度</h2><h3 id="卡片透明度"><a href="#卡片透明度" class="headerlink" title="卡片透明度"></a>卡片透明度</h3><p>在souce文件夹中新建css文件夹，用来存放所有自行配置的css文件，与img文件夹同理，防止更新后被覆盖。在文件夹中新建transparency.css文件，编写以下代码。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 明亮模式透明度0.75 */</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line"><span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">75</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 黑暗模式透明度0.7 */</span></span><br><span class="line"><span class="selector-attr">[data-theme=<span class="string">&quot;dark&quot;</span>]</span> &#123;</span><br><span class="line"><span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">12</span>, <span class="number">12</span>, <span class="number">12</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在主题配置文件的inject下按格式填写css，其中根目录为source文件夹。<br><img src="/../img/posts/image-3.png"></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/transparency.css&quot;&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="页脚透明度"><a href="#页脚透明度" class="headerlink" title="页脚透明度"></a>页脚透明度</h3><p>在主题配置文件中，将页脚颜色直接设置为transparent。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Footer Background</span></span><br><span class="line"><span class="attr">footer_bg:</span> <span class="string">transparent</span></span><br></pre></td></tr></table></figure>
+<p>因为有遮罩的关系，既保留了底色来显示文字，又可以和背景融为一体。<br><img src="/../img/posts/image.png" alt="页脚效果"></p>
+<h2 id="2-改变top颜色"><a href="#2-改变top颜色" class="headerlink" title="2.改变top颜色"></a>2.改变top颜色</h2><p>新建css文件命名为headtransparency，编写以下代码。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 取消top颜色以支持cover透明图片显示背景 */</span></span><br><span class="line"><span class="selector-id">#page-header</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: unset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>同样添加到inject中</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/headtransparency.css&quot;&gt;</span></span><br></pre></td></tr></table></figure>
+<p>因为顶图优先级top_img &gt; cover， 而cover既可以作为文章封面，又可以在top_img未设置时作为顶图，所以我准备全使用cover设置图片，省去多余图片设置。但在top_img未设置时，主题的蓝色 <code>#49b1f5</code> 会作为背景色填充 ，因为图片的webp和png格式有alpha通道，存在透明的图片会显露出cover图片下被默认填充的背景色，所以需要取消页眉的背景色填充，这样就可以透出页面背景。另外页眉同样有遮罩，比较合适。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Add mask to header or footer (为 header 或 footer 添加黑色半透遮罩)</span></span><br><span class="line"><span class="attr">mask:</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">footer:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h1 id="教学"><a href="#教学" class="headerlink" title="教学"></a>教学</h1><p>实际上css的内容操作是使用浏览器F12调试摸索的，需要在右侧的样式中逐一查找对应属性。<br><img src="/../img/posts/image4.png" alt="点击元素获取id"><br>因为我从未接触过css，速成只能利用网络文档和AI，自行摸索出了结果，而网络上流传的许多修改透明度方法千篇一律都是屎山代码，长篇大论中仅有一两句有用，且不适配黑暗模式的页面，所幸我最后自行排查出了结果，并简化了代码。</p>
+<p>另外我认为无需单独配置每个卡牌的透明度，如果透明度各不相同那页面会很不美观，又因为所有卡片都使用 <code>--card-bg</code> 作为颜色，那在两种页面模式下配置它即可，既省事又高效，但rgba函数仍需获取颜色作为填充，我选取了原主题颜色，可以自行调整。</p>
+<hr>
+<h3 id="以下是避雷"><a href="#以下是避雷" class="headerlink" title="以下是避雷"></a>以下是避雷</h3><p><img src="/../img/posts/026fc1bea3736cc224e319b6c2b4741e.png" alt="雷同的网络教程"><br>以下这是网络教程的雷同代码,除开页脚我直接设置为transparent外，仅两句可用，分别是.recent-post-item和最主要的–card-bg，且因为全覆盖设置成白色，完全不适配原黑暗模式页面。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 文章页背景 */</span></span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 可以自行修改*/</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 所有页面背景 */</span></span><br><span class="line"><span class="selector-id">#aside_content</span> <span class="selector-class">.card-widget</span>,</span><br><span class="line"><span class="selector-id">#recent-posts</span>&gt;<span class="selector-class">.recent-post-item</span>,</span><br><span class="line"><span class="selector-class">.layout_page</span>&gt;<span class="selector-tag">div</span><span class="selector-pseudo">:first-child</span><span class="selector-pseudo">:not</span>(<span class="selector-class">.recent-posts</span>),</span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#page</span>,</span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span>,</span><br><span class="line"><span class="selector-class">.read-mode</span> <span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 */</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*侧边卡片的透明度 */</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">    <span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 页脚透明 */</span></span><br><span class="line"><span class="selector-id">#footer</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 */</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Butterfly</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏设计笔记1</title>
+    <url>/2024/08/08/%E7%AC%94%E8%AE%B0/b1/</url>
+    <content><![CDATA[<h2 id="策划必备要素"><a href="#策划必备要素" class="headerlink" title="策划必备要素"></a>策划必备要素</h2><p>倾听&gt;&gt;创意，沟通</p>
+<ol>
+<li>倾听团队，与团队沟通合作。</li>
+<li>倾听受众，深入理解用户。</li>
+<li>倾听游戏，彻底了解游戏。</li>
+<li>倾听客户（投资者），理解并满足最上级需求。</li>
+<li>倾听自己，发挥天赋。<br>只有学会深度倾听才能让设计出的游戏给玩家创造良好的体验。</li>
+</ol>
+<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>仔细分析用户不清晰的反馈，洞察其中的情感，反思自己真正想让用户体验什么？用户实际产生了什么体验？怎么缩小实际与设想的差距？再深入思考这种体验的本质是什么？如何抓住这种本质？</p>
+<p>为了最大化游戏的乐趣，反思游戏中的哪个部分很有乐趣？为什么？哪个部分需要变得更加有乐趣？</p>
+<p>思考玩家的真正游玩动力（动机）————不是游戏设定的目标，而是玩家真正想要完成目标的原因。反思游戏给玩家的思维引导了怎样的问题？做了哪些努力让他们在意这些问题？能做什么来使他们提出更多的问题（更感兴趣更有游玩动力，增加用户粘性）？<br><em>比如，一个解谜电子游戏在每一关中都可能有一个时间限定的目标，玩家们尝试问这样一个问题:“我能在 30秒之内找到过关的方法吗?”一个让他们更加在意的方法是，当他们解决了任意一个谜题后播放一段有趣的动画，那么玩家就会问这样一个问题:“我想知道下一个动画是什么?”</em></p>
+<h2 id="思考游戏"><a href="#思考游戏" class="headerlink" title="思考游戏"></a>思考游戏</h2><p><em>游戏是一种对自主控制系统的练习，其中包含力量的竞争，被规则限制以产生一个不平衡的结果</em></p>
+<ul>
+<li>游戏是完全自主的</li>
+<li>游戏有目标</li>
+<li>游戏有冲突</li>
+<li>游戏有规则</li>
+<li>游戏有输赢</li>
+</ul>
+<p><em>游戏是一个拥有内生意义的交互结构，需要玩家们努力完成目标。</em><br>游戏越吸引人，游戏中的 <code>内生价值</code> 越大。（游戏中有价值的部分仅在游戏环境中有价值）</p>
+<ul>
+<li>游戏可交互</li>
+<li>游戏有挑战性</li>
+<li>游戏能创造其内生价值</li>
+</ul>
+<p><strong>游戏是一种以娱乐为目标进行的解决问题的活动</strong></p>
+<h3 id="思考-1"><a href="#思考-1" class="headerlink" title="思考"></a>思考</h3><p>游戏中哪些东西对玩家很有价值？怎样让这些东西对玩家更有价值？游戏中的价值与玩家的动机之间有怎样的关系？</p>
+<p>游戏要求玩家解决哪些问题？是否有一些隐藏的问题作为玩法的一部分出现？游戏中，怎样产生新的问题来保持对玩家的吸引力？</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>状态模式笔记1</title>
+    <url>/2024/08/11/%E7%AC%94%E8%AE%B0/b3/</url>
+    <content><![CDATA[<p>英雄游戏（英雄互娱）曾在面试中询问我有关动画状态机的内容，我当时没有准备过这方面，紧张时说出了不太了解的回答，事后回想自己其实了解过相关内容，曾在设计角色时绑定骨骼后导入过一些动作来操控角色，当时还学习过如何平滑动作动画，进行状态机的切换，懊悔自己薄弱的即时表达能力，感觉很可惜。借此机会，我回顾了“动画状态机”，同时再阅读有关“设计模式”的书籍，通过递归式地学习，针对“状态模式”先做些笔记，发散出了“有限状态机”再是“行为树”等内容，所以将笔记拆分为几篇集中叙写，内容对象针对游戏角色(AI)。<del>这几天我的确还是有点乏了，感觉自己学的写的没有正反馈，认识的朋友们大都找到合适的工作了，我水平真的不够吗，感觉入职之后再写博客会更有动力吧。。。</del></p>
+<h1 id="状态模式"><a href="#状态模式" class="headerlink" title="状态模式"></a>状态模式</h1><p><em>“允许一个对象的行为随着内部状态的改变而改变，对象看起来好像是在修改自身类。”</em></p>
+<h2 id="有限状态机FSM"><a href="#有限状态机FSM" class="headerlink" title="有限状态机FSM"></a>有限状态机FSM</h2><ul>
+<li>拥有一组状态，并且可以在这组状态之间进行切换。</li>
+<li>状态机同一时刻只能处于一种状态。</li>
+<li>状态机会接收一组输入或者事件。</li>
+<li>每一个状态有一组转换，每一个转换都关联着一个输入并指向另一个状态。<br><img src="https://s2.loli.net/2024/08/15/Hym65dXV4NGxTlp.png" alt="image.png"></li>
+</ul>
+<p>首先，有限状态机的每个状态可以用枚举 <code>enum</code> 列出来</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">publice <span class="built_in">enum</span> State&#123;</span><br><span class="line">    Attack,</span><br><span class="line">    Jump,</span><br><span class="line">    Move,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后在角色AI类中，简单可以通过switch case来实现条件判断和状态转换，但存在一些缺点：</p>
+<ol>
+<li>每增加一个状态，就需要在所有switch代码中添加对应代码。</li>
+<li>所有与状态有关的对象和参数保存在一个类中，在被多个状态共享时容易产生混淆。</li>
+<li>方法过于冗长，不易于调试。</li>
+</ol>
+<p>所以需要使用<strong>状态模式</strong>。</p>
+<h2 id="状态模式-1"><a href="#状态模式-1" class="headerlink" title="状态模式"></a>状态模式</h2><ul>
+<li>角色类</li>
+<li>状态接口<br>列举状态方法，切换具体状态。</li>
+<li>具体状态类<br>继承自状态接口，设置在各状态下的行为。<br> <img src="https://s2.loli.net/2024/08/15/GDVOpMZ3Pq5CFX1.png" alt="状态模式角色AI结构图"><br>状态模式将每个状态相关的行为封装到了相关类中，在增删改查时不会对原有架构造成较大影响，可以让人清楚了解单一状态执行时的环境，降低了维护成本。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>面向对象</tag>
+        <tag>设计模式</tag>
+        <tag>状态模式</tag>
+        <tag>有限状态机</tag>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏设计笔记3</title>
+    <url>/2024/08/19/%E7%AC%94%E8%AE%B0/b4/</url>
+    <content><![CDATA[<h2 id="游戏的可玩性"><a href="#游戏的可玩性" class="headerlink" title="游戏的可玩性"></a>游戏的可玩性</h2><p><em>游戏可玩性优先：在所有的电子游戏中，可玩性是最主要的娱乐元素。所以，在设计游戏时，首先要考虑的就是游戏的可玩性。————《游戏设计基础》(Ernest Adams)</em></p>
+<p>当我看到书上的这句话时我感受到了充分的认同感，但我立马想到了有悖这一观点的例子，然后在我沉思后，我感到了疑惑，到底是这句话出了问题，还是国内二游模式过分畸形。</p>
+<p>手游本就相比端游会缺少一些可玩性可以理解，但国内<strong>大部分</strong>二游是可玩性优先的吗？我觉得不是的，首先需要确定的是客观来说大部分二游的主体游戏内容是单一枯燥的，虽然我暂时很难直接证明，但是否则就不会在任务设置合理的情况下存在所谓<strong>上班</strong>式的体验并出现那么多代肝和自动脚本。二游设置的任务负担不大但主体玩法没有太多可玩性，很多需要玩家日复一日地重复游玩完全相同内容，也就是所谓的<strong>日常</strong>、<strong>周常</strong>，并衍生出了所谓<strong>长草期</strong>等名称，以此来收集资源（主要是抽卡资源和养成材料），玩家根本不会因为完成这些任务而觉得好玩。而只有通过这些资源积累才能获取角色等内容来从某种意义上拓展游戏一定的可玩性，但主要还是为了抽卡<strong>收集</strong>这一目的服务，可这种收集玩法的可玩性真的很低，长期消磨玩家的耐心最后也只能提供很短期的正反馈且并不能让玩家充分地获得<strong>回报感</strong>，玩家们不会思考是那么长期地打卡游玩的功劳，而是更多地利用赌博心理，让人感觉幸运和终于获得的轻微满足感以及新鲜感，反而在未获得（收集）时会产生极大的挫败感，这对增加或维持用户粘性的效果并不好。</p>
+<p>在MMORPG中因为存在社交属性的存在，玩家重复刷团本会显得没那么枯燥，在过程（战斗）和结果（战利品）都增加了一些随机性，同时合作的玩法也相比个人更具可玩性；在《宝可梦》这类收集游戏中，寻找和捕捉时的随机性以及在多种设计下给予玩家充分的回报感（图鉴、组队、繁衍等玩法），也大大提升了可玩性。以上两个简单举例，对比说明了二游日常模式和抽卡玩法的低可玩性。</p>
+<p>但是可玩性低不代表优先级低，还需别的方面加以证明。上文提到了攒资源抽卡本质上是收集玩法，那么就算玩家是有意识去收集（实际上大都不是，后文解释），收集后最核心的玩法还是在<strong>养成</strong>，而支撑养成这一目标的根本不是可玩性，而是下一章要讲的美学（艺术性）。因为大部分二游的主体玩法内容单一，虽然养成可以使角色的可玩性得到一定的提升，但即便角色的可玩性较高，面对枯燥的关卡和重复的游戏也难以发挥，玩法不够支撑角色的可玩性，玩家仍会感觉枯燥乏味，感觉每天都在<strong>肝</strong>，类似<u>木桶效应</u>；而真正支撑玩家收集并养成的，是二游厂商或者说策划们更花心思的剧情、人设、立绘、建模、动作动画等美学要素，这才是真正吸引二游玩家的，因为一边“强度党”关心的是角色的数值和机制，而不是真正意义上的可玩性，他们只会说强度高，但不会实际感觉说这个角色很好玩，更多的还是另一边玩家因为美学各方面的塑造而单纯喜欢这个角色并进行收集、养成和付费，获得满足感，同样不是可玩性的作用。游戏公司很明显懂这一点，所以愈发在美学上下功夫，来促进玩家的消费，而在玩法上设计的不尽人意。</p>
+<p>那么综上所述，我认为这些二游并不以可玩性优先，但目前这种盈利模式是成功的，我虽然很想认同书籍作者的观点，但可能因为书是在10年代编写的，当时并不流行现在的二游模式，受到了时效性的局限，所以我可能会将该观点添加“端游&#x2F;主机游戏”的限定词，端游&#x2F;主机游戏才必须要以可玩性为优先，手游或许不必。</p>
+<p>诚然，上述所说的游戏设计模式有可取性，但我认为还是有些过头了，我想手游更合适的或许还是要可玩性与美学具有相同的优先级，只有足够的可玩性才能够充分地发挥美学。这些二游可玩性水平的滞后，或许是过度依赖美学的结果，<del>系统、玩法、关卡策划太过安逸而不思进取了</del>，国内部分游戏厂商为了求稳过分地限制了策划的能力。</p>
+<h2 id="游戏的美学（艺术性）"><a href="#游戏的美学（艺术性）" class="headerlink" title="游戏的美学（艺术性）"></a>游戏的美学（艺术性）</h2><ol>
+<li>协调性：让游戏的各个方面适当地结合在一起，成为一个连贯、统一的整体。</li>
+<li>沉浸性：通过策略、空间、叙事等方式创建出沉浸感。</li>
+<li>情感共鸣：娱乐感、满足感、惊喜、兴奋、好奇、成就、自豪、松了一口气等。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>恢复因更改邮箱导致的 GitHub Contributions 丢失</title>
+    <url>/2025/08/07/%E7%AC%94%E8%AE%B0/contribution/</url>
+    <content><![CDATA[<div class="admonition attention"><p class="admonition-title"><span class="mdi mdi-alert-circle-outline admonition-icon"></span>Attention</p><div class="admonition-content"><p>仓库邮箱地址（ GitHub 账户邮箱）和提交邮箱不一致会导致不记录进当前账户的 Contributions。</p>
+</div></div>
+
+<ol>
+<li>clone 远程仓库后在本地仓库中创建一个脚本文件 <code>email.sh</code>，内容如下（修改5,6,7行的内容）。<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/sh</span></span><br><span class="line"></span><br><span class="line">git filter-branch --env-filter &#x27;</span><br><span class="line"></span><br><span class="line">OLD_EMAIL=&quot;原邮箱地址&quot;</span><br><span class="line">CORRECT_NAME=&quot;自定义用户名&quot;</span><br><span class="line">CORRECT_EMAIL=&quot;新邮箱地址&quot;</span><br><span class="line"></span><br><span class="line">if [ &quot;$GIT_COMMITTER_EMAIL&quot; = &quot;$OLD_EMAIL&quot; ]</span><br><span class="line">then</span><br><span class="line">    export GIT_COMMITTER_NAME=&quot;$CORRECT_NAME&quot;</span><br><span class="line">    export GIT_COMMITTER_EMAIL=&quot;$CORRECT_EMAIL&quot;</span><br><span class="line">fi</span><br><span class="line">if [ &quot;$GIT_AUTHOR_EMAIL&quot; = &quot;$OLD_EMAIL&quot; ]</span><br><span class="line">then</span><br><span class="line">    export GIT_AUTHOR_NAME=&quot;$CORRECT_NAME&quot;</span><br><span class="line">    export GIT_AUTHOR_EMAIL=&quot;$CORRECT_EMAIL&quot;</span><br><span class="line">fi</span><br><span class="line">&#x27; --tag-name-filter cat -- --branches --tags</span><br></pre></td></tr></table></figure></li>
+<li>git 中运行 <code>email.sh</code>，成功会有 change 提示，否则提示 unchanged。<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sh email.sh</span><br></pre></td></tr></table></figure></li>
+<li>查看修改结果。<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></li>
+<li>同步至远程仓库<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git push origin --force --all</span><br></pre></td></tr></table></figure></li>
+</ol>
+<div class="admonition success"><p class="admonition-title"><span class="mdi mdi-check-circle-outline admonition-icon"></span>Success</p><div class="admonition-content"><p>绿格子成功恢复</p>
+</div></div>
+
+<p><a href="http://www.codingcode.cn/2021/06/04/git/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%B8%A2%E5%A4%B1%E7%9A%84GitHub_Contributions%E7%BB%BF%E6%A0%BC/">文章参考，特别鸣谢</a></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏设计笔记2</title>
+    <url>/2024/08/09/%E7%AC%94%E8%AE%B0/b2/</url>
+    <content><![CDATA[<h2 id="游戏的构成"><a href="#游戏的构成" class="headerlink" title="游戏的构成"></a>游戏的构成</h2><p>在我的评价体系中，我将游戏拆分为两大元素：<strong>1.可玩性<del>游戏性</del> 2.艺术性</strong>。<br><del>其中“游戏性”可能与真正意义的<code>游戏性</code>不太一致，我这里主要为了与“艺术性”进行区分，而传统概念的<code>游戏性</code>是一个整体性的概念，包括了我所谓的“游戏性”和“艺术性”，是区别于其他娱乐方式或是艺术方式的概念。</del></p>
+<p>元素四分法中拆分游戏为：<strong>1.机制 2.技术 3.故事 4.美学</strong>。</p>
+<ul>
+<li>机制：包括游戏目标和游戏方式，使游戏成为游戏，需要美学、技术和故事的支持。</li>
+<li>故事：由游戏中事件按发生的顺序构成，需要机制来推动，美学来增强表现力，技术来配合展示。</li>
+<li>美学：是游戏的外观、声音等各方面的感觉，对玩家之体验影响最直接，可以搭配机制来表现，需要技术来放大，故事来凸显。</li>
+<li>技术：是一种媒介，美学通过其展现，机制通过其产生作用，故事通过其来讲述。</li>
+</ul>
+<p>我认为我的评价体系和四分法是高度重合的：“可玩<del>游戏</del>性”主要包括了玩法、机制和技术，是游戏最主要的要素；“艺术性”主要包括了剧情故事和美学，其中美学又包括画面美术、音乐音效、地编等元素。其中我认为其实美学甚至可以包括故事，基本等于“艺术性”的含义，另外<u>技术</u>其实是在两大元素的交集中。内容上基本一致，区别是四分法主要保留了各元素间的联系，我的评价体系做分割主要是为了方便评价，使各部分相对独立。</p>
+<p>我个人所谓的游戏评价体系就是在两大元素中专注评价感受较深的方面，分析优缺点，而非一个多边形的维度图来统一评价标准，总体上优秀的游戏至少会在两大元素其一做到优秀。</p>
+<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>游戏设计使用了全部的四种元素吗？设计能够通过增强一种或者多种元素来获得提高吗？四种元素是否和谐，互相作用并向同一个主题努力？</p>
+<h2 id="思维方式"><a href="#思维方式" class="headerlink" title="思维方式"></a>思维方式</h2><p>分析设计游戏要内外兼顾，表面涉及玩家体验，内在涉及游戏组成元素。不仅要理解各种各样的游戏元素及它们之间的关系，还必须考虑它们与体验的关系，即同时保留玩家视角与设计师视角，在理解元素及其关系是如何产生体验的同时感受游戏体验。如果只保留玩家视角，会只思考体验，却不理解为什么会有这样的体验或者怎样增强这种体验；<u>如果只保留设计师视角，可能让一个游戏结构在理论上十分完美，而在现实中十分糟糕</u>（这或许是我常感觉很多设计师、策划有问题的原因）。只有同时专注这两件事，才能设计出好的游戏内容。</p>
+<h3 id="思考-1"><a href="#思考-1" class="headerlink" title="思考"></a>思考</h3><p>这种思维方式近期才被我列为我的个人优势之一。具体想法如下（搬运自我的其他笔记）：<br><em>我爱玩游戏，会玩游戏，能真正的了解游戏，懂游戏，对于实际的策划工作有扎实的着力点。（这一点原本我认为是策划基础的必备能力，但是后来我才了解到现在很多的游戏设计师和策划，根本都不玩或者是玩不明白他们自己设计的游戏或是参照的游戏或是竞品，经典例如《英雄联盟》的设计师，在后知后觉地调整游戏平衡时还要私下微信询问部分英雄的“绝活哥”，通过他们的意见来设计平衡游戏，而最后设计改动的还和调研反馈大相径庭，且毫无作用，这我认为是很可笑的，这样的例子还有很多，比如《绝区零》《鸣潮》《尘白禁区》等游戏都有类似情况，<del>这点与我说的第二点共同作用，</del> 展开来详细讲内容会很多，<u>概括来说就是现在很多的策划在招人和实际工作时我觉得有点过于学院派和闭门造车</u>）</em><br><strong>总之我现在认为我能同时从玩家视角和策划视角分析游戏，这成为了我的一大能力优势。</strong> 虽然还并没有人认可，或许也再也没机会被人认可了。</p>
+<p>必须一次性看到游戏的全部：四种元素和玩家体验以及它们是怎样关联起来的。可以把注意力从皮肤转移到骨骼再到皮肤，但更好的方法是全息观察游戏和体验。</p>
+<p>统一的主题：反思游戏中的哪种元素产生了令人享受的体验？游戏中的哪种元素会让玩家在体验中分心？怎样改变游戏元素来提高游戏体验？</p>
+<p>思考游戏主题是什么？是否采用了所有可能的方法来强化主题？</p>
+<h2 id="共鸣主题"><a href="#共鸣主题" class="headerlink" title="共鸣主题"></a>共鸣主题</h2><p>不是每个主题都能成为一个共鸣主题。不过当找到一个深刻的共鸣主题时，就值得好好利用它。这些主题中的一些是基于体验的，另一些是基于真相的。无法通过逻辑分辨出哪一个主题是有共鸣性的–必须在自己内心深处亲自感受这种共鸣，这是一种很重要的自我倾听的形式。</p>
+<p><em>一些设计师拒绝主题的概念,因为他们认为:“玩家从来不会注意到主题”确实，玩家们并不总能够清楚地认识到真正打动他们的是作品的主题–这是因为主题经常作用于潜意识的层面。玩家们知道他们喜欢一个游戏，但他们很难说清为什么喜欢。在许多场合，他们喜欢的理由可能是所有的元素都在加强一个他们认为很有趣或者很重要的主题。主题并不会像谜题一般故意留下隐藏的信息。主题会把你的作品聚焦到对玩家有意义的事物上。</em> </p>
+<h3 id="思考-2"><a href="#思考-2" class="headerlink" title="思考"></a>思考</h3><p>在游戏中，能感觉到哪些有力的或者特殊的元素？当向他人描述此游戏时，哪些创意能让他们真的兴奋？如果没有任何限制，这个游戏将会变成什么样？我对这个游戏的方向有一定的直觉，那到底是什么在驱动这种直觉呢？</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+        <tag>评价体系</tag>
+        <tag>个人优势</tag>
+        <tag>我</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>win11 右键展开</title>
+    <url>/2025/08/23/%E7%AC%94%E8%AE%B0/windows/</url>
+    <content><![CDATA[<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">reg add &quot;HKCU\Software\Classes\CLSID\&#123;86ca1aa0-34aa-4e8b-a509-50c905bae2a2&#125;\InprocServer32&quot; /f /ve</span><br></pre></td></tr></table></figure>
+<p>执行后任务管理器里重新启动 Windows 资源管理器生效。</p>
+<p>恢复代码</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">reg delete &quot;HKCU\Software\Classes\CLSID\&#123;86ca1aa0-34aa-4e8b-a509-50c905bae2a2&#125;&quot; /f</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vs 使用笔记</title>
+    <url>/2025/08/04/%E7%AC%94%E8%AE%B0/vscode/</url>
+    <content><![CDATA[<p><img src="https://s2.loli.net/2025/08/04/nuO3hUQeyva1zWc.png" alt="将Visual Studio 2022快捷键改为vscode方案"></p>
+<h3 id="选中相同内容"><a href="#选中相同内容" class="headerlink" title="选中相同内容"></a>选中相同内容</h3><p><code>Ctrl + D</code> 逐个选择<br><code>Ctrl + Shift + L</code> 全选</p>
+<h3 id="控制光标"><a href="#控制光标" class="headerlink" title="控制光标"></a>控制光标</h3><p><code>Ctrl + ←/→</code><br><code>Home/End</code> 当前行首位， + <code>Ctrl</code> 为当前页首位<br><code>Shift + ← / →</code> 逐个选中字符<br><code>Ctrl + Shift + ← / →</code> 自动选中多个字符</p>
+<h3 id="内联提示"><a href="#内联提示" class="headerlink" title="内联提示"></a>内联提示</h3><p>double <code>Ctrl</code> 切换</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>vs</tag>
+        <tag>快捷键</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于《炉石传说》国服回归策划的启发</title>
+    <url>/2024/07/30/%E8%AF%84%E8%AE%BA/idea1/</url>
+    <content><![CDATA[<h2 id="新闻"><a href="#新闻" class="headerlink" title="新闻"></a>新闻</h2><p>最近的ChinaJoy上，《炉石传说》（HearthStone）中国宣布，回归日期定档9月25日，回归后一定时间内登录《炉石传说》，所有国服玩家（包括新注册玩家）即可免费获赠2023年全部错过的卡牌，共计2154张卡牌，包括全部97张金色传说。另外游戏内还有额外的任务卡包、皮肤等福利，游戏外与网易雷火合作赞助赛事100万元奖金以及提供4个国服直邀名额。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>我曾有玩过一段时间的《炉石传说》，从开服时入坑的尝试，到2017年左右的卡拉赞之夜版本开始长期游玩至JK版本左右，也算是对游戏及环境有一定理解。</p>
+<p>国服《炉石传说》玩家数量较多，游戏热情也较高，游戏平衡性相对较好（不过基本可以说没有竞品）；消费上以每个版本发布的预购卡包和冒险模式为主。运营上相比《守望先锋》的后继无力，显然《炉石传说》更扎实地稳中有进，所以中国市场是十分重要的，暴雪对于中国市场肯定也是十分看重的。</p>
+<p>实际上在CJ官宣前，原本制作组制定的回归策划是使用 <code>追赶</code> 的机制，利用回归任务的逐渐完成获得“追赶卡包”来补偿卡牌，遭到了一定程度的质疑，但我观察实际上反应差强人意，处于多半好评的状态，主要的疑问在于追赶卡包和任务的机制上：<u>一是国服玩家基本没有体验过追赶卡包的机制，对它的具体效果有疑虑；二是逐步的获得卡牌，对于回归前期的体验会十分坐牢。</u> <em>“他们不熟悉这个机制，会觉得我们好像很小气，给的追赶卡包不是很多。于是我们干脆决定直接说，我们提供所有的2023年标准卡牌，这样会让玩家更加明白。”</em> 这个最终决定直接引爆了玩家的风评，如果说原本追赶包策划的分数是80%，那么最终策划的分数应该是120%。制作人如此决策的背后逻辑是什么，这是一个策划值得考虑的问题，分析这个问题可以从目的和目前看来的收益上出发。</p>
+<ul>
+<li>目的：<strong>尽快完成游戏回归，重建玩家信任。</strong> 以最简单直接的方式打消玩家顾虑，摒弃国服玩家不熟悉的追赶卡包机制，帮助玩家迅速上手游戏，专注于玩家的娱乐，而非急于求成的盈利。</li>
+<li>好处：<u>作为重磅新闻借势宣传，顺带完成了宣发及营销工作</u>；重获玩家信任，获得良好风评，为后续运营打下坚实基础。</li>
+</ul>
+<h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><p>实际上这个决策我认为是国内部分游戏厂商需要借鉴的，是可以举一反三在不同场景中运用的。</p>
+<p>以开服饱受争议的《鸣潮》为例，在市场反馈明显的情况下，仍一意孤行策划设计了包括剧情对话、抽卡卡池，福利资源等众多令人反感的核心内容及机制，直到差评如潮才在游戏中进行一定的更新补偿，但仍不够令人满意，也丧失了玩家的信任，很大程度上造成了大量玩家的流失。<del>即便是从阴谋论上《鸣潮》想靠黑红进行营销，但这样吸引来的用户我认为留存率很低，而失去了部分本可以稳定粘住的原受众，可以说是捡了芝麻，丢了西瓜，所以我不认为库洛刻意为之。</del> 反而如果借鉴《炉石传说》的决策，在开服时给予玩家相对更良好的入坑条件，在初期以保证玩家留存率，提高用户粘性，增加用户信任为主（毕竟开服前质疑就很多），我认为能达到更优秀的表现，积累更扎实的用户基础，然后再到下一阶段的决策。因为《鸣潮》的营销及买量已经吸引了足够多的用户数，并且游戏本身的质量也不差，只有这样的决策才能充分地利用本身的条件，而错过开服的这一次机会，后续想再通过运营来达到开服时的效果几乎不可能。</p>
+<p>另外举一反三来说，任何游戏遇到影响游戏运营的问题，如玩家利用游戏漏洞获得竞技优势、官方操作失误导致玩家矛盾等各类问题，我认为厂商都应该以获得玩家信任为首要目标，先专注于服务好用户，再考虑其他内容，这样才能获得游戏运营的良性发展，才能做到细水长流，而不能急功近利，特别是中大厂。我认为这正是国内部分游戏厂商的策划所欠缺的，因为即便是米哈游、库洛这样的中大厂都出现了类似的问题，我认为策划在设计游戏上的水平我暂时没有能力质疑，但我想的是，似乎即便是中大厂的策划，也经常与市场分析和反馈脱轨，我认为一个优秀的策划不能只会设计游戏内容，也应该具备良好的行业视野、市场分析和游戏运营的能力，这对于策划游戏内容和游戏发展是很关键的因素。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>策划</tag>
+        <tag>游戏</tag>
+        <tag>运营</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为什么感觉好玩的新游戏越来越少？</title>
+    <url>/2024/08/17/%E8%AF%84%E8%AE%BA/idea2/</url>
+    <content><![CDATA[<p>我希望我未来能设计出好玩的游戏。</p>
+<h1 id="游戏的发展趋势"><a href="#游戏的发展趋势" class="headerlink" title="游戏的发展趋势"></a>游戏的发展趋势</h1><p>我想把游戏发展大致分为三个阶段：①约2000年前的萌芽期 ②00年至15年左右的发展红利期 ③15年后至今的稳定期。<br>虽然很多书籍、视频等内容很详细地讲解过游戏发展的几个阶段，但我主要是以各阶段为载体，来分析游戏设计的发展趋势。</p>
+<p>在①阶段，游戏从2D向3D发展，创新了很多技术和游戏模式，成为了之后游戏的基础。<br>在②阶段时，各种游戏如雨后春笋般地出现，技术的迭代、玩法的革新无不刺激着玩家们的神经，让人耳目一新。<br>在③阶段时，各方面的“质变”逐渐放缓，玩法创新逐渐减少，游戏产品趋于工业化，产生了一定瓶颈。</p>
+<p>某种程度上说，③阶段的现状就是本文标题问题的原因。游戏玩法经过这么多年的积累已经趋于饱和，近年游戏的创新，只能通过“抄”的方式：跨国抄、跨文化抄、跨品类抄、跨平台抄等等（可能具体另写一文论述）。玩法上排列组合、重组优化的创新方式让游戏的惊喜刺激程度相比②阶段有所减弱，很多工业化的出品也是乏善可陈。<del>创新的放缓和现在大环境一致，电影、音乐等内容的发展也都趋于停滞，甚至与电影、音乐创意的枯竭，好莱坞进入“量产系列电影”时代在时间上都极为一致，如同当今市场下创新创业的艰难，也类比摩尔定律在如今的失效，但这形势太大我无法分析，但肯定是有一定关系的，比如现在游戏的设计更受投资方的影响，追求变现能力和稳定性，削弱了开发者的能力。</del></p>
+<p>总之，现在游戏发展趋向稳定化，画面技术上一定的发展难以弥补玩法上创新的缺失，毕竟游戏的特点还是在“玩”。</p>
+<p>在玩法难以创新的形势下，玩家所获得的惊喜刺激相对减少，所以网游、手游开始更有优势，通过版本内容的更新、PVP竞技的无限随机和即时正反馈，让玩家获得更廉价的快乐，一个版本的收益就与单机顶级佳作卖出得全部份额相当。而部分单机3A游戏也开始顺应时代的趋势，产出了越来越多的“良品”：典型的如育碧一代代的《刺客信条》，动视一代代的《使命召唤》，甚至还出现了CDPR《赛博朋克2077》这种半成品。这些游戏有的开始内购皮肤、载具，有的阉割内容，通过DLC来补全游戏，工业化的产出让整体游戏发展开始劣币驱逐良币，越来越少的厂商坚持内容路线，开发游戏的主旨从好玩逐渐向收益倾斜。这也导致了恶性循环，很多手游、网游设计者或者说策划，在设计好玩游戏内容的能力越来越弱，游戏设计能力越来越差（手游每日上线清体力、日常这样上班式的体验；《守望先锋》低下的平衡性和更新速度；《鸣潮》被喷强制进行长对话；《绝区零》被喷走格子玩法和低级的战斗玩法等等），依赖艺术方面的优势来转移玩家的注意力，不通过“玩”来吸引“玩家”，而是靠收集？养成？还是靠玩家的幻想？（指美术、皮肤等）来吸引人们，并给游戏公司带来可观的收益，即便很大程度上不是内容设计师、策划的功劳，或者说主要是美术、文案等方面的功劳。总之，游戏给玩家提供的情绪价值似乎从出发点上已经发生了变换。</p>
+<h1 id="电子ED的成因"><a href="#电子ED的成因" class="headerlink" title="电子ED的成因"></a>电子ED的成因</h1><p>我认为总体主要分为以下两点。</p>
+<h2 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h2><p>从时间上看，游玩游戏的主力军年龄已经越来越高。大环境上，当代社会节奏加快，人们的生活压力增大，一些玩家可能因为生活、工作或其他责任的增加，而感到精力不足，难以像以前那样投入游戏，也有很多人没有足够的时间投入到游戏中，毕竟游戏需要投入一定学习和时间成本，长时间的工作和学习可能使他们更倾向于选择更轻松的休闲方式。</p>
+<p>随着手游的兴起，人们开始更多地接触手游，手游通常设计得更加便捷和易于上手，满足了快节奏生活中碎片化时间的娱乐需求，更廉价的正反馈可能导致很多玩家消耗了原本对于传统电子游戏的兴趣，让人难以再静心去体验游戏，就像“伟哥”一样透支了人们的游玩动力，并让人们离不开它，这在更年轻的下一代上影响或许更加明显，很多人开始连电脑都不会使用。</p>
+<h2 id="游戏性"><a href="#游戏性" class="headerlink" title="游戏性"></a>游戏性</h2><p>如第一章的发展趋势中所说，当今游戏很难再产生颠覆性的玩法，玩家们见识过了越来越多的游戏，接触新的游戏越来越难以产生惊喜和共鸣，游戏内容上的变化更多地开始体现在剧情设定、画面等艺术内容上，人们每当游玩新的游戏时，常能快速地熟悉游戏机制，而在玩法上感到同质化，无法产生“新”的感觉时，在游玩了一段时间后很容易在度过游戏初期后就感到乏味而弃坑。</p>
+<h1 id="为什么《幻兽帕鲁》是电子ED的特效药"><a href="#为什么《幻兽帕鲁》是电子ED的特效药" class="headerlink" title="为什么《幻兽帕鲁》是电子ED的特效药"></a>为什么《幻兽帕鲁》是电子ED的特效药</h1><h1 id="为什么我预测《黑神话：悟空》会成功"><a href="#为什么我预测《黑神话：悟空》会成功" class="headerlink" title="为什么我预测《黑神话：悟空》会成功"></a>为什么我预测《黑神话：悟空》会成功</h1><p>2024年8月16日晚10点解禁了《黑神话：悟空》的媒体评测，结合部分的实机演示，我认为《黑神话：悟空》大概率会是一个优秀的作品，并且应该很好玩，只要恶性BUG不多。</p>
+<p>综上所述，好玩的游戏应该能让玩家体验到新鲜感，但现在游戏又都是互相“抄”，那么让玩家感觉到“原创感”就是“抄”的最高境界，《黑神话：悟空》很大概率能达到。《守望先锋》为什么初期那么优秀，因为它有“原创感”，将MOBA融合到FPS中，将各个国家的标志性建筑设计成地图，将类似这些方面节省的工作量投入到角色设计及开发玩法中，设计出优秀的竞技体验，让玩家们感觉这就是原创的精品游戏。</p>
+<p>《黑神话：悟空》以《西游记》为背景文化，大大节省了自行设计庞大世界观的消耗，同时能借鉴国外大量的优秀动作和角色扮演游戏，游戏厂商如育碧、卡普空、顽皮狗、From Software等，虽说大家常将其与《黑暗之魂》对比，但我个人感觉与《只狼：影逝二度》最相关（相比黑魂的地图、关卡更相似，且弱化关卡沿途小怪，更注重BOSS战），且相比只狼的故事，以顶级神话故事为基底更具优势。另外《黑神话：悟空》还跨越了种族，主角将是一个猴子，玩法上《西游记》就给出了答案，无论是武器、法术，还是七十二变、铜头铁臂，都极大拓展了游戏玩法，足够让玩家获得新鲜感、“原创感”，这些创意拿来主义后节省下来的时间、金钱，能更进一步地用于优化、完善游戏设计和创意。</p>
+<p>值得一提的是，如上文第一章发展趋势所说，游戏开发开始以收益为导向，通过对比，很显然，我认为《黑神话：悟空》能好玩、能成功的优势就在于不以赚钱为首要目标，听说游科拥有充足的资金供应，那么不受制于投资者和温饱收益限制，开发者们义无反顾地发挥能力，专注于游戏内容的设计，可以使 <code>游戏性</code> 得到充分的满足，且显而易见地表现在了画面中，向所有人展现了虚幻5引擎的强大。</p>
+<h1 id="未来游戏发展方向"><a href="#未来游戏发展方向" class="headerlink" title="未来游戏发展方向"></a>未来游戏发展方向</h1><p>随着游戏玩法、机制逐渐达到瓶颈，未来游戏在可玩性上做出突破的可能性越来越小；但画质方面，以虚幻5为首的商业引擎仍在做出创新，图形学也在不断发展，同时伴随硬件性能的迭代提升，即使速度略有减缓，画面表现也将会持续进步。那么如何弥合这两大部分的成长速度差距就可能作为未来游戏的发展方向，是否能产生新的技术或是AI技术能否匹配游戏领域的使用大概是唯一的解决办法，因为只有更拟真的互动才能匹配日益真实的画面效果。<u>另外二次元游戏虽然目前市场良好，但我预计还剩6年左右的时间也会衰败，未来人们是否还买账抽卡游戏，下一代年轻人是否还沉迷二次元，我感觉需要居安思危。</u>话说回来，如果AI技术进一步应用于游戏领域，或许能在人机交互上做出突破，通过模式识别创造更拟真的NPC，更沉浸式的体验，可以通过技术来提升可玩性。不过大模型技术的落地使用应该还有10年左右的缓冲期，目前的成本难以支持其应用落地：一是如果让玩家本地加载运行，会对玩家的设备压力过大，导致性能不足；二是云端加载需要依赖网络性能的提升，普及5G甚至6G的高网速，同时游戏公司需要铺设更多的服务器，耗费更大的开发、运行成本。大模型未来的使用方式会是一还是二还是取决于硬件性能的发展，游戏公司根据成本具体选择方式。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1>]]></content>
+      <categories>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>锐评我所擅长和喜欢的 FPS 和 JRPG</title>
+    <url>/2024/08/31/%E8%AF%84%E8%AE%BA/idea3/</url>
+    <content><![CDATA[<p>FPS 竞技性强，能给予玩家强烈的即时的刺激感与正反馈，容易产生沉浸感和进入心流状态。但这对于枪械和操作的手感要求较高，同时因为竞技性的过强，导致影响游戏出圈的因素会更多，如平衡性、差异化玩法、门槛、反作弊、关卡地图设计等等。</p>
+<p>首要的是传统JRPG和新型 JRPG 有明显差别，我主要喜欢新式的JRPG，相对来说更短平快，符合我个人喜好。 JRPG 线性叙事节奏较紧凑平滑，较简单直接，适合当代节奏，动作动画较优秀流畅，画风较美，系统较简单易入门，但也因此略显颓势， JRPG 相比当代商业引擎技术孱弱，游戏工业化流水线，除了《最终幻想》这类老牌 IP 的老式 JRPG 外很少再出现优秀佳作，平均都在良好水平线附近，近年仅《碧蓝幻想 Relink》接近优秀，这或许与部分日厂追求稳定的低投入低回报理念有关，同时这种思想感觉也影响了国内部分游戏厂商，或许从某种意义上导致了国内除《觅长生》等独立游戏外仅有《黑神话：悟空》一部优秀 3A 的现状。</p>
+]]></content>
+      <categories>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分析《Apex Legends》角色技能设计维度</title>
+    <url>/2024/10/10/%E8%AF%84%E8%AE%BA/idea4/</url>
+    <content><![CDATA[<p>《APEX英雄》技能体系我会分三维为：转移，攻防，信息与资源。其中转移分为远近，其关系进点和机动性。以此为三维，可通过思维导图进一步细分效果。</p>
+<p>值得一提的是，实际上《APEX英雄》的角色设计对于资源相关的考量在电竞比赛中与玩家排位中相差巨大。<br><img src="https://s2.loli.net/2024/10/10/L3b8kSOHmBQGTW7.png" alt="三维图"></p>
+]]></content>
+      <categories>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ 性能优化笔记</title>
     <url>/2025/07/28/C++/cpp1/</url>
     <content><![CDATA[<h2 id="malloc-new"><a href="#malloc-new" class="headerlink" title="malloc &#x2F; new"></a>malloc &#x2F; new</h2><p><code>malloc</code> 不会自动调用构造函数，通过绕过构造函数和析构函数，直接用底层手段手动控制对象的生命周期，避免额外的函数调用开销。</p>
@@ -182,66 +658,17 @@
       </tags>
   </entry>
   <entry>
-    <title>test1</title>
-    <url>/2024/07/26/test1/</url>
-    <content><![CDATA[<p><a href="https://butterfly.js.org/posts/89757140/?highlight=table#Tables">https://butterfly.js.org/posts/89757140/?highlight=table#Tables</a><br><a href="https://www.bilibili.com/video/BV1j34y1p7HX?spm_id_from=333.788.recommend_more_video.14&vd_source=11db1d1a077558e043cecb028334f12a">https://www.bilibili.com/video/BV1j34y1p7HX?spm_id_from=333.788.recommend_more_video.14&amp;vd_source=11db1d1a077558e043cecb028334f12a</a></p>
-<p>h124:</p>
-<h1 id="test"><a href="#test" class="headerlink" title="test"></a>test</h1><h2 id="test2"><a href="#test2" class="headerlink" title="test2"></a>test2</h2><h3 id="test3"><a href="#test3" class="headerlink" title="test3"></a>test3</h3><h4 id="test4"><a href="#test4" class="headerlink" title="test4"></a>test4</h4><p>pic:<br><img src="/./img/avatar.jpg" alt="avatar"></p>
-<p>code:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;test&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>test, <strong>bold</strong>, <em>italic</em>, <em><strong>bl</strong></em>, <del>slash</del>, <u>下划线</u></p>
-<p>强调:<code>ili</code></p>
-<p>ima: $y&#x3D;ax+b$</p>
-<p>$$<br>bma<br>$$</p>
-<p>链接锚点’a’: <a href="http://baidu.com/">baidu</a></p>
-<h2 id="Check"><a href="#Check" class="headerlink" title="Check"></a>Check</h2><ul>
-<li><input checked="" disabled="" type="checkbox"> test</li>
-<li><input disabled="" type="checkbox"> test2</li>
-<li></li>
-</ul>
-<p>居中对齐图片cpic:</p>
-<div align=center><img src="./img/avatar.jpg"></div>
-
-<p>table:</p>
-<table>
-<thead>
-<tr>
-<th>t1</th>
-<th>t2</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>x1</td>
-<td>x2</td>
-</tr>
-</tbody></table>
+    <title>设计竞技类游戏时如何兼顾女性用户</title>
+    <url>/2024/10/20/%E8%AF%84%E8%AE%BA/idea5/</url>
+    <content><![CDATA[<p><strong>例如在FPS和MOBA游戏中，设计明确的奶位（偏纯辅助型）角色，即可兼顾女性玩家</strong><br>例如《守望先锋》中的天使，《英雄联盟》中的魔法猫咪、琴女，《无畏契约》中的贤者等。<br>看似像暴论，但意思已经基本到位了，我细想确实如此。</p>
+<p>后续有空再更</p>
 ]]></content>
       <categories>
-        <category>笔记</category>
+        <category>评论</category>
       </categories>
       <tags>
-        <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ 多线程笔记1</title>
-    <url>/2025/08/02/C++/cpp2/</url>
-    <content><![CDATA[<div class="admonition anote"><p class="admonition-title"><span class="mdi mdi-note-outline admonition-icon"></span>Note</p><div class="admonition-content"><p><code>call_once</code> 配合 <code>once_flag</code> 一起使用，用于在多个线程中只执行某段初始化代码一次。</p>
-</div></div>
-
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;thread&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;mutex&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用call_once解决单例模式线程安全问题</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Log</span> &#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="built_in">Log</span>() &#123; std::cout &lt;&lt; <span class="string">&quot;Log is constructed\n&quot;</span>;&#125;; <span class="comment">// 私有构造函数，防止外部实例化</span></span><br><span class="line">	<span class="built_in">Log</span>(<span class="type">const</span> Log&amp;) = <span class="keyword">delete</span>; <span class="comment">// 显式删除了拷贝构造函数，编译器生成的默认构造函数会被禁用</span></span><br><span class="line">	Log&amp; <span class="keyword">operator</span>=(<span class="type">const</span> Log&amp;) = <span class="keyword">delete</span>; <span class="comment">// 删除拷贝构造和赋值运算符，防止对象被拷贝</span></span><br><span class="line">	<span class="type">static</span> std::once_flag ONCE;</span><br><span class="line">	<span class="type">static</span> Log* log; <span class="comment">// 静态成员函数只能直接访问静态成员，必须在类内声明</span></span><br><span class="line">	<span class="function"><span class="type">static</span> <span class="type">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;	<span class="comment">// 静态成员函数不属于具体对象实例，只属于类本身，所以没有 this 指针，因此必须定义 log指针 为静态成员变量</span></span><br><span class="line">		<span class="keyword">if</span> (!log) &#123; log = <span class="keyword">new</span> <span class="built_in">Log</span>(); &#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="comment">//静态方法不需要实例化对象就可以调用，确保了全局只有一个实例</span></span><br><span class="line">	<span class="function"><span class="type">static</span> Log&amp; <span class="title">GetInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		std::<span class="built_in">call_once</span>(ONCE, init); <span class="comment">// init() 函数只会被调用一次，后续线程等待后直接跳过</span></span><br><span class="line">		<span class="comment">// std::call_once(ONCE, []() &#123;if (!log) log = new Log(); &#125;); lambda 表达式可以直接访问静态变量（还有全局变量）</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> *log;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">PrintLog</span><span class="params">(std::string msg)</span> </span>&#123;</span><br><span class="line">		<span class="type">static</span> std::mutex cout_mutex; <span class="comment">// 输出流加锁保护</span></span><br><span class="line">		<span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lock</span><span class="params">(cout_mutex)</span></span>;</span><br><span class="line">		<span class="comment">//cout_mutex.lock();</span></span><br><span class="line">		std::cout &lt;&lt; __TIME__ &lt;&lt; msg &lt;&lt; std::endl; <span class="comment">// __TIME__ 是编译期常量</span></span><br><span class="line">		<span class="comment">//cout_mutex.unlock();</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 静态成员变量的定义和初始化</span></span><br><span class="line">std::once_flag Log::ONCE; <span class="comment">// 类内的静态成员变量只是声明，不会分配内存，必须在类外定义</span></span><br><span class="line">Log* Log::log = <span class="literal">nullptr</span>; <span class="comment">// 全局指针，指向 Log 类的唯一实例</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">print_error</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Log::<span class="built_in">GetInstance</span>().<span class="built_in">PrintLog</span>(<span class="string">&quot;error&quot;</span>); <span class="comment">//链式调用，GetInstance() 返回 Log 类的引用</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="function">std::thread <span class="title">t1</span><span class="params">(print_error)</span></span>;</span><br><span class="line">	<span class="function">std::thread <span class="title">t2</span><span class="params">(print_error)</span></span>;</span><br><span class="line">	t<span class="number">1.</span><span class="built_in">join</span>();</span><br><span class="line">	t<span class="number">2.</span><span class="built_in">join</span>();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<div class="admonition example"><p class="admonition-title"><span class="mdi mdi-file-code-outline admonition-icon"></span>Example</p><div class="admonition-content"><p>C++11后多个线程初始化同一 <strong>静态局部变量</strong> 无需 <code>call_once</code> ，线程安全，例如：
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 简易懒汉式单例模式</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Singleton</span> {</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="built_in">Singleton</span>() {}</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">Singleton</span>(<span class="type">const</span> Singleton&amp;) = <span class="keyword">delete</span>;</span><br><span class="line">	Singleton&amp; <span class="keyword">operator</span>=(<span class="type">const</span> Singleton&amp;) = <span class="keyword">delete</span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="type">static</span> Singleton&amp; <span class="title">GetInstance</span><span class="params">()</span> </span>{</span><br><span class="line">		<span class="type">static</span> Singleton instance;  <span class="comment">// ✅ C++11 起线程安全</span></span><br><span class="line">		<span class="keyword">return</span> instance;</span><br><span class="line">	}</span><br><span class="line">};</span><br></pre></td></tr></table></figure></p>
-</div></div>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>多线程</tag>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
       </tags>
   </entry>
   <entry>
@@ -274,15 +701,15 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ 多线程笔记3</title>
-    <url>/2025/08/05/C++/cpp4/</url>
-    <content><![CDATA[<div class="admonition anote"><p class="admonition-title"><span class="mdi mdi-note-outline admonition-icon"></span>Note</p><div class="admonition-content"><p><code>std::thread</code> 无拷贝构造函数，无法复制只能引用 <code>&amp;</code>。</p>
+    <title>C++ 多线程笔记1</title>
+    <url>/2025/08/02/C++/cpp2/</url>
+    <content><![CDATA[<div class="admonition anote"><p class="admonition-title"><span class="mdi mdi-note-outline admonition-icon"></span>Note</p><div class="admonition-content"><p><code>call_once</code> 配合 <code>once_flag</code> 一起使用，用于在多个线程中只执行某段初始化代码一次。</p>
 </div></div>
 
-<div class="admonition tip"><p class="admonition-title"><span class="mdi mdi-lightbulb-on-outline admonition-icon"></span>Tip</p><div class="admonition-content"><p><code>&lt;condition_variable&gt;</code> 里包含了 <code>&lt;mutex&gt;</code> 头文件。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;thread&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;mutex&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用call_once解决单例模式线程安全问题</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Log</span> &#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="built_in">Log</span>() &#123; std::cout &lt;&lt; <span class="string">&quot;Log is constructed\n&quot;</span>;&#125;; <span class="comment">// 私有构造函数，防止外部实例化</span></span><br><span class="line">	<span class="built_in">Log</span>(<span class="type">const</span> Log&amp;) = <span class="keyword">delete</span>; <span class="comment">// 显式删除了拷贝构造函数，编译器生成的默认构造函数会被禁用</span></span><br><span class="line">	Log&amp; <span class="keyword">operator</span>=(<span class="type">const</span> Log&amp;) = <span class="keyword">delete</span>; <span class="comment">// 删除拷贝构造和赋值运算符，防止对象被拷贝</span></span><br><span class="line">	<span class="type">static</span> std::once_flag ONCE;</span><br><span class="line">	<span class="type">static</span> Log* log; <span class="comment">// 静态成员函数只能直接访问静态成员，必须在类内声明</span></span><br><span class="line">	<span class="function"><span class="type">static</span> <span class="type">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;	<span class="comment">// 静态成员函数不属于具体对象实例，只属于类本身，所以没有 this 指针，因此必须定义 log指针 为静态成员变量</span></span><br><span class="line">		<span class="keyword">if</span> (!log) &#123; log = <span class="keyword">new</span> <span class="built_in">Log</span>(); &#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="comment">//静态方法不需要实例化对象就可以调用，确保了全局只有一个实例</span></span><br><span class="line">	<span class="function"><span class="type">static</span> Log&amp; <span class="title">GetInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		std::<span class="built_in">call_once</span>(ONCE, init); <span class="comment">// init() 函数只会被调用一次，后续线程等待后直接跳过</span></span><br><span class="line">		<span class="comment">// std::call_once(ONCE, []() &#123;if (!log) log = new Log(); &#125;); lambda 表达式可以直接访问静态变量（还有全局变量）</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> *log;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">PrintLog</span><span class="params">(std::string msg)</span> </span>&#123;</span><br><span class="line">		<span class="type">static</span> std::mutex cout_mutex; <span class="comment">// 输出流加锁保护</span></span><br><span class="line">		<span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lock</span><span class="params">(cout_mutex)</span></span>;</span><br><span class="line">		<span class="comment">//cout_mutex.lock();</span></span><br><span class="line">		std::cout &lt;&lt; __TIME__ &lt;&lt; msg &lt;&lt; std::endl; <span class="comment">// __TIME__ 是编译期常量</span></span><br><span class="line">		<span class="comment">//cout_mutex.unlock();</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 静态成员变量的定义和初始化</span></span><br><span class="line">std::once_flag Log::ONCE; <span class="comment">// 类内的静态成员变量只是声明，不会分配内存，必须在类外定义</span></span><br><span class="line">Log* Log::log = <span class="literal">nullptr</span>; <span class="comment">// 全局指针，指向 Log 类的唯一实例</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">print_error</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Log::<span class="built_in">GetInstance</span>().<span class="built_in">PrintLog</span>(<span class="string">&quot;error&quot;</span>); <span class="comment">//链式调用，GetInstance() 返回 Log 类的引用</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="function">std::thread <span class="title">t1</span><span class="params">(print_error)</span></span>;</span><br><span class="line">	<span class="function">std::thread <span class="title">t2</span><span class="params">(print_error)</span></span>;</span><br><span class="line">	t<span class="number">1.</span><span class="built_in">join</span>();</span><br><span class="line">	t<span class="number">2.</span><span class="built_in">join</span>();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div class="admonition example"><p class="admonition-title"><span class="mdi mdi-file-code-outline admonition-icon"></span>Example</p><div class="admonition-content"><p>C++11后多个线程初始化同一 <strong>静态局部变量</strong> 无需 <code>call_once</code> ，线程安全，例如：
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 简易懒汉式单例模式</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Singleton</span> {</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="built_in">Singleton</span>() {}</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">Singleton</span>(<span class="type">const</span> Singleton&amp;) = <span class="keyword">delete</span>;</span><br><span class="line">	Singleton&amp; <span class="keyword">operator</span>=(<span class="type">const</span> Singleton&amp;) = <span class="keyword">delete</span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="type">static</span> Singleton&amp; <span class="title">GetInstance</span><span class="params">()</span> </span>{</span><br><span class="line">		<span class="type">static</span> Singleton instance;  <span class="comment">// ✅ C++11 起线程安全</span></span><br><span class="line">		<span class="keyword">return</span> instance;</span><br><span class="line">	}</span><br><span class="line">};</span><br></pre></td></tr></table></figure></p>
 </div></div>
-
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;thread&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;condition_variable&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;functional&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;atomic&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ThreadPool</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	std::mutex mtx;</span><br><span class="line">	std::condition_variable condition;</span><br><span class="line">	std::queue&lt;std::function&lt;<span class="type">void</span>()&gt;&gt; tasks;</span><br><span class="line">	std::atomic&lt;<span class="type">bool</span>&gt; stop;</span><br><span class="line">	std::vector&lt;std::thread&gt; threads;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">ThreadPool</span>(<span class="type">int</span> num_threads) : stop&#123; <span class="literal">false</span> &#125; &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; num_threads; i++) &#123;</span><br><span class="line">			threads.<span class="built_in">emplace_back</span>([<span class="keyword">this</span>]() &#123;</span><br><span class="line">				<span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					std::unique_lock&lt;std::mutex&gt; <span class="built_in">lock</span>(mtx);</span><br><span class="line">					condition.<span class="built_in">wait</span>(lock, [<span class="keyword">this</span>]() &#123; <span class="keyword">return</span> !tasks.<span class="built_in">empty</span>() || stop; &#125;);</span><br><span class="line">					<span class="keyword">if</span> (stop &amp;&amp; tasks.<span class="built_in">empty</span>()) <span class="keyword">return</span>;</span><br><span class="line">					std::function&lt;<span class="built_in">void</span>()&gt; <span class="built_in">task</span>(std::<span class="built_in">move</span>(tasks.<span class="built_in">front</span>()));</span><br><span class="line">					tasks.<span class="built_in">pop</span>();</span><br><span class="line">					lock.<span class="built_in">unlock</span>();</span><br><span class="line">					<span class="built_in">task</span>();</span><br><span class="line">				&#125;</span><br><span class="line">				&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	~<span class="built_in">ThreadPool</span>() &#123;</span><br><span class="line">		&#123;	</span><br><span class="line">			<span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lock</span><span class="params">(mtx)</span></span>;</span><br><span class="line">			stop = <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		condition.<span class="built_in">notify_all</span>();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">auto</span>&amp; t : threads) &#123;</span><br><span class="line">			t.<span class="built_in">join</span>();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> F, <span class="keyword">typename</span>... Args&gt; <span class="type">void</span> <span class="title">enqueue</span><span class="params">(F&amp;&amp; f, Args&amp;&amp;... args)</span> </span>&#123;</span><br><span class="line">		std::function&lt;<span class="type">void</span>()&gt; task = std::<span class="built_in">bind</span>(std::forward&lt;F&gt;(f), std::forward&lt;Args&gt;(args)...);</span><br><span class="line">		<span class="comment">//auto task = [func = std::forward&lt;F&gt;(f), tup = std::make_tuple(std::forward&lt;Args&gt;(args)...)]() mutable &#123; std::apply(std::move(func), std::move(tup)); &#125;; C++17 引入 &lt;tuple&gt; 头文件 std::apply</span></span><br><span class="line">		<span class="comment">//auto task = [func = std::forward&lt;F&gt;(f), ...args = std::forward&lt;Args&gt;((args)...)]() mutable &#123; func = std::move((args)...); &#125;; C++20 才支持包扩展用于初始化捕获 [...args = ...]，用 lambda 替代 std::bind</span></span><br><span class="line">		<span class="keyword">if</span> (stop) <span class="keyword">throw</span> std::<span class="built_in">runtime_error</span>(<span class="string">&quot;enqueue on stopped ThreadPool&quot;</span>);</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lock</span><span class="params">(mtx)</span></span>;</span><br><span class="line">			tasks.<span class="built_in">emplace</span>(std::<span class="built_in">move</span>(task));</span><br><span class="line">			<span class="comment">//std::cout&lt;&lt; &quot;task loaded&quot; &lt;&lt; &quot;\n&quot;;</span></span><br><span class="line">		&#125;</span><br><span class="line">		condition.<span class="built_in">notify_one</span>();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="function">ThreadPool <span class="title">threadpool</span><span class="params">(<span class="number">6</span>)</span></span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">500</span>; i++) &#123;</span><br><span class="line">		threadpool.<span class="built_in">enqueue</span>([i]() &#123;</span><br><span class="line">			std::cout &lt;&lt; <span class="string">&quot;task: &quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot; is running&quot;</span> &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">			std::this_thread::<span class="built_in">sleep_for</span>(std::chrono::<span class="built_in">milliseconds</span>(<span class="number">10</span>));</span><br><span class="line">			std::cout &lt;&lt; <span class="string">&quot;task: &quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot; is done&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">			&#125;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>笔记</category>
@@ -329,6 +756,41 @@
 <div class="admonition tip"><p class="admonition-title"><span class="mdi mdi-lightbulb-on-outline admonition-icon"></span>Tip</p><div class="admonition-content"><p>C++17 后使用 <code>std::invoke_result_t&lt;F, Args...&gt;</code> 代替 <code>decltype(f(std::forward&lt;Args&gt;(args)...))</code> 。可以<strong>先 decay</strong>（移除引用、顶层 cv），如果 <code>f</code> 返回 <code>int&amp;</code> 会推导为 <code>int</code> , <code>std::packaged_task&lt;int()&gt;</code> 可编译，而 <code>decltype</code> 推导为 <code>int&amp;</code> ，<code>std::packaged_task&lt;int&amp;()&gt;</code> 无法编译。</p>
 <p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> F, <span class="keyword">typename</span>... Args&gt; <span class="keyword">auto</span> <span class="title">enqueue</span><span class="params">(F&amp;&amp; f, Args&amp;&amp;... args)</span> -&gt; std::future&lt;std::<span class="type">invoke_result_t</span>&lt;F, Args...&gt;&gt; </span>{</span><br><span class="line"><span class="keyword">using</span> typeName = std::<span class="type">invoke_result_t</span>&lt;F, Args...&gt;;</span><br><span class="line"><span class="keyword">auto</span> task_ptr = std::make_shared&lt;std::packaged_task&lt;<span class="built_in">typeName</span>()&gt;&gt;(std::<span class="built_in">bind</span>(std::forward&lt;F&gt;(f), std::forward&lt;Args&gt;(args)...));</span><br><span class="line">std::future&lt;typeName&gt; future = task_ptr-&gt;<span class="built_in">get_future</span>();</span><br><span class="line"><span class="keyword">if</span> (stop) <span class="keyword">throw</span> std::<span class="built_in">runtime_error</span>(<span class="string">&quot;enqueue on stopped ThreadPool&quot;</span>);</span><br><span class="line">{</span><br><span class="line">	<span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lock</span><span class="params">(mtx)</span></span>;</span><br><span class="line">	tasks.<span class="built_in">emplace</span>(<a href="">task_ptr</a> {(*task_ptr)(); }); <span class="comment">//lambda 封装成 void() 函数</span></span><br><span class="line">}</span><br><span class="line">condition.<span class="built_in">notify_one</span>();</span><br><span class="line"><span class="keyword">return</span> future;	}</span><br></pre></td></tr></table></figure></p>
 </div></div>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>多线程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ 多线程笔记3</title>
+    <url>/2025/08/05/C++/cpp4/</url>
+    <content><![CDATA[<div class="admonition anote"><p class="admonition-title"><span class="mdi mdi-note-outline admonition-icon"></span>Note</p><div class="admonition-content"><p><code>std::thread</code> 无拷贝构造函数，无法复制只能引用 <code>&amp;</code>。</p>
+</div></div>
+
+<div class="admonition tip"><p class="admonition-title"><span class="mdi mdi-lightbulb-on-outline admonition-icon"></span>Tip</p><div class="admonition-content"><p><code>&lt;condition_variable&gt;</code> 里包含了 <code>&lt;mutex&gt;</code> 头文件。</p>
+</div></div>
+
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;thread&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;condition_variable&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;functional&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;atomic&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ThreadPool</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	std::mutex mtx;</span><br><span class="line">	std::condition_variable condition;</span><br><span class="line">	std::queue&lt;std::function&lt;<span class="type">void</span>()&gt;&gt; tasks;</span><br><span class="line">	std::atomic&lt;<span class="type">bool</span>&gt; stop;</span><br><span class="line">	std::vector&lt;std::thread&gt; threads;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">ThreadPool</span>(<span class="type">int</span> num_threads) : stop&#123; <span class="literal">false</span> &#125; &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; num_threads; i++) &#123;</span><br><span class="line">			threads.<span class="built_in">emplace_back</span>([<span class="keyword">this</span>]() &#123;</span><br><span class="line">				<span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					std::unique_lock&lt;std::mutex&gt; <span class="built_in">lock</span>(mtx);</span><br><span class="line">					condition.<span class="built_in">wait</span>(lock, [<span class="keyword">this</span>]() &#123; <span class="keyword">return</span> !tasks.<span class="built_in">empty</span>() || stop; &#125;);</span><br><span class="line">					<span class="keyword">if</span> (stop &amp;&amp; tasks.<span class="built_in">empty</span>()) <span class="keyword">return</span>;</span><br><span class="line">					std::function&lt;<span class="built_in">void</span>()&gt; <span class="built_in">task</span>(std::<span class="built_in">move</span>(tasks.<span class="built_in">front</span>()));</span><br><span class="line">					tasks.<span class="built_in">pop</span>();</span><br><span class="line">					lock.<span class="built_in">unlock</span>();</span><br><span class="line">					<span class="built_in">task</span>();</span><br><span class="line">				&#125;</span><br><span class="line">				&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	~<span class="built_in">ThreadPool</span>() &#123;</span><br><span class="line">		&#123;	</span><br><span class="line">			<span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lock</span><span class="params">(mtx)</span></span>;</span><br><span class="line">			stop = <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		condition.<span class="built_in">notify_all</span>();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">auto</span>&amp; t : threads) &#123;</span><br><span class="line">			t.<span class="built_in">join</span>();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> F, <span class="keyword">typename</span>... Args&gt; <span class="type">void</span> <span class="title">enqueue</span><span class="params">(F&amp;&amp; f, Args&amp;&amp;... args)</span> </span>&#123;</span><br><span class="line">		std::function&lt;<span class="type">void</span>()&gt; task = std::<span class="built_in">bind</span>(std::forward&lt;F&gt;(f), std::forward&lt;Args&gt;(args)...);</span><br><span class="line">		<span class="comment">//auto task = [func = std::forward&lt;F&gt;(f), tup = std::make_tuple(std::forward&lt;Args&gt;(args)...)]() mutable &#123; std::apply(std::move(func), std::move(tup)); &#125;; C++17 引入 &lt;tuple&gt; 头文件 std::apply</span></span><br><span class="line">		<span class="comment">//auto task = [func = std::forward&lt;F&gt;(f), ...args = std::forward&lt;Args&gt;((args)...)]() mutable &#123; func = std::move((args)...); &#125;; C++20 才支持包扩展用于初始化捕获 [...args = ...]，用 lambda 替代 std::bind</span></span><br><span class="line">		<span class="keyword">if</span> (stop) <span class="keyword">throw</span> std::<span class="built_in">runtime_error</span>(<span class="string">&quot;enqueue on stopped ThreadPool&quot;</span>);</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lock</span><span class="params">(mtx)</span></span>;</span><br><span class="line">			tasks.<span class="built_in">emplace</span>(std::<span class="built_in">move</span>(task));</span><br><span class="line">			<span class="comment">//std::cout&lt;&lt; &quot;task loaded&quot; &lt;&lt; &quot;\n&quot;;</span></span><br><span class="line">		&#125;</span><br><span class="line">		condition.<span class="built_in">notify_one</span>();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="function">ThreadPool <span class="title">threadpool</span><span class="params">(<span class="number">6</span>)</span></span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">500</span>; i++) &#123;</span><br><span class="line">		threadpool.<span class="built_in">enqueue</span>([i]() &#123;</span><br><span class="line">			std::cout &lt;&lt; <span class="string">&quot;task: &quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot; is running&quot;</span> &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">			std::this_thread::<span class="built_in">sleep_for</span>(std::chrono::<span class="built_in">milliseconds</span>(<span class="number">10</span>));</span><br><span class="line">			std::cout &lt;&lt; <span class="string">&quot;task: &quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot; is done&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">			&#125;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>多线程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ 多线程笔记小结</title>
+    <url>/2025/08/08/C++/cpp7/</url>
+    <content><![CDATA[<ul>
+<li><strong>线程安全</strong>： 并行读写和串行读写效果一致。</li>
+<li>解决数据<strong>竞态</strong>问题常见是把全局变量改为线程局部变量；初始化时使用 <code>call_once</code> 或使用局部静态变量进行初始化，因为局部静态变量 c++11 后初始化自动线程安全；还有使用锁和原子变量 <code>atomic</code> 来保证原子性等。</li>
+</ul>
 ]]></content>
       <categories>
         <category>笔记</category>
@@ -581,22 +1043,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ 多线程笔记小结</title>
-    <url>/2025/08/08/C++/cpp7/</url>
-    <content><![CDATA[<ul>
-<li><strong>线程安全</strong>： 并行读写和串行读写效果一致。</li>
-<li>解决数据<strong>竞态</strong>问题常见是把全局变量改为线程局部变量；初始化时使用 <code>call_once</code> 或使用局部静态变量进行初始化，因为局部静态变量 c++11 后初始化自动线程安全；还有使用锁和原子变量 <code>atomic</code> 来保证原子性等。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>多线程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++ static 与 const</title>
     <url>/2025/08/09/C++/cpp8/</url>
     <content><![CDATA[<h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2><ul>
@@ -634,42 +1080,6 @@
       </categories>
       <tags>
         <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构笔记：堆</title>
-    <url>/2025/08/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/s1/</url>
-    <content><![CDATA[<div style="position:relative;width:100%;padding-bottom:56.25%;height:0;">
-  <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;"
-    src="//player.bilibili.com/player.html?isOutside=true&aid=297973330&bvid=BV1AF411G7cA&cid=570109806&p=1&autoplay=0"
-    scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
-  </iframe>
-</div>
-
-<h2 id="堆的定义"><a href="#堆的定义" class="headerlink" title="堆的定义"></a>堆的定义</h2><blockquote>
-<p>是<strong>完全二叉树</strong>：只允许最后一行不为满，且最后一行必须从左往右排序，最后一行元素之间不可以有间隔<br>  <img src="https://s2.loli.net/2025/08/26/8WE56QdBMgsSlfb.png"><br>  层序遍历给节点编号，元素存入数组对应下标，下标节点为 i ，其子节点则为 2i+1 2i+2 。</p>
-</blockquote>
-<h2 id="堆的基本操作"><a href="#堆的基本操作" class="headerlink" title="堆的基本操作"></a>堆的基本操作</h2><p><strong>上滤（上浮） &#x2F; 下滤（下沉）</strong></p>
-<h3 id="下滤"><a href="#下滤" class="headerlink" title="下滤"></a>下滤</h3><p><strong>根节点向下调整</strong></p>
-<ul>
-<li>若（根）节点元素小于其最大子节点，则交换，直至该元素所在节点大于其所有子节点或移动到底部（无子节点），形成大根堆。</li>
-<li>复杂度为 <strong>O(logN)</strong> 。<br>自下而上建堆，从倒数第二行父节点开始向下调整，复杂度为 <strong>O(N)</strong> 。</li>
-</ul>
-<h3 id="上滤"><a href="#上滤" class="headerlink" title="上滤"></a>上滤</h3><p><strong>子节点向上调整</strong></p>
-<ul>
-<li>与父节点比较，大于父节点则交换，直到无法上移。</li>
-<li>主要用于插入新元素到堆尾，复杂度为 <strong>O(logN)</strong> 。<br>自顶向下建堆，每次插入到堆尾后向上调整，复杂度为 <strong>O(NlogN)</strong> 。</li>
-</ul>
-<h2 id="堆的应用"><a href="#堆的应用" class="headerlink" title="堆的应用"></a>堆的应用</h2><h3 id="优先队列-priority-queue"><a href="#优先队列-priority-queue" class="headerlink" title="优先队列 priority_queue"></a>优先队列 priority_queue</h3><p>默认为最大堆<br>弹出堆顶元素后，<strong>堆尾元素移至根节点</strong>，重新进行上滤或下滤操作直至有序。</p>
-<ul>
-<li><strong>堆排序</strong>就是把优先队列元素依次弹出，为降低空间复杂度，实际排序时堆顶弹出的元素与堆尾元素交换并存放，最终形成的树做层序遍历便是有序的。时间复杂度为 <strong>O(NlogN)</strong> 。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -742,413 +1152,6 @@
       <tags>
         <tag>C++</tag>
         <tag>内存</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo之Butterfly主题透明css浅析</title>
-    <url>/2024/07/29/%E6%95%99%E7%A8%8B/css1/</url>
-    <content><![CDATA[<p><img src="/./img/posts/image-1.png" alt="效果图1"><br><img src="/./img/posts/image-2.png" alt="效果图2"></p>
-<h2 id="1-改变透明度"><a href="#1-改变透明度" class="headerlink" title="1.改变透明度"></a>1.改变透明度</h2><h3 id="卡片透明度"><a href="#卡片透明度" class="headerlink" title="卡片透明度"></a>卡片透明度</h3><p>在souce文件夹中新建css文件夹，用来存放所有自行配置的css文件，与img文件夹同理，防止更新后被覆盖。在文件夹中新建transparency.css文件，编写以下代码。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 明亮模式透明度0.75 */</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line"><span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">75</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 黑暗模式透明度0.7 */</span></span><br><span class="line"><span class="selector-attr">[data-theme=<span class="string">&quot;dark&quot;</span>]</span> &#123;</span><br><span class="line"><span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">12</span>, <span class="number">12</span>, <span class="number">12</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在主题配置文件的inject下按格式填写css，其中根目录为source文件夹。<br><img src="/../img/posts/image-3.png"></p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/transparency.css&quot;&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="页脚透明度"><a href="#页脚透明度" class="headerlink" title="页脚透明度"></a>页脚透明度</h3><p>在主题配置文件中，将页脚颜色直接设置为transparent。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Footer Background</span></span><br><span class="line"><span class="attr">footer_bg:</span> <span class="string">transparent</span></span><br></pre></td></tr></table></figure>
-<p>因为有遮罩的关系，既保留了底色来显示文字，又可以和背景融为一体。<br><img src="/../img/posts/image.png" alt="页脚效果"></p>
-<h2 id="2-改变top颜色"><a href="#2-改变top颜色" class="headerlink" title="2.改变top颜色"></a>2.改变top颜色</h2><p>新建css文件命名为headtransparency，编写以下代码。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 取消top颜色以支持cover透明图片显示背景 */</span></span><br><span class="line"><span class="selector-id">#page-header</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: unset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>同样添加到inject中</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/headtransparency.css&quot;&gt;</span></span><br></pre></td></tr></table></figure>
-<p>因为顶图优先级top_img &gt; cover， 而cover既可以作为文章封面，又可以在top_img未设置时作为顶图，所以我准备全使用cover设置图片，省去多余图片设置。但在top_img未设置时，主题的蓝色 <code>#49b1f5</code> 会作为背景色填充 ，因为图片的webp和png格式有alpha通道，存在透明的图片会显露出cover图片下被默认填充的背景色，所以需要取消页眉的背景色填充，这样就可以透出页面背景。另外页眉同样有遮罩，比较合适。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Add mask to header or footer (为 header 或 footer 添加黑色半透遮罩)</span></span><br><span class="line"><span class="attr">mask:</span></span><br><span class="line">  <span class="attr">header:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">footer:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h1 id="教学"><a href="#教学" class="headerlink" title="教学"></a>教学</h1><p>实际上css的内容操作是使用浏览器F12调试摸索的，需要在右侧的样式中逐一查找对应属性。<br><img src="/../img/posts/image4.png" alt="点击元素获取id"><br>因为我从未接触过css，速成只能利用网络文档和AI，自行摸索出了结果，而网络上流传的许多修改透明度方法千篇一律都是屎山代码，长篇大论中仅有一两句有用，且不适配黑暗模式的页面，所幸我最后自行排查出了结果，并简化了代码。</p>
-<p>另外我认为无需单独配置每个卡牌的透明度，如果透明度各不相同那页面会很不美观，又因为所有卡片都使用 <code>--card-bg</code> 作为颜色，那在两种页面模式下配置它即可，既省事又高效，但rgba函数仍需获取颜色作为填充，我选取了原主题颜色，可以自行调整。</p>
-<hr>
-<h3 id="以下是避雷"><a href="#以下是避雷" class="headerlink" title="以下是避雷"></a>以下是避雷</h3><p><img src="/../img/posts/026fc1bea3736cc224e319b6c2b4741e.png" alt="雷同的网络教程"><br>以下这是网络教程的雷同代码,除开页脚我直接设置为transparent外，仅两句可用，分别是.recent-post-item和最主要的–card-bg，且因为全覆盖设置成白色，完全不适配原黑暗模式页面。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 文章页背景 */</span></span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 可以自行修改*/</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 所有页面背景 */</span></span><br><span class="line"><span class="selector-id">#aside_content</span> <span class="selector-class">.card-widget</span>,</span><br><span class="line"><span class="selector-id">#recent-posts</span>&gt;<span class="selector-class">.recent-post-item</span>,</span><br><span class="line"><span class="selector-class">.layout_page</span>&gt;<span class="selector-tag">div</span><span class="selector-pseudo">:first-child</span><span class="selector-pseudo">:not</span>(<span class="selector-class">.recent-posts</span>),</span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#page</span>,</span><br><span class="line"><span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span>,</span><br><span class="line"><span class="selector-class">.read-mode</span> <span class="selector-class">.layout_post</span>&gt;<span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 */</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*侧边卡片的透明度 */</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">    <span class="attr">--card-bg</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">7</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 页脚透明 */</span></span><br><span class="line"><span class="selector-id">#footer</span> &#123;</span><br><span class="line">    <span class="comment">/* 以下代表透明度为0.7 */</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, .<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Butterfly</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Unity的生命周期</title>
-    <url>/2024/08/01/unity/unity1/</url>
-    <content><![CDATA[<h1 id="Unity的生命周期"><a href="#Unity的生命周期" class="headerlink" title="Unity的生命周期"></a>Unity的生命周期</h1><p><a href="https://docs.unity3d.com/cn/2023.2/Manual/UnityManual.html">Unity官方手册</a></p>
-<p>场景开始前调用，用于<strong>加载场景</strong>（场景中每个对象调用一次）<br>在为任何对象调用 Start 和 Update 等函数之前，会为所有脚本调用 Awake 和 OnEnable 函数。在游戏运行过程中实例化对象时，不能强制执行此调用。</p>
-<ul>
-<li><strong>Awake：</strong> 早于Start，常用于在游戏开始之前初始化变量或游戏状态（只调用一次）</li>
-<li><strong>OnEnable：</strong> 当对象变为可用或激活状态时调用（可多次调用）</li>
-</ul>
-<p><u><strong>Start</u>：</strong> 仅当启用脚本实例后，在第一次帧更新之前（Update前）调用，常用于数据或逻辑对象初始化（只调用一次），在游戏运行过程中实例化对象时，不能强制执行此调用。</p>
-<p><strong>FixedUpdate：</strong> 根据物理帧利用固定间隔计时器（独立于帧率）进行所有物理计算和更新</p>
-<p><strong>OnTrigger：</strong> 触发器被触发时调用；<strong>OnCollision：</strong> 产生碰撞事件时调用</p>
-<p><em><del>yield WaitForFixedUpdate：所有脚本上调用所有 FixedUpdate 后继续，作为卡点，在物理帧结束至此点再开始执行后续代码</del></em></p>
-<p><em><del>OnMouse：输入</del></em></p>
-<p><u><strong>Update</u>：</strong> 每帧调用</p>
-<p><strong>LateUpdate：</strong> 每帧Update方法调用后调用，常见用途是跟随第三人称摄像机</p>
-<p><em><del>一堆渲染函数（有关状态机）</del></em></p>
-<p><strong>OnGUI：</strong> 渲染用户界面，然后为每个输入事件处理布局和键盘&#x2F;鼠标事件</p>
-<p><em><del>yield WaitForEndOfFrame：**当前帧彻底结束后会执行此协程</del></em></p>
-<p><strong>OnApplicationPause：</strong> 应用暂停时在帧结尾处调用，并发出一个额外帧，从而允许游戏显示图形来指示暂停状态，取消暂停后从FixedUpdate开始重新执行</p>
-<p>在场景中的所有活动对象上调用以下函数</p>
-<ul>
-<li><strong>OnApplicationQuit：</strong> 应用退出前在所有对象上调用，可以用于保存退出前的信息</li>
-<li><strong>OnDisable：</strong> 行为被禁用或处于非活动状态时调用</li>
-</ul>
-<p><strong>OnDestroy：</strong> 物体被销毁时，即存在的最后一帧完成所有帧更新之后调用，一般用于清理内存</p>
-<p><img src="https://s2.loli.net/2024/08/01/wD4g5PSxKa1e8TN.png" alt="中文流程图"></p>
-<p>yield函数都是协程，在Update返回后更新。</p>
-<p><strong>协程</strong>是一种编写异步代码的方法，其中包括等待一定时间或某些操作完成，同时允许其他代码继续执行。它允许程序在单线程内实现多个独立的执行线程（协程），这些线程可以非阻塞地挂起和恢复，以实现协作式多任务处理。协程的核心思想是让程序员能够控制执行的流程，而不是完全交给操作系统或线程调度器来控制。</p>
-<p><img src="https://s2.loli.net/2024/08/01/oKkrTDdJX2igxfB.png" alt="官方文档流程图"></p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Unity</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Unity中的面向对象</title>
-    <url>/2024/08/10/unity/unity2/</url>
-    <content><![CDATA[<p>场景中存在GameObject实例，每个实例对象在Inspector中都会显示一系列组件，这些组件就是脚本（类），默认全部继承自MonoBehaviour类，成为了该脚本类的实例对象和所选对象GameObject的各种属性。</p>
-<p>Prefab预制体，将场景中的物体拖动到Assets里即可生成。这个过程实际上是一个抽象的过程，抽象成一个具有场景中被拖动物体的所有属性(含值)的模板类。</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Unity</tag>
-        <tag>面向对象</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>游戏设计笔记1</title>
-    <url>/2024/08/08/%E7%AC%94%E8%AE%B0/b1/</url>
-    <content><![CDATA[<h2 id="策划必备要素"><a href="#策划必备要素" class="headerlink" title="策划必备要素"></a>策划必备要素</h2><p>倾听&gt;&gt;创意，沟通</p>
-<ol>
-<li>倾听团队，与团队沟通合作。</li>
-<li>倾听受众，深入理解用户。</li>
-<li>倾听游戏，彻底了解游戏。</li>
-<li>倾听客户（投资者），理解并满足最上级需求。</li>
-<li>倾听自己，发挥天赋。<br>只有学会深度倾听才能让设计出的游戏给玩家创造良好的体验。</li>
-</ol>
-<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>仔细分析用户不清晰的反馈，洞察其中的情感，反思自己真正想让用户体验什么？用户实际产生了什么体验？怎么缩小实际与设想的差距？再深入思考这种体验的本质是什么？如何抓住这种本质？</p>
-<p>为了最大化游戏的乐趣，反思游戏中的哪个部分很有乐趣？为什么？哪个部分需要变得更加有乐趣？</p>
-<p>思考玩家的真正游玩动力（动机）————不是游戏设定的目标，而是玩家真正想要完成目标的原因。反思游戏给玩家的思维引导了怎样的问题？做了哪些努力让他们在意这些问题？能做什么来使他们提出更多的问题（更感兴趣更有游玩动力，增加用户粘性）？<br><em>比如，一个解谜电子游戏在每一关中都可能有一个时间限定的目标，玩家们尝试问这样一个问题:“我能在 30秒之内找到过关的方法吗?”一个让他们更加在意的方法是，当他们解决了任意一个谜题后播放一段有趣的动画，那么玩家就会问这样一个问题:“我想知道下一个动画是什么?”</em></p>
-<h2 id="思考游戏"><a href="#思考游戏" class="headerlink" title="思考游戏"></a>思考游戏</h2><p><em>游戏是一种对自主控制系统的练习，其中包含力量的竞争，被规则限制以产生一个不平衡的结果</em></p>
-<ul>
-<li>游戏是完全自主的</li>
-<li>游戏有目标</li>
-<li>游戏有冲突</li>
-<li>游戏有规则</li>
-<li>游戏有输赢</li>
-</ul>
-<p><em>游戏是一个拥有内生意义的交互结构，需要玩家们努力完成目标。</em><br>游戏越吸引人，游戏中的 <code>内生价值</code> 越大。（游戏中有价值的部分仅在游戏环境中有价值）</p>
-<ul>
-<li>游戏可交互</li>
-<li>游戏有挑战性</li>
-<li>游戏能创造其内生价值</li>
-</ul>
-<p><strong>游戏是一种以娱乐为目标进行的解决问题的活动</strong></p>
-<h3 id="思考-1"><a href="#思考-1" class="headerlink" title="思考"></a>思考</h3><p>游戏中哪些东西对玩家很有价值？怎样让这些东西对玩家更有价值？游戏中的价值与玩家的动机之间有怎样的关系？</p>
-<p>游戏要求玩家解决哪些问题？是否有一些隐藏的问题作为玩法的一部分出现？游戏中，怎样产生新的问题来保持对玩家的吸引力？</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>游戏设计之心流</title>
-    <url>/2024/08/02/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/design1/</url>
-    <content><![CDATA[<h1 id="心流"><a href="#心流" class="headerlink" title="心流"></a>心流</h1><p><u>指玩家沉浸游戏，淡化时间、饥饿等外部因素，全神贯注的状态</u><br>理论适用于大部分“传统游戏”，但仍须根据游戏类型及目标用户具体问题具体分析。<br><img src="https://s2.loli.net/2024/08/02/3RkghHSZ5JzfY76.png" alt="心流图"><br><strong>心流的节奏要有变化</strong></p>
-<p>达到心流体验的最主要的条件我认为是：1.明确的目标 2.充分的正反馈。<br><em>但我还没有真正参与设计出过优秀的游戏，所以暂不分析也没有能力分析如何设计具有心流体验的游戏，下文更多通过解读和举例分析来浅谈心流。</em></p>
-<p>特殊的如魂系游戏和大部分手游另作讨论。<br>魂系游戏：更多依靠技术，以及在高压的焦虑中起伏的心流状态。<br>手游：更多依靠养成和数值，碎片化游戏时间，难以产生心流状态。</p>
-<p><img src="https://s2.loli.net/2024/08/02/oZ2zb56vGeV4kyU.png" alt="游戏体验数据走向"><br>游戏中的各种决策决定了游戏节奏和玩家的体验感受，大的决策影响更大，决策也会受玩家的水平影响。<br><img src="https://s2.loli.net/2024/08/02/mXuhxga9bqFEDTP.png" alt="决策流程图"><br>抽象来说<u>最差</u>的游戏设计就是<strong>破坏玩家的心流体验</strong>。<br><a id="content"></a>游戏设计要<strong>避免心流中断</strong>，出现停顿都可能影响心流让玩家感到不适，常见和典型的例子如<strong>场景加载</strong>、<strong>菜单动画</strong>、<strong>对话框</strong>等，这种交互效果都会短暂的阻碍玩家行动，如果频繁出现且无法加速和跳过会导致断层。</p>
-<p>在《赛博朋克2077》中强制对话较少，大部分对话都不会限制玩家行动，且完全没有固定和 <em>“美观”</em> 的对话窗口；<a href="#comment1">而在《GTA5》中人物的固定对话建立在第三人称真实且丰富的实机演出上，包括人物的动作、表情等，且剧情分支是根据角色的具体行为而非对话选项</a>。两者的例子整体简单来说就是在避免断层，这样的设计在RPG中较优。<a href="#comment2">反面来说，《原神》《鸣潮》等游戏被大量玩家网友诟病的对话无法跳过，剧情对话又臭又长的这种体验，根本上就是<u>阻碍了玩家心流的形成</u></a>，因为二游每个版本都有大量的剧情对话，且大部分的对话都没有伴随剧情演出，只是角色直立生硬的对话框对话，<u>信息密度过低破坏了玩家的沉浸感</u>，从游戏设计上讲是非常低级的，<a href="#comment3">且完全有办法优化</a>。<br><img src="https://s2.loli.net/2024/08/02/lHYIEQiLvu4O8Dw.png" alt="心流断层导致节奏破碎的体验"></p>
-<p>游戏设计也要<strong>避免决策溢出</strong>，同时出现过多的决策会让玩家感到压力，常出现在路线分支等情况和水平较低的玩家身上。决策溢出更难避免，需要在游戏测试过程中持续优化，可以设定一些阈值，而不是设法全覆盖。</p>
-<p><u>以上内容不完全适用于回合制游戏，需要具体游戏具体分析。</u></p>
-<h2 id="评论"><a href="#评论" class="headerlink" title="评论 "></a>评论 <a id="comment1"></a></h2><p><a href="#content">返回文中</a></p>
-<p><a id="comment2"></a>过场对话的剧情体验是GTA5心流中的”伏“，任务的进行则是“起”。</p>
-<hr>
-<p><a id="comment3"></a>这是已经得到市场验证的，《鸣潮》在开服后几天添加了更多对话的跳过来补救，更是印证了这种说法。我认为这其实是游戏设计和体验过程中很基础和重要的方面，所以我不理解库洛和米哈游这种中大厂的策划到底是什么水平。<em>为什么连我这样应届生未入行的人都能分析和理解的游戏设计，他们却不懂。</em></p>
-<p><em>所以之前春招后期有面试官问过我，“考虑过为什么策划岗的校招应聘结果不理想”，我不只回答说“因为我个人的经验不足，没有完全地从玩家视角转变到策划开发者的视角”，我还简单地说“感觉策划岗位对学历的要求更高”，因为我个人感觉策划岗位很难通过交流得知实际的策划水平，不像开发直接做算法题判断人的代码能力，而目前游戏公司招策划很看重学历高低，相较其他岗位我不认同策划岗位的能力与应试的学历正相关，我更感觉策划水平与天赋有关。有点幽默的是后来我还听到过大概说“找不到工作不要总反思自己，也要反思外部因素”的说法，我就也开始考虑，再根据库洛《鸣潮》公测后的表现，我更加怀疑策划岗位求职情况不理想，不只是我有问题，我对自己的工作能力一直很有信心，不过也不至于说自负到把原因都归结于别人，我没工作这段时间一直在学习游戏设计来提升自己。</em></p>
-<hr>
-<p>简单的如添加跳过和倍速选项，在跳过中对对话和剧情进行文字的总结呈现；特殊的如借鉴日厂游戏《绯红结系》《女神异闻录》等用2D形式来美化对话演出，仅需增加一些人物表情拆分等即可。</p>
-<p>针对这类二游，我个人设计将次要的内容通过类似漫画的的方式呈现，重要的主线再通过文字和视频具体表现，从计算机视觉方向讲，现在追求的是“多模态”，类比来说我这样的游戏设计就是在提高信息密度以提供相对流畅的游戏体验，避免破坏玩家的心流。</p>
-<p>而像《GTA5》这样的全部实机动画演出对于二游来说就没有必要，成本较高。</p>
-<p><em>不过这样的成本对于这些中大厂而言其实是不高的，导致这样的原因根本上是厂商把资金更多地投入到了营销中，买量成本大量压缩了开发成本。我难以评价利弊，可能对于厂商的盈利是有利的，但我感觉对于游戏市场长期的良性发展是不利的，不确定。</em></p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>心流</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>游戏设计笔记2</title>
-    <url>/2024/08/09/%E7%AC%94%E8%AE%B0/b2/</url>
-    <content><![CDATA[<h2 id="游戏的构成"><a href="#游戏的构成" class="headerlink" title="游戏的构成"></a>游戏的构成</h2><p>在我的评价体系中，我将游戏拆分为两大元素：<strong>1.可玩性<del>游戏性</del> 2.艺术性</strong>。<br><del>其中“游戏性”可能与真正意义的<code>游戏性</code>不太一致，我这里主要为了与“艺术性”进行区分，而传统概念的<code>游戏性</code>是一个整体性的概念，包括了我所谓的“游戏性”和“艺术性”，是区别于其他娱乐方式或是艺术方式的概念。</del></p>
-<p>元素四分法中拆分游戏为：<strong>1.机制 2.技术 3.故事 4.美学</strong>。</p>
-<ul>
-<li>机制：包括游戏目标和游戏方式，使游戏成为游戏，需要美学、技术和故事的支持。</li>
-<li>故事：由游戏中事件按发生的顺序构成，需要机制来推动，美学来增强表现力，技术来配合展示。</li>
-<li>美学：是游戏的外观、声音等各方面的感觉，对玩家之体验影响最直接，可以搭配机制来表现，需要技术来放大，故事来凸显。</li>
-<li>技术：是一种媒介，美学通过其展现，机制通过其产生作用，故事通过其来讲述。</li>
-</ul>
-<p>我认为我的评价体系和四分法是高度重合的：“可玩<del>游戏</del>性”主要包括了玩法、机制和技术，是游戏最主要的要素；“艺术性”主要包括了剧情故事和美学，其中美学又包括画面美术、音乐音效、地编等元素。其中我认为其实美学甚至可以包括故事，基本等于“艺术性”的含义，另外<u>技术</u>其实是在两大元素的交集中。内容上基本一致，区别是四分法主要保留了各元素间的联系，我的评价体系做分割主要是为了方便评价，使各部分相对独立。</p>
-<p>我个人所谓的游戏评价体系就是在两大元素中专注评价感受较深的方面，分析优缺点，而非一个多边形的维度图来统一评价标准，总体上优秀的游戏至少会在两大元素其一做到优秀。</p>
-<h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>游戏设计使用了全部的四种元素吗？设计能够通过增强一种或者多种元素来获得提高吗？四种元素是否和谐，互相作用并向同一个主题努力？</p>
-<h2 id="思维方式"><a href="#思维方式" class="headerlink" title="思维方式"></a>思维方式</h2><p>分析设计游戏要内外兼顾，表面涉及玩家体验，内在涉及游戏组成元素。不仅要理解各种各样的游戏元素及它们之间的关系，还必须考虑它们与体验的关系，即同时保留玩家视角与设计师视角，在理解元素及其关系是如何产生体验的同时感受游戏体验。如果只保留玩家视角，会只思考体验，却不理解为什么会有这样的体验或者怎样增强这种体验；<u>如果只保留设计师视角，可能让一个游戏结构在理论上十分完美，而在现实中十分糟糕</u>（这或许是我常感觉很多设计师、策划有问题的原因）。只有同时专注这两件事，才能设计出好的游戏内容。</p>
-<h3 id="思考-1"><a href="#思考-1" class="headerlink" title="思考"></a>思考</h3><p>这种思维方式近期才被我列为我的个人优势之一。具体想法如下（搬运自我的其他笔记）：<br><em>我爱玩游戏，会玩游戏，能真正的了解游戏，懂游戏，对于实际的策划工作有扎实的着力点。（这一点原本我认为是策划基础的必备能力，但是后来我才了解到现在很多的游戏设计师和策划，根本都不玩或者是玩不明白他们自己设计的游戏或是参照的游戏或是竞品，经典例如《英雄联盟》的设计师，在后知后觉地调整游戏平衡时还要私下微信询问部分英雄的“绝活哥”，通过他们的意见来设计平衡游戏，而最后设计改动的还和调研反馈大相径庭，且毫无作用，这我认为是很可笑的，这样的例子还有很多，比如《绝区零》《鸣潮》《尘白禁区》等游戏都有类似情况，<del>这点与我说的第二点共同作用，</del> 展开来详细讲内容会很多，<u>概括来说就是现在很多的策划在招人和实际工作时我觉得有点过于学院派和闭门造车</u>）</em><br><strong>总之我现在认为我能同时从玩家视角和策划视角分析游戏，这成为了我的一大能力优势。</strong> 虽然还并没有人认可，或许也再也没机会被人认可了。</p>
-<p>必须一次性看到游戏的全部：四种元素和玩家体验以及它们是怎样关联起来的。可以把注意力从皮肤转移到骨骼再到皮肤，但更好的方法是全息观察游戏和体验。</p>
-<p>统一的主题：反思游戏中的哪种元素产生了令人享受的体验？游戏中的哪种元素会让玩家在体验中分心？怎样改变游戏元素来提高游戏体验？</p>
-<p>思考游戏主题是什么？是否采用了所有可能的方法来强化主题？</p>
-<h2 id="共鸣主题"><a href="#共鸣主题" class="headerlink" title="共鸣主题"></a>共鸣主题</h2><p>不是每个主题都能成为一个共鸣主题。不过当找到一个深刻的共鸣主题时，就值得好好利用它。这些主题中的一些是基于体验的，另一些是基于真相的。无法通过逻辑分辨出哪一个主题是有共鸣性的–必须在自己内心深处亲自感受这种共鸣，这是一种很重要的自我倾听的形式。</p>
-<p><em>一些设计师拒绝主题的概念,因为他们认为:“玩家从来不会注意到主题”确实，玩家们并不总能够清楚地认识到真正打动他们的是作品的主题–这是因为主题经常作用于潜意识的层面。玩家们知道他们喜欢一个游戏，但他们很难说清为什么喜欢。在许多场合，他们喜欢的理由可能是所有的元素都在加强一个他们认为很有趣或者很重要的主题。主题并不会像谜题一般故意留下隐藏的信息。主题会把你的作品聚焦到对玩家有意义的事物上。</em> </p>
-<h3 id="思考-2"><a href="#思考-2" class="headerlink" title="思考"></a>思考</h3><p>在游戏中，能感觉到哪些有力的或者特殊的元素？当向他人描述此游戏时，哪些创意能让他们真的兴奋？如果没有任何限制，这个游戏将会变成什么样？我对这个游戏的方向有一定的直觉，那到底是什么在驱动这种直觉呢？</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-        <tag>评价体系</tag>
-        <tag>个人优势</tag>
-        <tag>我</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>状态模式笔记1</title>
-    <url>/2024/08/11/%E7%AC%94%E8%AE%B0/b3/</url>
-    <content><![CDATA[<p>英雄游戏（英雄互娱）曾在面试中询问我有关动画状态机的内容，我当时没有准备过这方面，紧张时说出了不太了解的回答，事后回想自己其实了解过相关内容，曾在设计角色时绑定骨骼后导入过一些动作来操控角色，当时还学习过如何平滑动作动画，进行状态机的切换，懊悔自己薄弱的即时表达能力，感觉很可惜。借此机会，我回顾了“动画状态机”，同时再阅读有关“设计模式”的书籍，通过递归式地学习，针对“状态模式”先做些笔记，发散出了“有限状态机”再是“行为树”等内容，所以将笔记拆分为几篇集中叙写，内容对象针对游戏角色(AI)。<del>这几天我的确还是有点乏了，感觉自己学的写的没有正反馈，认识的朋友们大都找到合适的工作了，我水平真的不够吗，感觉入职之后再写博客会更有动力吧。。。</del></p>
-<h1 id="状态模式"><a href="#状态模式" class="headerlink" title="状态模式"></a>状态模式</h1><p><em>“允许一个对象的行为随着内部状态的改变而改变，对象看起来好像是在修改自身类。”</em></p>
-<h2 id="有限状态机FSM"><a href="#有限状态机FSM" class="headerlink" title="有限状态机FSM"></a>有限状态机FSM</h2><ul>
-<li>拥有一组状态，并且可以在这组状态之间进行切换。</li>
-<li>状态机同一时刻只能处于一种状态。</li>
-<li>状态机会接收一组输入或者事件。</li>
-<li>每一个状态有一组转换，每一个转换都关联着一个输入并指向另一个状态。<br><img src="https://s2.loli.net/2024/08/15/Hym65dXV4NGxTlp.png" alt="image.png"></li>
-</ul>
-<p>首先，有限状态机的每个状态可以用枚举 <code>enum</code> 列出来</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">publice <span class="built_in">enum</span> State&#123;</span><br><span class="line">    Attack,</span><br><span class="line">    Jump,</span><br><span class="line">    Move,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>然后在角色AI类中，简单可以通过switch case来实现条件判断和状态转换，但存在一些缺点：</p>
-<ol>
-<li>每增加一个状态，就需要在所有switch代码中添加对应代码。</li>
-<li>所有与状态有关的对象和参数保存在一个类中，在被多个状态共享时容易产生混淆。</li>
-<li>方法过于冗长，不易于调试。</li>
-</ol>
-<p>所以需要使用<strong>状态模式</strong>。</p>
-<h2 id="状态模式-1"><a href="#状态模式-1" class="headerlink" title="状态模式"></a>状态模式</h2><ul>
-<li>角色类</li>
-<li>状态接口<br>列举状态方法，切换具体状态。</li>
-<li>具体状态类<br>继承自状态接口，设置在各状态下的行为。<br> <img src="https://s2.loli.net/2024/08/15/GDVOpMZ3Pq5CFX1.png" alt="状态模式角色AI结构图"><br>状态模式将每个状态相关的行为封装到了相关类中，在增删改查时不会对原有架构造成较大影响，可以让人清楚了解单一状态执行时的环境，降低了维护成本。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>面向对象</tag>
-        <tag>设计模式</tag>
-        <tag>状态模式</tag>
-        <tag>有限状态机</tag>
-        <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>游戏设计笔记3</title>
-    <url>/2024/08/19/%E7%AC%94%E8%AE%B0/b4/</url>
-    <content><![CDATA[<h2 id="游戏的可玩性"><a href="#游戏的可玩性" class="headerlink" title="游戏的可玩性"></a>游戏的可玩性</h2><p><em>游戏可玩性优先：在所有的电子游戏中，可玩性是最主要的娱乐元素。所以，在设计游戏时，首先要考虑的就是游戏的可玩性。————《游戏设计基础》(Ernest Adams)</em></p>
-<p>当我看到书上的这句话时我感受到了充分的认同感，但我立马想到了有悖这一观点的例子，然后在我沉思后，我感到了疑惑，到底是这句话出了问题，还是国内二游模式过分畸形。</p>
-<p>手游本就相比端游会缺少一些可玩性可以理解，但国内<strong>大部分</strong>二游是可玩性优先的吗？我觉得不是的，首先需要确定的是客观来说大部分二游的主体游戏内容是单一枯燥的，虽然我暂时很难直接证明，但是否则就不会在任务设置合理的情况下存在所谓<strong>上班</strong>式的体验并出现那么多代肝和自动脚本。二游设置的任务负担不大但主体玩法没有太多可玩性，很多需要玩家日复一日地重复游玩完全相同内容，也就是所谓的<strong>日常</strong>、<strong>周常</strong>，并衍生出了所谓<strong>长草期</strong>等名称，以此来收集资源（主要是抽卡资源和养成材料），玩家根本不会因为完成这些任务而觉得好玩。而只有通过这些资源积累才能获取角色等内容来从某种意义上拓展游戏一定的可玩性，但主要还是为了抽卡<strong>收集</strong>这一目的服务，可这种收集玩法的可玩性真的很低，长期消磨玩家的耐心最后也只能提供很短期的正反馈且并不能让玩家充分地获得<strong>回报感</strong>，玩家们不会思考是那么长期地打卡游玩的功劳，而是更多地利用赌博心理，让人感觉幸运和终于获得的轻微满足感以及新鲜感，反而在未获得（收集）时会产生极大的挫败感，这对增加或维持用户粘性的效果并不好。</p>
-<p>在MMORPG中因为存在社交属性的存在，玩家重复刷团本会显得没那么枯燥，在过程（战斗）和结果（战利品）都增加了一些随机性，同时合作的玩法也相比个人更具可玩性；在《宝可梦》这类收集游戏中，寻找和捕捉时的随机性以及在多种设计下给予玩家充分的回报感（图鉴、组队、繁衍等玩法），也大大提升了可玩性。以上两个简单举例，对比说明了二游日常模式和抽卡玩法的低可玩性。</p>
-<p>但是可玩性低不代表优先级低，还需别的方面加以证明。上文提到了攒资源抽卡本质上是收集玩法，那么就算玩家是有意识去收集（实际上大都不是，后文解释），收集后最核心的玩法还是在<strong>养成</strong>，而支撑养成这一目标的根本不是可玩性，而是下一章要讲的美学（艺术性）。因为大部分二游的主体玩法内容单一，虽然养成可以使角色的可玩性得到一定的提升，但即便角色的可玩性较高，面对枯燥的关卡和重复的游戏也难以发挥，玩法不够支撑角色的可玩性，玩家仍会感觉枯燥乏味，感觉每天都在<strong>肝</strong>，类似<u>木桶效应</u>；而真正支撑玩家收集并养成的，是二游厂商或者说策划们更花心思的剧情、人设、立绘、建模、动作动画等美学要素，这才是真正吸引二游玩家的，因为一边“强度党”关心的是角色的数值和机制，而不是真正意义上的可玩性，他们只会说强度高，但不会实际感觉说这个角色很好玩，更多的还是另一边玩家因为美学各方面的塑造而单纯喜欢这个角色并进行收集、养成和付费，获得满足感，同样不是可玩性的作用。游戏公司很明显懂这一点，所以愈发在美学上下功夫，来促进玩家的消费，而在玩法上设计的不尽人意。</p>
-<p>那么综上所述，我认为这些二游并不以可玩性优先，但目前这种盈利模式是成功的，我虽然很想认同书籍作者的观点，但可能因为书是在10年代编写的，当时并不流行现在的二游模式，受到了时效性的局限，所以我可能会将该观点添加“端游&#x2F;主机游戏”的限定词，端游&#x2F;主机游戏才必须要以可玩性为优先，手游或许不必。</p>
-<p>诚然，上述所说的游戏设计模式有可取性，但我认为还是有些过头了，我想手游更合适的或许还是要可玩性与美学具有相同的优先级，只有足够的可玩性才能够充分地发挥美学。这些二游可玩性水平的滞后，或许是过度依赖美学的结果，<del>系统、玩法、关卡策划太过安逸而不思进取了</del>，国内部分游戏厂商为了求稳过分地限制了策划的能力。</p>
-<h2 id="游戏的美学（艺术性）"><a href="#游戏的美学（艺术性）" class="headerlink" title="游戏的美学（艺术性）"></a>游戏的美学（艺术性）</h2><ol>
-<li>协调性：让游戏的各个方面适当地结合在一起，成为一个连贯、统一的整体。</li>
-<li>沉浸性：通过策略、空间、叙事等方式创建出沉浸感。</li>
-<li>情感共鸣：娱乐感、满足感、惊喜、兴奋、好奇、成就、自豪、松了一口气等。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>恢复因更改邮箱导致的 GitHub Contributions 丢失</title>
-    <url>/2025/08/07/%E7%AC%94%E8%AE%B0/contribution/</url>
-    <content><![CDATA[<div class="admonition attention"><p class="admonition-title"><span class="mdi mdi-alert-circle-outline admonition-icon"></span>Attention</p><div class="admonition-content"><p>仓库邮箱地址（ GitHub 账户邮箱）和提交邮箱不一致会导致不记录进当前账户的 Contributions。</p>
-</div></div>
-
-<ol>
-<li>clone 远程仓库后在本地仓库中创建一个脚本文件 <code>email.sh</code>，内容如下（修改5,6,7行的内容）。<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/sh</span></span><br><span class="line"></span><br><span class="line">git filter-branch --env-filter &#x27;</span><br><span class="line"></span><br><span class="line">OLD_EMAIL=&quot;原邮箱地址&quot;</span><br><span class="line">CORRECT_NAME=&quot;自定义用户名&quot;</span><br><span class="line">CORRECT_EMAIL=&quot;新邮箱地址&quot;</span><br><span class="line"></span><br><span class="line">if [ &quot;$GIT_COMMITTER_EMAIL&quot; = &quot;$OLD_EMAIL&quot; ]</span><br><span class="line">then</span><br><span class="line">    export GIT_COMMITTER_NAME=&quot;$CORRECT_NAME&quot;</span><br><span class="line">    export GIT_COMMITTER_EMAIL=&quot;$CORRECT_EMAIL&quot;</span><br><span class="line">fi</span><br><span class="line">if [ &quot;$GIT_AUTHOR_EMAIL&quot; = &quot;$OLD_EMAIL&quot; ]</span><br><span class="line">then</span><br><span class="line">    export GIT_AUTHOR_NAME=&quot;$CORRECT_NAME&quot;</span><br><span class="line">    export GIT_AUTHOR_EMAIL=&quot;$CORRECT_EMAIL&quot;</span><br><span class="line">fi</span><br><span class="line">&#x27; --tag-name-filter cat -- --branches --tags</span><br></pre></td></tr></table></figure></li>
-<li>git 中运行 <code>email.sh</code>，成功会有 change 提示，否则提示 unchanged。<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sh email.sh</span><br></pre></td></tr></table></figure></li>
-<li>查看修改结果。<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></li>
-<li>同步至远程仓库<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git push origin --force --all</span><br></pre></td></tr></table></figure></li>
-</ol>
-<div class="admonition success"><p class="admonition-title"><span class="mdi mdi-check-circle-outline admonition-icon"></span>Success</p><div class="admonition-content"><p>绿格子成功恢复</p>
-</div></div>
-
-<p><a href="http://www.codingcode.cn/2021/06/04/git/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%B8%A2%E5%A4%B1%E7%9A%84GitHub_Contributions%E7%BB%BF%E6%A0%BC/">文章参考，特别鸣谢</a></p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vs 使用笔记</title>
-    <url>/2025/08/04/%E7%AC%94%E8%AE%B0/vscode/</url>
-    <content><![CDATA[<p><img src="https://s2.loli.net/2025/08/04/nuO3hUQeyva1zWc.png" alt="将Visual Studio 2022快捷键改为vscode方案"></p>
-<h3 id="选中相同内容"><a href="#选中相同内容" class="headerlink" title="选中相同内容"></a>选中相同内容</h3><p><code>Ctrl + D</code> 逐个选择<br><code>Ctrl + Shift + L</code> 全选</p>
-<h3 id="控制光标"><a href="#控制光标" class="headerlink" title="控制光标"></a>控制光标</h3><p><code>Ctrl + ←/→</code><br><code>Home/End</code> 当前行首位， + <code>Ctrl</code> 为当前页首位<br><code>Shift + ← / →</code> 逐个选中字符<br><code>Ctrl + Shift + ← / →</code> 自动选中多个字符</p>
-<h3 id="内联提示"><a href="#内联提示" class="headerlink" title="内联提示"></a>内联提示</h3><p>double <code>Ctrl</code> 切换</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>vs</tag>
-        <tag>快捷键</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>win11 右键展开</title>
-    <url>/2025/08/23/%E7%AC%94%E8%AE%B0/windows/</url>
-    <content><![CDATA[<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">reg add &quot;HKCU\Software\Classes\CLSID\&#123;86ca1aa0-34aa-4e8b-a509-50c905bae2a2&#125;\InprocServer32&quot; /f /ve</span><br></pre></td></tr></table></figure>
-<p>执行后任务管理器里重新启动 Windows 资源管理器生效。</p>
-<p>恢复代码</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">reg delete &quot;HKCU\Software\Classes\CLSID\&#123;86ca1aa0-34aa-4e8b-a509-50c905bae2a2&#125;&quot; /f</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于《炉石传说》国服回归策划的启发</title>
-    <url>/2024/07/30/%E8%AF%84%E8%AE%BA/idea1/</url>
-    <content><![CDATA[<h2 id="新闻"><a href="#新闻" class="headerlink" title="新闻"></a>新闻</h2><p>最近的ChinaJoy上，《炉石传说》（HearthStone）中国宣布，回归日期定档9月25日，回归后一定时间内登录《炉石传说》，所有国服玩家（包括新注册玩家）即可免费获赠2023年全部错过的卡牌，共计2154张卡牌，包括全部97张金色传说。另外游戏内还有额外的任务卡包、皮肤等福利，游戏外与网易雷火合作赞助赛事100万元奖金以及提供4个国服直邀名额。</p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>我曾有玩过一段时间的《炉石传说》，从开服时入坑的尝试，到2017年左右的卡拉赞之夜版本开始长期游玩至JK版本左右，也算是对游戏及环境有一定理解。</p>
-<p>国服《炉石传说》玩家数量较多，游戏热情也较高，游戏平衡性相对较好（不过基本可以说没有竞品）；消费上以每个版本发布的预购卡包和冒险模式为主。运营上相比《守望先锋》的后继无力，显然《炉石传说》更扎实地稳中有进，所以中国市场是十分重要的，暴雪对于中国市场肯定也是十分看重的。</p>
-<p>实际上在CJ官宣前，原本制作组制定的回归策划是使用 <code>追赶</code> 的机制，利用回归任务的逐渐完成获得“追赶卡包”来补偿卡牌，遭到了一定程度的质疑，但我观察实际上反应差强人意，处于多半好评的状态，主要的疑问在于追赶卡包和任务的机制上：<u>一是国服玩家基本没有体验过追赶卡包的机制，对它的具体效果有疑虑；二是逐步的获得卡牌，对于回归前期的体验会十分坐牢。</u> <em>“他们不熟悉这个机制，会觉得我们好像很小气，给的追赶卡包不是很多。于是我们干脆决定直接说，我们提供所有的2023年标准卡牌，这样会让玩家更加明白。”</em> 这个最终决定直接引爆了玩家的风评，如果说原本追赶包策划的分数是80%，那么最终策划的分数应该是120%。制作人如此决策的背后逻辑是什么，这是一个策划值得考虑的问题，分析这个问题可以从目的和目前看来的收益上出发。</p>
-<ul>
-<li>目的：<strong>尽快完成游戏回归，重建玩家信任。</strong> 以最简单直接的方式打消玩家顾虑，摒弃国服玩家不熟悉的追赶卡包机制，帮助玩家迅速上手游戏，专注于玩家的娱乐，而非急于求成的盈利。</li>
-<li>好处：<u>作为重磅新闻借势宣传，顺带完成了宣发及营销工作</u>；重获玩家信任，获得良好风评，为后续运营打下坚实基础。</li>
-</ul>
-<h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><p>实际上这个决策我认为是国内部分游戏厂商需要借鉴的，是可以举一反三在不同场景中运用的。</p>
-<p>以开服饱受争议的《鸣潮》为例，在市场反馈明显的情况下，仍一意孤行策划设计了包括剧情对话、抽卡卡池，福利资源等众多令人反感的核心内容及机制，直到差评如潮才在游戏中进行一定的更新补偿，但仍不够令人满意，也丧失了玩家的信任，很大程度上造成了大量玩家的流失。<del>即便是从阴谋论上《鸣潮》想靠黑红进行营销，但这样吸引来的用户我认为留存率很低，而失去了部分本可以稳定粘住的原受众，可以说是捡了芝麻，丢了西瓜，所以我不认为库洛刻意为之。</del> 反而如果借鉴《炉石传说》的决策，在开服时给予玩家相对更良好的入坑条件，在初期以保证玩家留存率，提高用户粘性，增加用户信任为主（毕竟开服前质疑就很多），我认为能达到更优秀的表现，积累更扎实的用户基础，然后再到下一阶段的决策。因为《鸣潮》的营销及买量已经吸引了足够多的用户数，并且游戏本身的质量也不差，只有这样的决策才能充分地利用本身的条件，而错过开服的这一次机会，后续想再通过运营来达到开服时的效果几乎不可能。</p>
-<p>另外举一反三来说，任何游戏遇到影响游戏运营的问题，如玩家利用游戏漏洞获得竞技优势、官方操作失误导致玩家矛盾等各类问题，我认为厂商都应该以获得玩家信任为首要目标，先专注于服务好用户，再考虑其他内容，这样才能获得游戏运营的良性发展，才能做到细水长流，而不能急功近利，特别是中大厂。我认为这正是国内部分游戏厂商的策划所欠缺的，因为即便是米哈游、库洛这样的中大厂都出现了类似的问题，我认为策划在设计游戏上的水平我暂时没有能力质疑，但我想的是，似乎即便是中大厂的策划，也经常与市场分析和反馈脱轨，我认为一个优秀的策划不能只会设计游戏内容，也应该具备良好的行业视野、市场分析和游戏运营的能力，这对于策划游戏内容和游戏发展是很关键的因素。</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>策划</tag>
-        <tag>游戏</tag>
-        <tag>运营</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>锐评我所擅长和喜欢的 FPS 和 JRPG</title>
-    <url>/2024/08/31/%E8%AF%84%E8%AE%BA/idea3/</url>
-    <content><![CDATA[<p>FPS 竞技性强，能给予玩家强烈的即时的刺激感与正反馈，容易产生沉浸感和进入心流状态。但这对于枪械和操作的手感要求较高，同时因为竞技性的过强，导致影响游戏出圈的因素会更多，如平衡性、差异化玩法、门槛、反作弊、关卡地图设计等等。</p>
-<p>首要的是传统JRPG和新型 JRPG 有明显差别，我主要喜欢新式的JRPG，相对来说更短平快，符合我个人喜好。 JRPG 线性叙事节奏较紧凑平滑，较简单直接，适合当代节奏，动作动画较优秀流畅，画风较美，系统较简单易入门，但也因此略显颓势， JRPG 相比当代商业引擎技术孱弱，游戏工业化流水线，除了《最终幻想》这类老牌 IP 的老式 JRPG 外很少再出现优秀佳作，平均都在良好水平线附近，近年仅《碧蓝幻想 Relink》接近优秀，这或许与部分日厂追求稳定的低投入低回报理念有关，同时这种思想感觉也影响了国内部分游戏厂商，或许从某种意义上导致了国内除《觅长生》等独立游戏外仅有《黑神话：悟空》一部优秀 3A 的现状。</p>
-]]></content>
-      <categories>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>为什么感觉好玩的新游戏越来越少？</title>
-    <url>/2024/08/17/%E8%AF%84%E8%AE%BA/idea2/</url>
-    <content><![CDATA[<p>我希望我未来能设计出好玩的游戏。</p>
-<h1 id="游戏的发展趋势"><a href="#游戏的发展趋势" class="headerlink" title="游戏的发展趋势"></a>游戏的发展趋势</h1><p>我想把游戏发展大致分为三个阶段：①约2000年前的萌芽期 ②00年至15年左右的发展红利期 ③15年后至今的稳定期。<br>虽然很多书籍、视频等内容很详细地讲解过游戏发展的几个阶段，但我主要是以各阶段为载体，来分析游戏设计的发展趋势。</p>
-<p>在①阶段，游戏从2D向3D发展，创新了很多技术和游戏模式，成为了之后游戏的基础。<br>在②阶段时，各种游戏如雨后春笋般地出现，技术的迭代、玩法的革新无不刺激着玩家们的神经，让人耳目一新。<br>在③阶段时，各方面的“质变”逐渐放缓，玩法创新逐渐减少，游戏产品趋于工业化，产生了一定瓶颈。</p>
-<p>某种程度上说，③阶段的现状就是本文标题问题的原因。游戏玩法经过这么多年的积累已经趋于饱和，近年游戏的创新，只能通过“抄”的方式：跨国抄、跨文化抄、跨品类抄、跨平台抄等等（可能具体另写一文论述）。玩法上排列组合、重组优化的创新方式让游戏的惊喜刺激程度相比②阶段有所减弱，很多工业化的出品也是乏善可陈。<del>创新的放缓和现在大环境一致，电影、音乐等内容的发展也都趋于停滞，甚至与电影、音乐创意的枯竭，好莱坞进入“量产系列电影”时代在时间上都极为一致，如同当今市场下创新创业的艰难，也类比摩尔定律在如今的失效，但这形势太大我无法分析，但肯定是有一定关系的，比如现在游戏的设计更受投资方的影响，追求变现能力和稳定性，削弱了开发者的能力。</del></p>
-<p>总之，现在游戏发展趋向稳定化，画面技术上一定的发展难以弥补玩法上创新的缺失，毕竟游戏的特点还是在“玩”。</p>
-<p>在玩法难以创新的形势下，玩家所获得的惊喜刺激相对减少，所以网游、手游开始更有优势，通过版本内容的更新、PVP竞技的无限随机和即时正反馈，让玩家获得更廉价的快乐，一个版本的收益就与单机顶级佳作卖出得全部份额相当。而部分单机3A游戏也开始顺应时代的趋势，产出了越来越多的“良品”：典型的如育碧一代代的《刺客信条》，动视一代代的《使命召唤》，甚至还出现了CDPR《赛博朋克2077》这种半成品。这些游戏有的开始内购皮肤、载具，有的阉割内容，通过DLC来补全游戏，工业化的产出让整体游戏发展开始劣币驱逐良币，越来越少的厂商坚持内容路线，开发游戏的主旨从好玩逐渐向收益倾斜。这也导致了恶性循环，很多手游、网游设计者或者说策划，在设计好玩游戏内容的能力越来越弱，游戏设计能力越来越差（手游每日上线清体力、日常这样上班式的体验；《守望先锋》低下的平衡性和更新速度；《鸣潮》被喷强制进行长对话；《绝区零》被喷走格子玩法和低级的战斗玩法等等），依赖艺术方面的优势来转移玩家的注意力，不通过“玩”来吸引“玩家”，而是靠收集？养成？还是靠玩家的幻想？（指美术、皮肤等）来吸引人们，并给游戏公司带来可观的收益，即便很大程度上不是内容设计师、策划的功劳，或者说主要是美术、文案等方面的功劳。总之，游戏给玩家提供的情绪价值似乎从出发点上已经发生了变换。</p>
-<h1 id="电子ED的成因"><a href="#电子ED的成因" class="headerlink" title="电子ED的成因"></a>电子ED的成因</h1><p>我认为总体主要分为以下两点。</p>
-<h2 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h2><p>从时间上看，游玩游戏的主力军年龄已经越来越高。大环境上，当代社会节奏加快，人们的生活压力增大，一些玩家可能因为生活、工作或其他责任的增加，而感到精力不足，难以像以前那样投入游戏，也有很多人没有足够的时间投入到游戏中，毕竟游戏需要投入一定学习和时间成本，长时间的工作和学习可能使他们更倾向于选择更轻松的休闲方式。</p>
-<p>随着手游的兴起，人们开始更多地接触手游，手游通常设计得更加便捷和易于上手，满足了快节奏生活中碎片化时间的娱乐需求，更廉价的正反馈可能导致很多玩家消耗了原本对于传统电子游戏的兴趣，让人难以再静心去体验游戏，就像“伟哥”一样透支了人们的游玩动力，并让人们离不开它，这在更年轻的下一代上影响或许更加明显，很多人开始连电脑都不会使用。</p>
-<h2 id="游戏性"><a href="#游戏性" class="headerlink" title="游戏性"></a>游戏性</h2><p>如第一章的发展趋势中所说，当今游戏很难再产生颠覆性的玩法，玩家们见识过了越来越多的游戏，接触新的游戏越来越难以产生惊喜和共鸣，游戏内容上的变化更多地开始体现在剧情设定、画面等艺术内容上，人们每当游玩新的游戏时，常能快速地熟悉游戏机制，而在玩法上感到同质化，无法产生“新”的感觉时，在游玩了一段时间后很容易在度过游戏初期后就感到乏味而弃坑。</p>
-<h1 id="为什么《幻兽帕鲁》是电子ED的特效药"><a href="#为什么《幻兽帕鲁》是电子ED的特效药" class="headerlink" title="为什么《幻兽帕鲁》是电子ED的特效药"></a>为什么《幻兽帕鲁》是电子ED的特效药</h1><h1 id="为什么我预测《黑神话：悟空》会成功"><a href="#为什么我预测《黑神话：悟空》会成功" class="headerlink" title="为什么我预测《黑神话：悟空》会成功"></a>为什么我预测《黑神话：悟空》会成功</h1><p>2024年8月16日晚10点解禁了《黑神话：悟空》的媒体评测，结合部分的实机演示，我认为《黑神话：悟空》大概率会是一个优秀的作品，并且应该很好玩，只要恶性BUG不多。</p>
-<p>综上所述，好玩的游戏应该能让玩家体验到新鲜感，但现在游戏又都是互相“抄”，那么让玩家感觉到“原创感”就是“抄”的最高境界，《黑神话：悟空》很大概率能达到。《守望先锋》为什么初期那么优秀，因为它有“原创感”，将MOBA融合到FPS中，将各个国家的标志性建筑设计成地图，将类似这些方面节省的工作量投入到角色设计及开发玩法中，设计出优秀的竞技体验，让玩家们感觉这就是原创的精品游戏。</p>
-<p>《黑神话：悟空》以《西游记》为背景文化，大大节省了自行设计庞大世界观的消耗，同时能借鉴国外大量的优秀动作和角色扮演游戏，游戏厂商如育碧、卡普空、顽皮狗、From Software等，虽说大家常将其与《黑暗之魂》对比，但我个人感觉与《只狼：影逝二度》最相关（相比黑魂的地图、关卡更相似，且弱化关卡沿途小怪，更注重BOSS战），且相比只狼的故事，以顶级神话故事为基底更具优势。另外《黑神话：悟空》还跨越了种族，主角将是一个猴子，玩法上《西游记》就给出了答案，无论是武器、法术，还是七十二变、铜头铁臂，都极大拓展了游戏玩法，足够让玩家获得新鲜感、“原创感”，这些创意拿来主义后节省下来的时间、金钱，能更进一步地用于优化、完善游戏设计和创意。</p>
-<p>值得一提的是，如上文第一章发展趋势所说，游戏开发开始以收益为导向，通过对比，很显然，我认为《黑神话：悟空》能好玩、能成功的优势就在于不以赚钱为首要目标，听说游科拥有充足的资金供应，那么不受制于投资者和温饱收益限制，开发者们义无反顾地发挥能力，专注于游戏内容的设计，可以使 <code>游戏性</code> 得到充分的满足，且显而易见地表现在了画面中，向所有人展现了虚幻5引擎的强大。</p>
-<h1 id="未来游戏发展方向"><a href="#未来游戏发展方向" class="headerlink" title="未来游戏发展方向"></a>未来游戏发展方向</h1><p>随着游戏玩法、机制逐渐达到瓶颈，未来游戏在可玩性上做出突破的可能性越来越小；但画质方面，以虚幻5为首的商业引擎仍在做出创新，图形学也在不断发展，同时伴随硬件性能的迭代提升，即使速度略有减缓，画面表现也将会持续进步。那么如何弥合这两大部分的成长速度差距就可能作为未来游戏的发展方向，是否能产生新的技术或是AI技术能否匹配游戏领域的使用大概是唯一的解决办法，因为只有更拟真的互动才能匹配日益真实的画面效果。<u>另外二次元游戏虽然目前市场良好，但我预计还剩6年左右的时间也会衰败，未来人们是否还买账抽卡游戏，下一代年轻人是否还沉迷二次元，我感觉需要居安思危。</u>话说回来，如果AI技术进一步应用于游戏领域，或许能在人机交互上做出突破，通过模式识别创造更拟真的NPC，更沉浸式的体验，可以通过技术来提升可玩性。不过大模型技术的落地使用应该还有10年左右的缓冲期，目前的成本难以支持其应用落地：一是如果让玩家本地加载运行，会对玩家的设备压力过大，导致性能不足；二是云端加载需要依赖网络性能的提升，普及5G甚至6G的高网速，同时游戏公司需要铺设更多的服务器，耗费更大的开发、运行成本。大模型未来的使用方式会是一还是二还是取决于硬件性能的发展，游戏公司根据成本具体选择方式。</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1>]]></content>
-      <categories>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>分析《Apex Legends》角色技能设计维度</title>
-    <url>/2024/10/10/%E8%AF%84%E8%AE%BA/idea4/</url>
-    <content><![CDATA[<p>《APEX英雄》技能体系我会分三维为：转移，攻防，信息与资源。其中转移分为远近，其关系进点和机动性。以此为三维，可通过思维导图进一步细分效果。</p>
-<p>值得一提的是，实际上《APEX英雄》的角色设计对于资源相关的考量在电竞比赛中与玩家排位中相差巨大。<br><img src="https://s2.loli.net/2024/10/10/L3b8kSOHmBQGTW7.png" alt="三维图"></p>
-]]></content>
-      <categories>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>设计竞技类游戏时如何兼顾女性用户</title>
-    <url>/2024/10/20/%E8%AF%84%E8%AE%BA/idea5/</url>
-    <content><![CDATA[<p><strong>例如在FPS和MOBA游戏中，设计明确的奶位（偏纯辅助型）角色，即可兼顾女性玩家</strong><br>例如《守望先锋》中的天使，《英雄联盟》中的魔法猫咪、琴女，《无畏契约》中的贤者等。<br>看似像暴论，但意思已经基本到位了，我细想确实如此。</p>
-<p>后续有空再更</p>
-]]></content>
-      <categories>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
       </tags>
   </entry>
 </search>
