@@ -22,3 +22,7 @@ a,u{
     --font-color: rgba(255, 255, 255, .7);
     --text-highlight-color: rgba(255, 255, 255, .88);
 }
+/* 代码块留白 */
+.container pre, .container figure.highlight{
+    margin: 0 0 10px;
+}
