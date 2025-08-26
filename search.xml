@@ -836,13 +836,25 @@
   </iframe>
 </div>
 
+<h2 id="堆的定义"><a href="#堆的定义" class="headerlink" title="堆的定义"></a>堆的定义</h2><blockquote>
+<p>是<strong>完全二叉树</strong>：只允许最后一行不为满，且最后一行必须从左往右排序，最后一行元素之间不可以有间隔<br>  <img src="https://s2.loli.net/2025/08/26/8WE56QdBMgsSlfb.png"><br>  层序遍历给节点编号，元素存入数组对应下标，下标节点为 i ，其子节点则为 2i+1 2i+2 。</p>
+</blockquote>
 <h2 id="堆的基本操作"><a href="#堆的基本操作" class="headerlink" title="堆的基本操作"></a>堆的基本操作</h2><p><strong>上滤（上浮） &#x2F; 下滤（下沉）</strong></p>
 <h3 id="下滤"><a href="#下滤" class="headerlink" title="下滤"></a>下滤</h3><p><strong>根节点向下调整</strong></p>
-<div class="admonition example"><p class="admonition-title"><span class="mdi mdi-file-code-outline admonition-icon"></span>大根堆调整</p><div class="admonition-content"><p>若（根）节点元素小于其最大子节点，则交换，直至该元素所在节点大于其所有子节点或移动到底部（无子节点），形成大根堆。
-复杂度为 O(logN)</p>
-</div></div>
-
-<h3 id="上滤"><a href="#上滤" class="headerlink" title="上滤"></a>上滤</h3>]]></content>
+<ul>
+<li>若（根）节点元素小于其最大子节点，则交换，直至该元素所在节点大于其所有子节点或移动到底部（无子节点），形成大根堆。</li>
+<li>复杂度为 <strong>O(logN)</strong> 。<br>自下而上建堆，从倒数第二行父节点开始向下调整，复杂度为 <strong>O(N)</strong> 。</li>
+</ul>
+<h3 id="上滤"><a href="#上滤" class="headerlink" title="上滤"></a>上滤</h3><p><strong>子节点向上调整</strong></p>
+<ul>
+<li>与父节点比较，大于父节点则交换，直到无法上移。</li>
+<li>主要用于插入新元素到堆尾，复杂度为 <strong>O(logN)</strong> 。<br>自顶向下建堆，每次插入到堆尾后向上调整，复杂度为 <strong>O(NlogN)</strong> 。</li>
+</ul>
+<h2 id="堆的应用"><a href="#堆的应用" class="headerlink" title="堆的应用"></a>堆的应用</h2><h3 id="优先队列-priority-queue"><a href="#优先队列-priority-queue" class="headerlink" title="优先队列 priority_queue"></a>优先队列 priority_queue</h3><p>默认为最大堆<br>弹出堆顶元素后，<strong>堆尾元素移至根节点</strong>，重新进行上滤或下滤操作直至有序。</p>
+<ul>
+<li><strong>堆排序</strong>就是把优先队列元素依次弹出，为降低空间复杂度，实际排序时堆顶弹出的元素与堆尾元素交换并存放，最终形成的树做层序遍历便是有序的。时间复杂度为 <strong>O(NlogN)</strong> 。</li>
+</ul>
+]]></content>
       <categories>
         <category>笔记</category>
       </categories>
@@ -992,7 +1004,7 @@
     <url>/2025/08/04/%E7%AC%94%E8%AE%B0/vscode/</url>
     <content><![CDATA[<p><img src="https://s2.loli.net/2025/08/04/nuO3hUQeyva1zWc.png" alt="将Visual Studio 2022快捷键改为vscode方案"></p>
 <h3 id="选中相同内容"><a href="#选中相同内容" class="headerlink" title="选中相同内容"></a>选中相同内容</h3><p><code>Ctrl + D</code> 逐个选择<br><code>Ctrl + Shift + L</code> 全选</p>
-<h3 id="控制光标"><a href="#控制光标" class="headerlink" title="控制光标"></a>控制光标</h3><p><code>Ctrl + ←/→</code><br><code>Home/End</code> 当前行首位， + <code>Ctrl</code> 为当前页首位 </p>
+<h3 id="控制光标"><a href="#控制光标" class="headerlink" title="控制光标"></a>控制光标</h3><p><code>Ctrl + ←/→</code><br><code>Home/End</code> 当前行首位， + <code>Ctrl</code> 为当前页首位<br><code>Shift + ← / →</code> 逐个选中字符<br><code>Ctrl + Shift + ← / →</code> 自动选中多个字符</p>
 <h3 id="内联提示"><a href="#内联提示" class="headerlink" title="内联提示"></a>内联提示</h3><p>double <code>Ctrl</code> 切换</p>
 ]]></content>
       <categories>
