@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2024/07/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>test2</title>
     <url>/2025/07/28/test2/</url>
     <content><![CDATA[<p>admonition 警告；告诫 [.ædmə’nɪʃ(ə)n]<br><a href="https://github.com/Mr-EEEeee/hexo-admonition-new">https://github.com/Mr-EEEeee/hexo-admonition-new</a><br>anote|info|todo|warning|attention|caution|failure|missing|fail|error|danger|bug|tip|success|question|example|quote</p>
@@ -123,47 +141,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ 性能优化笔记</title>
-    <url>/2025/07/28/C++/cpp1/</url>
-    <content><![CDATA[<h2 id="malloc-new"><a href="#malloc-new" class="headerlink" title="malloc &#x2F; new"></a>malloc &#x2F; new</h2><p><code>malloc</code> 不会自动调用构造函数，通过绕过构造函数和析构函数，直接用底层手段手动控制对象的生命周期，避免额外的函数调用开销。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="type">int</span> age;</span><br><span class="line">        <span class="type">float</span> height;</span><br><span class="line">        <span class="built_in">Person</span>();</span><br><span class="line">&#125;;</span><br><span class="line">Person::<span class="built_in">Person</span>(<span class="type">void</span>)&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;调用构造函数&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br><span class="line">Person::~<span class="built_in">Person</span>(<span class="type">void</span>)&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;调用析构函数&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person* p = (Person*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(Person));</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;1&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">p-&gt;age = <span class="number">25</span>;</span><br><span class="line">p-&gt;height = <span class="number">175.5f</span>;</span><br><span class="line"><span class="built_in">free</span>(p);</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;2&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">auto</span> t = <span class="keyword">new</span> <span class="built_in">Person</span>();</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;1&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"><span class="built_in">delete</span>(t);</span><br></pre></td></tr></table></figure>
-<pre><code>1
-2
-调用构造函数
-1
-调用析构函数
-</code></pre>
-<hr>
-<h2 id="移动构造-拷贝构造"><a href="#移动构造-拷贝构造" class="headerlink" title="移动构造 &#x2F; 拷贝构造"></a>移动构造 &#x2F; 拷贝构造</h2><p><strong>移动构造</strong> 仅接管指针（原对象置空） </p>
-<pre><code>ClassName(ClassName &amp;&amp;obj)
-&#123;this.data = obj.data; obj.data = nullptr&#125;
-</code></pre>
-<p><strong>拷贝构造</strong> 深拷贝，分配新内存（复制），性能差</p>
-<pre><code>ClassName(const ClassName &amp;obj)
-&#123;this.data = new int(*obj.data)&#125;
-</code></pre>
-<h3 id="emplace-back-push-back"><a href="#emplace-back-push-back" class="headerlink" title="emplace_back() &#x2F; push_back()"></a>emplace_back() &#x2F; push_back()</h3><p><code>push_back()</code> 先创建元素，再将这个元素拷贝或者移动到容器中，性能差。<br><code>emplace_back()</code> 直接在容器尾部创建元素，无拷贝或移动元素的过程。</p>
-<hr>
-<h2 id="深拷贝-浅拷贝"><a href="#深拷贝-浅拷贝" class="headerlink" title="深拷贝 &#x2F; 浅拷贝"></a>深拷贝 &#x2F; 浅拷贝</h2><p><strong>浅拷贝</strong>	拷贝指针地址，共享资源。<br><strong>深拷贝</strong>	拷贝资源内容，各自拥有自己的资源，性能差。</p>
-<hr>
-<h2 id="堆-栈"><a href="#堆-栈" class="headerlink" title="堆 &#x2F; 栈"></a>堆 &#x2F; 栈</h2><ul>
-<li>字符串拼接，<code>string</code>（堆） &#x2F; <code>char</code>（栈）<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;benchmark/benchmark.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="comment">// 测试用例：N次字符串拼接</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 1000</span></span><br><span class="line"><span class="comment">// 方法1：std::string</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcString</span><span class="params">(benchmark::State&amp; state)</span></span>&#123;  </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state)&#123;</span><br><span class="line">    std::string s;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;N; ++i) s += <span class="string">&quot;a&quot;</span>;  <span class="comment">// SSO优化初期，后期堆分配</span></span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(s);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcString);</span><br><span class="line"><span class="comment">// 方法2：char[]（栈）</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcCharstack</span><span class="params">(benchmark::State&amp; state)</span></span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state)&#123; </span><br><span class="line">    <span class="type">char</span> arr[N]; <span class="comment">// 危险！可能栈溢出</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;N; ++i) arr[i] = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(arr);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcCharstack);</span><br><span class="line"><span class="comment">// 方法3：char*（堆）</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcCharheap</span><span class="params">(benchmark::State&amp; state)</span></span>&#123;  </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state)&#123; </span><br><span class="line">    <span class="type">char</span>* ptr = <span class="keyword">new</span> <span class="type">char</span>[N];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;N; ++i) ptr[i] = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(ptr);</span><br><span class="line">    <span class="keyword">delete</span>[] ptr;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcCharheap);</span><br><span class="line"><span class="comment">// 方法4：std::vector&lt;char&gt;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcVectorChar</span><span class="params">(benchmark::State&amp; state)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state) &#123;</span><br><span class="line">    std::vector&lt;<span class="type">char</span>&gt; vec;</span><br><span class="line">    vec.<span class="built_in">reserve</span>(N); <span class="comment">// 提前分配堆空间，避免多次扩容，提升性能</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) vec.<span class="built_in">emplace_back</span>(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(vec);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcVectorChar);</span><br></pre></td></tr></table></figure>
-<img src="https://s2.loli.net/2025/07/31/HjsID92KYZvcC1A.png" alt="运行耗时对比"><br><a href="https://quick-bench.com/q/R0j4gghe_WvFe1fDf4nWz9rCVbc">性能测试网站</a><br>显然耗时 <code>string</code> ≈ <code>vector&lt;char&gt;</code> &gt; <code>char*</code> &gt; <code>char[]</code><br>另外 <code>vector</code> 在未提前 <code>reserve()</code> 空间的情况下，性能基本与 <code>string</code> 相同，提前分配堆空间后提升了约10%的速度。</li>
-</ul>
-<hr>
-<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><h3 id="lock-guard-unique-lock"><a href="#lock-guard-unique-lock" class="headerlink" title="lock_guard &#x2F; unique_lock"></a>lock_guard &#x2F; unique_lock</h3><p><code>lock_guard</code> 仅自动加解锁。<br><code>unique_lock</code> 可手动加解锁，支持延迟锁定，可用条件变量 <code>condition_variable</code> ，性能差。</p>
-<h3 id="atomic-std-mutex"><a href="#atomic-std-mutex" class="headerlink" title="atomic &#x2F; std::mutex"></a>atomic &#x2F; std::mutex</h3><p><code>std::atomic</code> 底层用 CPU 指令，适合单个变量。<br><code>std::mutex</code> 适合多个变量同步，性能差。</p>
-<hr>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>性能</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>test1</title>
     <url>/2024/07/26/test1/</url>
     <content><![CDATA[<p><a href="https://butterfly.js.org/posts/89757140/?highlight=table#Tables">https://butterfly.js.org/posts/89757140/?highlight=table#Tables</a><br><a href="https://www.bilibili.com/video/BV1j34y1p7HX?spm_id_from=333.788.recommend_more_video.14&vd_source=11db1d1a077558e043cecb028334f12a">https://www.bilibili.com/video/BV1j34y1p7HX?spm_id_from=333.788.recommend_more_video.14&amp;vd_source=11db1d1a077558e043cecb028334f12a</a></p>
@@ -208,6 +185,47 @@
       </tags>
   </entry>
   <entry>
+    <title>C++ 性能优化笔记</title>
+    <url>/2025/07/28/C++/cpp1/</url>
+    <content><![CDATA[<h2 id="malloc-new"><a href="#malloc-new" class="headerlink" title="malloc &#x2F; new"></a>malloc &#x2F; new</h2><p><code>malloc</code> 不会自动调用构造函数，通过绕过构造函数和析构函数，直接用底层手段手动控制对象的生命周期，避免额外的函数调用开销。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="type">int</span> age;</span><br><span class="line">        <span class="type">float</span> height;</span><br><span class="line">        <span class="built_in">Person</span>();</span><br><span class="line">&#125;;</span><br><span class="line">Person::<span class="built_in">Person</span>(<span class="type">void</span>)&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;调用构造函数&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br><span class="line">Person::~<span class="built_in">Person</span>(<span class="type">void</span>)&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;调用析构函数&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person* p = (Person*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(Person));</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;1&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">p-&gt;age = <span class="number">25</span>;</span><br><span class="line">p-&gt;height = <span class="number">175.5f</span>;</span><br><span class="line"><span class="built_in">free</span>(p);</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;2&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">auto</span> t = <span class="keyword">new</span> <span class="built_in">Person</span>();</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;1&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"><span class="built_in">delete</span>(t);</span><br></pre></td></tr></table></figure>
+<pre><code>1
+2
+调用构造函数
+1
+调用析构函数
+</code></pre>
+<hr>
+<h2 id="移动构造-拷贝构造"><a href="#移动构造-拷贝构造" class="headerlink" title="移动构造 &#x2F; 拷贝构造"></a>移动构造 &#x2F; 拷贝构造</h2><p><strong>移动构造</strong> 仅接管指针（原对象置空） </p>
+<pre><code>ClassName(ClassName &amp;&amp;obj)
+&#123;this.data = obj.data; obj.data = nullptr&#125;
+</code></pre>
+<p><strong>拷贝构造</strong> 深拷贝，分配新内存（复制），性能差</p>
+<pre><code>ClassName(const ClassName &amp;obj)
+&#123;this.data = new int(*obj.data)&#125;
+</code></pre>
+<h3 id="emplace-back-push-back"><a href="#emplace-back-push-back" class="headerlink" title="emplace_back() &#x2F; push_back()"></a>emplace_back() &#x2F; push_back()</h3><p><code>push_back()</code> 先创建元素，再将这个元素拷贝或者移动到容器中，性能差。<br><code>emplace_back()</code> 直接在容器尾部创建元素，无拷贝或移动元素的过程。</p>
+<hr>
+<h2 id="深拷贝-浅拷贝"><a href="#深拷贝-浅拷贝" class="headerlink" title="深拷贝 &#x2F; 浅拷贝"></a>深拷贝 &#x2F; 浅拷贝</h2><p><strong>浅拷贝</strong>	拷贝指针地址，共享资源。<br><strong>深拷贝</strong>	拷贝资源内容，各自拥有自己的资源，性能差。</p>
+<hr>
+<h2 id="堆-栈"><a href="#堆-栈" class="headerlink" title="堆 &#x2F; 栈"></a>堆 &#x2F; 栈</h2><ul>
+<li>字符串拼接，<code>string</code>（堆） &#x2F; <code>char</code>（栈）<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;benchmark/benchmark.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="comment">// 测试用例：N次字符串拼接</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 1000</span></span><br><span class="line"><span class="comment">// 方法1：std::string</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcString</span><span class="params">(benchmark::State&amp; state)</span></span>&#123;  </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state)&#123;</span><br><span class="line">    std::string s;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;N; ++i) s += <span class="string">&quot;a&quot;</span>;  <span class="comment">// SSO优化初期，后期堆分配</span></span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(s);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcString);</span><br><span class="line"><span class="comment">// 方法2：char[]（栈）</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcCharstack</span><span class="params">(benchmark::State&amp; state)</span></span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state)&#123; </span><br><span class="line">    <span class="type">char</span> arr[N]; <span class="comment">// 危险！可能栈溢出</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;N; ++i) arr[i] = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(arr);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcCharstack);</span><br><span class="line"><span class="comment">// 方法3：char*（堆）</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcCharheap</span><span class="params">(benchmark::State&amp; state)</span></span>&#123;  </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state)&#123; </span><br><span class="line">    <span class="type">char</span>* ptr = <span class="keyword">new</span> <span class="type">char</span>[N];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;N; ++i) ptr[i] = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(ptr);</span><br><span class="line">    <span class="keyword">delete</span>[] ptr;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcCharheap);</span><br><span class="line"><span class="comment">// 方法4：std::vector&lt;char&gt;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">funcVectorChar</span><span class="params">(benchmark::State&amp; state)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">auto</span> _ : state) &#123;</span><br><span class="line">    std::vector&lt;<span class="type">char</span>&gt; vec;</span><br><span class="line">    vec.<span class="built_in">reserve</span>(N); <span class="comment">// 提前分配堆空间，避免多次扩容，提升性能</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) vec.<span class="built_in">emplace_back</span>(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">    benchmark::<span class="built_in">DoNotOptimize</span>(vec);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">BENCHMARK</span>(funcVectorChar);</span><br></pre></td></tr></table></figure>
+<img src="https://s2.loli.net/2025/07/31/HjsID92KYZvcC1A.png" alt="运行耗时对比"><br><a href="https://quick-bench.com/q/R0j4gghe_WvFe1fDf4nWz9rCVbc">性能测试网站</a><br>显然耗时 <code>string</code> ≈ <code>vector&lt;char&gt;</code> &gt; <code>char*</code> &gt; <code>char[]</code><br>另外 <code>vector</code> 在未提前 <code>reserve()</code> 空间的情况下，性能基本与 <code>string</code> 相同，提前分配堆空间后提升了约10%的速度。</li>
+</ul>
+<hr>
+<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><h3 id="lock-guard-unique-lock"><a href="#lock-guard-unique-lock" class="headerlink" title="lock_guard &#x2F; unique_lock"></a>lock_guard &#x2F; unique_lock</h3><p><code>lock_guard</code> 仅自动加解锁。<br><code>unique_lock</code> 可手动加解锁，支持延迟锁定，可用条件变量 <code>condition_variable</code> ，性能差。</p>
+<h3 id="atomic-std-mutex"><a href="#atomic-std-mutex" class="headerlink" title="atomic &#x2F; std::mutex"></a>atomic &#x2F; std::mutex</h3><p><code>std::atomic</code> 底层用 CPU 指令，适合单个变量。<br><code>std::mutex</code> 适合多个变量同步，性能差。</p>
+<hr>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>性能</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++ 多线程笔记1</title>
     <url>/2025/08/02/C++/cpp2/</url>
     <content><![CDATA[<div class="admonition anote"><p class="admonition-title"><span class="mdi mdi-note-outline admonition-icon"></span>Note</p><div class="admonition-content"><p><code>call_once</code> 配合 <code>once_flag</code> 一起使用，用于在多个线程中只执行某段初始化代码一次。</p>
@@ -231,7 +249,7 @@
     <url>/2025/08/17/C++/cpp10/</url>
     <content><![CDATA[<h2 id="值类别"><a href="#值类别" class="headerlink" title="值类别"></a>值类别</h2><p><a href="https://blog.csdn.net/qq_55125921/article/details/144319904">参考</a></p>
 <ol>
-<li>lvalue: 左值，可取地址，如变量名。</li>
+<li>lvalue: 左值，可取地址，如<strong>变量名</strong>。</li>
 <li>prvalue: 纯右值，如 <code>int(42)</code> 临时量。</li>
 <li>xvalue: 将亡值， 如表达式 <code>std::move(obj)</code>。</li>
 </ol>
@@ -261,30 +279,10 @@
 <p>永远不要在 return 语句上 <code>std::move</code> 临时对象或局部变量，会影响 RVO&#x2F;NRVO（具名）返回值优化。</p>
 </blockquote>
 <h3 id="悬垂引用"><a href="#悬垂引用" class="headerlink" title="悬垂引用"></a>悬垂引用</h3><p><code>std::move(obj)</code> 中的“临时对象” obj 在整条语句结束后立即析构，指向已释放内存 → 悬垂引用。</p>
-<table>
-<thead>
-<tr>
-<th>代码片段</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>auto&amp;&amp; ref = std::move(makeObj());</code></td>
-<td>临时对象析构后 ref 悬空</td>
-</tr>
-<tr>
-<td><code>const T&amp; r = func().member;</code></td>
-<td><code>const</code> 只延长 <code>func()</code> 的临时对象生命周期，不延长其成员</td>
-</tr>
-<tr>
-<td><code>std::string_view sv = (a + b).substr(1);</code></td>
-<td>临时 string 析构，sv 悬空</td>
-</tr>
-</tbody></table>
 <div class="admonition tip"><p class="admonition-title"><span class="mdi mdi-lightbulb-on-outline admonition-icon"></span>Tip</p><div class="admonition-content"><p>任何右值（尤其是 <code>std::move</code> 后的 xvalue）不要直接绑定到引用；如果一定要延长生命周期，请用<strong>值</strong>接收，而不是引用。</p>
 </div></div>
 
-<h2 id="std-forward"><a href="#std-forward" class="headerlink" title="std::forward()"></a>std::forward()</h2><p>模板函数中，模板参数 <code>T&amp;&amp;</code> 代表<strong>万能引用</strong>，实际类型是 T&amp; 还是 T&amp;&amp; → 由<strong>引用折叠</strong>决定。</p>
+<h2 id="std-forward"><a href="#std-forward" class="headerlink" title="std::forward()"></a>std::forward()</h2><p><strong>模板函数</strong>中，模板参数 <code>T&amp;&amp;</code> 代表<strong>万能引用</strong>，实际类型是 T&amp; 还是 T&amp;&amp; → 由<strong>引用折叠</strong>决定。</p>
 <table>
 <thead>
 <tr>
@@ -469,28 +467,13 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/07/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>运算符重载与函数对象</title>
     <url>/2025/08/30/C++/cpp11/</url>
     <content><![CDATA[<p><strong>函数对象：使用方式看上去像函数，但实际是类的一个对象；是因为类重载了“()”运算符，所以让对象使用的方式看起来是函数，即对象后面的括号像函数一样调用。</strong></p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Adder</span> &#123;               <span class="comment">// 1. 类重载了 operator()</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> <span class="type">const</span> </span>&#123; <span class="keyword">return</span> a + b; &#125;</span><br><span class="line">&#125;;</span><br><span class="line">Adder add;                   <span class="comment">// 2. 函数对象</span></span><br><span class="line"><span class="type">int</span> r = <span class="built_in">add</span>(<span class="number">3</span>, <span class="number">4</span>);           <span class="comment">// 调用函数对象</span></span><br></pre></td></tr></table></figure>
+<p><strong>友元函数不是类的成员函数</strong>，但它可以访问类的私有和保护成员，为操作符重载提供了灵活性。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">friend</span> std::ostream&amp; <span class="keyword">operator</span>&lt;&lt;(std::ostream&amp; os, <span class="type">const</span> Student&amp; s) &#123;</span><br><span class="line">    <span class="keyword">return</span> os &lt;&lt; <span class="string">&#x27;[&#x27;</span> &lt;&lt; s.id &lt;&lt; <span class="string">&#x27;,&#x27;</span> &lt;&lt; s.score &lt;&lt; <span class="string">&#x27;,&#x27;</span> &lt;&lt; s.name &lt;&lt; <span class="string">&#x27;]&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果不用 <code>friend</code> 而作为成员函数，只能是 <code>this</code> 对象的操作符，即 <code>Student::operator&lt;&lt;(std::ostream&amp;)</code>，这样调用方式会变成 <code>student &lt;&lt; cout</code>，不符合常规用法，需要保持 <code>cout &lt;&lt; object</code> 这种自然的语法结构。</p>
 ]]></content>
       <categories>
         <category>笔记</category>
@@ -548,12 +531,15 @@
       </tags>
   </entry>
   <entry>
-    <title>C++ 多线程笔记小结</title>
-    <url>/2025/08/08/C++/cpp7/</url>
-    <content><![CDATA[<ul>
-<li><strong>线程安全</strong>： 并行读写和串行读写效果一致。</li>
-<li>解决数据<strong>竞态</strong>问题常见是把全局变量改为线程局部变量；初始化时使用 <code>call_once</code> 或使用局部静态变量进行初始化，因为局部静态变量 c++11 后初始化自动线程安全；还有使用锁和原子变量 <code>atomic</code> 来保证原子性等。</li>
-</ul>
+    <title>C++ 多线程笔记4</title>
+    <url>/2025/08/07/C++/cpp5/</url>
+    <content><![CDATA[<div class="admonition tip"><p class="admonition-title"><span class="mdi mdi-lightbulb-on-outline admonition-icon"></span>Tip</p><div class="admonition-content"><p><code>std::thread::hardware_concurrency()</code> 返回 CPU 线程数，可作为线程池默认大小。</p>
+</div></div>
+
+<div class="admonition example"><p class="admonition-title"><span class="mdi mdi-file-code-outline admonition-icon"></span>时间计数代码</p><div class="admonition-content"><p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//时间计数 us微秒 = micro </span></span><br><span class="line"><span class="keyword">auto</span> t0 = std::chrono::steady_clock::<span class="built_in">now</span>();</span><br><span class="line"><span class="comment">//代码</span></span><br><span class="line"><span class="keyword">auto</span> ms = std::chrono::<span class="built_in">duration</span>&lt;<span class="type">double</span>, std::milli&gt;(</span><br><span class="line">std::chrono::steady_clock::<span class="built_in">now</span>() - t0).<span class="built_in">count</span>();</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;全部任务耗时 &quot;</span> &lt;&lt; ms &lt;&lt; <span class="string">&quot; ms\n&quot;</span>;</span><br></pre></td></tr></table></figure></p>
+</div></div>
+
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;thread&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;condition_variable&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;functional&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;atomic&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;mutex&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ThreadPool</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	std::mutex mtx;</span><br><span class="line">	std::condition_variable condition;</span><br><span class="line">	std::queue&lt;std::function&lt;<span class="type">void</span>()&gt;&gt; tasks;</span><br><span class="line">	std::atomic&lt;<span class="type">bool</span>&gt; stop;</span><br><span class="line">	std::vector&lt;std::thread&gt; threads;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">ThreadPool</span>(<span class="type">const</span> ThreadPool&amp;) = <span class="keyword">delete</span>;</span><br><span class="line">	ThreadPool&amp; <span class="keyword">operator</span>=(<span class="type">const</span> ThreadPool&amp;) = <span class="keyword">delete</span>;</span><br><span class="line">	<span class="built_in">ThreadPool</span>(<span class="type">int</span> num_threads);</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="type">static</span> ThreadPool&amp; <span class="title">SetThreadPool</span><span class="params">(<span class="type">int</span> num_threads)</span> </span>&#123;</span><br><span class="line">		<span class="function"><span class="type">static</span> ThreadPool <span class="title">threadpool</span><span class="params">(num_threads)</span></span>;</span><br><span class="line">		<span class="keyword">return</span> threadpool;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	~<span class="built_in">ThreadPool</span>() &#123;</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lock</span><span class="params">(mtx)</span></span>;</span><br><span class="line">			stop = <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		condition.<span class="built_in">notify_all</span>();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">auto</span>&amp; t : threads) &#123;</span><br><span class="line">			t.<span class="built_in">join</span>();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> F, <span class="keyword">typename</span>... Args&gt; <span class="type">void</span> <span class="title">enqueue</span><span class="params">(F&amp;&amp; f, Args&amp;&amp;... args)</span> </span>&#123;</span><br><span class="line">		std::function&lt;<span class="type">void</span>()&gt; task = std::<span class="built_in">bind</span>(std::forward&lt;F&gt;(f), std::forward&lt;Args&gt;(args)...);</span><br><span class="line">		<span class="keyword">if</span> (stop) <span class="keyword">throw</span> std::<span class="built_in">runtime_error</span>(<span class="string">&quot;enqueue on stopped ThreadPool&quot;</span>);</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lock</span><span class="params">(mtx)</span></span>;</span><br><span class="line">			tasks.<span class="built_in">emplace</span>(std::<span class="built_in">move</span>(task));</span><br><span class="line">		&#125;</span><br><span class="line">		condition.<span class="built_in">notify_one</span>();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ThreadPool::<span class="built_in">ThreadPool</span>(<span class="type">int</span> num_threads) : stop&#123; <span class="literal">false</span> &#125; &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; num_threads; i++) &#123;</span><br><span class="line">		threads.<span class="built_in">emplace_back</span>([<span class="keyword">this</span>]() &#123;</span><br><span class="line">			<span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				std::unique_lock&lt;std::mutex&gt; <span class="built_in">lock</span>(mtx);</span><br><span class="line">				condition.<span class="built_in">wait</span>(lock, [<span class="keyword">this</span>]() &#123; <span class="keyword">return</span> !tasks.<span class="built_in">empty</span>() || stop; &#125;);</span><br><span class="line">				<span class="keyword">if</span> (stop &amp;&amp; tasks.<span class="built_in">empty</span>()) <span class="keyword">return</span>;</span><br><span class="line">				std::function&lt;<span class="built_in">void</span>()&gt; <span class="built_in">task</span>(std::<span class="built_in">move</span>(tasks.<span class="built_in">front</span>()));</span><br><span class="line">				tasks.<span class="built_in">pop</span>();</span><br><span class="line">				lock.<span class="built_in">unlock</span>();</span><br><span class="line">				<span class="built_in">task</span>();</span><br><span class="line">			&#125;</span><br><span class="line">			&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ThreadPool&amp; threadpool = ThreadPool::<span class="built_in">SetThreadPool</span>(std::thread::<span class="built_in">hardware_concurrency</span>());</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">500</span>; i++) &#123;</span><br><span class="line">		threadpool.<span class="built_in">enqueue</span>([i]() &#123;</span><br><span class="line">			std::cout &lt;&lt; <span class="string">&quot;task: &quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot; is running&quot;</span> &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">			std::this_thread::<span class="built_in">sleep_for</span>(std::chrono::<span class="built_in">milliseconds</span>(<span class="number">10</span>));</span><br><span class="line">			std::cout &lt;&lt; <span class="string">&quot;task: &quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot; is done&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">			&#125;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>笔记</category>
@@ -588,104 +574,6 @@
       <tags>
         <tag>C++</tag>
         <tag>多线程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ 多线程笔记4</title>
-    <url>/2025/08/07/C++/cpp5/</url>
-    <content><![CDATA[<div class="admonition tip"><p class="admonition-title"><span class="mdi mdi-lightbulb-on-outline admonition-icon"></span>Tip</p><div class="admonition-content"><p><code>std::thread::hardware_concurrency()</code> 返回 CPU 线程数，可作为线程池默认大小。</p>
-</div></div>
-
-<div class="admonition example"><p class="admonition-title"><span class="mdi mdi-file-code-outline admonition-icon"></span>时间计数代码</p><div class="admonition-content"><p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//时间计数 us微秒 = micro </span></span><br><span class="line"><span class="keyword">auto</span> t0 = std::chrono::steady_clock::<span class="built_in">now</span>();</span><br><span class="line"><span class="comment">//代码</span></span><br><span class="line"><span class="keyword">auto</span> ms = std::chrono::<span class="built_in">duration</span>&lt;<span class="type">double</span>, std::milli&gt;(</span><br><span class="line">std::chrono::steady_clock::<span class="built_in">now</span>() - t0).<span class="built_in">count</span>();</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;全部任务耗时 &quot;</span> &lt;&lt; ms &lt;&lt; <span class="string">&quot; ms\n&quot;</span>;</span><br></pre></td></tr></table></figure></p>
-</div></div>
-
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;thread&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;condition_variable&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;functional&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;atomic&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;mutex&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ThreadPool</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	std::mutex mtx;</span><br><span class="line">	std::condition_variable condition;</span><br><span class="line">	std::queue&lt;std::function&lt;<span class="type">void</span>()&gt;&gt; tasks;</span><br><span class="line">	std::atomic&lt;<span class="type">bool</span>&gt; stop;</span><br><span class="line">	std::vector&lt;std::thread&gt; threads;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">ThreadPool</span>(<span class="type">const</span> ThreadPool&amp;) = <span class="keyword">delete</span>;</span><br><span class="line">	ThreadPool&amp; <span class="keyword">operator</span>=(<span class="type">const</span> ThreadPool&amp;) = <span class="keyword">delete</span>;</span><br><span class="line">	<span class="built_in">ThreadPool</span>(<span class="type">int</span> num_threads);</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="type">static</span> ThreadPool&amp; <span class="title">SetThreadPool</span><span class="params">(<span class="type">int</span> num_threads)</span> </span>&#123;</span><br><span class="line">		<span class="function"><span class="type">static</span> ThreadPool <span class="title">threadpool</span><span class="params">(num_threads)</span></span>;</span><br><span class="line">		<span class="keyword">return</span> threadpool;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	~<span class="built_in">ThreadPool</span>() &#123;</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lock</span><span class="params">(mtx)</span></span>;</span><br><span class="line">			stop = <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		condition.<span class="built_in">notify_all</span>();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">auto</span>&amp; t : threads) &#123;</span><br><span class="line">			t.<span class="built_in">join</span>();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> F, <span class="keyword">typename</span>... Args&gt; <span class="type">void</span> <span class="title">enqueue</span><span class="params">(F&amp;&amp; f, Args&amp;&amp;... args)</span> </span>&#123;</span><br><span class="line">		std::function&lt;<span class="type">void</span>()&gt; task = std::<span class="built_in">bind</span>(std::forward&lt;F&gt;(f), std::forward&lt;Args&gt;(args)...);</span><br><span class="line">		<span class="keyword">if</span> (stop) <span class="keyword">throw</span> std::<span class="built_in">runtime_error</span>(<span class="string">&quot;enqueue on stopped ThreadPool&quot;</span>);</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lock</span><span class="params">(mtx)</span></span>;</span><br><span class="line">			tasks.<span class="built_in">emplace</span>(std::<span class="built_in">move</span>(task));</span><br><span class="line">		&#125;</span><br><span class="line">		condition.<span class="built_in">notify_one</span>();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ThreadPool::<span class="built_in">ThreadPool</span>(<span class="type">int</span> num_threads) : stop&#123; <span class="literal">false</span> &#125; &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; num_threads; i++) &#123;</span><br><span class="line">		threads.<span class="built_in">emplace_back</span>([<span class="keyword">this</span>]() &#123;</span><br><span class="line">			<span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				std::unique_lock&lt;std::mutex&gt; <span class="built_in">lock</span>(mtx);</span><br><span class="line">				condition.<span class="built_in">wait</span>(lock, [<span class="keyword">this</span>]() &#123; <span class="keyword">return</span> !tasks.<span class="built_in">empty</span>() || stop; &#125;);</span><br><span class="line">				<span class="keyword">if</span> (stop &amp;&amp; tasks.<span class="built_in">empty</span>()) <span class="keyword">return</span>;</span><br><span class="line">				std::function&lt;<span class="built_in">void</span>()&gt; <span class="built_in">task</span>(std::<span class="built_in">move</span>(tasks.<span class="built_in">front</span>()));</span><br><span class="line">				tasks.<span class="built_in">pop</span>();</span><br><span class="line">				lock.<span class="built_in">unlock</span>();</span><br><span class="line">				<span class="built_in">task</span>();</span><br><span class="line">			&#125;</span><br><span class="line">			&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ThreadPool&amp; threadpool = ThreadPool::<span class="built_in">SetThreadPool</span>(std::thread::<span class="built_in">hardware_concurrency</span>());</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">500</span>; i++) &#123;</span><br><span class="line">		threadpool.<span class="built_in">enqueue</span>([i]() &#123;</span><br><span class="line">			std::cout &lt;&lt; <span class="string">&quot;task: &quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot; is running&quot;</span> &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">			std::this_thread::<span class="built_in">sleep_for</span>(std::chrono::<span class="built_in">milliseconds</span>(<span class="number">10</span>));</span><br><span class="line">			std::cout &lt;&lt; <span class="string">&quot;task: &quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot; is done&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">			&#125;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>多线程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++ static 与 const</title>
-    <url>/2025/08/09/C++/cpp8/</url>
-    <content><![CDATA[<h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2><ul>
-<li><code>static</code> 定义的静态变量在函数执行后不会释放其存储空间，存储在内存的全局区域。</li>
-<li><code>static</code> 表示的是静态的。类的<u>静态成员函数、静态成员变量</u>是和<strong>类</strong>相关的，而不是和类的具体对象相关。即使没有具体对象，也能调用类的静态成员函数和成员变量。静态成员函数的访问权限是<strong>全局</strong>的，只要包含了声明它的头文件，都能调用它（public）。</li>
-<li>在 C++11 中，<code>static</code> 非 <code>constexpr</code> 的普通静态成员变量不能在类的内部初始化。在类的内部只是声明，必须在类外定义 <code>数据类型 类名::静态数据成员名=值</code> ；而静态成员函数定义无限制，调用时 <code>类名::静态成员函数名(参数表)</code>。</li>
-<li><u>从 C++17 起， 可用 <code>inline</code> 关键词在类内定义内联静态数据成员，如 <code>inline static int a = 1</code> ，但多个定义必须完全相同。</u></li>
-<li><code>static</code> 关键字只能用于类定义体内部的声明中，定义时不能标示为 <code>static</code>。</li>
-</ul>
-<div class="admonition tip"><p class="admonition-title"><span class="mdi mdi-lightbulb-on-outline admonition-icon"></span>Tip</p><div class="admonition-content"><p><code>static</code> 成员函数主要用处是作为类作用域的全局函数。不能访问类的非静态数据成员。因为类的静态成员函数属于<strong>类本身</strong>，没有 <code>this</code> 指针，这导致：</p>
-<ol>
-<li>不能直接存取类的非静态成员变量 或 调用非静态成员函数。</li>
-<li>不能被声明为 <code>virtual</code>。因为虚函数的实现依赖 <strong>vtable（虚函数表）</strong> 和对象实例的 vptr（指向 vtable 的指针），而静态成员函数没有 <code>this</code>，因此没有办法通过对象的多态机制调用。</li>
-</ol>
-<p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Test</span> {</span><br><span class="line">    <span class="type">int</span> value;                <span class="comment">// 非静态成员变量</span></span><br><span class="line">    <span class="type">static</span> <span class="type">int</span> staticValue;   <span class="comment">// 静态成员变量</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Test</span>(<span class="type">int</span> v) : <span class="built_in">value</span>(v) {}</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">normalFunc</span><span class="params">()</span> </span>{ <span class="comment">// 普通成员函数</span></span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;normalFunc(): value = &quot;</span> &lt;&lt; value &lt;&lt; endl;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">static</span> <span class="type">void</span> <span class="title">staticFunc</span><span class="params">()</span> </span>{ <span class="comment">// 静态成员函数</span></span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;staticFunc(): staticValue = &quot;</span> &lt;&lt; staticValue &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// ❌ 不能访问非静态成员变量</span></span><br><span class="line">        <span class="comment">// cout &lt;&lt; value; // 编译错误：没有 this 指针</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// ❌ 不能直接调用非静态成员函数</span></span><br><span class="line">        <span class="comment">// normalFunc(); // 编译错误：没有 this 指针</span></span><br><span class="line">    }</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> Test::staticValue = <span class="number">42</span>; <span class="comment">// 静态成员变量需要类外定义</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="function">Test <span class="title">t</span><span class="params">(<span class="number">10</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 普通成员函数调用</span></span><br><span class="line">    t.<span class="built_in">normalFunc</span>();  <span class="comment">// ✅ 输出 value = 10</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 静态成员函数调用（两种方式）</span></span><br><span class="line">    Test::<span class="built_in">staticFunc</span>(); <span class="comment">// ✅ 推荐用类名调用，输出 staticValue = 42</span></span><br><span class="line">    t.<span class="built_in">staticFunc</span>();     <span class="comment">// ✅ 虽然能用对象调用，但本质上跟类名调用一样</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
-</div></div>
-
-<hr>
-<h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><ul>
-<li>从 C++11 起，<code>const</code> 成员变量支持类内定义赋初值，也可通过构造函数列表初始化（优先级高）。</li>
-<li><code>const</code> 数据成员只在某个对象生存期内是常量，而对于整个类而言却是可变的。因为类可以创建多个对象，不同的对象其 <code>const</code> 数据成员的值可以不同。要想建立在整个类中都恒定的常量，可以用类中的 <code>enum</code> 或 <code>static const</code> 或 <code>static constexpr</code> 。<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Test</span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Test</span>(): a&#123;<span class="literal">false</span>&#125; &#123;&#125; <span class="comment">//被列表初始化覆盖</span></span><br><span class="line">    <span class="keyword">enum</span> &#123; size1 = <span class="number">100</span>, size2 = <span class="number">200</span> &#125;;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">const</span> <span class="type">bool</span> a = <span class="literal">true</span>; </span><br><span class="line">    <span class="type">static</span> <span class="type">int</span> b; <span class="comment">//类内声明</span></span><br><span class="line">    <span class="type">const</span> <span class="type">static</span> <span class="type">int</span> c; <span class="comment">//与 static const int c;相同</span></span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="type">int</span> Test::b = <span class="number">0</span>; <span class="comment">//类外定义，static 成员变量不能在构造函数初始化列表中初始化，因为它不属于某个对象</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> Test::c = <span class="number">0</span>; <span class="comment">//注意：不需要加 static 修饰符，但要加 const</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<div class="admonition tip"><p class="admonition-title"><span class="mdi mdi-lightbulb-on-outline admonition-icon"></span>Tip</p><div class="admonition-content"><p><code>const</code> 成员函数不能修改<strong>成员变量</strong>的值（非 <code>mutable</code> ），但可以读取。对于只用于访问数据而不修改数据的成员函数，应声明为 <code>const</code> 成员函数，<strong>常量对象</strong>才能调用它。因为如果一个对象被声明为 <code>const</code>，那它只能调用 <code>const</code> 成员函数。</p>
-<p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> {</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getX</span><span class="params">()</span> <span class="type">const</span> </span>{ <span class="keyword">return</span> x; } </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">setX</span><span class="params">(<span class="type">int</span> v)</span> </span>{ x = v; }    <span class="comment">// 会修改成员变量，不是 const</span></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> A a; <span class="comment">//常量对象</span></span><br><span class="line">a.<span class="built_in">getX</span>(); <span class="comment">// OK，因为 getX 是 const</span></span><br><span class="line">a.<span class="built_in">setX</span>(<span class="number">5</span>); <span class="comment">// ❌ 编译错误，因为 setX 不是 const</span></span><br></pre></td></tr></table></figure></p>
-</div></div>
-
-<hr>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
-<li>静态数据成员可以成为成员函数的可选参数，而普通数据成员则不可以。举例如下：<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">base</span>&#123; </span><br><span class="line"><span class="keyword">public</span> : </span><br><span class="line">    <span class="type">static</span> <span class="type">int</span> _staticVar; </span><br><span class="line">    <span class="type">int</span> _var; </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">foo1</span><span class="params">(<span class="type">int</span> i = _staticVar)</span></span>;<span class="comment">//正确,_staticVar为静态数据成员 </span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">foo2</span><span class="params">(<span class="type">int</span> i = _var)</span></span>;<span class="comment">//错误,_var为普通数据成员 </span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
-<li>静态数据成员的类型可以是所属类的类型，而普通数据成员则不可以。普通数据成员的只能声明为所属类类型的指针或引用。举例如下：<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Singleton</span>&#123; </span><br><span class="line"><span class="keyword">public</span> : </span><br><span class="line">    <span class="type">static</span> Singleton Instance;<span class="comment">//正确，静态成员自身类型，典型实现单例模式</span></span><br><span class="line">    Singleton _object;<span class="comment">//错误，类对象会导致无限递归嵌套</span></span><br><span class="line">    Singleton *pInstance;<span class="comment">//正确，指针 </span></span><br><span class="line">    Singleton &amp;mInstance;<span class="comment">//正确，引用 </span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构笔记：堆</title>
-    <url>/2025/08/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/s1/</url>
-    <content><![CDATA[<div style="position:relative;width:100%;padding-bottom:56.25%;height:0;">
-  <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;"
-    src="//player.bilibili.com/player.html?isOutside=true&aid=297973330&bvid=BV1AF411G7cA&cid=570109806&p=1&autoplay=0"
-    scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
-  </iframe>
-</div>
-
-<h2 id="堆的定义"><a href="#堆的定义" class="headerlink" title="堆的定义"></a>堆的定义</h2><blockquote>
-<p>是<strong>完全二叉树</strong>：只允许最后一行不为满，且最后一行必须从左往右排序，最后一行元素之间不可以有间隔。特性适合数组存储。</p>
-</blockquote>
-<div align=center><img src="https://s2.loli.net/2025/08/26/8WE56QdBMgsSlfb.png"></div>
-
-<p><em>层序遍历给节点编号，元素存入数组对应下标，下标节点为 i ，其子节点则为 2i+1 2i+2 。</em></p>
-<h2 id="堆的基本操作"><a href="#堆的基本操作" class="headerlink" title="堆的基本操作"></a>堆的基本操作</h2><p><strong>上滤（上浮） &#x2F; 下滤（下沉）</strong></p>
-<h3 id="下滤"><a href="#下滤" class="headerlink" title="下滤"></a>下滤</h3><p><strong>根节点向下调整</strong></p>
-<ul>
-<li>若（根）节点元素小于其最大子节点，则交换，直至该元素所在节点大于其所有子节点或移动到底部（无子节点），形成大根堆。</li>
-<li>复杂度为 <strong>O(logN)</strong> 。<br>自下而上建堆，从倒数第二行父节点开始向下调整，复杂度为 <strong>O(N)</strong> 。</li>
-</ul>
-<h3 id="上滤"><a href="#上滤" class="headerlink" title="上滤"></a>上滤</h3><p><strong>子节点向上调整</strong></p>
-<ul>
-<li>与父节点比较，大于父节点则交换，直到无法上移。</li>
-<li>主要用于插入新元素到堆尾，复杂度为 <strong>O(logN)</strong> 。<br>自顶向下建堆，每次插入到堆尾后向上调整，复杂度为 <strong>O(NlogN)</strong> 。</li>
-</ul>
-<h2 id="堆的应用"><a href="#堆的应用" class="headerlink" title="堆的应用"></a>堆的应用</h2><h3 id="优先队列-priority-queue"><a href="#优先队列-priority-queue" class="headerlink" title="优先队列 priority_queue"></a>优先队列 priority_queue</h3><p>默认为最大堆<br>弹出堆顶元素后，<strong>堆尾元素移至根节点</strong>，重新进行上滤或下滤操作直至有序。</p>
-<ul>
-<li><strong>堆排序</strong>就是把优先队列元素依次弹出，为降低空间复杂度，实际排序时堆顶弹出的元素与堆尾元素交换并存放，最终形成的树做层序遍历便是有序的。时间复杂度为 <strong>O(NlogN)</strong> 。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -763,7 +651,9 @@
   <entry>
     <title>数据结构笔记：二叉树</title>
     <url>/2025/08/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/s2/</url>
-    <content><![CDATA[<p><a href="https://oi-wiki.org/ds/bst/">https://oi-wiki.org/ds/bst/</a><br>二叉搜索树（BST, Binary Search&#x2F;Sort Tree）<br>左子节点 &lt; 父节点 &lt; 右子节点</p>
+    <content><![CDATA[<p><a href="https://oi-wiki.org/ds/bst/">https://oi-wiki.org/ds/bst/</a></p>
+<h2 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h2><p><strong>BST, Binary Search&#x2F;Sort Tree</strong><br>左子节点 &lt; 父节点 &lt; 右子节点，所以右子树的所有值必 &gt; 左子树的所有值。<br>插入时从上往下按上述规则遍历，直至空节点创建子节点。<br>删除有两个子节点的节点时，替换为当前节点的中序后继或前驱，即右子树中的最左边（最小值）节点或左子树中的最右边（最大值）节点。时间复杂度是树的深度即 **O(logN)**。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line">	TreeNode&lt;T&gt;* left;</span><br><span class="line">	TreeNode&lt;T&gt;* right;</span><br><span class="line">	T data;</span><br><span class="line">	<span class="built_in">TreeNode</span>(T val = T&#123;&#125;) :data&#123; val &#125;, left&#123; <span class="literal">nullptr</span> &#125;, right&#123; <span class="literal">nullptr</span> &#125; &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Compare = std::less&lt;T&gt;&gt;</span><br><span class="line"><span class="keyword">class</span> BST &#123;</span><br><span class="line">	TreeNode&lt;T&gt;* root;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">Destory</span><span class="params">(TreeNode&lt;T&gt;* node)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (!node) <span class="keyword">return</span>;</span><br><span class="line">		<span class="built_in">Destory</span>(node-&gt;left);</span><br><span class="line">		<span class="built_in">Destory</span>(node-&gt;right);</span><br><span class="line">		<span class="keyword">delete</span> node;</span><br><span class="line">	&#125;</span><br><span class="line">	Compare isLessThan; <span class="comment">// 使用函数对象替换 &quot;&lt;&quot;，自定义比较规则</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">BST</span>() :root&#123; <span class="literal">nullptr</span> &#125; &#123;&#125;</span><br><span class="line">	~<span class="built_in">BST</span>() &#123; <span class="built_in">Destory</span>(root); &#125;</span><br><span class="line">	<span class="comment">//增</span></span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">Insert</span><span class="params">(<span class="type">const</span> T&amp; val)</span> </span>&#123; <span class="comment">//左值（拷贝）迭代</span></span><br><span class="line">		<span class="keyword">if</span> (!root) &#123;</span><br><span class="line">			root = <span class="keyword">new</span> TreeNode&lt;T&gt;&#123; val &#125;;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			TreeNode&lt;T&gt;* cur = root;</span><br><span class="line">			TreeNode&lt;T&gt;* parent = <span class="literal">nullptr</span>;</span><br><span class="line">			<span class="keyword">while</span> (cur) &#123;</span><br><span class="line">				<span class="keyword">if</span> (!<span class="built_in">isLessThan</span>(val, cur-&gt;data) &amp;&amp; !<span class="built_in">isLessThan</span>(cur-&gt;data, val)) <span class="keyword">return</span>;</span><br><span class="line">				parent = cur;</span><br><span class="line">				<span class="built_in">isLessThan</span>(val, cur-&gt;data) ? cur = cur-&gt;left : cur = cur-&gt;right;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">isLessThan</span>(parent-&gt;data, val) ? parent-&gt;right = <span class="keyword">new</span> TreeNode&lt;T&gt;&#123; val &#125; : parent-&gt;left = <span class="keyword">new</span> TreeNode&lt;T&gt;&#123; val &#125;;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">Insert</span><span class="params">(T&amp;&amp; val, TreeNode&lt;T&gt;*&amp; root)</span> </span>&#123; <span class="comment">//右值（移动）递归</span></span><br><span class="line">		<span class="keyword">if</span> (!root) &#123;</span><br><span class="line">			root = <span class="keyword">new</span> TreeNode&lt;T&gt;&#123; std::<span class="built_in">move</span>(val) &#125;;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">isLessThan</span>(val, root-&gt;data)) &#123;</span><br><span class="line">			<span class="built_in">Insert</span>(std::<span class="built_in">move</span>(val), root-&gt;left);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">isLessThan</span>(root-&gt;data, val)) &#123;</span><br><span class="line">			<span class="built_in">Insert</span>(std::<span class="built_in">move</span>(val), root-&gt;right);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">return</span>; <span class="comment">//重复元素</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//删</span></span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">remove</span><span class="params">(<span class="type">const</span> T&amp; val)</span> </span>&#123; <span class="comment">//迭代</span></span><br><span class="line">		<span class="keyword">if</span> (!root) <span class="keyword">return</span>;</span><br><span class="line">		TreeNode&lt;T&gt;* cur = root;</span><br><span class="line">		TreeNode&lt;T&gt;* parent = <span class="literal">nullptr</span>;</span><br><span class="line">		<span class="keyword">while</span> (<span class="built_in">isLessThan</span>(val, cur-&gt;data) || <span class="built_in">isLessThan</span>(cur-&gt;data, val)) &#123;</span><br><span class="line">			parent = cur;</span><br><span class="line">			<span class="built_in">isLessThan</span>(val, cur-&gt;data) ? cur = cur-&gt;left : cur = cur-&gt;right;</span><br><span class="line">			<span class="keyword">if</span> (!cur) <span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (cur-&gt;left &amp;&amp; cur-&gt;right) &#123; <span class="comment">//双子节点</span></span><br><span class="line">			TreeNode&lt;T&gt;* key = cur;</span><br><span class="line">			parent = cur;</span><br><span class="line">			cur = cur-&gt;right;</span><br><span class="line">			<span class="keyword">while</span> (cur-&gt;left) &#123;</span><br><span class="line">				parent = cur;</span><br><span class="line">				cur = cur-&gt;left;</span><br><span class="line">			&#125;</span><br><span class="line">			key-&gt;data = cur-&gt;data;</span><br><span class="line">			<span class="keyword">if</span> (parent-&gt;left == cur) &#123;</span><br><span class="line">				parent-&gt;left = cur-&gt;right;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				parent-&gt;right = cur-&gt;right;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">delete</span> cur;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (!cur-&gt;left &amp;&amp; !cur-&gt;right) &#123; <span class="comment">//无子节点</span></span><br><span class="line">			<span class="keyword">if</span> (!parent) root = <span class="literal">nullptr</span>;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				parent-&gt;left == cur ? parent-&gt;left = <span class="literal">nullptr</span> : parent-&gt;right = <span class="literal">nullptr</span>;</span><br><span class="line">				<span class="keyword">delete</span> cur;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123; <span class="comment">//单子节点</span></span><br><span class="line">			<span class="keyword">auto</span>* t = cur;</span><br><span class="line">			cur-&gt;left ? cur = cur-&gt;left : cur = cur-&gt;right;</span><br><span class="line">			<span class="keyword">if</span> (!parent) root = cur;</span><br><span class="line">			<span class="keyword">else</span> (parent-&gt;left == t ? parent-&gt;left : parent-&gt;right) = cur;</span><br><span class="line">			<span class="keyword">delete</span> t;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>笔记</category>
@@ -809,85 +699,42 @@
       </tags>
   </entry>
   <entry>
-    <title>Unity的生命周期</title>
-    <url>/2024/08/01/unity/unity1/</url>
-    <content><![CDATA[<h1 id="Unity的生命周期"><a href="#Unity的生命周期" class="headerlink" title="Unity的生命周期"></a>Unity的生命周期</h1><p><a href="https://docs.unity3d.com/cn/2023.2/Manual/UnityManual.html">Unity官方手册</a></p>
-<p>场景开始前调用，用于<strong>加载场景</strong>（场景中每个对象调用一次）<br>在为任何对象调用 Start 和 Update 等函数之前，会为所有脚本调用 Awake 和 OnEnable 函数。在游戏运行过程中实例化对象时，不能强制执行此调用。</p>
+    <title>数据结构笔记：堆</title>
+    <url>/2025/08/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/s1/</url>
+    <content><![CDATA[<div style="position:relative;width:100%;padding-bottom:56.25%;height:0;">
+  <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;"
+    src="//player.bilibili.com/player.html?isOutside=true&aid=297973330&bvid=BV1AF411G7cA&cid=570109806&p=1&autoplay=0"
+    scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
+  </iframe>
+</div>
+
+<h2 id="堆的定义"><a href="#堆的定义" class="headerlink" title="堆的定义"></a>堆的定义</h2><blockquote>
+<p>是<strong>完全二叉树</strong>：只允许最后一行不为满，且最后一行必须从左往右排序，最后一行元素之间不可以有间隔。特性适合数组存储。</p>
+</blockquote>
+<div align=center><img src="https://s2.loli.net/2025/08/26/8WE56QdBMgsSlfb.png"></div>
+
+<p><em>层序遍历给节点编号，元素存入数组对应下标，下标节点为 i ，其子节点则为 2i+1 2i+2 。</em></p>
+<h2 id="堆的基本操作"><a href="#堆的基本操作" class="headerlink" title="堆的基本操作"></a>堆的基本操作</h2><p><strong>上滤（上浮） &#x2F; 下滤（下沉）</strong></p>
+<h3 id="下滤"><a href="#下滤" class="headerlink" title="下滤"></a>下滤</h3><p><strong>根节点向下调整</strong></p>
 <ul>
-<li><strong>Awake：</strong> 早于Start，常用于在游戏开始之前初始化变量或游戏状态（只调用一次）</li>
-<li><strong>OnEnable：</strong> 当对象变为可用或激活状态时调用（可多次调用）</li>
+<li>若（根）节点元素小于其最大子节点，则交换，直至该元素所在节点大于其所有子节点或移动到底部（无子节点），形成大根堆。</li>
+<li>复杂度为 <strong>O(logN)</strong> 。<br>自下而上建堆，从倒数第二行父节点开始向下调整，复杂度为 <strong>O(N)</strong> 。</li>
 </ul>
-<p><u><strong>Start</u>：</strong> 仅当启用脚本实例后，在第一次帧更新之前（Update前）调用，常用于数据或逻辑对象初始化（只调用一次），在游戏运行过程中实例化对象时，不能强制执行此调用。</p>
-<p><strong>FixedUpdate：</strong> 根据物理帧利用固定间隔计时器（独立于帧率）进行所有物理计算和更新</p>
-<p><strong>OnTrigger：</strong> 触发器被触发时调用；<strong>OnCollision：</strong> 产生碰撞事件时调用</p>
-<p><em><del>yield WaitForFixedUpdate：所有脚本上调用所有 FixedUpdate 后继续，作为卡点，在物理帧结束至此点再开始执行后续代码</del></em></p>
-<p><em><del>OnMouse：输入</del></em></p>
-<p><u><strong>Update</u>：</strong> 每帧调用</p>
-<p><strong>LateUpdate：</strong> 每帧Update方法调用后调用，常见用途是跟随第三人称摄像机</p>
-<p><em><del>一堆渲染函数（有关状态机）</del></em></p>
-<p><strong>OnGUI：</strong> 渲染用户界面，然后为每个输入事件处理布局和键盘&#x2F;鼠标事件</p>
-<p><em><del>yield WaitForEndOfFrame：**当前帧彻底结束后会执行此协程</del></em></p>
-<p><strong>OnApplicationPause：</strong> 应用暂停时在帧结尾处调用，并发出一个额外帧，从而允许游戏显示图形来指示暂停状态，取消暂停后从FixedUpdate开始重新执行</p>
-<p>在场景中的所有活动对象上调用以下函数</p>
+<h3 id="上滤"><a href="#上滤" class="headerlink" title="上滤"></a>上滤</h3><p><strong>子节点向上调整</strong></p>
 <ul>
-<li><strong>OnApplicationQuit：</strong> 应用退出前在所有对象上调用，可以用于保存退出前的信息</li>
-<li><strong>OnDisable：</strong> 行为被禁用或处于非活动状态时调用</li>
+<li>与父节点比较，大于父节点则交换，直到无法上移。</li>
+<li>主要用于插入新元素到堆尾，复杂度为 <strong>O(logN)</strong> 。<br>自顶向下建堆，每次插入到堆尾后向上调整，复杂度为 <strong>O(NlogN)</strong> 。</li>
 </ul>
-<p><strong>OnDestroy：</strong> 物体被销毁时，即存在的最后一帧完成所有帧更新之后调用，一般用于清理内存</p>
-<p><img src="https://s2.loli.net/2024/08/01/wD4g5PSxKa1e8TN.png" alt="中文流程图"></p>
-<p>yield函数都是协程，在Update返回后更新。</p>
-<p><strong>协程</strong>是一种编写异步代码的方法，其中包括等待一定时间或某些操作完成，同时允许其他代码继续执行。它允许程序在单线程内实现多个独立的执行线程（协程），这些线程可以非阻塞地挂起和恢复，以实现协作式多任务处理。协程的核心思想是让程序员能够控制执行的流程，而不是完全交给操作系统或线程调度器来控制。</p>
-<p><img src="https://s2.loli.net/2024/08/01/oKkrTDdJX2igxfB.png" alt="官方文档流程图"></p>
+<h2 id="堆的应用"><a href="#堆的应用" class="headerlink" title="堆的应用"></a>堆的应用</h2><h3 id="优先队列-priority-queue"><a href="#优先队列-priority-queue" class="headerlink" title="优先队列 priority_queue"></a>优先队列 priority_queue</h3><p>默认为最大堆<br>弹出堆顶元素后，<strong>堆尾元素移至根节点</strong>，重新进行上滤或下滤操作直至有序。</p>
+<ul>
+<li><strong>堆排序</strong>就是把优先队列元素依次弹出，为降低空间复杂度，实际排序时堆顶弹出的元素与堆尾元素交换并存放，最终形成的树做层序遍历便是有序的。时间复杂度为 <strong>O(NlogN)</strong> 。</li>
+</ul>
 ]]></content>
       <categories>
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>Unity</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>游戏设计之心流</title>
-    <url>/2024/08/02/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/design1/</url>
-    <content><![CDATA[<h1 id="心流"><a href="#心流" class="headerlink" title="心流"></a>心流</h1><p><u>指玩家沉浸游戏，淡化时间、饥饿等外部因素，全神贯注的状态</u><br>理论适用于大部分“传统游戏”，但仍须根据游戏类型及目标用户具体问题具体分析。<br><img src="https://s2.loli.net/2024/08/02/3RkghHSZ5JzfY76.png" alt="心流图"><br><strong>心流的节奏要有变化</strong></p>
-<p>达到心流体验的最主要的条件我认为是：1.明确的目标 2.充分的正反馈。<br><em>但我还没有真正参与设计出过优秀的游戏，所以暂不分析也没有能力分析如何设计具有心流体验的游戏，下文更多通过解读和举例分析来浅谈心流。</em></p>
-<p>特殊的如魂系游戏和大部分手游另作讨论。<br>魂系游戏：更多依靠技术，以及在高压的焦虑中起伏的心流状态。<br>手游：更多依靠养成和数值，碎片化游戏时间，难以产生心流状态。</p>
-<p><img src="https://s2.loli.net/2024/08/02/oZ2zb56vGeV4kyU.png" alt="游戏体验数据走向"><br>游戏中的各种决策决定了游戏节奏和玩家的体验感受，大的决策影响更大，决策也会受玩家的水平影响。<br><img src="https://s2.loli.net/2024/08/02/mXuhxga9bqFEDTP.png" alt="决策流程图"><br>抽象来说<u>最差</u>的游戏设计就是<strong>破坏玩家的心流体验</strong>。<br><a id="content"></a>游戏设计要<strong>避免心流中断</strong>，出现停顿都可能影响心流让玩家感到不适，常见和典型的例子如<strong>场景加载</strong>、<strong>菜单动画</strong>、<strong>对话框</strong>等，这种交互效果都会短暂的阻碍玩家行动，如果频繁出现且无法加速和跳过会导致断层。</p>
-<p>在《赛博朋克2077》中强制对话较少，大部分对话都不会限制玩家行动，且完全没有固定和 <em>“美观”</em> 的对话窗口；<a href="#comment1">而在《GTA5》中人物的固定对话建立在第三人称真实且丰富的实机演出上，包括人物的动作、表情等，且剧情分支是根据角色的具体行为而非对话选项</a>。两者的例子整体简单来说就是在避免断层，这样的设计在RPG中较优。<a href="#comment2">反面来说，《原神》《鸣潮》等游戏被大量玩家网友诟病的对话无法跳过，剧情对话又臭又长的这种体验，根本上就是<u>阻碍了玩家心流的形成</u></a>，因为二游每个版本都有大量的剧情对话，且大部分的对话都没有伴随剧情演出，只是角色直立生硬的对话框对话，<u>信息密度过低破坏了玩家的沉浸感</u>，从游戏设计上讲是非常低级的，<a href="#comment3">且完全有办法优化</a>。<br><img src="https://s2.loli.net/2024/08/02/lHYIEQiLvu4O8Dw.png" alt="心流断层导致节奏破碎的体验"></p>
-<p>游戏设计也要<strong>避免决策溢出</strong>，同时出现过多的决策会让玩家感到压力，常出现在路线分支等情况和水平较低的玩家身上。决策溢出更难避免，需要在游戏测试过程中持续优化，可以设定一些阈值，而不是设法全覆盖。</p>
-<p><u>以上内容不完全适用于回合制游戏，需要具体游戏具体分析。</u></p>
-<h2 id="评论"><a href="#评论" class="headerlink" title="评论 "></a>评论 <a id="comment1"></a></h2><p><a href="#content">返回文中</a></p>
-<p><a id="comment2"></a>过场对话的剧情体验是GTA5心流中的”伏“，任务的进行则是“起”。</p>
-<hr>
-<p><a id="comment3"></a>这是已经得到市场验证的，《鸣潮》在开服后几天添加了更多对话的跳过来补救，更是印证了这种说法。我认为这其实是游戏设计和体验过程中很基础和重要的方面，所以我不理解库洛和米哈游这种中大厂的策划到底是什么水平。<em>为什么连我这样应届生未入行的人都能分析和理解的游戏设计，他们却不懂。</em></p>
-<p><em>所以之前春招后期有面试官问过我，“考虑过为什么策划岗的校招应聘结果不理想”，我不只回答说“因为我个人的经验不足，没有完全地从玩家视角转变到策划开发者的视角”，我还简单地说“感觉策划岗位对学历的要求更高”，因为我个人感觉策划岗位很难通过交流得知实际的策划水平，不像开发直接做算法题判断人的代码能力，而目前游戏公司招策划很看重学历高低，相较其他岗位我不认同策划岗位的能力与应试的学历正相关，我更感觉策划水平与天赋有关。有点幽默的是后来我还听到过大概说“找不到工作不要总反思自己，也要反思外部因素”的说法，我就也开始考虑，再根据库洛《鸣潮》公测后的表现，我更加怀疑策划岗位求职情况不理想，不只是我有问题，我对自己的工作能力一直很有信心，不过也不至于说自负到把原因都归结于别人，我没工作这段时间一直在学习游戏设计来提升自己。</em></p>
-<hr>
-<p>简单的如添加跳过和倍速选项，在跳过中对对话和剧情进行文字的总结呈现；特殊的如借鉴日厂游戏《绯红结系》《女神异闻录》等用2D形式来美化对话演出，仅需增加一些人物表情拆分等即可。</p>
-<p>针对这类二游，我个人设计将次要的内容通过类似漫画的的方式呈现，重要的主线再通过文字和视频具体表现，从计算机视觉方向讲，现在追求的是“多模态”，类比来说我这样的游戏设计就是在提高信息密度以提供相对流畅的游戏体验，避免破坏玩家的心流。</p>
-<p>而像《GTA5》这样的全部实机动画演出对于二游来说就没有必要，成本较高。</p>
-<p><em>不过这样的成本对于这些中大厂而言其实是不高的，导致这样的原因根本上是厂商把资金更多地投入到了营销中，买量成本大量压缩了开发成本。我难以评价利弊，可能对于厂商的盈利是有利的，但我感觉对于游戏市场长期的良性发展是不利的，不确定。</em></p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>心流</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Unity中的面向对象</title>
-    <url>/2024/08/10/unity/unity2/</url>
-    <content><![CDATA[<p>场景中存在GameObject实例，每个实例对象在Inspector中都会显示一系列组件，这些组件就是脚本（类），默认全部继承自MonoBehaviour类，成为了该脚本类的实例对象和所选对象GameObject的各种属性。</p>
-<p>Prefab预制体，将场景中的物体拖动到Assets里即可生成。这个过程实际上是一个抽象的过程，抽象成一个具有场景中被拖动物体的所有属性(含值)的模板类。</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Unity</tag>
-        <tag>面向对象</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -966,6 +813,22 @@
       </tags>
   </entry>
   <entry>
+    <title>C++ 多线程笔记小结</title>
+    <url>/2025/08/08/C++/cpp7/</url>
+    <content><![CDATA[<ul>
+<li><strong>线程安全</strong>： 并行读写和串行读写效果一致。</li>
+<li>解决数据<strong>竞态</strong>问题常见是把全局变量改为线程局部变量；初始化时使用 <code>call_once</code> 或使用局部静态变量进行初始化，因为局部静态变量 c++11 后初始化自动线程安全；还有使用锁和原子变量 <code>atomic</code> 来保证原子性等。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>多线程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>状态模式笔记1</title>
     <url>/2024/08/11/%E7%AC%94%E8%AE%B0/b3/</url>
     <content><![CDATA[<p>英雄游戏（英雄互娱）曾在面试中询问我有关动画状态机的内容，我当时没有准备过这方面，紧张时说出了不太了解的回答，事后回想自己其实了解过相关内容，曾在设计角色时绑定骨骼后导入过一些动作来操控角色，当时还学习过如何平滑动作动画，进行状态机的切换，懊悔自己薄弱的即时表达能力，感觉很可惜。借此机会，我回顾了“动画状态机”，同时再阅读有关“设计模式”的书籍，通过递归式地学习，针对“状态模式”先做些笔记，发散出了“有限状态机”再是“行为树”等内容，所以将笔记拆分为几篇集中叙写，内容对象针对游戏角色(AI)。<del>这几天我的确还是有点乏了，感觉自己学的写的没有正反馈，认识的朋友们大都找到合适的工作了，我水平真的不够吗，感觉入职之后再写博客会更有动力吧。。。</del></p>
@@ -995,11 +858,51 @@
         <category>笔记</category>
       </categories>
       <tags>
-        <tag>面向对象</tag>
         <tag>设计模式</tag>
         <tag>状态模式</tag>
         <tag>有限状态机</tag>
         <tag>AI</tag>
+        <tag>面向对象</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++ static 与 const</title>
+    <url>/2025/08/09/C++/cpp8/</url>
+    <content><![CDATA[<h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2><ul>
+<li><code>static</code> 定义的静态变量在函数执行后不会释放其存储空间，存储在内存的全局区域。</li>
+<li><code>static</code> 表示的是静态的。类的<u>静态成员函数、静态成员变量</u>是和<strong>类</strong>相关的，而不是和类的具体对象相关。即使没有具体对象，也能调用类的静态成员函数和成员变量。静态成员函数的访问权限是<strong>全局</strong>的，只要包含了声明它的头文件，都能调用它（public）。</li>
+<li>在 C++11 中，<code>static</code> 非 <code>constexpr</code> 的普通静态成员变量不能在类的内部初始化。在类的内部只是声明，必须在类外定义 <code>数据类型 类名::静态数据成员名=值</code> ；而静态成员函数定义无限制，调用时 <code>类名::静态成员函数名(参数表)</code>。</li>
+<li><u>从 C++17 起， 可用 <code>inline</code> 关键词在类内定义内联静态数据成员，如 <code>inline static int a = 1</code> ，但多个定义必须完全相同。</u></li>
+<li><code>static</code> 关键字只能用于类定义体内部的声明中，定义时不能标示为 <code>static</code>。</li>
+</ul>
+<div class="admonition tip"><p class="admonition-title"><span class="mdi mdi-lightbulb-on-outline admonition-icon"></span>Tip</p><div class="admonition-content"><p><code>static</code> 成员函数主要用处是作为类作用域的全局函数。不能访问类的非静态数据成员。因为类的静态成员函数属于<strong>类本身</strong>，没有 <code>this</code> 指针，这导致：</p>
+<ol>
+<li>不能直接存取类的非静态成员变量 或 调用非静态成员函数。</li>
+<li>不能被声明为 <code>virtual</code>。因为虚函数的实现依赖 <strong>vtable（虚函数表）</strong> 和对象实例的 vptr（指向 vtable 的指针），而静态成员函数没有 <code>this</code>，因此没有办法通过对象的多态机制调用。</li>
+</ol>
+<p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Test</span> {</span><br><span class="line">    <span class="type">int</span> value;                <span class="comment">// 非静态成员变量</span></span><br><span class="line">    <span class="type">static</span> <span class="type">int</span> staticValue;   <span class="comment">// 静态成员变量</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Test</span>(<span class="type">int</span> v) : <span class="built_in">value</span>(v) {}</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">normalFunc</span><span class="params">()</span> </span>{ <span class="comment">// 普通成员函数</span></span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;normalFunc(): value = &quot;</span> &lt;&lt; value &lt;&lt; endl;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">static</span> <span class="type">void</span> <span class="title">staticFunc</span><span class="params">()</span> </span>{ <span class="comment">// 静态成员函数</span></span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;staticFunc(): staticValue = &quot;</span> &lt;&lt; staticValue &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// ❌ 不能访问非静态成员变量</span></span><br><span class="line">        <span class="comment">// cout &lt;&lt; value; // 编译错误：没有 this 指针</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// ❌ 不能直接调用非静态成员函数</span></span><br><span class="line">        <span class="comment">// normalFunc(); // 编译错误：没有 this 指针</span></span><br><span class="line">    }</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> Test::staticValue = <span class="number">42</span>; <span class="comment">// 静态成员变量需要类外定义</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="function">Test <span class="title">t</span><span class="params">(<span class="number">10</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 普通成员函数调用</span></span><br><span class="line">    t.<span class="built_in">normalFunc</span>();  <span class="comment">// ✅ 输出 value = 10</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 静态成员函数调用（两种方式）</span></span><br><span class="line">    Test::<span class="built_in">staticFunc</span>(); <span class="comment">// ✅ 推荐用类名调用，输出 staticValue = 42</span></span><br><span class="line">    t.<span class="built_in">staticFunc</span>();     <span class="comment">// ✅ 虽然能用对象调用，但本质上跟类名调用一样</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+</div></div>
+
+<hr>
+<h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><ul>
+<li>从 C++11 起，<code>const</code> 成员变量支持类内定义赋初值，也可通过构造函数列表初始化（优先级高）。</li>
+<li><code>const</code> 数据成员只在某个对象生存期内是常量，而对于整个类而言却是可变的。因为类可以创建多个对象，不同的对象其 <code>const</code> 数据成员的值可以不同。要想建立在整个类中都恒定的常量，可以用类中的 <code>enum</code> 或 <code>static const</code> 或 <code>static constexpr</code> 。<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Test</span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Test</span>(): a&#123;<span class="literal">false</span>&#125; &#123;&#125; <span class="comment">//被列表初始化覆盖</span></span><br><span class="line">    <span class="keyword">enum</span> &#123; size1 = <span class="number">100</span>, size2 = <span class="number">200</span> &#125;;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">const</span> <span class="type">bool</span> a = <span class="literal">true</span>; </span><br><span class="line">    <span class="type">static</span> <span class="type">int</span> b; <span class="comment">//类内声明</span></span><br><span class="line">    <span class="type">const</span> <span class="type">static</span> <span class="type">int</span> c; <span class="comment">//与 static const int c;相同</span></span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="type">int</span> Test::b = <span class="number">0</span>; <span class="comment">//类外定义，static 成员变量不能在构造函数初始化列表中初始化，因为它不属于某个对象</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> Test::c = <span class="number">0</span>; <span class="comment">//注意：不需要加 static 修饰符，但要加 const</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<div class="admonition tip"><p class="admonition-title"><span class="mdi mdi-lightbulb-on-outline admonition-icon"></span>Tip</p><div class="admonition-content"><p><code>const</code> 成员函数不能修改<strong>成员变量</strong>的值（非 <code>mutable</code> ），但可以读取。对于只用于访问数据而不修改数据的成员函数，应声明为 <code>const</code> 成员函数，<strong>常量对象</strong>才能调用它。因为如果一个对象被声明为 <code>const</code>，那它只能调用 <code>const</code> 成员函数。</p>
+<p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> {</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getX</span><span class="params">()</span> <span class="type">const</span> </span>{ <span class="keyword">return</span> x; } </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">setX</span><span class="params">(<span class="type">int</span> v)</span> </span>{ x = v; }    <span class="comment">// 会修改成员变量，不是 const</span></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> A a; <span class="comment">//常量对象</span></span><br><span class="line">a.<span class="built_in">getX</span>(); <span class="comment">// OK，因为 getX 是 const</span></span><br><span class="line">a.<span class="built_in">setX</span>(<span class="number">5</span>); <span class="comment">// ❌ 编译错误，因为 setX 不是 const</span></span><br></pre></td></tr></table></figure></p>
+</div></div>
+
+<hr>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>静态数据成员可以成为成员函数的可选参数，而普通数据成员则不可以。举例如下：<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">base</span>&#123; </span><br><span class="line"><span class="keyword">public</span> : </span><br><span class="line">    <span class="type">static</span> <span class="type">int</span> _staticVar; </span><br><span class="line">    <span class="type">int</span> _var; </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">foo1</span><span class="params">(<span class="type">int</span> i = _staticVar)</span></span>;<span class="comment">//正确,_staticVar为静态数据成员 </span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">foo2</span><span class="params">(<span class="type">int</span> i = _var)</span></span>;<span class="comment">//错误,_var为普通数据成员 </span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+<li>静态数据成员的类型可以是所属类的类型，而普通数据成员则不可以。普通数据成员的只能声明为所属类类型的指针或引用。举例如下：<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Singleton</span>&#123; </span><br><span class="line"><span class="keyword">public</span> : </span><br><span class="line">    <span class="type">static</span> Singleton Instance;<span class="comment">//正确，静态成员自身类型，典型实现单例模式</span></span><br><span class="line">    Singleton _object;<span class="comment">//错误，类对象会导致无限递归嵌套</span></span><br><span class="line">    Singleton *pInstance;<span class="comment">//正确，指针 </span></span><br><span class="line">    Singleton &amp;mInstance;<span class="comment">//正确，引用 </span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -1060,6 +963,7 @@
 <h3 id="选中相同内容"><a href="#选中相同内容" class="headerlink" title="选中相同内容"></a>选中相同内容</h3><p><code>Ctrl + D</code> 逐个选择<br><code>Ctrl + Shift + L</code> 全选</p>
 <h3 id="控制光标"><a href="#控制光标" class="headerlink" title="控制光标"></a>控制光标</h3><p><code>Ctrl + ←/→</code><br><code>Home/End</code> 当前行首位， + <code>Ctrl</code> 为当前页首位<br><code>Shift + ← / →</code> 逐个选中字符<br><code>Ctrl + Shift + ← / →</code> 自动选中多个字符<br><code>Ctrl+K，CtrlN</code> 移动到下一个书签</p>
 <h3 id="内联提示"><a href="#内联提示" class="headerlink" title="内联提示"></a>内联提示</h3><p>double <code>Ctrl</code> 切换</p>
+<h3 id="代码格式化"><a href="#代码格式化" class="headerlink" title="代码格式化"></a>代码格式化</h3><p><code>Shift + Alt + F</code></p>
 ]]></content>
       <categories>
         <category>笔记</category>
@@ -1067,22 +971,6 @@
       <tags>
         <tag>vs</tag>
         <tag>快捷键</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>windows 和 office 激活</title>
-    <url>/2025/08/29/%E7%AC%94%E8%AE%B0/win/</url>
-    <content><![CDATA[<ol>
-<li>打开 powershell（管理员）</li>
-<li>输入 <code>irm https://get.activated.win | iex</code></li>
-</ol>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
       </tags>
   </entry>
   <entry>
@@ -1120,6 +1008,66 @@
       </tags>
   </entry>
   <entry>
+    <title>windows 和 office 激活</title>
+    <url>/2025/08/29/%E7%AC%94%E8%AE%B0/win/</url>
+    <content><![CDATA[<ol>
+<li>打开 powershell（管理员）</li>
+<li>输入 <code>irm https://get.activated.win | iex</code></li>
+</ol>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏设计之心流</title>
+    <url>/2024/08/02/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/design1/</url>
+    <content><![CDATA[<h1 id="心流"><a href="#心流" class="headerlink" title="心流"></a>心流</h1><p><u>指玩家沉浸游戏，淡化时间、饥饿等外部因素，全神贯注的状态</u><br>理论适用于大部分“传统游戏”，但仍须根据游戏类型及目标用户具体问题具体分析。<br><img src="https://s2.loli.net/2024/08/02/3RkghHSZ5JzfY76.png" alt="心流图"><br><strong>心流的节奏要有变化</strong></p>
+<p>达到心流体验的最主要的条件我认为是：1.明确的目标 2.充分的正反馈。<br><em>但我还没有真正参与设计出过优秀的游戏，所以暂不分析也没有能力分析如何设计具有心流体验的游戏，下文更多通过解读和举例分析来浅谈心流。</em></p>
+<p>特殊的如魂系游戏和大部分手游另作讨论。<br>魂系游戏：更多依靠技术，以及在高压的焦虑中起伏的心流状态。<br>手游：更多依靠养成和数值，碎片化游戏时间，难以产生心流状态。</p>
+<p><img src="https://s2.loli.net/2024/08/02/oZ2zb56vGeV4kyU.png" alt="游戏体验数据走向"><br>游戏中的各种决策决定了游戏节奏和玩家的体验感受，大的决策影响更大，决策也会受玩家的水平影响。<br><img src="https://s2.loli.net/2024/08/02/mXuhxga9bqFEDTP.png" alt="决策流程图"><br>抽象来说<u>最差</u>的游戏设计就是<strong>破坏玩家的心流体验</strong>。<br><a id="content"></a>游戏设计要<strong>避免心流中断</strong>，出现停顿都可能影响心流让玩家感到不适，常见和典型的例子如<strong>场景加载</strong>、<strong>菜单动画</strong>、<strong>对话框</strong>等，这种交互效果都会短暂的阻碍玩家行动，如果频繁出现且无法加速和跳过会导致断层。</p>
+<p>在《赛博朋克2077》中强制对话较少，大部分对话都不会限制玩家行动，且完全没有固定和 <em>“美观”</em> 的对话窗口；<a href="#comment1">而在《GTA5》中人物的固定对话建立在第三人称真实且丰富的实机演出上，包括人物的动作、表情等，且剧情分支是根据角色的具体行为而非对话选项</a>。两者的例子整体简单来说就是在避免断层，这样的设计在RPG中较优。<a href="#comment2">反面来说，《原神》《鸣潮》等游戏被大量玩家网友诟病的对话无法跳过，剧情对话又臭又长的这种体验，根本上就是<u>阻碍了玩家心流的形成</u></a>，因为二游每个版本都有大量的剧情对话，且大部分的对话都没有伴随剧情演出，只是角色直立生硬的对话框对话，<u>信息密度过低破坏了玩家的沉浸感</u>，从游戏设计上讲是非常低级的，<a href="#comment3">且完全有办法优化</a>。<br><img src="https://s2.loli.net/2024/08/02/lHYIEQiLvu4O8Dw.png" alt="心流断层导致节奏破碎的体验"></p>
+<p>游戏设计也要<strong>避免决策溢出</strong>，同时出现过多的决策会让玩家感到压力，常出现在路线分支等情况和水平较低的玩家身上。决策溢出更难避免，需要在游戏测试过程中持续优化，可以设定一些阈值，而不是设法全覆盖。</p>
+<p><u>以上内容不完全适用于回合制游戏，需要具体游戏具体分析。</u></p>
+<h2 id="评论"><a href="#评论" class="headerlink" title="评论 "></a>评论 <a id="comment1"></a></h2><p><a href="#content">返回文中</a></p>
+<p><a id="comment2"></a>过场对话的剧情体验是GTA5心流中的”伏“，任务的进行则是“起”。</p>
+<hr>
+<p><a id="comment3"></a>这是已经得到市场验证的，《鸣潮》在开服后几天添加了更多对话的跳过来补救，更是印证了这种说法。我认为这其实是游戏设计和体验过程中很基础和重要的方面，所以我不理解库洛和米哈游这种中大厂的策划到底是什么水平。<em>为什么连我这样应届生未入行的人都能分析和理解的游戏设计，他们却不懂。</em></p>
+<p><em>所以之前春招后期有面试官问过我，“考虑过为什么策划岗的校招应聘结果不理想”，我不只回答说“因为我个人的经验不足，没有完全地从玩家视角转变到策划开发者的视角”，我还简单地说“感觉策划岗位对学历的要求更高”，因为我个人感觉策划岗位很难通过交流得知实际的策划水平，不像开发直接做算法题判断人的代码能力，而目前游戏公司招策划很看重学历高低，相较其他岗位我不认同策划岗位的能力与应试的学历正相关，我更感觉策划水平与天赋有关。有点幽默的是后来我还听到过大概说“找不到工作不要总反思自己，也要反思外部因素”的说法，我就也开始考虑，再根据库洛《鸣潮》公测后的表现，我更加怀疑策划岗位求职情况不理想，不只是我有问题，我对自己的工作能力一直很有信心，不过也不至于说自负到把原因都归结于别人，我没工作这段时间一直在学习游戏设计来提升自己。</em></p>
+<hr>
+<p>简单的如添加跳过和倍速选项，在跳过中对对话和剧情进行文字的总结呈现；特殊的如借鉴日厂游戏《绯红结系》《女神异闻录》等用2D形式来美化对话演出，仅需增加一些人物表情拆分等即可。</p>
+<p>针对这类二游，我个人设计将次要的内容通过类似漫画的的方式呈现，重要的主线再通过文字和视频具体表现，从计算机视觉方向讲，现在追求的是“多模态”，类比来说我这样的游戏设计就是在提高信息密度以提供相对流畅的游戏体验，避免破坏玩家的心流。</p>
+<p>而像《GTA5》这样的全部实机动画演出对于二游来说就没有必要，成本较高。</p>
+<p><em>不过这样的成本对于这些中大厂而言其实是不高的，导致这样的原因根本上是厂商把资金更多地投入到了营销中，买量成本大量压缩了开发成本。我难以评价利弊，可能对于厂商的盈利是有利的，但我感觉对于游戏市场长期的良性发展是不利的，不确定。</em></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>心流</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分析《Apex Legends》角色技能设计维度</title>
+    <url>/2024/10/10/%E8%AF%84%E8%AE%BA/idea4/</url>
+    <content><![CDATA[<p>《APEX英雄》技能体系我会分三维为：转移，攻防，信息与资源。其中转移分为远近，其关系进点和机动性。以此为三维，可通过思维导图进一步细分效果。</p>
+<p>值得一提的是，实际上《APEX英雄》的角色设计对于资源相关的考量在电竞比赛中与玩家排位中相差巨大。<br><img src="https://s2.loli.net/2024/10/10/L3b8kSOHmBQGTW7.png" alt="三维图"></p>
+]]></content>
+      <categories>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于《炉石传说》国服回归策划的启发</title>
     <url>/2024/07/30/%E8%AF%84%E8%AE%BA/idea1/</url>
     <content><![CDATA[<h2 id="新闻"><a href="#新闻" class="headerlink" title="新闻"></a>新闻</h2><p>最近的ChinaJoy上，《炉石传说》（HearthStone）中国宣布，回归日期定档9月25日，回归后一定时间内登录《炉石传说》，所有国服玩家（包括新注册玩家）即可免费获赠2023年全部错过的卡牌，共计2154张卡牌，包括全部97张金色传说。另外游戏内还有额外的任务卡包、皮肤等福利，游戏外与网易雷火合作赞助赛事100万元奖金以及提供4个国服直邀名额。</p>
@@ -1142,34 +1090,6 @@
         <tag>策划</tag>
         <tag>游戏</tag>
         <tag>运营</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>锐评我所擅长和喜欢的 FPS 和 JRPG</title>
-    <url>/2024/08/31/%E8%AF%84%E8%AE%BA/idea3/</url>
-    <content><![CDATA[<p>FPS 竞技性强，能给予玩家强烈的即时的刺激感与正反馈，容易产生沉浸感和进入心流状态。但这对于枪械和操作的手感要求较高，同时因为竞技性的过强，导致影响游戏出圈的因素会更多，如平衡性、差异化玩法、门槛、反作弊、关卡地图设计等等。</p>
-<p>首要的是传统JRPG和新型 JRPG 有明显差别，我主要喜欢新式的JRPG，相对来说更短平快，符合我个人喜好。 JRPG 线性叙事节奏较紧凑平滑，较简单直接，适合当代节奏，动作动画较优秀流畅，画风较美，系统较简单易入门，但也因此略显颓势， JRPG 相比当代商业引擎技术孱弱，游戏工业化流水线，除了《最终幻想》这类老牌 IP 的老式 JRPG 外很少再出现优秀佳作，平均都在良好水平线附近，近年仅《碧蓝幻想 Relink》接近优秀，这或许与部分日厂追求稳定的低投入低回报理念有关，同时这种思想感觉也影响了国内部分游戏厂商，或许从某种意义上导致了国内除《觅长生》等独立游戏外仅有《黑神话：悟空》一部优秀 3A 的现状。</p>
-]]></content>
-      <categories>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>设计竞技类游戏时如何兼顾女性用户</title>
-    <url>/2024/10/20/%E8%AF%84%E8%AE%BA/idea5/</url>
-    <content><![CDATA[<p><strong>例如在FPS和MOBA游戏中，设计明确的奶位（偏纯辅助型）角色，即可兼顾女性玩家</strong><br>例如《守望先锋》中的天使，《英雄联盟》中的魔法猫咪、琴女，《无畏契约》中的贤者等。<br>看似像暴论，但意思已经基本到位了，我细想确实如此。</p>
-<p>后续有空再更</p>
-]]></content>
-      <categories>
-        <category>评论</category>
-      </categories>
-      <tags>
-        <tag>游戏设计</tag>
-        <tag>策划</tag>
       </tags>
   </entry>
   <entry>
@@ -1200,10 +1120,10 @@
       </tags>
   </entry>
   <entry>
-    <title>分析《Apex Legends》角色技能设计维度</title>
-    <url>/2024/10/10/%E8%AF%84%E8%AE%BA/idea4/</url>
-    <content><![CDATA[<p>《APEX英雄》技能体系我会分三维为：转移，攻防，信息与资源。其中转移分为远近，其关系进点和机动性。以此为三维，可通过思维导图进一步细分效果。</p>
-<p>值得一提的是，实际上《APEX英雄》的角色设计对于资源相关的考量在电竞比赛中与玩家排位中相差巨大。<br><img src="https://s2.loli.net/2024/10/10/L3b8kSOHmBQGTW7.png" alt="三维图"></p>
+    <title>设计竞技类游戏时如何兼顾女性用户</title>
+    <url>/2024/10/20/%E8%AF%84%E8%AE%BA/idea5/</url>
+    <content><![CDATA[<p><strong>例如在FPS和MOBA游戏中，设计明确的奶位（偏纯辅助型）角色，即可兼顾女性玩家</strong><br>例如《守望先锋》中的天使，《英雄联盟》中的魔法猫咪、琴女，《无畏契约》中的贤者等。<br>看似像暴论，但意思已经基本到位了，我细想确实如此。</p>
+<p>后续有空再更</p>
 ]]></content>
       <categories>
         <category>评论</category>
@@ -1211,6 +1131,72 @@
       <tags>
         <tag>游戏设计</tag>
         <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>锐评我所擅长和喜欢的 FPS 和 JRPG</title>
+    <url>/2024/08/31/%E8%AF%84%E8%AE%BA/idea3/</url>
+    <content><![CDATA[<p>FPS 竞技性强，能给予玩家强烈的即时的刺激感与正反馈，容易产生沉浸感和进入心流状态。但这对于枪械和操作的手感要求较高，同时因为竞技性的过强，导致影响游戏出圈的因素会更多，如平衡性、差异化玩法、门槛、反作弊、关卡地图设计等等。</p>
+<p>首要的是传统JRPG和新型 JRPG 有明显差别，我主要喜欢新式的JRPG，相对来说更短平快，符合我个人喜好。 JRPG 线性叙事节奏较紧凑平滑，较简单直接，适合当代节奏，动作动画较优秀流畅，画风较美，系统较简单易入门，但也因此略显颓势， JRPG 相比当代商业引擎技术孱弱，游戏工业化流水线，除了《最终幻想》这类老牌 IP 的老式 JRPG 外很少再出现优秀佳作，平均都在良好水平线附近，近年仅《碧蓝幻想 Relink》接近优秀，这或许与部分日厂追求稳定的低投入低回报理念有关，同时这种思想感觉也影响了国内部分游戏厂商，或许从某种意义上导致了国内除《觅长生》等独立游戏外仅有《黑神话：悟空》一部优秀 3A 的现状。</p>
+]]></content>
+      <categories>
+        <category>评论</category>
+      </categories>
+      <tags>
+        <tag>游戏设计</tag>
+        <tag>策划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Unity的生命周期</title>
+    <url>/2024/08/01/unity/unity1/</url>
+    <content><![CDATA[<h1 id="Unity的生命周期"><a href="#Unity的生命周期" class="headerlink" title="Unity的生命周期"></a>Unity的生命周期</h1><p><a href="https://docs.unity3d.com/cn/2023.2/Manual/UnityManual.html">Unity官方手册</a></p>
+<p>场景开始前调用，用于<strong>加载场景</strong>（场景中每个对象调用一次）<br>在为任何对象调用 Start 和 Update 等函数之前，会为所有脚本调用 Awake 和 OnEnable 函数。在游戏运行过程中实例化对象时，不能强制执行此调用。</p>
+<ul>
+<li><strong>Awake：</strong> 早于Start，常用于在游戏开始之前初始化变量或游戏状态（只调用一次）</li>
+<li><strong>OnEnable：</strong> 当对象变为可用或激活状态时调用（可多次调用）</li>
+</ul>
+<p><u><strong>Start</u>：</strong> 仅当启用脚本实例后，在第一次帧更新之前（Update前）调用，常用于数据或逻辑对象初始化（只调用一次），在游戏运行过程中实例化对象时，不能强制执行此调用。</p>
+<p><strong>FixedUpdate：</strong> 根据物理帧利用固定间隔计时器（独立于帧率）进行所有物理计算和更新</p>
+<p><strong>OnTrigger：</strong> 触发器被触发时调用；<strong>OnCollision：</strong> 产生碰撞事件时调用</p>
+<p><em><del>yield WaitForFixedUpdate：所有脚本上调用所有 FixedUpdate 后继续，作为卡点，在物理帧结束至此点再开始执行后续代码</del></em></p>
+<p><em><del>OnMouse：输入</del></em></p>
+<p><u><strong>Update</u>：</strong> 每帧调用</p>
+<p><strong>LateUpdate：</strong> 每帧Update方法调用后调用，常见用途是跟随第三人称摄像机</p>
+<p><em><del>一堆渲染函数（有关状态机）</del></em></p>
+<p><strong>OnGUI：</strong> 渲染用户界面，然后为每个输入事件处理布局和键盘&#x2F;鼠标事件</p>
+<p><em><del>yield WaitForEndOfFrame：**当前帧彻底结束后会执行此协程</del></em></p>
+<p><strong>OnApplicationPause：</strong> 应用暂停时在帧结尾处调用，并发出一个额外帧，从而允许游戏显示图形来指示暂停状态，取消暂停后从FixedUpdate开始重新执行</p>
+<p>在场景中的所有活动对象上调用以下函数</p>
+<ul>
+<li><strong>OnApplicationQuit：</strong> 应用退出前在所有对象上调用，可以用于保存退出前的信息</li>
+<li><strong>OnDisable：</strong> 行为被禁用或处于非活动状态时调用</li>
+</ul>
+<p><strong>OnDestroy：</strong> 物体被销毁时，即存在的最后一帧完成所有帧更新之后调用，一般用于清理内存</p>
+<p><img src="https://s2.loli.net/2024/08/01/wD4g5PSxKa1e8TN.png" alt="中文流程图"></p>
+<p>yield函数都是协程，在Update返回后更新。</p>
+<p><strong>协程</strong>是一种编写异步代码的方法，其中包括等待一定时间或某些操作完成，同时允许其他代码继续执行。它允许程序在单线程内实现多个独立的执行线程（协程），这些线程可以非阻塞地挂起和恢复，以实现协作式多任务处理。协程的核心思想是让程序员能够控制执行的流程，而不是完全交给操作系统或线程调度器来控制。</p>
+<p><img src="https://s2.loli.net/2024/08/01/oKkrTDdJX2igxfB.png" alt="官方文档流程图"></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Unity中的面向对象</title>
+    <url>/2024/08/10/unity/unity2/</url>
+    <content><![CDATA[<p>场景中存在GameObject实例，每个实例对象在Inspector中都会显示一系列组件，这些组件就是脚本（类），默认全部继承自MonoBehaviour类，成为了该脚本类的实例对象和所选对象GameObject的各种属性。</p>
+<p>Prefab预制体，将场景中的物体拖动到Assets里即可生成。这个过程实际上是一个抽象的过程，抽象成一个具有场景中被拖动物体的所有属性(含值)的模板类。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>面向对象</tag>
+        <tag>Unity</tag>
       </tags>
   </entry>
   <entry>
