@@ -1327,7 +1327,7 @@
 <h3 id="选中相同内容"><a href="#选中相同内容" class="headerlink" title="选中相同内容"></a>选中相同内容</h3><p><code>Ctrl + D</code> 逐个选择<br><code>Ctrl + Shift + L</code> 全选</p>
 <h3 id="控制光标"><a href="#控制光标" class="headerlink" title="控制光标"></a>控制光标</h3><p><code>Ctrl + ←/→</code><br><code>Home/End</code> 当前行首位， + <code>Ctrl</code> 为当前页首位<br><code>Shift + ← / →</code> 逐个选中字符<br><code>Ctrl + Shift + ← / →</code> 自动选中多个字符<br><code>Ctrl+K，CtrlN</code> 移动到下一个书签</p>
 <h3 id="内联提示"><a href="#内联提示" class="headerlink" title="内联提示"></a>内联提示</h3><p>double <code>Ctrl</code> 切换</p>
-<h3 id="代码格式化"><a href="#代码格式化" class="headerlink" title="代码格式化"></a>代码格式化</h3><p><code>Shift + Alt + F</code></p>
+<h3 id="代码格式化"><a href="#代码格式化" class="headerlink" title="代码格式化"></a>代码格式化</h3><p><code>Shift + Alt + F</code><br>虚拟机里是 <code>Ctrl + Shift + I</code></p>
 ]]></content>
       <categories>
         <category>笔记</category>
@@ -1369,6 +1369,57 @@
       </categories>
       <tags>
         <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux 环境 C++ 编程</title>
+    <url>/2026/01/06/%E7%AC%94%E8%AE%B0/Linux/</url>
+    <content><![CDATA[<h2 id="C-环境准备"><a href="#C-环境准备" class="headerlink" title="C++ 环境准备"></a>C++ 环境准备</h2><p><code>sudo apt-get install g++</code> 安装编译器。<br><code>sudo apt-get install gdb</code> 安装调试器。<br>在 vscode 中安装拓展</p>
+<h2 id="编译指令"><a href="#编译指令" class="headerlink" title="编译指令"></a>编译指令</h2><p>简单：”g++ 选项 源文件名”，例如 <code>g++ -o test main.cpp</code><br>高级：”g++ 选项 源文件名 输出选项 链接库”，例如 <code>g++ -std=c++17 -Wall -O2 -I./include main.cpp -o my_app -L./lib -lpthread</code></p>
+<ol>
+<li><p>编译选项<br><code>-std=c++17</code> 指定 C++ 标准。<br><code>-I./include</code> 指定头文件搜索路径。<br><code>-g</code> 调试， <code>Wall</code> 警告。<br><code>-On</code> 编译、链接时优化，提高可执行程序运行速度，减慢编译速度，默认 <code>-O0</code>, 推荐 <code>-O2</code> 。<br><code>-c</code> 只编译不链接，常用于把源文件编译成静态库或动态库。</p>
+</li>
+<li><p>输出选项<br><code>-o 文件名</code> 指定输出文件名。</p>
+</li>
+<li><p>链接库<br><code>-L./libs</code> 指定库文件搜索路径。<br><code>-l库文件名</code> 链接库，若库文件名为 <code>libpthread.so</code> 则命令为 <code>-lpthread</code> 。</p>
+</li>
+</ol>
+<h2 id="静态库和动态库"><a href="#静态库和动态库" class="headerlink" title="静态库和动态库"></a>静态库和动态库</h2><p>若动态库和静态库同时存在，编译器将优先使用动态库。</p>
+<h3 id="概念与特点"><a href="#概念与特点" class="headerlink" title="概念与特点"></a>概念与特点</h3><p><strong>静态库</strong>：程序在<strong>编译</strong>时把库文件的二进制代码链接到目标程序中，这种方式称为静态链接。<br>如果多个程序中用到了同一静态库中的函数或类，就会存在<strong>多份拷贝</strong>。</p>
+<ul>
+<li>静态库的链接在编译时期完成，执行时代码加载速度快。</li>
+<li>目标程序的可执行文件较大，浪费空间。</li>
+<li>程序的更新和发布不方便，一个静态库更新后，所有使用它的程序都需要重新编译。</li>
+</ul>
+<p><strong>动态库</strong>：程序在<strong>运行</strong>时把库文件的二进制代码载入。<br>如果多个进程中用到了同一动态库中的函数或类，内存中只会存在<strong>一份</strong>，避免了空间浪费问题</p>
+<ul>
+<li>可实现进程间的代码共享，因此动态库也称为共享库。</li>
+<li>程序升级较简单，无需重新编译程序，只需更新动态库即可。</li>
+<li>需要提前设置 <code>LD_LIBRARY_PATH</code> 环境变量。</li>
+</ul>
+<h3 id="制作"><a href="#制作" class="headerlink" title="制作"></a>制作</h3><ol>
+<li><p>制作静态库<br>1.”g++ -c 源代码文件清单”，如 <code>g++ -c source1.cpp source2.cpp source3.cpp</code><br>2.”ar rcs lib库名.a 目标文件清单”，如 <code>ar rcs libmylib.a source1.o source2.o source3.o</code></p>
+</li>
+<li><p>制作动态库<br>“g++ -fPIC -shared 源代码文件清单 -o lib库名.so”，如 <code>g++ -fPIC -shared math.cpp -o libmymath.so</code></p>
+</li>
+</ol>
+<h2 id="Makefile-与-CMake"><a href="#Makefile-与-CMake" class="headerlink" title="Makefile 与 CMake"></a>Makefile 与 CMake</h2><h3 id="Makefile"><a href="#Makefile" class="headerlink" title="Makefile"></a>Makefile</h3><ol>
+<li>在目录下创建文件 “Makefile” ，编写命令内容。<strong>开头需要使用 <code>Tab</code> 缩进，而非空格</strong>。</li>
+<li>运行命令 <code>make</code> 即可编译链接出可执行程序，使用 “.&#x2F;程序名” 运行。<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment"># # v1</span></span><br><span class="line"><span class="comment"># test: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line"><span class="comment"># 	g++ -o test main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># # v2</span></span><br><span class="line"><span class="comment"># CXX = g++</span></span><br><span class="line"><span class="comment"># TARGET = test</span></span><br><span class="line"><span class="comment"># OBJ = main.o printhello.o factorial.o</span></span><br><span class="line"><span class="comment"># # make 时执行 g++, 先找 TARGET , TARGET 不存在找 OBJ， OBJ 不存在，编译三个 .cpp 文件生成 .o 文件</span></span><br><span class="line"><span class="comment"># # 然后再链接 OBJ 文件，生成可执行文件 hello</span></span><br><span class="line"><span class="comment"># $(TARGET): $(OBJ)</span></span><br><span class="line"><span class="comment"># 	$(CXX) -o $(TARGET) $(OBJ)</span></span><br><span class="line"><span class="comment"># # 编译 OBJ</span></span><br><span class="line"><span class="comment"># main.o: main.cpp</span></span><br><span class="line"><span class="comment"># 	$(CXX) -c main.cpp</span></span><br><span class="line"><span class="comment"># printhello.o: printhello.cpp</span></span><br><span class="line"><span class="comment"># 	$(CXX) -c printhello.cpp</span></span><br><span class="line"><span class="comment"># factorial.o: factorial.cpp</span></span><br><span class="line"><span class="comment"># 	$(CXX) -c factorial.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># v3</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"><span class="comment"># 编译选项，显示所有的warning</span></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"><span class="comment"># $@表示的就是冒号前面的TARGET，$^表示的是冒号后OBJ的全部.o依赖文件</span></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">	<span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"><span class="comment"># $&lt;表示指向%.cpp依赖的第一个，但是这里依赖只有一个</span></span><br><span class="line"><span class="comment"># $@表示指向%.o</span></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">	<span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="comment"># 为了防止文件夹中存在一个文件叫clean</span></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="comment"># -f表示强制删除，此处表示删除所有的.o文件和TARGET文件</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">	rm -f *.o <span class="variable">$(TARGET)</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="CMake"><a href="#CMake" class="headerlink" title="CMake"></a>CMake</h3><ol>
+<li>在项目根目录下创建 .txt文件 <code>CMakeLists.txt</code> ，编写内容。</li>
+<li>创建 “build” 文件夹 <code>mkdir build</code> ，进入该目录 <code>cd build</code> 。</li>
+<li>运行命令 <code>cmake ..</code> ，执行根目录的内容，在当前目录生成 “Makefile”。</li>
+<li>运行命令 <code>make</code> 即可编译链接出可执行程序，使用 “.&#x2F;程序名” 运行。<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(<span class="keyword">test</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD <span class="number">20</span>) <span class="comment"># 指定 C++ 标准</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(<span class="keyword">test</span> main.cpp factorial.cpp printhello.cpp)</span><br><span class="line"></span><br><span class="line"><span class="comment">## 自动查找当前目录下所有的源文件，并将列表赋值给变量 SRC_LIST</span></span><br><span class="line"><span class="comment">#aux_source_directory(. SRC_LIST)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 使用变量 SRC_LIST 编译程序，不用手写 main.cpp factorial.cpp ...</span></span><br><span class="line"><span class="comment">#add_executable(test $&#123;SRC_LIST&#125;)</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
 </search>
