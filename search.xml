@@ -1408,11 +1408,21 @@
 <li>运行命令 <code>make</code> 即可编译链接出可执行程序，使用 “.&#x2F;程序名” 运行。<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="comment"># # v1</span></span><br><span class="line"><span class="comment"># test: main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line"><span class="comment"># 	g++ -o test main.cpp printhello.cpp factorial.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># # v2</span></span><br><span class="line"><span class="comment"># CXX = g++</span></span><br><span class="line"><span class="comment"># TARGET = test</span></span><br><span class="line"><span class="comment"># OBJ = main.o printhello.o factorial.o</span></span><br><span class="line"><span class="comment"># # make 时执行 g++, 先找 TARGET , TARGET 不存在找 OBJ， OBJ 不存在，编译三个 .cpp 文件生成 .o 文件</span></span><br><span class="line"><span class="comment"># # 然后再链接 OBJ 文件，生成可执行文件 hello</span></span><br><span class="line"><span class="comment"># $(TARGET): $(OBJ)</span></span><br><span class="line"><span class="comment"># 	$(CXX) -o $(TARGET) $(OBJ)</span></span><br><span class="line"><span class="comment"># # 编译 OBJ</span></span><br><span class="line"><span class="comment"># main.o: main.cpp</span></span><br><span class="line"><span class="comment"># 	$(CXX) -c main.cpp</span></span><br><span class="line"><span class="comment"># printhello.o: printhello.cpp</span></span><br><span class="line"><span class="comment"># 	$(CXX) -c printhello.cpp</span></span><br><span class="line"><span class="comment"># factorial.o: factorial.cpp</span></span><br><span class="line"><span class="comment"># 	$(CXX) -c factorial.cpp</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># v3</span></span><br><span class="line">CXX = g++</span><br><span class="line">TARGET = hello</span><br><span class="line">OBJ = main.o printhello.o factorial.o</span><br><span class="line"><span class="comment"># 编译选项，显示所有的warning</span></span><br><span class="line">CXXFLAGS = -c -Wall</span><br><span class="line"><span class="comment"># $@表示的就是冒号前面的TARGET，$^表示的是冒号后OBJ的全部.o依赖文件</span></span><br><span class="line"><span class="variable">$(TARGET)</span>: <span class="variable">$(OBJ)</span></span><br><span class="line">	<span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"><span class="comment"># $&lt;表示指向%.cpp依赖的第一个，但是这里依赖只有一个</span></span><br><span class="line"><span class="comment"># $@表示指向%.o</span></span><br><span class="line"><span class="section">%.o: %.cpp</span></span><br><span class="line">	<span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="comment"># 为了防止文件夹中存在一个文件叫clean</span></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="comment"># -f表示强制删除，此处表示删除所有的.o文件和TARGET文件</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">	rm -f *.o <span class="variable">$(TARGET)</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="CMake"><a href="#CMake" class="headerlink" title="CMake"></a>CMake</h3><ol>
-<li>在项目根目录下创建 .txt文件 <code>CMakeLists.txt</code> ，编写内容。</li>
+<li>在项目根目录下创建 .txt文件 <code>CMakeLists.txt</code> ，编写内容。<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(<span class="keyword">test</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD <span class="number">20</span>) <span class="comment"># 指定 C++ 标准</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(<span class="keyword">test</span> main.cpp factorial.cpp printhello.cpp)</span><br><span class="line"></span><br><span class="line"><span class="comment">## 自动查找当前目录下所有的源文件，并将列表赋值给变量 SRC_LIST</span></span><br><span class="line"><span class="comment">#aux_source_directory(. SRC_LIST)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 使用变量 SRC_LIST 编译程序，不用手写 main.cpp factorial.cpp ...</span></span><br><span class="line"><span class="comment">#add_executable(test $&#123;SRC_LIST&#125;)</span></span><br></pre></td></tr></table></figure></li>
 <li>创建 “build” 文件夹 <code>mkdir build</code> ，进入该目录 <code>cd build</code> 。</li>
 <li>运行命令 <code>cmake ..</code> ，执行根目录的内容，在当前目录生成 “Makefile”。</li>
-<li>运行命令 <code>make</code> 即可编译链接出可执行程序，使用 “.&#x2F;程序名” 运行。<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">project</span>(<span class="keyword">test</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD <span class="number">20</span>) <span class="comment"># 指定 C++ 标准</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(<span class="keyword">test</span> main.cpp factorial.cpp printhello.cpp)</span><br><span class="line"></span><br><span class="line"><span class="comment">## 自动查找当前目录下所有的源文件，并将列表赋值给变量 SRC_LIST</span></span><br><span class="line"><span class="comment">#aux_source_directory(. SRC_LIST)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 使用变量 SRC_LIST 编译程序，不用手写 main.cpp factorial.cpp ...</span></span><br><span class="line"><span class="comment">#add_executable(test $&#123;SRC_LIST&#125;)</span></span><br></pre></td></tr></table></figure></li>
+<li>运行命令 <code>make</code> 即可编译链接出可执行程序，使用 “.&#x2F;程序名” 运行。</li>
 </ol>
+<h2 id="GDB-调试"><a href="#GDB-调试" class="headerlink" title="GDB 调试"></a>GDB 调试</h2><p>待写</p>
+<h2 id="Linux-的系统错误"><a href="#Linux-的系统错误" class="headerlink" title="Linux 的系统错误"></a>Linux 的系统错误</h2><p>待写</p>
+<h2 id="Linux-的信号"><a href="#Linux-的信号" class="headerlink" title="Linux 的信号"></a>Linux 的信号</h2><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="Linux-的时间操作"><a href="#Linux-的时间操作" class="headerlink" title="Linux 的时间操作"></a>Linux 的时间操作</h3><h3 id="Linux-的目录操作"><a href="#Linux-的目录操作" class="headerlink" title="Linux 的目录操作"></a>Linux 的目录操作</h3><div class="admonition anote"><p class="admonition-title"><span class="mdi mdi-note-outline admonition-icon"></span>stat 结构体</p><div class="admonition-content"><p><code>struct stat</code> 结构体用于存放目录或文件的详细信息，成员变量比较多，重点关注 <code>st_mode</code>, <code>st_size</code> 和 <code>st_mtime</code> 成员。<br />
+注意：<br />
+<code>st_mtime</code> 是一个整数表示的时间，需要程序员自己写代码转换格式。<br />
+<code>st_mode</code> 成员的取值很多，用以下两个宏来判断：<br />
+<code>S_ISREG(st_mode)</code> 是否为普通文件，如果是，返回真。<br />
+<code>S_ISDIR(st_mode)</code> 是否为目录，如果是，返回真。<br />
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">stat</span> </span><br><span class="line">{ </span><br><span class="line"><span class="type">dev_t</span> st_dev;    <span class="comment">// 文件的设备编号。 </span></span><br><span class="line"><span class="type">ino_t</span> st_ino;     <span class="comment">// 文件的i-node。 </span></span><br><span class="line"><span class="type">mode_t</span> st_mode;  <span class="comment">// 文件的类型和存取的权限。 </span></span><br><span class="line"><span class="type">nlink_t</span> st_nlink;    <span class="comment">// 连到该文件的硬连接数目，刚建立的文件值为1。 </span></span><br><span class="line"><span class="type">uid_t</span> st_uid;     <span class="comment">// 文件所有者的用户识别码。 </span></span><br><span class="line"><span class="type">gid_t</span> st_gid;     <span class="comment">// 文件所有者的组识别码。 </span></span><br><span class="line"><span class="type">dev_t</span> st_rdev;   <span class="comment">// 若此文件为设备文件，则为其设备编号。 </span></span><br><span class="line"><span class="type">off_t</span> st_size;    <span class="comment">// 文件的大小，以字节计算。 </span></span><br><span class="line"><span class="type">size_t</span> st_blksize; <span class="comment">// I/O 文件系统的I/O 缓冲区大小。 </span></span><br><span class="line"><span class="type">size_t</span> st_blocks;   <span class="comment">// 占用文件区块的个数。 </span></span><br><span class="line"><span class="type">time_t</span> st_atime;   <span class="comment">// 文件最近一次被存取或被执行的时间， </span></span><br><span class="line">	<span class="comment">// 在用mknod、 utime、read、write 与tructate 时改变。 </span></span><br><span class="line"><span class="type">time_t</span> st_mtime;   <span class="comment">// 文件最后一次被修改的时间， </span></span><br><span class="line">	<span class="comment">// 在用mknod、 utime 和write 时才会改变。 </span></span><br><span class="line"><span class="type">time_t</span> st_ctime;   <span class="comment">// 最近一次被更改的时间，在文件所有者、组、 权限被更改时更新。 </span></span><br><span class="line">}; </span><br></pre></td></tr></table></figure></p>
+</div></div>
 ]]></content>
       <categories>
         <category>笔记</category>
@@ -1420,6 +1430,43 @@
       <tags>
         <tag>C++</tag>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从输入 URL 到页面展示到底发生了什么？</title>
+    <url>/2026/01/07/%E5%85%AB%E8%82%A1%E6%96%87/bgw2/</url>
+    <content><![CDATA[<ol>
+<li>解析 URL，准备发送 HTTP 请求。</li>
+<li>检查本地缓存是否有对应资源，如果有则直接返回；没有则进入下一步网络请求。</li>
+<li>DNS 查找域名对应的 IP 地址（按本地浏览器缓存-&gt;本地 Host 文件-&gt;路由器缓存-&gt; DNS 服务器-&gt;根 DNS 服务器的顺序查询域名对应 IP，直到找到为止）。如果使用了 CDN， DNS 解析会通过 CNAME 返回离用户最近的 CDN 节点的 IP 地址，而非源站地址。</li>
+<li>TCP 三次握手浏览器与服务器（IP）建立（TCP）建立连接。 HTTPS 协议还要进行 SSL 加密协议握手。</li>
+<li>浏览器构建 HTTP 请求报文发送给服务器。</li>
+<li>服务器处理请求并返回 HTTP 资源，其中包括状态码如404未找到、301重定向等。</li>
+<li>浏览器解析响应并渲染页面。</li>
+<li>TCP 四次挥手浏览器与服务器（IP）断开（TCP）连接。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>介绍一下 TCP/IP 模型和 OSI 模型的区别</title>
+    <url>/2026/01/07/%E5%85%AB%E8%82%A1%E6%96%87/bgw1/</url>
+    <content><![CDATA[<p>OSI 是理论上的国际标准，是七层协议体系结构，从上至下分别是应用层，表示层，会话层，运输层，网络层，数据链路层，物理层； TCP&#x2F;IP 是实际上的工业标准，是更具实用性的四层体系结构，从上至下分别是应用层，运输层，网络层和网络接口层。</p>
+<p>TCP&#x2F;IP 模型的应用层对应 OSI 的应用层、表示层和会话层，将这3层合并后让应用程序自行管理数据格式会更高效。应用层负责应用进程间的交互来完成特定的网络应用，其协议定义的是应用进程间通信和交互的规则，其中的协议有很多，如 DNS, HTTPS 和 SMTP 等等。</p>
+<p>TCP&#x2F;IP 的运输层对应的 OSI 的运输层，负责向两台主机的进程间的通信提供通用的数据传输服务，主要使用 TCP 和 UDP 两种协议。 TCP 提供面向连接的可靠的数据传输服务；而 UDP 提供的是无连接的不可靠的数据传输服务。</p>
+<p>TCP&#x2F;IP 的网络层对应 OSI 的网络层，使用的是无连接的 IP 协议，根据 IP 地址为分组交换网上的不同主机提供通信服务。而 OSI 同时提供面向连接和无连接的通信服务。在对连接服务的支持上， TCP&#x2F;IP 模型比 OSI 具备更加明确和精简的设计。</p>
+<p>最下面的网络接口层对应 OSI 的数据链路层和物理层，但它没有属于 TCP&#x2F;IP 体系的具体协议，主要负责将网络层交付的 IP 数据报组装成 MAC 帧，并利用物理介质如光缆、无线电等将比特流发到物理链路的另一端。比起 OSI 的分层设计具有更好的兼容性，对硬件限制更少。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
       </tags>
   </entry>
 </search>
