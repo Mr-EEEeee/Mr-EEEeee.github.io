@@ -272,6 +272,16 @@
 <hr>
 <p><strong>迭代器</strong>主要是对 STL 容器的指针操作进行了封装，来模拟指针的行为，让开发者在使用时不必关注和理解容器内存细节，专注于逻辑的操作，使得连续内存的容器如 <code>vector</code> 和非连续内存地址的容器如 <code>list</code> 都能统一的使用，比如说 <code>++</code> <code>--</code> 来管理指针的移动操作。另外可以与标准库的一些方法如 <code>find</code> <code>max_element</code> 合作在算法题中来专注于实现逻辑操作，省略具体细节内容。降低了指针和内存的耦合度。</p>
 <hr>
+<p><code>std::stringstream</code> 是 C++ 标准库 <code>&lt;sstream&gt;</code> 中的一个类，把字符串当作一个流（Stream）来处理，用 &gt;&gt; 和 &lt;&lt; 操作符来操作它。<br>它的用法主要分为两大类：<strong>格式化拼接</strong>和<strong>字符串分割</strong>。</p>
+<ol>
+<li><p>格式化拼接（把各种类型转为 string）会自动处理类型转换</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">std::stringstream ss;</span><br><span class="line"><span class="type">int</span> id = <span class="number">101</span>;</span><br><span class="line"><span class="type">double</span> score = <span class="number">95.5</span>;</span><br><span class="line">std::string name = <span class="string">&quot;Alice&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 &lt;&lt; 写入数据（就像 cout）</span></span><br><span class="line">ss &lt;&lt; <span class="string">&quot;User: &quot;</span> &lt;&lt; name &lt;&lt; <span class="string">&quot;, ID: &quot;</span> &lt;&lt; id &lt;&lt; <span class="string">&quot;, Score: &quot;</span> &lt;&lt; score;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 .str() 导出完整的字符串</span></span><br><span class="line">std::string result = ss.<span class="built_in">str</span>();</span><br><span class="line">std::cout &lt;&lt; result &lt;&lt; std::endl; </span><br><span class="line"><span class="comment">// 输出: User: Alice, ID: 101, Score: 95.5</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串分割（解析字符串）它默认以 空格、制表符、换行符 作为分隔符</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 按空格分割单词</span></span><br><span class="line">std::string s = <span class="string">&quot;C++ is fun to learn&quot;</span>;</span><br><span class="line"><span class="function">std::stringstream <span class="title">ss</span><span class="params">(s)</span></span>; <span class="comment">// 初始化时传入字符串</span></span><br><span class="line">std::string word;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 &gt;&gt; 提取数据（就像 cin）</span></span><br><span class="line"><span class="comment">// 它会一个单词一个单词地读，直到结束</span></span><br><span class="line"><span class="keyword">while</span> (ss &gt;&gt; word) &#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Word: &quot;</span> &lt;&lt; word &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>按特定字符分割（如逗号），配合 <code>std::getline</code></strong></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// &quot;100,200,300&quot;</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">sumString</span><span class="params">(string data)</span> </span>&#123;</span><br><span class="line">    <span class="function">stringstream <span class="title">ss</span><span class="params">(data)</span></span>; <span class="comment">// 把原始字符串喂给流</span></span><br><span class="line">    string item;</span><br><span class="line">    <span class="type">int</span> total = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 用 getline 分割逗号</span></span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">getline</span>(ss, item, <span class="string">&#x27;,&#x27;</span>)) &#123;</span><br><span class="line">        <span class="comment">// 把分割出来的字符串 item 转成整数并累加</span></span><br><span class="line">        total += <span class="built_in">stoi</span>(item); </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> total;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
 ]]></content>
       <categories>
         <category>笔记</category>
@@ -940,58 +950,16 @@
       </tags>
   </entry>
   <entry>
-    <title>算法笔记：滑动窗口</title>
-    <url>/2025/11/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/c0/</url>
-    <content><![CDATA[<h2 id="滑动窗口通用模板"><a href="#滑动窗口通用模板" class="headerlink" title="滑动窗口通用模板"></a>滑动窗口通用模板</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">std::unordered_map&lt;<span class="type">char</span>, <span class="type">int</span>&gt; need, window;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1. 初始化 need（目标字符频率）</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">const</span> <span class="keyword">auto</span>&amp; c : target) &#123;</span><br><span class="line">    need[c]++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> left = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> valid = <span class="number">0</span>;  <span class="comment">// 已匹配的字符种类数</span></span><br><span class="line"><span class="comment">// 根据题目需求自定义其他变量（如结果、长度等）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 移动 right 扩大窗口</span></span><br><span class="line"><span class="keyword">while</span> (right &lt; s.<span class="built_in">size</span>()) &#123;</span><br><span class="line">    <span class="type">char</span> c = s[right];</span><br><span class="line">    right++;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 3. 进行窗口内数据的更新</span></span><br><span class="line">    <span class="keyword">if</span> (need.<span class="built_in">count</span>(c)) &#123;</span><br><span class="line">        window[c]++;</span><br><span class="line">        <span class="keyword">if</span> (window[c] == need[c]) &#123;</span><br><span class="line">            valid++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 4. 判断是否需要收缩窗口</span></span><br><span class="line">    <span class="keyword">while</span> (窗口需要收缩的条件) &#123;</span><br><span class="line">        <span class="comment">// 在这里更新结果（如果需要）</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 5. 移动 left 缩小窗口</span></span><br><span class="line">        <span class="type">char</span> d = s[left];</span><br><span class="line">        left++;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 6. 进行窗口内数据的更新</span></span><br><span class="line">        <span class="keyword">if</span> (need.<span class="built_in">count</span>(d)) &#123;</span><br><span class="line">            <span class="keyword">if</span> (window[d] == need[d]) &#123;</span><br><span class="line">                valid--;</span><br><span class="line">            &#125;</span><br><span class="line">            window[d]--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> res;</span><br></pre></td></tr></table></figure>
-<h2 id="关键点说明"><a href="#关键点说明" class="headerlink" title="关键点说明"></a>关键点说明</h2><h3 id="1️⃣-窗口收缩条件（最重要的区别）"><a href="#1️⃣-窗口收缩条件（最重要的区别）" class="headerlink" title="1️⃣ 窗口收缩条件（最重要的区别）"></a>1️⃣ <strong>窗口收缩条件（最重要的区别）</strong></h3><p>不同题目的收缩条件不同：</p>
-<table>
-<thead>
-<tr>
-<th>题目类型</th>
-<th>收缩条件</th>
-<th>何时更新结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>最小覆盖子串</strong></td>
-<td><code>valid == need.size()</code></td>
-<td>收缩时（找最小）</td>
-</tr>
-<tr>
-<td><strong>字符串排列</strong></td>
-<td><code>right - left &gt;= target.size()</code></td>
-<td>收缩时（固定长度）</td>
-</tr>
-<tr>
-<td><strong>找所有异位词</strong></td>
-<td><code>right - left &gt;= target.size()</code></td>
-<td>收缩时（固定长度）</td>
-</tr>
-<tr>
-<td><strong>最长无重复子串</strong></td>
-<td><code>window[c] &gt; 1</code>（有重复）</td>
-<td>扩张时（找最大）</td>
-</tr>
-</tbody></table>
-<h3 id="2️⃣-何时更新结果"><a href="#2️⃣-何时更新结果" class="headerlink" title="2️⃣ 何时更新结果"></a>2️⃣ <strong>何时更新结果</strong></h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 情况1：求最小 → 在收缩窗口时更新</span></span><br><span class="line"><span class="keyword">while</span> (valid == need.<span class="built_in">size</span>()) &#123;  <span class="comment">// 窗口合法</span></span><br><span class="line">    res = <span class="built_in">min</span>(res, right - left);  <span class="comment">// 更新最小值</span></span><br><span class="line">    <span class="comment">// 然后收缩</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 情况2：求最大 → 在扩张窗口后更新</span></span><br><span class="line"><span class="keyword">if</span> (条件满足) &#123;</span><br><span class="line">    res = <span class="built_in">max</span>(res, right - left);  <span class="comment">// 更新最大值</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 情况3：固定长度 → 在收缩窗口时检查</span></span><br><span class="line"><span class="keyword">while</span> (right - left &gt;= k) &#123;</span><br><span class="line">    <span class="keyword">if</span> (valid == need.<span class="built_in">size</span>()) &#123;</span><br><span class="line">        <span class="comment">// 记录结果</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 收缩</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>算法笔记</title>
+    <url>/2026/01/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/c0/</url>
+    <content><![CDATA[<h2 id="二叉树算法总结"><a href="#二叉树算法总结" class="headerlink" title="二叉树算法总结"></a>二叉树算法总结</h2><p>889题跳过</p>
+<h3 id="递归算法"><a href="#递归算法" class="headerlink" title="递归算法"></a>递归算法</h3><p>二叉树的递归问题，分为<strong>遍历</strong>和<strong>分解</strong>两种思想。</p>
+<h4 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h4><p>DFS 深度优先搜索，自顶向下，需要<strong>回溯</strong>，函数类型为 <code>void</code>，依靠全局变量（显式）或参数传递（隐式）。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义全局变量</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">traverse</span><span class="params">(TreeNode* root)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(root == <span class="literal">nullptr</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 前序进入处理</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(root-&gt;left == <span class="literal">nullptr</span> &amp;&amp; root-&gt;right == <span class="literal">nullptr</span>)&#123;</span><br><span class="line">        <span class="comment">// 叶节点临界处理</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">traverse</span>(root-&gt;left);</span><br><span class="line">    <span class="built_in">traverse</span>(root-&gt;right);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 后序回溯</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="分解"><a href="#分解" class="headerlink" title="分解"></a>分解</h4><p>动态规划，自底向上，进行<strong>分治</strong>，函数类型为 <code>TreeNode*</code> （结果类型），</p>
+<h3 id="非递归算法"><a href="#非递归算法" class="headerlink" title="非递归算法"></a>非递归算法</h3><p>层序遍历，BFS 广度优先搜索。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">levelOrder</span>(TreeNode* root) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!root)</span><br><span class="line">        <span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; level;</span><br><span class="line">    std::queue&lt;TreeNode*&gt; q;</span><br><span class="line">    q.<span class="built_in">push</span>(root);</span><br><span class="line">    <span class="type">int</span> depth = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        <span class="type">int</span> sz = q.<span class="built_in">size</span>();</span><br><span class="line">        level.<span class="built_in">push_back</span>(<span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(sz));</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; sz; i++) &#123;</span><br><span class="line">            TreeNode* temp = q.<span class="built_in">front</span>();</span><br><span class="line">            level[depth][i] = temp-&gt;val;</span><br><span class="line">            q.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">if</span> (temp-&gt;left)</span><br><span class="line">                q.<span class="built_in">push</span>(temp-&gt;left);</span><br><span class="line">            <span class="keyword">if</span> (temp-&gt;right)</span><br><span class="line">                q.<span class="built_in">push</span>(temp-&gt;right);</span><br><span class="line">        &#125;</span><br><span class="line">        depth++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> level;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="三道经典题对比"><a href="#三道经典题对比" class="headerlink" title="三道经典题对比"></a>三道经典题对比</h2><h3 id="🔹-最小覆盖子串-LeetCode-76"><a href="#🔹-最小覆盖子串-LeetCode-76" class="headerlink" title="🔹 最小覆盖子串 (LeetCode 76)"></a>🔹 最小覆盖子串 (LeetCode 76)</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (valid == need.<span class="built_in">size</span>()) &#123;  <span class="comment">// 包含所有字符时收缩</span></span><br><span class="line">    <span class="keyword">if</span> (right - left &lt; len) &#123;   <span class="comment">// 更新最小长度</span></span><br><span class="line">        start = left;</span><br><span class="line">        len = right - left;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 收缩窗口...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="🔹-字符串排列-LeetCode-567"><a href="#🔹-字符串排列-LeetCode-567" class="headerlink" title="🔹 字符串排列 (LeetCode 567)"></a>🔹 字符串排列 (LeetCode 567)</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (right - left &gt;= s<span class="number">1.</span><span class="built_in">size</span>()) &#123;  <span class="comment">// 窗口达到目标长度时收缩</span></span><br><span class="line">    <span class="keyword">if</span> (valid == need.<span class="built_in">size</span>())        <span class="comment">// 检查是否匹配</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="comment">// 收缩窗口...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="🔹-找所有异位词-LeetCode-438"><a href="#🔹-找所有异位词-LeetCode-438" class="headerlink" title="🔹 找所有异位词 (LeetCode 438)"></a>🔹 找所有异位词 (LeetCode 438)</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (right - left &gt;= p.<span class="built_in">size</span>()) &#123;</span><br><span class="line">    <span class="keyword">if</span> (valid == need.<span class="built_in">size</span>())</span><br><span class="line">        res.<span class="built_in">push_back</span>(left);  <span class="comment">// 记录起始位置</span></span><br><span class="line">    <span class="comment">// 收缩窗口...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h2><div class="admonition anote"><p class="admonition-title"><span class="mdi mdi-note-outline admonition-icon"></span>Note</p><div class="admonition-content">
-
-<p>基于这个框架，遇到子串&#x2F;子数组相关的题目，只需要回答以下三个问题：<br>1、什么时候应该移动 right 扩大窗口？窗口加入字符时，应该更新哪些数据？<br>2、什么时候窗口应该暂停扩大，开始移动 left 缩小窗口？从窗口移出字符时，应该更新哪些数据？<br>3、什么时候应该更新结果？</p>
-</div></div>
-
-<ol>
-<li><strong>右指针扩张</strong>：不断纳入新元素</li>
-<li><strong>左指针收缩</strong>：满足条件时尝试优化</li>
-<li><strong>valid 计数</strong>：追踪匹配状态</li>
-<li><strong>灵活调整</strong>：根据题目需求调整收缩条件和结果更新时机</li>
-</ol>
 ]]></content>
       <categories>
         <category>笔记</category>
@@ -1607,6 +1575,67 @@
       </categories>
       <tags>
         <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>算法笔记：滑动窗口</title>
+    <url>/2025/11/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/c1/</url>
+    <content><![CDATA[<h2 id="滑动窗口通用模板"><a href="#滑动窗口通用模板" class="headerlink" title="滑动窗口通用模板"></a>滑动窗口通用模板</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">std::unordered_map&lt;<span class="type">char</span>, <span class="type">int</span>&gt; need, window;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1. 初始化 need（目标字符频率）</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">const</span> <span class="keyword">auto</span>&amp; c : target) &#123;</span><br><span class="line">    need[c]++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> left = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> valid = <span class="number">0</span>;  <span class="comment">// 已匹配的字符种类数</span></span><br><span class="line"><span class="comment">// 根据题目需求自定义其他变量（如结果、长度等）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 移动 right 扩大窗口</span></span><br><span class="line"><span class="keyword">while</span> (right &lt; s.<span class="built_in">size</span>()) &#123;</span><br><span class="line">    <span class="type">char</span> c = s[right];</span><br><span class="line">    right++;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 3. 进行窗口内数据的更新</span></span><br><span class="line">    <span class="keyword">if</span> (need.<span class="built_in">count</span>(c)) &#123;</span><br><span class="line">        window[c]++;</span><br><span class="line">        <span class="keyword">if</span> (window[c] == need[c]) &#123;</span><br><span class="line">            valid++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 4. 判断是否需要收缩窗口</span></span><br><span class="line">    <span class="keyword">while</span> (窗口需要收缩的条件) &#123;</span><br><span class="line">        <span class="comment">// 在这里更新结果（如果需要）</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 5. 移动 left 缩小窗口</span></span><br><span class="line">        <span class="type">char</span> d = s[left];</span><br><span class="line">        left++;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 6. 进行窗口内数据的更新</span></span><br><span class="line">        <span class="keyword">if</span> (need.<span class="built_in">count</span>(d)) &#123;</span><br><span class="line">            <span class="keyword">if</span> (window[d] == need[d]) &#123;</span><br><span class="line">                valid--;</span><br><span class="line">            &#125;</span><br><span class="line">            window[d]--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> res;</span><br></pre></td></tr></table></figure>
+<h2 id="关键点说明"><a href="#关键点说明" class="headerlink" title="关键点说明"></a>关键点说明</h2><h3 id="1️⃣-窗口收缩条件（最重要的区别）"><a href="#1️⃣-窗口收缩条件（最重要的区别）" class="headerlink" title="1️⃣ 窗口收缩条件（最重要的区别）"></a>1️⃣ <strong>窗口收缩条件（最重要的区别）</strong></h3><p>不同题目的收缩条件不同：</p>
+<table>
+<thead>
+<tr>
+<th>题目类型</th>
+<th>收缩条件</th>
+<th>何时更新结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>最小覆盖子串</strong></td>
+<td><code>valid == need.size()</code></td>
+<td>收缩时（找最小）</td>
+</tr>
+<tr>
+<td><strong>字符串排列</strong></td>
+<td><code>right - left &gt;= target.size()</code></td>
+<td>收缩时（固定长度）</td>
+</tr>
+<tr>
+<td><strong>找所有异位词</strong></td>
+<td><code>right - left &gt;= target.size()</code></td>
+<td>收缩时（固定长度）</td>
+</tr>
+<tr>
+<td><strong>最长无重复子串</strong></td>
+<td><code>window[c] &gt; 1</code>（有重复）</td>
+<td>扩张时（找最大）</td>
+</tr>
+</tbody></table>
+<h3 id="2️⃣-何时更新结果"><a href="#2️⃣-何时更新结果" class="headerlink" title="2️⃣ 何时更新结果"></a>2️⃣ <strong>何时更新结果</strong></h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 情况1：求最小 → 在收缩窗口时更新</span></span><br><span class="line"><span class="keyword">while</span> (valid == need.<span class="built_in">size</span>()) &#123;  <span class="comment">// 窗口合法</span></span><br><span class="line">    res = <span class="built_in">min</span>(res, right - left);  <span class="comment">// 更新最小值</span></span><br><span class="line">    <span class="comment">// 然后收缩</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 情况2：求最大 → 在扩张窗口后更新</span></span><br><span class="line"><span class="keyword">if</span> (条件满足) &#123;</span><br><span class="line">    res = <span class="built_in">max</span>(res, right - left);  <span class="comment">// 更新最大值</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 情况3：固定长度 → 在收缩窗口时检查</span></span><br><span class="line"><span class="keyword">while</span> (right - left &gt;= k) &#123;</span><br><span class="line">    <span class="keyword">if</span> (valid == need.<span class="built_in">size</span>()) &#123;</span><br><span class="line">        <span class="comment">// 记录结果</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 收缩</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="三道经典题对比"><a href="#三道经典题对比" class="headerlink" title="三道经典题对比"></a>三道经典题对比</h2><h3 id="🔹-最小覆盖子串-LeetCode-76"><a href="#🔹-最小覆盖子串-LeetCode-76" class="headerlink" title="🔹 最小覆盖子串 (LeetCode 76)"></a>🔹 最小覆盖子串 (LeetCode 76)</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (valid == need.<span class="built_in">size</span>()) &#123;  <span class="comment">// 包含所有字符时收缩</span></span><br><span class="line">    <span class="keyword">if</span> (right - left &lt; len) &#123;   <span class="comment">// 更新最小长度</span></span><br><span class="line">        start = left;</span><br><span class="line">        len = right - left;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 收缩窗口...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="🔹-字符串排列-LeetCode-567"><a href="#🔹-字符串排列-LeetCode-567" class="headerlink" title="🔹 字符串排列 (LeetCode 567)"></a>🔹 字符串排列 (LeetCode 567)</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (right - left &gt;= s<span class="number">1.</span><span class="built_in">size</span>()) &#123;  <span class="comment">// 窗口达到目标长度时收缩</span></span><br><span class="line">    <span class="keyword">if</span> (valid == need.<span class="built_in">size</span>())        <span class="comment">// 检查是否匹配</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="comment">// 收缩窗口...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="🔹-找所有异位词-LeetCode-438"><a href="#🔹-找所有异位词-LeetCode-438" class="headerlink" title="🔹 找所有异位词 (LeetCode 438)"></a>🔹 找所有异位词 (LeetCode 438)</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (right - left &gt;= p.<span class="built_in">size</span>()) &#123;</span><br><span class="line">    <span class="keyword">if</span> (valid == need.<span class="built_in">size</span>())</span><br><span class="line">        res.<span class="built_in">push_back</span>(left);  <span class="comment">// 记录起始位置</span></span><br><span class="line">    <span class="comment">// 收缩窗口...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h2><div class="admonition anote"><p class="admonition-title"><span class="mdi mdi-note-outline admonition-icon"></span>Note</p><div class="admonition-content">
+
+<p>基于这个框架，遇到子串&#x2F;子数组相关的题目，只需要回答以下三个问题：<br>1、什么时候应该移动 right 扩大窗口？窗口加入字符时，应该更新哪些数据？<br>2、什么时候窗口应该暂停扩大，开始移动 left 缩小窗口？从窗口移出字符时，应该更新哪些数据？<br>3、什么时候应该更新结果？</p>
+</div></div>
+
+<ol>
+<li><strong>右指针扩张</strong>：不断纳入新元素</li>
+<li><strong>左指针收缩</strong>：满足条件时尝试优化</li>
+<li><strong>valid 计数</strong>：追踪匹配状态</li>
+<li><strong>灵活调整</strong>：根据题目需求调整收缩条件和结果更新时机</li>
+</ol>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
       </tags>
   </entry>
 </search>
