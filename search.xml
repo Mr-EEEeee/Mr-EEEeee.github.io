@@ -282,6 +282,8 @@
 <p><strong>按特定字符分割（如逗号），配合 <code>std::getline</code></strong></p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// &quot;100,200,300&quot;</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">sumString</span><span class="params">(string data)</span> </span>&#123;</span><br><span class="line">    <span class="function">stringstream <span class="title">ss</span><span class="params">(data)</span></span>; <span class="comment">// 把原始字符串喂给流</span></span><br><span class="line">    string item;</span><br><span class="line">    <span class="type">int</span> total = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 用 getline 分割逗号</span></span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">getline</span>(ss, item, <span class="string">&#x27;,&#x27;</span>)) &#123;</span><br><span class="line">        <span class="comment">// 把分割出来的字符串 item 转成整数并累加</span></span><br><span class="line">        total += <span class="built_in">stoi</span>(item); </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> total;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
+<hr>
+<p><strong>RAII</strong> （Resource Acquisition Is Initialization）资源获取即初始化：指在对象初始化时，会自动获取资源，并在对象销毁时自动释放资源（且不抛出异常）。<br>具体使用场景：STL 容器，智能指针，互斥锁，线程，<code>std::function</code> 等。<br>若自定义 RAII 管理资源，即在自定义特殊成员函数时，需要同时显示地处理5个函数：构造函数、析构函数、拷贝构造函数、赋值运算符函数、移动构造函数。</p>
 ]]></content>
       <categories>
         <category>笔记</category>
