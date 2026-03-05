@@ -284,6 +284,8 @@
 </ol>
 <hr>
 <p><strong>RAII</strong> （Resource Acquisition Is Initialization）资源获取即初始化：指在对象初始化时，会自动获取资源，并在对象销毁时自动释放资源（且不抛出异常）。<br>具体使用场景：STL 容器，智能指针，互斥锁，线程，<code>std::function</code> 等。<br>若自定义 RAII 管理资源，即在自定义特殊成员函数时，需要同时显示地处理5个函数：构造函数、析构函数、拷贝构造函数、赋值运算符函数、移动构造函数。</p>
+<hr>
+<p><strong>纯虚函数</strong> <code>virtual void func() = 0</code> 即在虚函数声明后添加 <code>= 0</code>。含有纯虚函数的类为抽象类，抽象类不能实例化对象。抽象类的纯虚函数定义了一个接口模板，让子类重写方法（实现具体操作），实现了多态。所以抽象类同时必须声明虚析构函数，以确保子类对象被正确销毁。</p>
 ]]></content>
       <categories>
         <category>笔记</category>
