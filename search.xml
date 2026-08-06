@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>test2</title>
-    <url>/2025/07/28/test2/</url>
+    <url>/2025/07/29/test2/</url>
     <content><![CDATA[<p>admonition 警告；告诫 [.ædmə’nɪʃ(ə)n]<br><a href="https://github.com/Mr-EEEeee/hexo-admonition-new">https://github.com/Mr-EEEeee/hexo-admonition-new</a><br>anote | info | todo | warning | attention | caution | failure | missing | fail | error | danger | bug | tip | success | question | example | quote</p>
 <h1 id="Admonition-功能测试"><a href="#Admonition-功能测试" class="headerlink" title="Admonition 功能测试"></a>Admonition 功能测试</h1><div class="admonition info"><p class="admonition-title"><span class="mdi mdi-information-outline admonition-icon"></span>自定义标题</p><div class="admonition-content">
 
@@ -239,7 +239,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2024/07/25/hello-world/</url>
+    <url>/2024/07/26/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -286,6 +286,8 @@
 <p><strong>RAII</strong> （Resource Acquisition Is Initialization）资源获取即初始化：指在对象初始化时，会自动获取资源，并在对象销毁时自动释放资源（且不抛出异常）。<br>具体使用场景：STL 容器，智能指针，互斥锁，线程，<code>std::function</code> 等。<br>若自定义 RAII 管理资源，即在自定义特殊成员函数时，需要同时显示地处理5个函数：构造函数、析构函数、拷贝构造函数、赋值运算符函数、移动构造函数。</p>
 <hr>
 <p><strong>纯虚函数</strong> <code>virtual void func() = 0</code> 即在虚函数声明后添加 <code>= 0</code>。含有纯虚函数的类为抽象类，抽象类不能实例化对象。抽象类的纯虚函数定义了一个接口模板，让子类重写方法（实现具体操作），实现了多态。所以抽象类同时必须声明虚析构函数，以确保子类对象被正确销毁。</p>
+<hr>
+<p><code>std::function</code> 是一个<strong>统一的可调用对象容器</strong>。只要一个对象能使用 <code>operator()</code> 调用，并且函数签名匹配，它几乎都可以存进去并以统一的方式调用。这也是现代 C++ 回调、事件、任务系统中最常用的基础工具之一。</p>
 ]]></content>
       <categories>
         <category>笔记</category>
@@ -296,7 +298,7 @@
   </entry>
   <entry>
     <title>运算符重载与函数对象</title>
-    <url>/2025/08/30/C++/cpp11/</url>
+    <url>/2025/08/31/C++/cpp11/</url>
     <content><![CDATA[<p><strong>函数对象：使用方式看上去像函数，但实际是类的一个对象；是因为类重载了“()”运算符，所以让对象使用的方式看起来是函数，即对象后面的括号像函数一样调用。</strong></p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Adder</span> &#123;               <span class="comment">// 1. 类重载了 operator()</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> <span class="type">const</span> </span>&#123; <span class="keyword">return</span> a + b; &#125;</span><br><span class="line">&#125;;</span><br><span class="line">Adder add;                   <span class="comment">// 2. 函数对象</span></span><br><span class="line"><span class="type">int</span> r = <span class="built_in">add</span>(<span class="number">3</span>, <span class="number">4</span>);           <span class="comment">// 调用函数对象</span></span><br></pre></td></tr></table></figure>
 <p><strong>友元函数不是类的成员函数</strong>，但它可以访问类的私有和保护成员，为操作符重载提供了灵活性。</p>
@@ -312,7 +314,7 @@
   </entry>
   <entry>
     <title>C++ 性能优化笔记</title>
-    <url>/2025/07/28/C++/cpp1/</url>
+    <url>/2025/07/29/C++/cpp1/</url>
     <content><![CDATA[<h2 id="malloc-new"><a href="#malloc-new" class="headerlink" title="malloc &#x2F; new"></a>malloc &#x2F; new</h2><p><code>malloc</code> 不会自动调用构造函数，通过绕过构造函数和析构函数，直接用底层手段手动控制对象的生命周期，避免额外的函数调用开销。</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="type">int</span> age;</span><br><span class="line">        <span class="type">float</span> height;</span><br><span class="line">        <span class="built_in">Person</span>();</span><br><span class="line">&#125;;</span><br><span class="line">Person::<span class="built_in">Person</span>(<span class="type">void</span>)&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;调用构造函数&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br><span class="line">Person::~<span class="built_in">Person</span>(<span class="type">void</span>)&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;调用析构函数&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person* p = (Person*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(Person));</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;1&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">p-&gt;age = <span class="number">25</span>;</span><br><span class="line">p-&gt;height = <span class="number">175.5f</span>;</span><br><span class="line"><span class="built_in">free</span>(p);</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;2&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">auto</span> t = <span class="keyword">new</span> <span class="built_in">Person</span>();</span><br><span class="line">std::cout &lt;&lt; <span class="string">&quot;1&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"><span class="built_in">delete</span>(t);</span><br></pre></td></tr></table></figure>
 <pre><code>1
@@ -593,7 +595,7 @@
   </entry>
   <entry>
     <title>C++ 多线程笔记3</title>
-    <url>/2025/08/05/C++/cpp4/</url>
+    <url>/2025/08/06/C++/cpp4/</url>
     <content><![CDATA[<div class="admonition anote"><p class="admonition-title"><span class="mdi mdi-note-outline admonition-icon"></span>Note</p><div class="admonition-content">
 
 <p><code>std::thread</code> 无拷贝构造函数，无法复制只能引用 <code>&amp;</code>。</p>
@@ -616,7 +618,7 @@
   </entry>
   <entry>
     <title>C++ 多线程笔记2</title>
-    <url>/2025/08/04/C++/cpp3/</url>
+    <url>/2025/08/05/C++/cpp3/</url>
     <content><![CDATA[<div class="admonition anote"><p class="admonition-title"><span class="mdi mdi-note-outline admonition-icon"></span>Note</p><div class="admonition-content">
 
 <p><code>condition_variable.wait(mutex, bool_condition)</code>  </p>
@@ -653,7 +655,7 @@
   </entry>
   <entry>
     <title>C++ 多线程笔记1</title>
-    <url>/2025/08/02/C++/cpp2/</url>
+    <url>/2025/08/03/C++/cpp2/</url>
     <content><![CDATA[<div class="admonition anote"><p class="admonition-title"><span class="mdi mdi-note-outline admonition-icon"></span>Note</p><div class="admonition-content">
 
 <p><code>call_once</code> 配合 <code>once_flag</code> 一起使用，用于在多个线程中只执行某段初始化代码一次。</p>
@@ -736,7 +738,7 @@
   </entry>
   <entry>
     <title>C++ static 与 const</title>
-    <url>/2025/08/09/C++/cpp8/</url>
+    <url>/2025/08/10/C++/cpp8/</url>
     <content><![CDATA[<h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2><ul>
 <li><code>static</code> 定义的静态变量在函数执行后不会释放其存储空间，存储在内存的全局区域。</li>
 <li><code>static</code> 表示的是静态的。类的<u>静态成员函数、静态成员变量</u>是和<strong>类</strong>相关的，而不是和类的具体对象相关。即使没有具体对象，也能调用类的静态成员函数和成员变量。静态成员函数的访问权限是<strong>全局</strong>的，只要包含了声明它的头文件，都能调用它（public）。</li>
@@ -800,7 +802,7 @@
   </entry>
   <entry>
     <title>C++ 内存区域</title>
-    <url>/2025/08/12/C++/cpp9/</url>
+    <url>/2025/08/13/C++/cpp9/</url>
     <content><![CDATA[<h2 id="所划分的内存区块有"><a href="#所划分的内存区块有" class="headerlink" title="所划分的内存区块有?"></a>所划分的内存区块有?</h2><p>在执行 C++ 程序时候，所划分出的内存区块主要有四个：</p>
 <ul>
 <li><strong>代码区</strong>：存放着程序的二进制代码，由操作系统管理。</li>
@@ -884,7 +886,7 @@
   </entry>
   <entry>
     <title>Unity中的面向对象</title>
-    <url>/2024/08/10/unity/unity2/</url>
+    <url>/2024/08/11/unity/unity2/</url>
     <content><![CDATA[<p>场景中存在GameObject实例，每个实例对象在Inspector中都会显示一系列组件，这些组件就是脚本（类），默认全部继承自MonoBehaviour类，成为了该脚本类的实例对象和所选对象GameObject的各种属性。</p>
 <p>Prefab预制体，将场景中的物体拖动到Assets里即可生成。这个过程实际上是一个抽象的过程，抽象成一个具有场景中被拖动物体的所有属性(含值)的模板类。</p>
 ]]></content>
@@ -898,7 +900,7 @@
   </entry>
   <entry>
     <title>Unity的生命周期</title>
-    <url>/2024/08/01/unity/unity1/</url>
+    <url>/2024/08/02/unity/unity1/</url>
     <content><![CDATA[<h1 id="Unity的生命周期"><a href="#Unity的生命周期" class="headerlink" title="Unity的生命周期"></a>Unity的生命周期</h1><p><a href="https://docs.unity3d.com/cn/2023.2/Manual/UnityManual.html">Unity官方手册</a></p>
 <p>场景开始前调用，用于<strong>加载场景</strong>（场景中每个对象调用一次）<br>在为任何对象调用 Start 和 Update 等函数之前，会为所有脚本调用 Awake 和 OnEnable 函数。在游戏运行过程中实例化对象时，不能强制执行此调用。</p>
 <ul>
@@ -936,7 +938,7 @@
   </entry>
   <entry>
     <title>算法笔记</title>
-    <url>/2026/01/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/c0/</url>
+    <url>/2026/01/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/c0/</url>
     <content><![CDATA[<h2 id="二叉树算法总结"><a href="#二叉树算法总结" class="headerlink" title="二叉树算法总结"></a>二叉树算法总结</h2><p>889,331,894题跳过</p>
 <h3 id="递归算法"><a href="#递归算法" class="headerlink" title="递归算法"></a>递归算法</h3><p>二叉树的递归问题，分为<strong>遍历</strong>和<strong>分解</strong>两种思想。</p>
 <h4 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h4><p>DFS 深度优先搜索，自顶向下，需要<strong>回溯</strong>，函数类型为 <code>void</code>，依靠全局变量（显式）或参数传递（隐式）。</p>
@@ -1187,7 +1189,7 @@
   </entry>
   <entry>
     <title>游戏设计笔记1</title>
-    <url>/2024/08/08/%E7%AC%94%E8%AE%B0/b1/</url>
+    <url>/2024/08/09/%E7%AC%94%E8%AE%B0/b1/</url>
     <content><![CDATA[<h2 id="策划必备要素"><a href="#策划必备要素" class="headerlink" title="策划必备要素"></a>策划必备要素</h2><p>倾听&gt;&gt;创意，沟通</p>
 <ol>
 <li>倾听团队，与团队沟通合作。</li>
@@ -1257,7 +1259,7 @@
   </entry>
   <entry>
     <title>Linux 环境 C++ 编程</title>
-    <url>/2026/01/06/%E7%AC%94%E8%AE%B0/Linux/</url>
+    <url>/2026/01/07/%E7%AC%94%E8%AE%B0/Linux/</url>
     <content><![CDATA[<h2 id="C-环境准备"><a href="#C-环境准备" class="headerlink" title="C++ 环境准备"></a>C++ 环境准备</h2><p><code>sudo apt-get install g++</code> 安装编译器。<br><code>sudo apt-get install gdb</code> 安装调试器。<br>在 vscode 中安装拓展</p>
 <h2 id="编译指令"><a href="#编译指令" class="headerlink" title="编译指令"></a>编译指令</h2><p>简单：”g++ 选项 源文件名”，例如 <code>g++ -o test main.cpp</code><br>高级：”g++ 选项 源文件名 输出选项 链接库”，例如 <code>g++ -std=c++17 -Wall -O2 -I./include main.cpp -o my_app -L./lib -lpthread</code></p>
 <ol>
@@ -1344,7 +1346,7 @@
   </entry>
   <entry>
     <title>状态模式笔记1</title>
-    <url>/2024/08/11/%E7%AC%94%E8%AE%B0/b3/</url>
+    <url>/2024/08/12/%E7%AC%94%E8%AE%B0/b3/</url>
     <content><![CDATA[<p>英雄游戏（英雄互娱）曾在面试中询问我有关动画状态机的内容，我当时没有准备过这方面，紧张时说出了不太了解的回答，事后回想自己其实了解过相关内容，曾在设计角色时绑定骨骼后导入过一些动作来操控角色，当时还学习过如何平滑动作动画，进行状态机的切换，懊悔自己薄弱的即时表达能力，感觉很可惜。借此机会，我回顾了“动画状态机”，同时再阅读有关“设计模式”的书籍，通过递归式地学习，针对“状态模式”先做些笔记，发散出了“有限状态机”再是“行为树”等内容，所以将笔记拆分为几篇集中叙写，内容对象针对游戏角色(AI)。<del>这几天我的确还是有点乏了，感觉自己学的写的没有正反馈，认识的朋友们大都找到合适的工作了，我水平真的不够吗，感觉入职之后再写博客会更有动力吧。。。</del></p>
 <h1 id="状态模式"><a href="#状态模式" class="headerlink" title="状态模式"></a>状态模式</h1><p><em>“允许一个对象的行为随着内部状态的改变而改变，对象看起来好像是在修改自身类。”</em></p>
 <h2 id="有限状态机FSM"><a href="#有限状态机FSM" class="headerlink" title="有限状态机FSM"></a>有限状态机FSM</h2><ul>
@@ -1381,7 +1383,7 @@
   </entry>
   <entry>
     <title>vs 使用笔记</title>
-    <url>/2025/08/04/%E7%AC%94%E8%AE%B0/vscode/</url>
+    <url>/2025/08/05/%E7%AC%94%E8%AE%B0/vscode/</url>
     <content><![CDATA[<p><img src="https://s2.loli.net/2025/08/04/nuO3hUQeyva1zWc.png" alt="将Visual Studio 2022快捷键改为vscode方案"></p>
 <h3 id="选中相同内容"><a href="#选中相同内容" class="headerlink" title="选中相同内容"></a>选中相同内容</h3><p><code>Ctrl + D</code> 逐个选择<br><code>Ctrl + Shift + L</code> 全选</p>
 <h3 id="控制光标"><a href="#控制光标" class="headerlink" title="控制光标"></a>控制光标</h3><p><code>Ctrl + ←/→</code><br><code>Home/End</code> 当前行首位， + <code>Ctrl</code> 为当前页首位<br><code>Shift + ← / →</code> 逐个选中字符<br><code>Ctrl + Shift + ← / →</code> 自动选中多个字符<br><code>Ctrl+K，CtrlN</code> 移动到下一个书签</p>
@@ -1482,7 +1484,7 @@
   </entry>
   <entry>
     <title>win11 右键展开</title>
-    <url>/2025/08/23/%E7%AC%94%E8%AE%B0/windows/</url>
+    <url>/2025/08/24/%E7%AC%94%E8%AE%B0/windows/</url>
     <content><![CDATA[<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">reg add &quot;HKCU\Software\Classes\CLSID\&#123;86ca1aa0-34aa-4e8b-a509-50c905bae2a2&#125;\InprocServer32&quot; /f /ve</span><br></pre></td></tr></table></figure>
 <p>执行后任务管理器里重新启动 Windows 资源管理器生效。</p>
 <p>恢复代码</p>
@@ -1646,7 +1648,7 @@
   </entry>
   <entry>
     <title>AI 工具的使用笔记</title>
-    <url>/2026/03/16/%E7%AC%94%E8%AE%B0/AItools/</url>
+    <url>/2026/03/17/%E7%AC%94%E8%AE%B0/AItools/</url>
     <content><![CDATA[<h3 id="Antigravity"><a href="#Antigravity" class="headerlink" title="Antigravity"></a>Antigravity</h3><p>修改市场的 URL，设置为 vscode 原版拓展市场。<br><a href="https://marketplace.visualstudio.com/items">https://marketplace.visualstudio.com/items</a><br><a href="https://marketplace.visualstudio.com/_apis/public/gallery">https://marketplace.visualstudio.com/_apis/public/gallery</a></p>
 ]]></content>
       <categories>
@@ -1659,7 +1661,7 @@
   </entry>
   <entry>
     <title>btv 开发记录</title>
-    <url>/2026/03/17/%E5%BC%80%E5%8F%91/btv1/</url>
+    <url>/2026/03/18/%E5%BC%80%E5%8F%91/btv1/</url>
     <content><![CDATA[<h2 id="需求文档"><a href="#需求文档" class="headerlink" title="需求文档"></a>需求文档</h2><h3 id="主功能清单"><a href="#主功能清单" class="headerlink" title="主功能清单"></a>主功能清单</h3><ul>
 <li><input checked="" disabled="" type="checkbox"> 观看直播</li>
 <li><input checked="" disabled="" type="checkbox"> 直播录制</li>
@@ -2284,7 +2286,7 @@
   </entry>
   <entry>
     <title>分布式系统课程总结</title>
-    <url>/2026/03/27/UOB/Dependable%20and%20Distributed%20Systems/Dependable%20and%20Distributed%20Systems/</url>
+    <url>/2026/03/28/UOB/Dependable%20and%20Distributed%20Systems/Dependable%20and%20Distributed%20Systems/</url>
     <content><![CDATA[<h1 id="Revision"><a href="#Revision" class="headerlink" title="Revision"></a>Revision</h1><p>introduction 2<br>dependability concepts 8<br>software fault tolerance 7<br>dependability analysis and evaluation 9 做历年卷子<br>leader election 8.5 定义 根据 properties 阐述问题<br>consensus 8 多写<br>byzantine generals problem 8<br>clocks 8 用 AI 举例 图标<br>reliable links and failure detectors 6 defination<br>reliable broadcast algorithms 8 </p>
 ]]></content>
       <categories>
@@ -2316,5 +2318,10 @@
       <tags>
         <tag>C++</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2026/05/29/%E5%BC%80%E5%8F%91/t/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
