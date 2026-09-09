@@ -2683,4 +2683,69 @@
         <tag>C++</tag>
       </tags>
   </entry>
+  <entry>
+    <title>简历</title>
+    <url>/2026/09/09/C++/%E7%AE%80%E5%8E%86/</url>
+    <content><![CDATA[<h2 id="AvatarX-智能终端平台"><a href="#AvatarX-智能终端平台" class="headerlink" title="AvatarX 智能终端平台"></a>AvatarX 智能终端平台</h2><h3 id="实时美颜模块-OpenCV"><a href="#实时美颜模块-OpenCV" class="headerlink" title="实时美颜模块 OpenCV"></a>实时美颜模块 OpenCV</h3><ol>
+<li><strong>双边滤波</strong> 距离近 + 颜色相近的像素权重大；距离远或颜色差异大的像素权重小。<br><strong>降采样</strong>：宽高都缩到四分之一，1920×1080 变为 480×270。<br><em>“我在小图上用双边滤波降低细小波动，再放大与原图混合。双边权重兼顾距离和颜色差，减少跨边缘模糊；降采样减少计算量，但会牺牲细节”</em></li>
+<li><strong>LUT</strong> 以空间换时间，用一个数组存储预计算结果，直接根据颜色去索引映射至目标值。<br>创建了 <code>1×256</code> 的 <code>CV_8UC1</code> 表<br><a href="https://zhuanlan.zhihu.com/p/604897964">https://zhuanlan.zhihu.com/p/604897964</a><br><a href="https://dev.epicgames.com/documentation/unreal-engine/using-lookup-tables-for-color-grading-in-unreal-engine?application_version=5.5&lang=zh-CN">https://dev.epicgames.com/documentation/unreal-engine/using-lookup-tables-for-color-grading-in-unreal-engine?application_version=5.5&amp;lang=zh-CN</a><br><a href="https://blog.csdn.net/m0_51133195/article/details/154124578">https://blog.csdn.net/m0_51133195/article/details/154124578</a><br><em>“美白曲线本来需要算对数，我把 256 个输入的结果预计算成表。参数没变就复用，每帧只做查表。”</em></li>
+<li><strong>局部形变</strong> 反向映射，离中心越远，形变越弱，到边界为零。</li>
+<li>妆容即口红，以两个嘴角的中点作为中心，嘴角距离决定椭圆尺寸；生成椭圆 mask，再高斯模糊边缘，即“羽化”。减少 G、增加 R，形成红润效果。</li>
+<li><strong>GPU 磨皮</strong> 以 RGB 通道颜色综合阈值判断肤色，命中肤色的中心像素做邻域均值再混合。（HLSL shader）</li>
+</ol>
+<h3 id="面部驱动"><a href="#面部驱动" class="headerlink" title="面部驱动"></a>面部驱动</h3><ul>
+<li><strong>YuNet</strong> 是人脸检测模型</li>
+<li><strong>ONNX</strong> 是存储模型计算结构和权重的格式,通过 OpenCV 的 FaceDetectorYN 加载 .onnx</li>
+<li>检测回答“哪里有人脸”；关键点定位回答“这张脸的眼鼻嘴在哪”</li>
+</ul>
+<ol>
+<li>每张检测结果有 15 个数：框的位置和宽高 4 个、5 个点的 x&#x2F;y 共 10 个、分数 1 个。点序为右眼、左眼、鼻尖、右嘴角、左嘴角。</li>
+<li>处理检测节流：缩到 320×320，每两个处理帧检测一次</li>
+<li>丢失帧沿用上帧数据：丢失帧&lt;5沿用，以抗闪烁</li>
+<li>参数平滑逻辑：权重平滑，进一步降低坐标抖动。（平滑后&#x3D;0.7×上次平滑值+0.3×本次检测值）</li>
+</ol>
+<h3 id="数字人道具模块"><a href="#数字人道具模块" class="headerlink" title="数字人道具模块"></a>数字人道具模块</h3><ol>
+<li>warpAffine 仿射变换，双眼两个点可以给出三个信息：中点代表位置，距离代表大小，连线方向代表平面内角度。计算 <code>dx=rightEye.x-leftEye.x</code>、<code>dy=rightEye.y-leftEye.y</code>，再取 <code>angle=-atan2(dy,dx)×180/π</code>，斜率即倾斜角度。</li>
+<li>眼距 <code>sqrt(dx²+dy²)</code>，目标贴纸宽度为眼距的 2.5 倍。</li>
+</ol>
+<h3 id="渲染管线模块"><a href="#渲染管线模块" class="headerlink" title="渲染管线模块"></a>渲染管线模块</h3><ol>
+<li><strong>YUV</strong> 中 Y 表示亮度，U&#x2F;V 表示色差。人眼对亮度细节更敏感，因此可以保留更多亮度信息、减少色度采样。4:2:0 表示图像中每个 2×2 像素区域有 4 个 Y，配一组 U&#x2F;V。<br><strong>NV12</strong> 把所有 Y 放在一个平面，再把 U&#x2F;V 交错放在第二个平面。YUV420P 则是 Y、U、V 三个独立平面。两者都是 4:2:0，但字节排列不同。<br><a href="https://zhuanlan.zhihu.com/p/1888633916459569669">https://zhuanlan.zhihu.com/p/1888633916459569669</a><br><a href="https://blog.csdn.net/byhook/article/details/84037338">https://blog.csdn.net/byhook/article/details/84037338</a></li>
+<li>色彩矩阵：把 RGB 换成 Y、U、V。8 位 Limited Range 的 Y 映射到 16～235，色度映射到 16～240。</li>
+<li>色彩分级：整体调色滤镜，3维 LUT，用 512×512 图片保存一个 64×64×64 的颜色立方体：64 个蓝色切片按 8×8 平铺，每个切片内部是红绿坐标。</li>
+<li>读写同一张纹理冲突黑屏问题：A 已经绑定为输出 → 又尝试把 A 绑定为 shader 输入时，D3D11 会检测到冲突，<strong>将冲突的输入槽置为 <code>NULL</code>，而不是按要求绑定 A</strong>。<br><code>“同一资源不应同时作为 shader 输入与渲染输出。绑定冲突时 D3D11 可能将输入槽置空，随后采样得不到预期画面。需要清理绑定，并加互斥锁，让多级滤镜交替读写两张纹理，避免输入输出冲突。”</code><br>项目的 <code>convertRGBtoNV12</code> 在绑定输入前，先做这件事：<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 清空当前渲染目标：A 不再被当作输出画布。</span></span><br><span class="line">ID3D11RenderTargetView* nullRTV[] = &#123; <span class="literal">nullptr</span> &#125;;</span><br><span class="line">m_context-&gt;<span class="built_in">OMSetRenderTargets</span>(<span class="number">1</span>, nullRTV, <span class="literal">nullptr</span>);</span><br></pre></td></tr></table></figure>
+这里的“清空”是清空输出槽的绑定，不是擦掉纹理 A 的画面，也不是释放纹理。<br>随后才把 A 接到输入槽，并选择另一个输出目标：<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 现在可以把已经画好的 A 作为输入读取。</span></span><br><span class="line">m_context-&gt;<span class="built_in">PSSetShaderResources</span>(<span class="number">0</span>, <span class="number">1</span>, &amp;inputTex);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将计算出的亮度写到 NV12 的 Y 平面，而不是写回 A。</span></span><br><span class="line">m_context-&gt;<span class="built_in">OMSetRenderTargets</span>(<span class="number">1</span>, &amp;targetY, <span class="literal">nullptr</span>);</span><br></pre></td></tr></table></figure>
+使用<strong>Ping-Pong 双缓冲</strong>，使每一步都有独立的输入和输出<br>如果连续做磨皮、美白、锐化，每一步都需要“读上一轮结果、写新结果”。<br>准备 A、B 两张纹理交替使用：<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>读取</th>
+<th>写入</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>磨皮</td>
+<td>原图</td>
+<td>A</td>
+</tr>
+<tr>
+<td>美白</td>
+<td>A</td>
+<td>B</td>
+</tr>
+<tr>
+<td>锐化</td>
+<td>B</td>
+<td>A</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h2 id="网络相机图传与多相机集中管理系统"><a href="#网络相机图传与多相机集中管理系统" class="headerlink" title="网络相机图传与多相机集中管理系统"></a>网络相机图传与多相机集中管理系统</h2><h2 id="BTV"><a href="#BTV" class="headerlink" title="BTV"></a>BTV</h2>]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
 </search>
