@@ -2684,8 +2684,8 @@
       </tags>
   </entry>
   <entry>
-    <title>简历</title>
-    <url>/2026/09/09/C++/%E7%AE%80%E5%8E%86/</url>
+    <title>简历项目</title>
+    <url>/2026/09/09/C++/projects/</url>
     <content><![CDATA[<h2 id="AvatarX-智能终端平台"><a href="#AvatarX-智能终端平台" class="headerlink" title="AvatarX 智能终端平台"></a>AvatarX 智能终端平台</h2><h3 id="实时美颜模块-OpenCV"><a href="#实时美颜模块-OpenCV" class="headerlink" title="实时美颜模块 OpenCV"></a>实时美颜模块 OpenCV</h3><ol>
 <li><strong>双边滤波</strong> 距离近 + 颜色相近的像素权重大；距离远或颜色差异大的像素权重小。<br><strong>降采样</strong>：宽高都缩到四分之一，1920×1080 变为 480×270。<br><em>“我在小图上用双边滤波降低细小波动，再放大与原图混合。双边权重兼顾距离和颜色差，减少跨边缘模糊；降采样减少计算量，但会牺牲细节”</em></li>
 <li><strong>LUT</strong> 以空间换时间，用一个数组存储预计算结果，直接根据颜色去索引映射至目标值。<br>创建了 <code>1×256</code> 的 <code>CV_8UC1</code> 表<br><a href="https://zhuanlan.zhihu.com/p/604897964">https://zhuanlan.zhihu.com/p/604897964</a><br><a href="https://dev.epicgames.com/documentation/unreal-engine/using-lookup-tables-for-color-grading-in-unreal-engine?application_version=5.5&lang=zh-CN">https://dev.epicgames.com/documentation/unreal-engine/using-lookup-tables-for-color-grading-in-unreal-engine?application_version=5.5&amp;lang=zh-CN</a><br><a href="https://blog.csdn.net/m0_51133195/article/details/154124578">https://blog.csdn.net/m0_51133195/article/details/154124578</a><br><em>“美白曲线本来需要算对数，我把 256 个输入的结果预计算成表。参数没变就复用，每帧只做查表。”</em></li>
